@@ -175,8 +175,8 @@ strong {
   SECTION               
 -----------------------------------------*/
 .section-padding {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .section-bg {
@@ -559,8 +559,8 @@ strong {
   HERO & HERO SLIDE         
 -----------------------------------------*/
 .hero-section-full-height {
-  height: 680px;
-  min-height: 680px;
+  height: 350px;
+  min-height: 300px;
   position: relative;
 }
 
@@ -570,8 +570,8 @@ strong {
 }
 
 #hero-slide .carousel-item {
-  height: 680px;
-  min-height: 680px;
+  height: 350px;
+  min-height: 80px;
 }
 
 #hero-slide .carousel-caption {
@@ -583,8 +583,8 @@ strong {
   right: 0;
   left: auto;
   text-align: right;
-  min-width: 680px;
-  min-height: 680px;
+  min-width: 350px;
+  min-height: 350px;
   padding: 100px 100px 50px 100px;
 }
 
@@ -635,7 +635,7 @@ strong {
 .featured-block {
   text-align: center;
   transition: all 0.5s ease;
-  min-height: 256px;
+  min-height: 56px;
   padding: 15px;
 }
 
@@ -647,6 +647,10 @@ strong {
 
 .featured-block:hover .featured-block-image {
   transform: scale(0.75);
+}
+
+.imgIcon{
+  max-width: 50% !important;
 }
 
 .featured-block-image {
@@ -738,6 +742,7 @@ strong {
   padding: 50px;
 }
 
+
 .volunteer-image {
   border-radius: 100%;
   display: block;
@@ -761,11 +766,43 @@ strong {
   DONATE              
 -----------------------------------------*/
 .donate-section {
-  background-image: url('../images/different-people-doing-volunteer-work.jpg');
+  background-image: url('../images/slide/escritorio.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.ahorro-section{
+  background-image: url('../images/slide/auto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+
+.login-section{
+  background-image: url('../images/slide/auto.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100%;
+}
+
+.tabla-section {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: inherit;
   padding-top: 150px;
   padding-bottom: 150px;
 }
@@ -1372,6 +1409,10 @@ blockquote::before {
   color: var(--white-color);
 }
 
+/*---------------------------------------
+  LOGIN MENU
+-----------------------------------------*/
+
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -1425,8 +1466,8 @@ blockquote::before {
   }
 
   .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .hero-form {
@@ -1652,4 +1693,7 @@ blockquote::before {
     padding: 25px;
   }
 }
+
+
+
 

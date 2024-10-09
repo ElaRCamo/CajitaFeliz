@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Commit inicial" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Commit inicial">
+      <change afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/daoLogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/slide/computadora.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/slide/escritorio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/slide/escritorio2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/slide/escritorio3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/slide/pigCarrito.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/slide/pigTarget.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/templatemo-kind-heart-charity.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/templatemo-kind-heart-charity.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/familia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/pigCajita.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/slide/pigCajita.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/prestamoFacil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/reunion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news-detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,23 +46,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/MetroTickets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\CajitaFelizGrammer" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\CajitaFelizGrammer\images\icons" />
       <recent name="C:\CajitaFelizGrammer\images\slide" />
+      <recent name="C:\CajitaFelizGrammer\images\icons" />
       <recent name="C:\CajitaFelizGrammer\images" />
     </key>
   </component>
@@ -61,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="1383000" />
+      <workItem from="1728394637434" duration="33269000" />
     </task>
     <task id="LOCAL-00001" summary="Commit inicial">
       <option name="closed" value="true" />
@@ -71,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728336284170</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit inicial">
+      <option name="closed" value="true" />
+      <created>1728396118817</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728396118817</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
