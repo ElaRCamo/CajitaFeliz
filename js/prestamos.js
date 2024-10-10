@@ -87,16 +87,10 @@ function registrarPrestamo() {
     const telefono = document.getElementById("telefono").value;
     const montoSolicitado = document.getElementById('montoPrestamo').value;
 
-    // Mostrar los valores en la consola (opcional)
-    console.log('Teléfono:', telefono);
-    console.log('Monto solicitado:', montoSolicitado);
-
 
     if (validarTelefono(telefono)) {
-        console.log("Número de teléfono válido.");
 
         if(validarMonto(montoSolicitado)) {
-            alert(`Monto válido: $${montoSolicitado})}`);
 
             const data = new FormData();
 
@@ -118,9 +112,9 @@ function registrarPrestamo() {
                 .then(data => {
                     if (data.status === 'success') {
                         Swal.fire({
-                            title: "¡Solicitud realizada exitosamente!",
+                            title: data.message,
                             icon: "success",
-                            html: `<div style="font-size: 3rem; font-weight: 800; color: #05BBEE;">${data.message}</div>`,
+                            text: "¡Solicitud realizada exitosamente!",
                             confirmButtonText: "OK"
                         }).then((result) => {
                             if (result.isConfirmed) {
