@@ -60,16 +60,16 @@ function autorizarSolicitud(){
 }
 
 function validarTelefono(telefono) {
-    // Expresión regular para validar un número de teléfono
-    const regex = /^\d{3}-\d{7}$/; // Formato: 555-1234567
+    // Expresión regular para validar un número de teléfono de 10 dígitos
+    const regex = /^\d{10}$/; // Formato: 5551234567
 
-    // Verifica si el número de teléfono coincide con el formato
     if (regex.test(telefono)) {
         return true; // Teléfono válido
     } else {
         return false; // Teléfono inválido
     }
 }
+
 function validarMonto(montoInput) {
     const montoSinSimbolo = montoInput.replace(/[$\s]/g, '');
 
