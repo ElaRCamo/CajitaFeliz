@@ -197,7 +197,7 @@
             </div>
         </section>
 
-        <section class="donate-section" id="solicitarPrestamoSeccion">
+        <section class="donate-section" id="section_1"><!--solicitarPrestamoSeccion-->
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -281,7 +281,7 @@
         </section>
 
 
-        <section class="ahorro-section" id="crearAhorroSeccion">
+        <section class="ahorro-section" id="section_2"><!--crearAhorroSeccion-->
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -358,7 +358,7 @@
             </div>
         </section>
 
-        <section class="donate-section" id="retirarAhorroSeccion">
+        <section class="donate-section" id="section_3"><!--retirarAhorroSeccion-->
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -392,7 +392,7 @@
         </section>
     </main>
 
-    <section class="section-padding section-bg" id="section_preguntas">
+    <section class="section-padding section-bg" id="section_4"><!--section_preguntas-->
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-12 text-center mx-auto">
