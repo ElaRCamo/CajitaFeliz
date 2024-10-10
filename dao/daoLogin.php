@@ -23,8 +23,8 @@ if (isset($_POST['iniciarSesionBtn'])) {
 
         $consultarEstatus = getAdmin($Nomina);
         if ($consultarEstatus['success']) {
-            $_SESSION['admin'] = $resultado['estatus'];
-        }else{
+            $_SESSION['admin'] = $consultarEstatus['estatus'];
+        } else {
             $_SESSION['admin'] = 0;
         }
 
