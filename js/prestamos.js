@@ -35,14 +35,9 @@ function autorizarSolicitud(){
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {
-                            document.getElementById('formSolicitarPrestamo').submit();
+                            //document.getElementById('formSolicitarPrestamo').submit();
+                            registrarPrestamo();
 
-                            const telefono = formData.get('telefono');
-                            const montoPrestamo = formData.get('montoPrestamo');
-
-                            // Mostrar los valores en la consola (opcional)
-                            console.log('Teléfono:', telefono);
-                            console.log('Monto solicitado:', montoPrestamo);
                         } else {
                             Swal.fire({
                                 icon: 'error',
@@ -64,74 +59,106 @@ function autorizarSolicitud(){
     });
 }
 
-function registrarUsuario() {
-    var inputsValidos = validarFormulario() && validarCorreo('correo','aviso') && validarPasswords('password','password2','aviso');
+function validarTelefono(telefono) {
+    // Expresión regular para validar un número de teléfono
+    const regex = /^\d{3}-\d{7}$/; // Formato: 555-1234567
 
-    if (inputsValidos) {
-        var nombreUsuario = id("nombreUsuario");
-        var correo        = id("correo");
-        var numNomina     = id("numNomina");
-        var password      = id("password");
+    // Verifica si el número de teléfono coincide con el formato
+    if (regex.test(telefono)) {
+        return true; // Teléfono válido
+    } else {
+        return false; // Teléfono inválido
+    }
+}
+function validarMonto(montoInput) {
+    const montoSinSimbolo = montoInput.replace(/[$\s]/g, '');
 
-        const data = new FormData();
+    const monto = parseFloat(montoSinSimbolo);
 
-        data.append('nombreUsuario', nombreUsuario.value.trim());
-        data.append('correo', correo.value.trim());
-        data.append('numNomina', numNomina.value.trim());
-        data.append('password', password.value.trim());
+    if (isNaN(monto) || monto <= 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
-        //alert('nombreUsuario: '+nombreUsuario.value.trim()+' correo: '+correo.value.trim()+' numNomina: '+numNomina.value.trim()+' password: '+ password.value.trim());
 
-        fetch('../../dao/userRegister.php', {
-            method: 'POST',
-            body: data
-        })
-            .then(response => {
-                if (!response.ok) {
-                    return response.json().then(error => {
-                        throw new Error(error.message);
-                    });
-                    // throw new Error('Hubo un problema al registrar el usuario. Por favor, intenta de nuevo más tarde.');
-                }
-                return response.json();
+function registrarPrestamo() {
+    const telefono = document.getElementById("telefono").value;
+    const montoSolicitado = document.getElementById('montoPrestamo').value;
+
+    // Mostrar los valores en la consola (opcional)
+    console.log('Teléfono:', telefono);
+    console.log('Monto solicitado:', montoSolicitado);
+
+
+    if (validarTelefono(telefono)) {
+        console.log("Número de teléfono válido.");
+
+        if(validarMonto(montoSolicitado)) {
+            alert(`Monto válido: $${montoSolicitado})}`);
+
+            const data = new FormData();
+
+            data.append('telefono', telefono.trim());
+            data.append('montoSolicitado', montoSolicitado.trim());
+
+            fetch('dao/daoSolicitudPrestamo.php', {
+                method: 'POST',
+                body: data
             })
-            .then(data => {
-                if (data.status === 'success') {
-                    //console.log(data.message);
-                    Swal.fire({
-                        title: "¡Usuario registrado exitosamente!",
-                        icon: "success",
-                        confirmButtonText: "OK"
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            enviarCorreoNuevoUsuario(nombreUsuario.value.trim(), numNomina.value.trim(), correo.value.trim());
-                            window.location.href = "../sesion/indexSesion.php";
-                        }
-                    });
-                }else if (data.status === 'error') {
-                    console.log(data.message);
-                    Swal.fire({
-                        title: "Error",
-                        text: data.message,
-                        icon: "error",
-                        confirmButtonText: "OK"
-                    });
-                }
-            }).catch(error => {
-            //console.error(error);
-            Swal.fire({
-                title: "Error",
-                text: error.message,
-                icon: "error",
-                confirmButtonText: "OK"
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(error => {
+                            throw new Error(error.message);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'success') {
+                        Swal.fire({
+                            title: "¡Solicitud realizada exitosamente!",
+                            icon: "success",
+                            text: data.message,
+                            confirmButtonText: "OK"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = "https://grammermx.com/RH/CajitaGrammer/misSolicitudes.php";
+                            }
+                        });
+                    }else if (data.status === 'error') {
+                        console.log(data.message);
+                        Swal.fire({
+                            title: "Error",
+                            text: data.message,
+                            icon: "error",
+                            confirmButtonText: "OK"
+                        });
+                    }
+                }).catch(error => {
+                Swal.fire({
+                    title: "Error",
+                    text: error.message,
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
             });
-        });
-    }else{
+
+
+        }else {
+            Swal.fire({
+                title: "Datos incorrectos",
+                text: "Por favor, ingresa un monto válido.",
+                icon: "error"
+            });
+        }
+
+    } else {
         Swal.fire({
             title: "Datos incorrectos",
-            text: "Revise su información",
+            text: "Número de teléfono inválido. Asegúrate de usar el formato: 555-1234567.",
             icon: "error"
-
         });
     }
 }

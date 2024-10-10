@@ -213,8 +213,8 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <label for="montoPrestamo">Monto solicitado: </label>
-                                    <input type="number" name="montoPrestamo" id="montoPrestamo" class="form-control"
-                                           placeholder="$1,000" required>
+                                    <input type="text" name="montoPrestamo" id="montoPrestamo" class="form-control"
+                                           placeholder="$1,000.00" required>
                                 </div>
                             </div>
 
