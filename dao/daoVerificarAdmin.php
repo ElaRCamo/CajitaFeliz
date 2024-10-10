@@ -13,7 +13,7 @@ function getAdmin($Nomina){
         $row = mysqli_fetch_assoc($rsconsPro);
         return array(
             'success' => true, // Indicador de éxito
-            'estatusAdmin' => $row['estatus']
+            'estatus' => $row['estatus']
         );
     }
     else{
