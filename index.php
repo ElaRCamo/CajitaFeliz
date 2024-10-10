@@ -78,7 +78,7 @@
                     <?php }?>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll">Salir</a>
+                        <button class="nav-link click-scroll" name="cerrarSesion">Salir</button>
                     </li>
 
                 </ul>

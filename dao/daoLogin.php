@@ -61,7 +61,7 @@ if (isset($_POST['iniciarSesionBtn'])) {
     }
 }
 
-if (isset($_POST['cerrarSesion']) || (isset($_POST['cerrarS']))) {
+if (isset($_POST['cerrarSesion'])) {
     session_start();
     session_destroy();
     echo "<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>";
