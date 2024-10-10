@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $respuesta = guardarPrestamo($nomina,$montoSolicitado,$telefono);
     }
     else{
-        $respuesta = array("status" => 'success', "message" => "Faltan datos en el formulario.");
+        $respuesta = array("status" => 'error', "message" => "Faltan datos en el formulario.");
     }
 }else{
     $respuesta = array("status" => 'error', "message" => "Se esperaba REQUEST_METHOD");
@@ -42,7 +42,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
         $conex->commit();
 
-        return $respuesta = array("status" => 'error', "message" => "Folio de solicitud: " . $idSolicitud);
+        return $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
 
     } catch (Exception $e) {
         // Deshacer la transacción en caso de error
