@@ -82,8 +82,9 @@ body {
 }
 
 #cerrarSesion {
-    border: white;
+    border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 /* Estilos responsivos */
