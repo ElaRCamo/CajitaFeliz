@@ -1,12 +1,3 @@
-/*
-
-TemplateMo 581 Kind Heart Charity
-
-https://templatemo.com/tm-581-kind-heart-charity
-
-*/
-
-
 
 @font-face {
     font-family: 'Metropolis';
@@ -58,6 +49,7 @@ https://templatemo.com/tm-581-kind-heart-charity
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #e9eaeb;
+  --p-bg-color:                   #FFCBDB;
 
   --body-font-family:             'Metropolis', sans-serif;
 
@@ -79,6 +71,8 @@ https://templatemo.com/tm-581-kind-heart-charity
   --font-weight-normal:           400;
   --font-weight-semibold:         600;
   --font-weight-bold:             700;
+  --font-weight-medium:           500;
+  --menu-font-size:               650;
 }
 
 body {
@@ -1692,6 +1686,13 @@ blockquote::before {
   .donate-form {
     padding: 25px;
   }
+}
+
+
+#cerrarSesion {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 

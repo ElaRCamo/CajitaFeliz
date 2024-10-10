@@ -81,11 +81,6 @@ body {
     overflow: hidden; /* Asegura que la imagen no se desborde de los bordes redondeados */
 }
 
-#cerrarSesion {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
 
 /* Estilos responsivos */
 @media (max-width: 600px) {
