@@ -405,20 +405,22 @@
 
                         <p class="mb-0">Puedes ahorrar un mínimo de $100 pesos.</p>
                     </div>
+
+
                     <div class="custom-text-box">
 
-                        <h5 class="mb-3">¿Cuál es el monto máximo que puedo ahorrar?  </h5>
+                        <h5 class="mb-3">¿Qué días puedo retirar mi ahorro para que se refleje en la misma semana?  </h5>
 
-                        <p class="mb-0"> Si eres personal sindicalizado, puedes ahorrar hasta $1,000 pesos.<br/></p>
+                        <p class="mb-0"> Debes solicitar tu ahorro el lunes o martes para que el depósito se realice el viernes de esa misma semana. Si lo solicitas a partir del miércoles, se procesará hasta la siguiente semana.<br/></p>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
                     <div class="custom-text-box">
 
-                        <h5 class="mb-3">¿Qué días puedo retirar mi ahorro para que se refleje en la misma semana?  </h5>
+                        <h5 class="mb-3">¿Cuál es el monto máximo que puedo ahorrar?  </h5>
 
-                        <p class="mb-0"> Debes solicitar tu ahorro el lunes o martes para que el depósito se realice el viernes de esa misma semana. Si lo solicitas a partir del miércoles, se procesará hasta la siguiente semana.<br/></p>
+                        <p class="mb-0"> Si eres personal sindicalizado, puedes ahorrar hasta $1,000 pesos.<br/></p>
                     </div>
 
                     <div class="custom-text-box">
