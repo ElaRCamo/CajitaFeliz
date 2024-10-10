@@ -155,7 +155,7 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#solicitarPrestamoSeccion" class="d-block">
+                            <a href="#section_1" class="d-block">
                                 <img src="images/icons/prestamo.png" class="imgIcon featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text">Solicitar <strong>préstamo</strong></p>
@@ -165,7 +165,7 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#crearAhorroSeccion" class="d-block">
+                            <a href="#section_2" class="d-block">
                                 <img src="images/icons/ahorro.png" class="imgIcon featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text"><strong>Crear </strong>ahorro  </p>
@@ -175,7 +175,7 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#retirarAhorroSeccion" class="d-block">
+                            <a href="#section_3" class="d-block">
                                 <img src="images/icons/salario.png" class="imgIcon featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text"> <strong>Retirar</strong> ahorro</p>
@@ -185,7 +185,7 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#crearAhorroSeccion" class="d-block">
+                            <a href="#section_2" class="d-block">
                                 <img src="images/icons/contrato.png" class="imgIcon featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text"><strong>Modificar</strong> ahorro</p>
@@ -300,13 +300,13 @@
 
 
                     <div class="col-lg-6 col-12 mx-auto">
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" id="formRegistrarAhorro" method="post" role="form">
                             <h3 class="mb-4">Crear Ahorro</h3>
 
                             <div class="row">
                                 <div class="col-lg-12 col-12">
                                     <label for="montoAhorro">Monto para ahorrar: </label>
-                                    <input type="number" name="montoAhorro" id="montoAhorro" class="form-control"
+                                    <input type="text" name="montoAhorro" id="montoAhorro" class="form-control"
                                            placeholder="$1,000" required>
                                 </div>
                             </div>
@@ -460,15 +460,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 col-12 row">
-                    <div class="custom-text-box col-sm">
+                <div class="col-lg-6 col-12">
+                    <div class="custom-text-box ">
 
                         <h5 class="mb-3">¿A qué hora se refleja el depósito de mi caja de ahorro o préstamo?</h5>
 
                         <p class="mb-0"> Los depósitos se realizan el viernes después de las 2:00 p.m. directamente en la cuenta de HSBC de cada trabajador solicitante.<br/></p>
                     </div>
 
-                    <div class="custom-text-box col-sm">
+                    <div class="custom-text-box ">
 
                         <h5 class="mb-3">Quiero liquidar mi préstamo, ¿qué debo hacer?</h5>
 

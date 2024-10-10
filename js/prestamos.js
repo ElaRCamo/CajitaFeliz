@@ -35,7 +35,7 @@ function autorizarSolicitud(){
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {
-                            //document.getElementById('formSolicitarPrestamo').submit();
+
                             registrarPrestamo();
 
                         } else {
