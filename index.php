@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/icons/Grammer_Logo.ico" type="image/x-icon">
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -21,6 +22,10 @@
         session_start();
         $nombreUser = $_SESSION['nombreUsuario'];
         $esAdmin = $_SESSION['admin'];
+
+    if ($nombreUser == null){
+        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
+    }
 
     ?>
 
