@@ -248,7 +248,7 @@
                                     </div>
                                 </div>
                             </div>-->
-                            <button type="submit" class="form-control" onclick="autorizarSolicitud()">Solicitar</button>
+                            <button type="button" class="form-control" onclick="autorizarSolicitud()">Solicitar</button>
                         </form>
                     </div>
                     <div class="col-lg-6 col-12">
