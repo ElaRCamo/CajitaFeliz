@@ -17,14 +17,21 @@
 
     <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
+    <?php
+        session_start();
+        $nombreUser = $_SESSION['nombreUsuario'];
+        $esAdmin = $_SESSION['admin'];
+
+    ?>
+
 </head>
 
 <body id="section_1">
 
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+            <a class="navbar-brand" href="index.php">
+                <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
                 <span>
                     Cajita Feliz
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
@@ -58,13 +65,17 @@
                         <a class="nav-link click-scroll">Manual</a>
                     </li>
 
+                    <?php if($esAdmin == 0 ){ ?>
                     <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" onclick="">Mis Solicitudes</a>
                     </li>
+                    <?php }?>
 
+                    <?php if($esAdmin == 1 ){ ?>
                     <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" href="administrar.php">Administrar</a>
                     </li>
+                    <?php }?>
 
                     <li class="nav-item">
                         <a class="nav-link click-scroll">Salir</a>
