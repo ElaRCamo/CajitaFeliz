@@ -203,7 +203,7 @@
                 <div class="row">
 
                     <div class="col-lg-6 col-12 mx-auto">
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="" method="post" role="form" id="formSolicitarPrestamo">
                             <h3 class="mb-4">Solicitar Préstamo</h3>
 
                             <div class="row">
@@ -218,7 +218,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-12 col-12">
+                            <!--<div class="col-lg-12 col-12">
                                 <h4>Avales</h4>
 
                                 <div class="col-lg-12 col-12 row">
@@ -247,8 +247,8 @@
                                         <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="María Hernández" required>
                                     </div>
                                 </div>
-                            </div>
-                            <button type="submit" class="form-control">Solicitar</button>
+                            </div>-->
+                            <button type="submit" class="form-control" onclick="autorizarSolicitud()">Solicitar</button>
                         </form>
                     </div>
                     <div class="col-lg-6 col-12">
@@ -508,6 +508,8 @@
     <script src="js/click-scroll.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/prestamos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
