@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-class LocalConector{
+class LocalConectorCajita{
     private $host = "127.0.0.1:3306";
     private $usuario = "u909553968_Nomina";
     private $clave = "RRHHGrammer2024#";

@@ -1,7 +1,7 @@
 <?php
 include_once('connectionCajita.php');
 function getAdmin($Nomina){
-    $con = new LocalConector();
+    $con = new LocalConectorCajita();
     $conexion=$con->conectar();
 
     $consP="SELECT estatus FROM Administrador WHERE idAdmin = '$Nomina'";
