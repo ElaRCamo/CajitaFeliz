@@ -77,8 +77,10 @@
                     </li>
                     <?php }?>
 
-                    <li class="nav-item">
-                        <button type="button" class="" name="cerrarSesion" id="cerrarSesion">Salir</button>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link click-scroll" id="cerrarSesion">
+                            <small>Cerrar sesión</small>
+                        </a>
                     </li>
 
                 </ul>
