@@ -28,7 +28,7 @@ function autorizarSolicitud(){
                 formData.append('password', password);
 
                 // Enviar los datos al servidor
-                fetch('../../dao/daoValidarTAG.php', {
+                fetch('dao/daoValidarTAG.php', {
                     method: 'POST',
                     body: formData
                 })
