@@ -55,15 +55,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#solicitarPrestamoSeccion">Préstamo</a>
+                        <a class="nav-link click-scroll" href="#section_1">Préstamo</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#crearAhorroSeccion">Caja de Ahorro</a>
+                        <a class="nav-link click-scroll" href="#section_2">Caja de Ahorro</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_preguntas">Preguntas Frecuentes</a>
+                        <a class="nav-link click-scroll" href="#section_4">Preguntas Frecuentes</a>
                     </li>
 
                     <li class="nav-item">
@@ -401,35 +401,78 @@
                 <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                     <div class="custom-text-box">
 
-                        <h5 class="mb-3">¿Cómo solicito un préstamo? </h5>
+                        <h5 class="mb-3">¿Cuál es el monto mínimo que puedo ahorrar? </h5>
 
-                        <p class="mb-0">Puedes solicitar un préstamo iniciando sesión en tu cuenta y completando el formulario de solicitud en la sección "Préstamos".
-                            Recibirás una confirmación y seguimiento en tu correo.</p>
+                        <p class="mb-0">Puedes ahorrar un mínimo de $100 pesos.</p>
                     </div>
                     <div class="custom-text-box">
 
-                        <h5 class="mb-3">¿Cuáles son los requisitos para obtener un préstamo?</h5>
+                        <h5 class="mb-3">¿Cuál es el monto máximo que puedo ahorrar?  </h5>
 
-                        <p class="mb-0">Los requisitos incluyen ser empleado activo de la empresa, tener al menos 3 meses de antigüedad
-                            y cumplir con la política de ahorro mensual.</p>
+                        <p class="mb-0"> Si eres personal sindicalizado, puedes ahorrar hasta $1,000 pesos.<br/></p>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-12">
                     <div class="custom-text-box">
 
-                        <h5 class="mb-3">¿Cuándo puedo retirar mis ahorros?  </h5>
+                        <h5 class="mb-3">¿Qué días puedo retirar mi ahorro para que se refleje en la misma semana?  </h5>
 
-                        <p class="mb-0">La caja de ahorro es una cuenta donde puedes depositar una parte de tu salario de forma automática cada mes.
-                            Estos fondos se acumulan y están disponibles para su retiro o para solicitar préstamos con mejores tasas.<br/></p>
+                        <p class="mb-0"> Debes solicitar tu ahorro el lunes o martes para que el depósito se realice el viernes de esa misma semana. Si lo solicitas a partir del miércoles, se procesará hasta la siguiente semana.<br/></p>
                     </div>
 
                     <div class="custom-text-box">
 
-                        <h5 class="mb-3">¿Cuándo puedo retirar mis ahorros? </h5>
+                        <h5 class="mb-3">Si tengo un préstamo, ¿puedo retirar mi ahorro? </h5>
 
-                        <p class="mb-0">Puedes retirar tus ahorros al final de cada trimestre,
-                            o en cualquier momento bajo ciertas condiciones que puedes consultar en la sección "Caja de Ahorro".</p>
+                        <p class="mb-0">Sí, puedes retirar tu ahorro siempre que el monto ahorrado sea mayor que la deuda restante. En este caso, se liquidará la deuda y se te entregará la diferencia.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                    <div class="custom-text-box">
+
+                        <h5 class="mb-3">Si soy aval, ¿puedo retirar mi ahorro?</h5>
+
+                        <p class="mb-0"> Puedes retirar tu ahorro siempre y cuando el préstamo de tu aval esté en la mitad de su plazo.</p>
+                    </div>
+                    <div class="custom-text-box">
+
+                        <h5 class="mb-3">Me fui de incapacidad, ¿por qué dejaron de descontar mi caja de ahorro?</h5>
+
+                        <p class="mb-0">Recuerda que si no tienes ingresos o tus ingresos son reducidos, es imposible realizar el descuento de tu ahorro. Es tu responsabilidad solicitar la reactivación del mismo.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="custom-text-box">
+
+                        <h5 class="mb-3">¿Qué criterios se consideran para otorgar un préstamo?</h5>
+
+                        <p class="mb-0"> Se evalúa el historial de los últimos seis meses, incluyendo faltas, amonestaciones, descuentos de Fonacot e Infonavit, así como pensiones y juicios mercantiles.<br/></p>
+                    </div>
+
+                    <div class="custom-text-box">
+
+                        <h5 class="mb-3">¿Qué requisitos debo cumplir para ser aval?</h5>
+
+                        <p class="mb-0">Debes estar ahorrando (cualquier cantidad) y tener un contrato de planta.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="custom-text-box">
+
+                        <h5 class="mb-3">¿A qué hora se refleja el depósito de mi caja de ahorro o préstamo?</h5>
+
+                        <p class="mb-0"> Los depósitos se realizan el viernes después de las 2:00 p.m. directamente en la cuenta de HSBC de cada trabajador solicitante.<br/></p>
+                    </div>
+
+                    <div class="custom-text-box">
+
+                        <h5 class="mb-3">Quiero liquidar mi préstamo, ¿qué debo hacer?</h5>
+
+                        <p class="mb-0"> Acércate al departamento de nóminas para que te informen el monto a pagar y el número de cuenta para realizar el depósito. Solo necesitarás entregar el comprobante para registrarlo y eliminar el descuento.</p>
                     </div>
                 </div>
 
