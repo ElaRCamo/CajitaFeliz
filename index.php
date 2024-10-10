@@ -398,7 +398,7 @@
                 <div class="col-lg-10 col-12 text-center mx-auto">
                     <h2 class="mb-5">Preguntas frecuentes</h2>
                 </div>
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                <div class="col-lg-12 col-12 mb-5 mb-lg-0">
                     <div class="custom-text-box">
 
                         <h5 class="mb-3">¿Cuál es el monto mínimo que puedo ahorrar? </h5>
@@ -413,7 +413,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-12 col-12">
                     <div class="custom-text-box">
 
                         <h5 class="mb-3">¿Qué días puedo retirar mi ahorro para que se refleje en la misma semana?  </h5>
@@ -429,7 +429,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                <div class="col-lg-12 col-12 mb-5 mb-lg-0">
                     <div class="custom-text-box">
 
                         <h5 class="mb-3">Si soy aval, ¿puedo retirar mi ahorro?</h5>
@@ -444,7 +444,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-12 col-12">
                     <div class="custom-text-box">
 
                         <h5 class="mb-3">¿Qué criterios se consideran para otorgar un préstamo?</h5>
@@ -460,7 +460,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-12 col-12">
                     <div class="custom-text-box">
 
                         <h5 class="mb-3">¿A qué hora se refleja el depósito de mi caja de ahorro o préstamo?</h5>
