@@ -156,7 +156,8 @@ button {
   transition: all 0.3s;
 }
 
-a {
+a,
+#cerrarSesion{
   color: var(--p-color);
   text-decoration: none;
 }
