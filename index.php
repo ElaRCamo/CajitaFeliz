@@ -398,7 +398,7 @@
                 <div class="col-lg-10 col-12 text-center mx-auto">
                     <h2 class="mb-5">Preguntas frecuentes</h2>
                 </div>
-                <div class="col-lg-6 col-12 mb-5 mb-lg-5 row">
+                <div class="col-lg-6 col-12">
                     <div class="custom-text-box">
 
                         <h5 class="mb-3 ">¿Cuál es el monto mínimo que puedo ahorrar? </h5>
