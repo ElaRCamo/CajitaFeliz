@@ -30,7 +30,7 @@
                             <div class="col-lg-6 col-12 " id="login-container">
                                 <small><strong>Cajita Feliz Grammer</strong></small>
                                 <div class="wrapper">
-                                    <form id="formInicioSesion" action="dao/login.php" method="post"  >
+                                    <form id="formInicioSesion" action="dao/daoLogin.php" method="post"  >
                                         <h2 id="iniciarSesion"><br>¡Hola,</h2>
                                         <h2 ><strong>Bienvenido!</strong></h2>
                                         <div class="input-box form-group" id="userDiv">
