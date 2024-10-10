@@ -120,7 +120,7 @@ function registrarPrestamo() {
                         Swal.fire({
                             title: "¡Solicitud realizada exitosamente!",
                             icon: "success",
-                            text: data.message,
+                            html: `<div style="font-size: 3rem; font-weight: 800; color: #05BBEE;">${data.message}</div>`,
                             confirmButtonText: "OK"
                         }).then((result) => {
                             if (result.isConfirmed) {
