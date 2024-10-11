@@ -72,8 +72,9 @@ function validarFormAhorro(){
                         }
                     }
                 }
-                autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios)
             }
+
+            autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios)
         }else {
             let mensaje = "";
             if(!valporcentajeBen1){mensaje = "Ingrese un porcentaje válido"}
