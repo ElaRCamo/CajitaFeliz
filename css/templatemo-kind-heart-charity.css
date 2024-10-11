@@ -1688,13 +1688,11 @@ blockquote::before {
   }
 }
 
-
 #cerrarSesion {
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
-
 
 /*Señalamiento de error en el llenado*/
 .popup-form .has-error .form-control{

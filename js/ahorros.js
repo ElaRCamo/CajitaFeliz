@@ -23,9 +23,7 @@ function validarFormAhorro(){
         let valtelefonoBen1 = validarTelefono(telefonoBen1);
 
         if (valporcentajeBen1 && valtelefonoBen1) {
-            if (!existeBen2) {
-                porcentajeBen1 = 100
-            }
+            if (!existeBen2) {porcentajeBen1 = 100}
             nombres.push(nombreBen1.trim());
             porcentajes.push(porcentajeBen1.trim());
             telefonos.push(telefonoBen1.trim());
@@ -76,13 +74,18 @@ function validarFormAhorro(){
                 }
                 autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios)
             }
+        }else {
+            let mensaje = "";
+            if(!valporcentajeBen1){mensaje = "Ingrese un porcentaje válido"}
+            if(!valtelefonoBen1){mensaje = "Ingrese un telefono válido"}
+            if(!valtelefonoBen1 && !valporcentajeBen1){mensaje = "Ingrese un porcentaje y un telefono válidos"}
+
+            Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: mensaje
+                });
         }
-    }else{
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Datos incorrectos, revise su información.'
-        });
     }
 }
 function autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios){
@@ -156,6 +159,12 @@ function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios) {
     formData.append('porcentajes', porcentajes.join(', '));
     formData.append('telefonos', telefonos.join(', '));
     formData.append('domicilios', domicilios.join(', '));
+
+    let formDataContents = '';
+    for (let pair of formData.entries()) {
+        formDataContents += `${pair[0]}: ${pair[1]}\n`;
+    }
+    alert(formDataContents);
 
     // Enviar los datos utilizando fetch
     fetch('dao/daoGuardarAhorro.php', {
