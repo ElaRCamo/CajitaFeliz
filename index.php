@@ -36,9 +36,10 @@
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">
+                <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
                 <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
                 <span>
-                    Cajita Feliz
+                    Caja de ahorro y prestamos Grammer, Qro.
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
                 </span>
             </a>
@@ -375,20 +376,7 @@
 
                     <div class="col-lg-6 col-12 mx-auto">
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h3 class="mb-4">Retirar de mis ahorros</h3>
-
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <label for="montoRetiro">Monto solicitado: </label>
-                                    <input type="number" name="montoRetiro" id="montoRetiro" class="form-control"
-                                           placeholder="$1,000" required>
-                                </div>
-                                <div class="col-lg-6 col-12">
-                                    <label for="tagRetiro">TAG: </label>
-                                    <input type="number" name="tagRetiro" id="tagRetiro" class="form-control"
-                                           placeholder="0012345678" required>
-                                </div>
-                            </div>
+                            <h3 class="mb-4">Retirar mis ahorros</h3>
                             <button type="submit" class="form-control">Solicitar</button>
                         </form>
                     </div>

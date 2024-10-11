@@ -20,7 +20,7 @@ function validarFormAhorro() {
     // Validación para asegurarse de que todos los campos del Beneficiario 1 estén llenos
     if (montoValido && nombreBen1Valido && porcentajeBen1Valido && telefonoBen1Valido && domicilioBen1Valido) {
 
-        alert("montoValido:"+montoValido +"nombreBen1Valido:"+ nombreBen1Valido +"porcentajeBen1Valido:"+ porcentajeBen1Valido  +"telefonoBen1Valido:"+ telefonoBen1Valido +"domicilioBen1Valido:"+ domicilioBen1Valido)
+        //alert("montoValido:"+montoValido +"nombreBen1Valido:"+ nombreBen1Valido +"porcentajeBen1Valido:"+ porcentajeBen1Valido  +"telefonoBen1Valido:"+ telefonoBen1Valido +"domicilioBen1Valido:"+ domicilioBen1Valido)
         let valporcentajeBen1 = validarPorcentaje(porcentajeBen1);
         let valtelefonoBen1 = validarTelefono(telefonoBen1);
 
@@ -41,7 +41,7 @@ function validarFormAhorro() {
                 const telefonoBen2 = document.getElementById('telefonoBen2').value;
                 const domicilioBen2 = document.getElementById('domicilioBen2').value;
 
-                console.log("ben2: " + nombreBen2 + " " + porcentajeBen2 + " " + telefonoBen2 + " " + domicilioBen2);
+                //console.log("ben2: " + nombreBen2 + " " + porcentajeBen2 + " " + telefonoBen2 + " " + domicilioBen2);
 
                 const nombreBen2Valido = validarInput('nombreBen2');
                 const porcentajeBen2Valido = validarInput('porcentajeBen2');
