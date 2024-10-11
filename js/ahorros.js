@@ -128,8 +128,8 @@ function registrarAhorro() {
                     let valporcentajeBen2 = validarPorcentaje(porcentajeBen2.value);
                     let valtelefonoBen2 = validarTelefono(telefonoBen2.value);
 
-                    if (valporcentajeBen2 && valtelefonoBen2) {
-                        console.log("%uno= " + porcentajeBen1 + " %dos= " + porcentajeBen1 + " suma= " + (porcentajeBen1 + porcentajeBen2));
+                    if (valporcentajeBen2.value && valtelefonoBen2.value) {
+                        console.log("%uno= " + porcentajeBen1.value + " %dos= " + porcentajeBen1.value + " suma= " + (porcentajeBen1.value + porcentajeBen2.value));
                         if ((porcentajeBen1.value + porcentajeBen2.value) === 100) {
 
                             nombres.push(nombreBen2.value.trim());
