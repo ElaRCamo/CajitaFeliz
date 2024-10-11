@@ -514,18 +514,18 @@
                         <i class="bi-envelope me-2"></i>
 
                         <a href="Yomara.soto@grammer.com" class="site-footer-link">
-                            Lic. Irma Yomara Soto Cabello
-                            Coordinadora Nóminas.
-                            yomara.soto@grammer.com
+                            Lic. Irma Yomara Soto Cabello<br>
+                            Coordinadora Nóminas<br>
+                            yomara.soto@grammer.com<br>
                         </a>
                     </p>
 
                     <p class="text-white d-flex">
                         <i class="bi-envelope me-2"></i>
                         <a href="juanroberto.arreola@grammer.com" class="site-footer-link">
-                            Lic. Juan Roberto Arreola Hernandez
-                            Administrador y analista de nómina
-                            juanroberto.arreola@grammer.
+                            Lic. Juan Roberto Arreola Hernandez<br>
+                            Administrador y analista de nómina<br>
+                            juanroberto.arreola@grammer.com
                         </a>
                     </p>
 
