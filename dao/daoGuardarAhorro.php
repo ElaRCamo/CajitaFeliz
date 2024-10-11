@@ -51,7 +51,7 @@ function guardarAhorro($nomina, $monto, $beneficiarios) {
     try {
         $fechaSolicitud = date("Y-m-d");
 
-        $insertAhorro = $conex->prepare("INSERT INTO CajaAhorro (nomina, montoAhorro, fechaSolicitud) VALUES (?, ?, ?, ?)");
+        $insertAhorro = $conex->prepare("INSERT INTO CajaAhorro (nomina, montoAhorro, fechaSolicitud) VALUES ( ?, ?, ?)");
         $insertAhorro->bind_param("sss", $nomina, $monto, $fechaSolicitud);
         $resultado = $insertAhorro->execute();
 
