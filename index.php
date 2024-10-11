@@ -505,16 +505,24 @@
                     <p class="text-white d-flex mb-2">
                         <i class="bi-telephone me-2"></i>
 
-                        <a href="tel: 442-296-7310" class="site-footer-link">
-                            442 296 7310
+                        <a href="tel: 442-475-2898" class="site-footer-link">
+                            442 475 2898
                         </a>
                     </p>
 
                     <p class="text-white d-flex">
                         <i class="bi-envelope me-2"></i>
 
+                        <a href="Yomara.soto@grammer.com" class="site-footer-link">
+                            Lic. Irma Yomara Soto Cabello
+                            Coordinadora Nóminas.
+                            yomara.soto@grammer.com
+                        </a>
+
                         <a href="juanroberto.arreola@grammer.com" class="site-footer-link">
-                            juanroberto.arreola@grammer.com
+                            Lic. Juan Roberto Arreola Hernandez
+                            Administrador y analista de nómina
+                            juanroberto.arreola@grammer.
                         </a>
                     </p>
 
