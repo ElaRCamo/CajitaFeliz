@@ -136,7 +136,7 @@ function registrarAhorro() {
 
                     if (valporcentajeBen2 && valtelefonoBen2) {
 
-                        if ((porcentajeBen1 + porcentajeBen2) === 100) {
+                        if ((Number(porcentajeBen1) + Number(porcentajeBen2)) === 100){
 
                             nombres.push(nombreBen2.trim());
                             porcentajes.push(porcentajeBen2.trim());
