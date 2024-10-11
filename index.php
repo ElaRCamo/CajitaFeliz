@@ -83,9 +83,8 @@
                     <?php }?>
 
                     <li class="nav-item ms-3">
-                        <a class="nav-link" id="cerrarSesion">Salir</a>
+                        <a class="nav-link" id="cerrarSesion" href="#">Salir</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -544,6 +543,25 @@
                 icono.classList.add('bi-plus-circle');
             }
         });
+
+        document.getElementById('cerrarSesion').addEventListener('click', function(e) {
+            e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+            fetch('dao/daoLogin.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'cerrarSesion=true'
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Muestra la alerta SweetAlert y redirige
+                    document.body.innerHTML += data;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+
     </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

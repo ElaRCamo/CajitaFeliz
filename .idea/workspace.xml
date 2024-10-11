@@ -76,15 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="58752000" />
-    </task>
-    <task id="LOCAL-00004" summary="Conexion a la BD">
-      <option name="closed" value="true" />
-      <created>1728567764559</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1728567764559</updated>
+      <workItem from="1728394637434" duration="59166000" />
     </task>
     <task id="LOCAL-00005" summary="Conexion a la BD">
       <option name="closed" value="true" />
@@ -470,7 +462,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728654192093</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Back end formulario solicitud de ahorro">
+      <option name="closed" value="true" />
+      <created>1728654317996</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1728654317996</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
