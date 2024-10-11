@@ -80,11 +80,11 @@ function validarPorcentaje(valor) {
 
 
 function registrarAhorro() {
-    const montoAhorro = document.getElementById('montoAhorro');
-    const nombreBen1 = document.getElementById('nombreBen1');
-    const porcentajeBen1 = document.getElementById('porcentajeBen1');
-    const telefonoBen1 = document.getElementById('telefonoBen1');
-    const domicilioBen1 = document.getElementById('domicilioBen1');
+    const montoAhorro = document.getElementById('montoAhorro').value;
+    const nombreBen1 = document.getElementById('nombreBen1').value;
+    let porcentajeBen1 = document.getElementById('porcentajeBen1').value;
+    const telefonoBen1 = document.getElementById('telefonoBen1').value;
+    const domicilioBen1 = document.getElementById('domicilioBen1').value;
 
     //Validar inputs
     const montoValido = validarInput('montoAhorro');
@@ -100,23 +100,29 @@ function registrarAhorro() {
 
     // Validación para asegurarse de que todos los campos del Beneficiario 1 estén llenos
     if (montoValido && nombreBen1Valido && porcentajeBen1Valido && telefonoBen1Valido && domicilioBen1Valido) {
-        let valporcentajeBen1 = validarPorcentaje(porcentajeBen1.value);
-        let valtelefonoBen1 = validarTelefono(telefonoBen1.value);
+        let valporcentajeBen1 = validarPorcentaje(porcentajeBen1);
+        let valtelefonoBen1 = validarTelefono(telefonoBen1);
 
         if(valporcentajeBen1 && valtelefonoBen1){
-            if (!existeBen2){porcentajeBen1.value = 100}
-            nombres.push(nombreBen1.value.trim());
-            porcentajes.push(porcentajeBen1.value.trim());
-            telefonos.push(telefonoBen1.value.trim());
-            domicilios.push(domicilioBen1.value.trim());
+            if (!existeBen2){porcentajeBen1 = 100}
+            nombres.push(nombreBen1.trim());
+            porcentajes.push(porcentajeBen1.trim());
+            telefonos.push(telefonoBen1.trim());
+            domicilios.push(domicilioBen1.trim());
+
+            console.log("ben1:" + nombreBen1 + " " +porcentajeBen1+ " " +telefonoBen1+ " " +domicilioBen1);
 
             // Verificar si los campos del Beneficiario 2 no están vacíos antes de añadirlos
             if (existeBen2) {
 
-                const nombreBen2 = document.getElementById('nombreBen2');
-                const porcentajeBen2 = document.getElementById('porcentajeBen2');
-                const telefonoBen2 = document.getElementById('telefonoBen2');
-                const domicilioBen2 = document.getElementById('domicilioBen2');
+                const nombreBen2 = document.getElementById('nombreBen2').value;
+                const porcentajeBen2 = document.getElementById('porcentajeBen2').value;
+                const telefonoBen2 = document.getElementById('telefonoBen2').value;
+                const domicilioBen2 = document.getElementById('domicilioBen2').value;
+
+                console.log("ben2:" +nombreBen2 + " " +porcentajeBen2+ " " +telefonoBen2+ " " +domicilioBen2);
+
+                console.log("%uno= " + porcentajeBen1 + " %dos= " + porcentajeBen1 + " suma= " + (porcentajeBen1 + porcentajeBen2));
 
                 const nombreBen2Valido = validarInput('nombreBen2');
                 const porcentajeBen2Valido = validarInput('porcentajeBen2');
@@ -125,17 +131,17 @@ function registrarAhorro() {
 
                 if (nombreBen2Valido && porcentajeBen2Valido && telefonoBen2Valido && domicilioBen2Valido) {
 
-                    let valporcentajeBen2 = validarPorcentaje(porcentajeBen2.value);
-                    let valtelefonoBen2 = validarTelefono(telefonoBen2.value);
+                    let valporcentajeBen2 = validarPorcentaje(porcentajeBen2);
+                    let valtelefonoBen2 = validarTelefono(telefonoBen2);
 
-                    if (valporcentajeBen2.value && valtelefonoBen2.value) {
-                        console.log("%uno= " + porcentajeBen1.value + " %dos= " + porcentajeBen1.value + " suma= " + (porcentajeBen1.value + porcentajeBen2.value));
-                        if ((porcentajeBen1.value + porcentajeBen2.value) === 100) {
+                    if (valporcentajeBen2 && valtelefonoBen2) {
 
-                            nombres.push(nombreBen2.value.trim());
-                            porcentajes.push(porcentajeBen2.value.trim());
-                            telefonos.push(telefonoBen2.value.trim());
-                            domicilios.push(domicilioBen2.value.trim());
+                        if ((porcentajeBen1 + porcentajeBen2) === 100) {
+
+                            nombres.push(nombreBen2.trim());
+                            porcentajes.push(porcentajeBen2.trim());
+                            telefonos.push(telefonoBen2.trim());
+                            domicilios.push(domicilioBen2.trim());
 
                         } else {
                             Swal.fire({
