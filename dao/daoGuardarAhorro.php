@@ -4,34 +4,17 @@ include_once('connectionCajita.php');
 session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST['montoAhorro'],$_POST['nombreBen1'],$_POST['porcentajeBen1'],$_POST['telefonoBen1'],$_POST['domicilioBen1'])){
+    if(isset($_POST['montoAhorro'],$_POST['nombres'],$_POST['porcentajes'],$_POST['telefonos'],$_POST['domicilios'])){
         $montoAhorro = $_POST['montoAhorro'];
         $nomina = $_SESSION['nomina'];
-        $beneficiarios = [];
 
-        // Agregar el primer beneficiario
-        $beneficiarios[] = array(
-            'nombre' => $_POST['nombreBen1'],
-            'porcentaje' => $_POST['porcentajeBen1'],
-            'telefono' => $_POST['telefonoBen1'],
-            'domicilio' => $_POST['domicilioBen1']
-        );
+        $nombres = explode(', ', $_POST['nombres']);
+        $porcentajes = explode(', ', $_POST['porcentajes']);
+        $telefonos = explode(', ', $_POST['telefonos']);
+        $domicilios = explode(', ', $_POST['domicilios']);
 
-        // Verificar si hay otro beneficiario
-        for ($i = 2; $i <= 2; $i++) {
-            if (isset($_POST['nombreBen' . $i], $_POST['porcentajeBen' . $i], $_POST['telefonoBen' . $i], $_POST['domicilioBen' . $i])) {
-                $beneficiarios[] = array(
-                    'nombre' => $_POST['nombreBen' . $i],
-                    'porcentaje' => $_POST['porcentajeBen' . $i],
-                    'telefono' => $_POST['telefonoBen' . $i],
-                    'domicilio' => $_POST['domicilioBen' . $i]
-                );
-            } else {
-                break;
-            }
-        }
 
-        $respuesta = guardarAhorro($nomina, $montoAhorro, $beneficiarios);
+        $respuesta = guardarAhorro($nomina, $montoAhorro, $nombres, $porcentajes, $telefonos,$domicilios );
     }
     else{
         $respuesta = array("status" => 'error', "message" => "Faltan datos en el formulario.");
@@ -42,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo json_encode($respuesta);
 
-function guardarAhorro($nomina, $monto, $beneficiarios) {
+function guardarAhorro($nomina, $monto, $nombres, $porcentajes, $telefonos,$domicilios) {
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
@@ -63,11 +46,11 @@ function guardarAhorro($nomina, $monto, $beneficiarios) {
             $idSolicitud = $conex->insert_id;
 
             //Registrar Beneficiarios
-            for ($i = 1; $i <= count($beneficiarios); $i++) {
-                $nombre = $beneficiarios[$i]['nombre'];
-                $porcentaje = $beneficiarios[$i]['porcentaje'];
-                $telefono = $beneficiarios[$i]['telefono'];
-                $domicilio = $beneficiarios[$i]['domicilio'];
+            for ($i = 1; $i <= count($nombres); $i++) {
+                $nombre = $nombres[$i];
+                $porcentaje = $porcentajes[$i];
+                $telefono = $telefonos[$i];
+                $domicilio = $domicilios[$i];
 
                 // Inserción en la base de datos
                 $insertBeneficiario = $conex->prepare("INSERT INTO `Beneficiarios` (`idCaja`, `nombre`, `direccion`, `telefono`, `porcentaje`) 

@@ -315,7 +315,7 @@
                             </div>
 
                             <div class="col-lg-12 col-12">
-                                <div class="col-lg-12 col-12 row">
+                                <div class="col-lg-12 col-12 row" id="divBeneficiario1">
                                     <h5>Beneficiario 1 <i class="bi bi-plus-circle" id="btnAgregarBeneficiario" style="cursor: pointer;"></i></h5>
                                     <div class="col-lg-12 col-12">
                                         <label for="nombreBen1">Nombre: </label>
@@ -333,7 +333,6 @@
                                         <label for="domicilioBen1">Domicilio: </label>
                                         <input type="text" name="domicilioBen1" id="domicilioBen1" class="form-control" placeholder="Av. de la Luz No.20" required>
                                     </div>
-
                                 </div>
                                 <div class="col-lg-12 col-12 row" id="divBeneficiario2" style="display: none;">
                                     <h5>Beneficiario 2</h5>
@@ -533,6 +532,7 @@
     </footer>
 
     <script>
+        let existeBen2 = false;
         document.getElementById('btnAgregarBeneficiario').addEventListener('click', function() {
             var divBeneficiario2 = document.getElementById('divBeneficiario2');
             var icono = document.getElementById('btnAgregarBeneficiario');
@@ -541,10 +541,12 @@
                 divBeneficiario2.style.display = 'block'; // Muestra el div
                 icono.classList.remove('bi-plus-circle'); // Cambia a ícono de menos
                 icono.classList.add('bi-dash-circle');
+                existeBen2 = true;
             } else {
                 divBeneficiario2.style.display = 'none'; // Oculta el div
                 icono.classList.remove('bi-dash-circle'); // Cambia a ícono de más
                 icono.classList.add('bi-plus-circle');
+                existeBen2 = false;
             }
         });
 

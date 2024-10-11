@@ -80,62 +80,81 @@ function validarPorcentaje(valor) {
 
 
 function registrarAhorro() {
-    const montoAhorro = document.getElementById('montoAhorro').value;
-    const nombreBen1 = document.getElementById('nombreBen1').value;
-    const porcentajeBen1 = document.getElementById('porcentajeBen1').value;
-    const telefonoBen1 = document.getElementById('telefonoBen1').value;
-    const domicilioBen1 = document.getElementById('domicilioBen1').value;
+    const montoAhorro = document.getElementById('montoAhorro');
+    const nombreBen1 = document.getElementById('nombreBen1');
+    const porcentajeBen1 = document.getElementById('porcentajeBen1');
+    const telefonoBen1 = document.getElementById('telefonoBen1');
+    const domicilioBen1 = document.getElementById('domicilioBen1');
 
-    const nombreBen2 = document.getElementById('nombreBen2').value;
-    const porcentajeBen2 = document.getElementById('porcentajeBen2').value;
-    const telefonoBen2 = document.getElementById('telefonoBen2').value;
-    const domicilioBen2 = document.getElementById('domicilioBen2').value;
+    //Validar inputs
+    const montoValido = validarInput(montoAhorro);
+    const nombreBen1Valido = validarInput(nombreBen1);
+    const porcentajeBen1Valido = validarInput(porcentajeBen1);
+    const telefonoBen1Valido = validarInput(telefonoBen1);
+    const domicilioBen1Valido = validarInput(domicilioBen1);
+
+    let nombres = [];
+    let porcentajes = [];
+    let telefonos = [];
+    let domicilios = [];
 
     // Validación para asegurarse de que todos los campos del Beneficiario 1 estén llenos
-    if (nombreBen1 === '' || porcentajeBen1 === '' || telefonoBen1 === '' || domicilioBen1 === '') {
-
-        Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'Todos los campos del Beneficiario 1 deben estar completos.'
-        });
-        return;
-    }else{
-        let valporcentajeBen1 = validarPorcentaje(porcentajeBen1);
-        let valtelefonoBen1 = validarTelefono(telefonoBen1);
+    if (montoValido && nombreBen1Valido && porcentajeBen1Valido && telefonoBen1Valido && domicilioBen1Valido) {
+        let valporcentajeBen1 = validarPorcentaje(porcentajeBen1.value);
+        let valtelefonoBen1 = validarTelefono(telefonoBen1.value);
 
         if(valporcentajeBen1 && valtelefonoBen1){
-
-            const formData = new FormData();
-            formData.append('montoAhorro', montoAhorro);
-            formData.append('nombreBen1', nombreBen1);
-            formData.append('porcentajeBen1', porcentajeBen1);
-            formData.append('telefonoBen1', telefonoBen1);
-            formData.append('domicilioBen1', domicilioBen1);
+            if (!existeBen2){porcentajeBen1.value = 100}
+            nombres.push(nombreBen1.value.trim());
+            porcentajes.push(porcentajeBen1.value.trim());
+            telefonos.push(telefonoBen1.value.trim());
+            domicilios.push(domicilioBen1.value.trim());
 
             // Verificar si los campos del Beneficiario 2 no están vacíos antes de añadirlos
-            if (nombreBen2 && porcentajeBen2 && telefonoBen2 && domicilioBen2) {
-                let valporcentajeBen2 = validarPorcentaje(porcentajeBen2);
-                let valtelefonoBen2 = validarTelefono(telefonoBen2);
+            if (existeBen2) {
 
-                if(valporcentajeBen2 && valtelefonoBen2) {
-                        console.log("%uno= "+porcentajeBen1 + " %dos= " +porcentajeBen1 +" suma= "+(porcentajeBen1 + porcentajeBen2));
-                    if((porcentajeBen1 + porcentajeBen2) === 100){
-                        formData.append('nombreBen2', nombreBen2);
-                        formData.append('porcentajeBen2', porcentajeBen2);
-                        formData.append('telefonoBen2', telefonoBen2);
-                        formData.append('domicilioBen2', domicilioBen2);
-                    }else{
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: "Ambos porcentajes deben sumar 100%"
-                        });
-                        return;
+                const nombreBen2 = document.getElementById('nombreBen2');
+                const porcentajeBen2 = document.getElementById('porcentajeBen2');
+                const telefonoBen2 = document.getElementById('telefonoBen2');
+                const domicilioBen2 = document.getElementById('domicilioBen2');
+
+                const nombreBen2Valido = validarInput(nombreBen2);
+                const porcentajeBen2Valido = validarInput(porcentajeBen2);
+                const telefonoBen2Valido = validarInput(telefonoBen2);
+                const domicilioBen2Valido = validarInput(domicilioBen2);
+
+                if (nombreBen2Valido && porcentajeBen2Valido && telefonoBen2Valido && domicilioBen2Valido) {
+
+                    let valporcentajeBen2 = validarPorcentaje(porcentajeBen2.value);
+                    let valtelefonoBen2 = validarTelefono(telefonoBen2.value);
+
+                    if (valporcentajeBen2 && valtelefonoBen2) {
+                        console.log("%uno= " + porcentajeBen1 + " %dos= " + porcentajeBen1 + " suma= " + (porcentajeBen1 + porcentajeBen2));
+                        if ((porcentajeBen1.value + porcentajeBen2.value) === 100) {
+
+                            nombres.push(nombreBen2.value.trim());
+                            porcentajes.push(porcentajeBen2.value.trim());
+                            telefonos.push(telefonoBen2.value.trim());
+                            domicilios.push(domicilioBen2.value.trim());
+
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: "Ambos porcentajes deben sumar 100%"
+                            });
+                            return;
+                        }
                     }
-
                 }
             }
+
+            const formData = new FormData();
+            formData.append('montoAhorro', montoAhorro.value.trim());
+            formData.append('nombres', nombres.join(', '));
+            formData.append('porcentajes', porcentajes.join(', '));
+            formData.append('telefonos', telefonos.join(', '));
+            formData.append('domicilios', domicilios.join(', '));
 
             // Enviar los datos utilizando fetch
             fetch('dao/daoGuardarAhorro.php', {
@@ -172,6 +191,33 @@ function registrarAhorro() {
             });
         }
     }
-
-
 }
+
+function validarInput(idInput) {
+    const inputElement = document.getElementById(idInput);
+    if (inputElement) {
+        const inputValue = inputElement.value.trim();
+        const feedbackElement = inputElement.parentElement.querySelector('.invalid-feedback');
+
+        if (!inputValue) {
+            inputElement.classList.add('is-invalid');
+            inputElement.parentElement.classList.add('has-error');
+            if (feedbackElement) {
+                feedbackElement.textContent = inputElement.getAttribute('data-error');
+                feedbackElement.style.display = 'block';
+            }
+            return false;
+        } else {
+            inputElement.classList.remove('is-invalid');
+            inputElement.parentElement.classList.remove('has-error');
+            if (feedbackElement) {
+                feedbackElement.style.display = 'none';
+            }
+            return true;
+        }
+    } else {
+        console.log(`Elemento con id ${idInput} no encontrado.`);
+        return false;
+    }
+}
+
