@@ -83,8 +83,12 @@
                     <?php }?>
 
                     <li class="nav-item ms-3">
+                        <form id="logoutForm" action="dao/daoLogin.php" method="POST" style="display: none;">
+                            <input type="hidden" name="cerrarSesion" value="true">
+                        </form>
                         <a class="nav-link" id="cerrarSesion" href="#">Salir</a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -546,21 +550,9 @@
 
         document.getElementById('cerrarSesion').addEventListener('click', function(e) {
             e.preventDefault(); // Evita el comportamiento predeterminado del enlace
-
-            fetch('dao/daoLogin.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: 'cerrarSesion=true'
-            })
-                .then(response => response.text())
-                .then(data => {
-                    // Muestra la alerta SweetAlert y redirige
-                    document.body.innerHTML += data;
-                })
-                .catch(error => console.error('Error:', error));
+            document.getElementById('logoutForm').submit(); // Envía el formulario
         });
+
 
     </script>
     <script src="js/jquery.min.js"></script>
