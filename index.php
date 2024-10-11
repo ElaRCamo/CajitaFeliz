@@ -518,7 +518,10 @@
                             Coordinadora Nóminas.
                             yomara.soto@grammer.com
                         </a>
+                    </p>
 
+                    <p class="text-white d-flex">
+                        <i class="bi-envelope me-2"></i>
                         <a href="juanroberto.arreola@grammer.com" class="site-footer-link">
                             Lic. Juan Roberto Arreola Hernandez
                             Administrador y analista de nómina
