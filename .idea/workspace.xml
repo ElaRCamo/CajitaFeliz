@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Back end formulario solicitud de ahorro">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,23 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="72940000" />
-    </task>
-    <task id="LOCAL-00026" summary="Conexion a la BD">
-      <option name="closed" value="true" />
-      <created>1728573596570</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1728573596570</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Conexion a la BD">
-      <option name="closed" value="true" />
-      <created>1728574185404</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1728574185404</updated>
+      <workItem from="1728394637434" duration="73245000" />
     </task>
     <task id="LOCAL-00028" summary="Fromulario prestamo">
       <option name="closed" value="true" />
@@ -471,7 +454,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728677693251</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Back end formulario solicitud de ahorro">
+      <option name="closed" value="true" />
+      <created>1728677922377</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1728677922377</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Back end formulario solicitud de ahorro">
+      <option name="closed" value="true" />
+      <created>1728678109966</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1728678109966</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
