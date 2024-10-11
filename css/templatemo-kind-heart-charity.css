@@ -1696,5 +1696,39 @@ blockquote::before {
 }
 
 
+/*Señalamiento de error en el llenado*/
+.popup-form .has-error .form-control{
+  border-color:#E10014;
+}
+.popup-form .has-error .input-group-icon {
+  background-color: #E10014;
+  color: #EFEDE9;
+}
+
+.popup-form .invalid-feedback {
+  color: #E10014;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  display: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+.input-group-icon {
+  position: absolute;
+  z-index: 2; /* Asegura que el ícono esté por encima del select */
+}
+
+.invalid-feedback {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* Asegura que el mensaje esté por debajo del ícono */
+  color: #dc3545;
+}
+
 
 

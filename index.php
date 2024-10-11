@@ -309,8 +309,8 @@
                             <div class="row">
                                 <div class="col-lg-12 col-12">
                                     <label for="montoAhorro">Monto para ahorrar: </label>
-                                    <input type="text" name="montoAhorro" id="montoAhorro" class="form-control"
-                                           placeholder="$1,000" required>
+                                    <input type="text" name="montoAhorro" id="montoAhorro" class="form-control" placeholder="$1,000" required data-error="Por favor ingresa un monto válido.">
+                                    <div class="invalid-feedback"></div>
                                 </div>
                             </div>
 
@@ -319,41 +319,49 @@
                                     <h5>Beneficiario 1 <i class="bi bi-plus-circle" id="btnAgregarBeneficiario" style="cursor: pointer;"></i></h5>
                                     <div class="col-lg-12 col-12">
                                         <label for="nombreBen1">Nombre: </label>
-                                        <input type="text" name="nombreBen1" id="nombreBen1" class="form-control" placeholder="Juan Perez" required>
+                                        <input type="text" name="nombreBen1" id="nombreBen1" class="form-control" placeholder="Juan Perez" required data-error="Por favor ingresa el nombre del beneficiario.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label for="porcentajeBen1">Porcentaje: </label>
-                                        <input type="text" name="porcentajeBen1" id="porcentajeBen1" class="form-control" placeholder="80%" required>
+                                        <input type="text" name="porcentajeBen1" id="porcentajeBen1" class="form-control" placeholder="80%" required data-error="Por favor ingresa un porcentaje válido.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label for="telefonoBen1">Teléfono: </label>
-                                        <input type="text" name="telefonoBen1" id="telefonoBen1" class="form-control" placeholder="555 4422556" required>
+                                        <input type="text" name="telefonoBen1" id="telefonoBen1" class="form-control" placeholder="555 4422556" required data-error="Por favor ingresa un teléfono válido.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-lg-12 col-12">
                                         <label for="domicilioBen1">Domicilio: </label>
-                                        <input type="text" name="domicilioBen1" id="domicilioBen1" class="form-control" placeholder="Av. de la Luz No.20" required>
+                                        <input type="text" name="domicilioBen1" id="domicilioBen1" class="form-control" placeholder="Av. de la Luz No.20" required data-error="Por favor ingresa el domicilio.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-12 row" id="divBeneficiario2" style="display: none;">
                                     <h5>Beneficiario 2</h5>
                                     <div class="col-lg-12 col-12">
                                         <label for="nombreBen2">Nombre: </label>
-                                        <input type="text" name="nombreBen2" id="nombreBen2" class="form-control" placeholder="María Hernández" required>
+                                        <input type="text" name="nombreBen2" id="nombreBen2" class="form-control" placeholder="María Hernández" required data-error="Por favor ingresa el nombre del beneficiario.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label for="porcentajeBen2">Porcentaje: </label>
-                                        <input type="text" name="porcentajeBen2" id="porcentajeBen2" class="form-control" placeholder="20%" required>
+                                        <input type="text" name="porcentajeBen2" id="porcentajeBen2" class="form-control" placeholder="20%" required data-error="Por favor ingresa un porcentaje válido.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label for="telefonoBen2">Teléfono: </label>
-                                        <input type="text" name="telefonoBen2" id="telefonoBen2" class="form-control" placeholder="555 4422556" required>
+                                        <input type="text" name="telefonoBen2" id="telefonoBen2" class="form-control" placeholder="555 4422556" required data-error="Por favor ingresa un teléfono válido.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-lg-12 col-12">
                                         <label for="domicilioBen2">Domicilio: </label>
-                                        <input type="text" name="domicilioBen2" id="domicilioBen2" class="form-control" placeholder="Av. de la Luz No.20" required>
+                                        <input type="text" name="domicilioBen2" id="domicilioBen2" class="form-control" placeholder="Av. de la Luz No.20" required data-error="Por favor ingresa el domicilio.">
+                                        <div class="invalid-feedback"></div>
                                     </div>
                                 </div>
-                                <button type="button" class="form-control" onclick="autorizarSolicitudAhorro()">Solicitar</button>
+                                <button type="button" class="form-control" onclick="validarFormAhorro()">Solicitar</button>
                         </form>
                     </div>
                 </div>
