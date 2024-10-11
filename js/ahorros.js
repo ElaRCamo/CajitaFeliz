@@ -1,4 +1,4 @@
-function autorizarSolicitud(){
+function autorizarSolicitudAhorro(){
     Swal.fire({
         title: 'Autorización requerida',
         input: 'password',

@@ -351,7 +351,7 @@
                                         <input type="text" name="domicilioBen2" id="domicilioBen2" class="form-control" placeholder="Av. de la Luz No.20" required>
                                     </div>
                                 </div>
-                                <button type="submit" class="form-control">Solicitar</button>
+                                <button type="button" class="form-control" onclick="autorizarSolicitudAhorro()">Solicitar</button>
                         </form>
                     </div>
                 </div>
