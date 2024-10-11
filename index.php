@@ -39,7 +39,7 @@
                 <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
                 <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
                 <span>
-                    Caja de ahorro y prestamos Grammer, Qro.
+                    Caja de ahorro y prestamos
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
                 </span>
             </a>
