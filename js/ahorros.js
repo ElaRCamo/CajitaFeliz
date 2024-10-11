@@ -244,3 +244,7 @@ function validarInput(idInput) {
     }
 }
 
+function estatutosAhorro() {
+    var url = "https://grammermx.com/RH/CajitaGrammer/docs/Estatutos-caja-de-ahorro-2024-v2.pdf";
+    window.open(url, '_blank');
+}
