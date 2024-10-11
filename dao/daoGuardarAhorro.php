@@ -62,7 +62,7 @@ function guardarAhorro($nomina, $monto, $nombres, $porcentajes, $telefonos,$domi
             if(!$rGuardarObjetos){
                 $respuesta = array('status' => 'error', 'message' => 'Error en Registrar Solicitud');
             }else{
-                $respuesta = array("status" => 'success', "message" => "Tu ahorro ha sido aprobado exitosamente, lo veras reflejado proximamente en tu nómina");
+                $respuesta = array("status" => 'success', "message" => "Tu ahorro ha sido aprobado exitosamente, lo veras reflejado proximamente en tu nómina. Count(nombres)".count($nombres));
             }
         }
         $conex->commit();
