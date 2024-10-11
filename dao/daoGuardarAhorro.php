@@ -46,7 +46,7 @@ function guardarAhorro($nomina, $monto, $nombres, $porcentajes, $telefonos,$domi
             $idSolicitud = $conex->insert_id;
 
             //Registrar Beneficiarios
-            for ($i = 1; $i <= count($nombres); $i++) {
+            for ($i = 0; $i <= count($nombres); $i++) {
                 $nombre = $nombres[$i];
                 $porcentaje = $porcentajes[$i];
                 $telefono = $telefonos[$i];
