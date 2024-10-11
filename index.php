@@ -68,7 +68,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" onclick="estatutosAhorro()">Estatutos Caja de Ahorro</a>
+                        <a class="nav-link click-scroll" onclick="estatutosAhorro()">Estatutos</a>
                     </li>
 
                     <?php if($esAdmin == 0 ){ ?>
