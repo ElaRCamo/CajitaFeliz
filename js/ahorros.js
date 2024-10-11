@@ -87,11 +87,11 @@ function registrarAhorro() {
     const domicilioBen1 = document.getElementById('domicilioBen1');
 
     //Validar inputs
-    const montoValido = validarInput(montoAhorro);
-    const nombreBen1Valido = validarInput(nombreBen1);
-    const porcentajeBen1Valido = validarInput(porcentajeBen1);
-    const telefonoBen1Valido = validarInput(telefonoBen1);
-    const domicilioBen1Valido = validarInput(domicilioBen1);
+    const montoValido = validarInput('montoAhorro');
+    const nombreBen1Valido = validarInput('nombreBen1');
+    const porcentajeBen1Valido = validarInput('porcentajeBen1');
+    const telefonoBen1Valido = validarInput('telefonoBen1');
+    const domicilioBen1Valido = validarInput('domicilioBen1');
 
     let nombres = [];
     let porcentajes = [];
@@ -118,10 +118,10 @@ function registrarAhorro() {
                 const telefonoBen2 = document.getElementById('telefonoBen2');
                 const domicilioBen2 = document.getElementById('domicilioBen2');
 
-                const nombreBen2Valido = validarInput(nombreBen2);
-                const porcentajeBen2Valido = validarInput(porcentajeBen2);
-                const telefonoBen2Valido = validarInput(telefonoBen2);
-                const domicilioBen2Valido = validarInput(domicilioBen2);
+                const nombreBen2Valido = validarInput('nombreBen2');
+                const porcentajeBen2Valido = validarInput('porcentajeBen2');
+                const telefonoBen2Valido = validarInput('telefonoBen2');
+                const domicilioBen2Valido = validarInput('domicilioBen2');
 
                 if (nombreBen2Valido && porcentajeBen2Valido && telefonoBen2Valido && domicilioBen2Valido) {
 
