@@ -329,7 +329,7 @@
                                     </div>
                                     <div class="col-lg-6 col-12">
                                         <label for="telefonoBen1">Teléfono: </label>
-                                        <input type="text" name="telefonoBen1" id="telefonoBen1" class="form-control" placeholder="555 4422556" required data-error="Por favor ingresa un teléfono válido.">
+                                        <input type="text" name="telefonoBen1" id="telefonoBen1" class="form-control" placeholder="4424422556" required data-error="Por favor ingresa un teléfono válido.">
                                         <div class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-lg-12 col-12">
