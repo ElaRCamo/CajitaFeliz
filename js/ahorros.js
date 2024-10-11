@@ -163,7 +163,7 @@ function registrarAhorro() {
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.success) {
+                    if (data.status === "success"){
                         Swal.fire({
                             title: "¡Solicitud realizada exitosamente!",
                             icon: "success",
