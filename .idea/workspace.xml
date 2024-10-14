@@ -77,15 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="93047000" />
-    </task>
-    <task id="LOCAL-00078" summary="Back end formulario solicitud de ahorro">
-      <option name="closed" value="true" />
-      <created>1728678817198</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1728678817198</updated>
+      <workItem from="1728394637434" duration="93355000" />
     </task>
     <task id="LOCAL-00079" summary="Back end formulario solicitud de ahorro">
       <option name="closed" value="true" />
@@ -471,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728939048236</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Apartado misSolicitudes RETIROS">
+      <option name="closed" value="true" />
+      <created>1728939340090</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1728939340090</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
