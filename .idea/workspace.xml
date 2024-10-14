@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Back end apartado misSolicitudes">
-      <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/misSolicitudes.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/misSolicitudes.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,39 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="84015000" />
-    </task>
-    <task id="LOCAL-00045" summary="Fromulario prestamo">
-      <option name="closed" value="true" />
-      <created>1728586495218</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1728586495218</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Fromulario prestamo">
-      <option name="closed" value="true" />
-      <created>1728590865034</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1728590865034</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Fromulario prestamo">
-      <option name="closed" value="true" />
-      <created>1728590905911</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1728590905911</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Fromulario prestamo">
-      <option name="closed" value="true" />
-      <created>1728590958192</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1728590958192</updated>
+      <workItem from="1728394637434" duration="84594000" />
     </task>
     <task id="LOCAL-00049" summary="Fromulario prestamo">
       <option name="closed" value="true" />
@@ -473,7 +442,39 @@
       <option name="project" value="LOCAL" />
       <updated>1728926112102</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728926287156</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1728926287156</updated>
+    </task>
+    <task id="LOCAL-00095" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728926356404</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1728926356404</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728926415529</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1728926415529</updated>
+    </task>
+    <task id="LOCAL-00097" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728926521587</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1728926521587</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
