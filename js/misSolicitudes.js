@@ -162,7 +162,7 @@ const initDataTableCaja = async () => {
 
 const TablaCajaAhorro= async () => {
     try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoMisSolicitudes.php`);
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoMiCajaDeAhorro.php`);
 
         // Verifica si la respuesta es exitosa
         if (!response.ok) {
