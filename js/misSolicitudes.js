@@ -113,13 +113,14 @@ const formatearFecha = (fecha) => {
     }
 };
 
-function formatearMonto(monto) {
-    if (isNaN(monto)) {
+function formatearMonto(numero) {
+    if (isNaN(numero)) {
         throw new Error("El valor proporcionado no es un número válido");
     }
 
     // Convertir el número a formato de pesos mexicanos
-    return `$${monto.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    return `$${numero.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+    //return `$${numero.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
 
