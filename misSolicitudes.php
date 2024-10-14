@@ -94,10 +94,9 @@
 </nav>
 
 <main>
-    <section class="hero-section hero-section-full-height">
-        <div class="container-fluid">
+    <section class="section-padding">
+        <div class="container">
             <div class="row">
-
                 <div class="col-lg-12 col-12 p-0">
                     <div class="page-content">
                         <div class="records table-responsive">
