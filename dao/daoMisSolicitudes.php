@@ -1,6 +1,6 @@
 <?php
 
-include_once('connection.php');
+include_once('connectionCajita.php');
 session_start();
 $id_solicitante = $_SESSION['nomina'];
 resumenPrueba($id_solicitante);
