@@ -3,11 +3,11 @@
     --primary-color: #92D5F6;
 }
 #divTablaSolicitudes{
-    /*padding: 1rem;*/
+    padding: 1rem;
 }
 
 #tablaSolicitudes_filter {
-    /*margin-right: 0 !important;*/
+    margin-right: 0 !important;
     border-top-right-radius: 0 !important;
 }
 
@@ -16,17 +16,17 @@
 }
 
 #tablaSolicitudess_info {
-    /*padding: 0 !important;*/
+    padding: 0 !important;
 }
 
 #tablaSolicitudes_length, #listadoPruebas_filter {
-    /*padding-right: 900px !important;*/
+    padding-right: 900px !important;
 }
 #tablaSolicitudes td{
     font-size: 0.9rem !important;
     color: var(--primary-color) !important;
-    /*padding-top: 5px !important;
-    padding-bottom: 5px !important;*/
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
 
 }
 #tablaSolicitudes #folio{
@@ -39,7 +39,7 @@
 }
 
 #tablaSolicitudes_length, #tablaSolicitudes_filter{
-    /*padding: 1rem;*/
+    padding: 1rem;
     background-color: var(--primary-color);
     color: var(--white-color);
     height: 65px !important;
@@ -60,7 +60,7 @@
 }
 
 #tablaSolicitudes_info{
-    /*padding: 1rem !important;*/
+    padding: 1rem !important;
     color: var(--primary-color) !important;
     font-size: 0.9rem !important;
 }
@@ -70,7 +70,7 @@
 
 .dataTables_paginate .paginate_button, #tablaSolicitudes_previous {
     border-radius: 4px;
-    /*margin: 0 2px;*/
+    margin: 0 2px;
     cursor: pointer;
 }
 
