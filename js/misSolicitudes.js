@@ -261,10 +261,22 @@ const TablaRetiroAhorro = async () => {
 
             if (item.estatusRetiro === '0') {
                 content += `
-                        <label class="btn btn-warning">En proceso</label>`;
+                        <label class="badge bg-warning text-dark">En proceso</label>`;
             } else if (item.estatusRetiro === '1') {
                 content += `
-                        <label class="btn btn-success">Concluido</label>`;
+                        <label class="badge bg-success">Concluido</label>`;
+            }
+
+            content += `
+                    </td>
+                </tr>`;
+
+            // Agrega el botón consultarRetiro si el estatus es 1
+            if (item.estatusRetiro === '1') {
+                content += `
+                    <button class="btn btn-secondary" onclick="consultarRetiro('${item.idRetiro}')">
+                        <i class="las la-file-pdf"></i><span>Ver detalles</span>
+                    </button>`;
             }
 
             content += `
@@ -277,3 +289,7 @@ const TablaRetiroAhorro = async () => {
         console.error('Error:', error);
     }
 };
+
+function consultarRetiro(idRetiro){
+
+}
