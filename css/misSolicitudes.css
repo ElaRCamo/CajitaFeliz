@@ -39,10 +39,10 @@
 }
 
 #tablaSolicitudes_length, #tablaSolicitudes_filter{
-    padding: 1rem;
+    padding: 3rem;
     background-color: var(--primary-color);
     color: var(--white-color);
-    height: 85px !important;
+    height: 15px !important;
 }
 
 #tablaSolicitudes_length {
@@ -93,4 +93,8 @@ label {
 
 .dataTables_filter input {
     width: 200px !important;
+}
+
+.form-select-sm {
+    width: 60px !important;
 }
