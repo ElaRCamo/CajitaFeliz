@@ -66,13 +66,14 @@ const TablaPruebasSolicitante = async () => {
 
             // Formatea las fechas de solicitud y compromiso
             let fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
+            let montoSolFormateado = formatearMonto(item.montoSolicitado);
 
             content += `
                     <tr>
                         <td>${item.idSolicitud}</td>
                         <td>${item.nominaSolicitante}</td>
                         <td>${fechaSolicitudFormateada}</td>
-                        <td>${item.montoSolicitado}</td>
+                        <td>${montoSolFormateado}</td>
                         <td>${item.estatusVisual}</td>
                         <td>
                             <button class="btn btn-success" onclick="mostrarRespuesta('${item.idSolicitud}')">
@@ -111,6 +112,15 @@ const formatearFecha = (fecha) => {
         return 'No asignada';
     }
 };
+
+function formatearMonto(monto) {
+    if (isNaN(monto)) {
+        throw new Error("El valor proporcionado no es un número válido");
+    }
+
+    // Convertir el número a formato de pesos mexicanos
+    return `$${monto.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
 
 
 
