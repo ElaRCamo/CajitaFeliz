@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Back end apartado misSolicitudes">
-      <change afterPath="$PROJECT_DIR$/dao/daoMiCajaDeAhorro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Apartado misSolicitudes caja de ahorro" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,15 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="89163000" />
-    </task>
-    <task id="LOCAL-00070" summary="Back end formulario solicitud de ahorro">
-      <option name="closed" value="true" />
-      <created>1728669009588</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1728669009588</updated>
+      <workItem from="1728394637434" duration="89506000" />
     </task>
     <task id="LOCAL-00071" summary="Back end formulario solicitud de ahorro">
       <option name="closed" value="true" />
@@ -474,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728931776102</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Apartado misSolicitudes caja de ahorro">
+      <option name="closed" value="true" />
+      <created>1728932289887</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1728932289887</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,6 +485,7 @@
     <MESSAGE value="Back end formulario solicitud de ahorro" />
     <MESSAGE value="Back end formulario retirar ahorro" />
     <MESSAGE value="Back end apartado misSolicitudes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Back end apartado misSolicitudes" />
+    <MESSAGE value="Apartado misSolicitudes caja de ahorro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Apartado misSolicitudes caja de ahorro" />
   </component>
 </project>

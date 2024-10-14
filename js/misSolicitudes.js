@@ -115,16 +115,49 @@ function formatearMonto(numero) {
 }
 
 
+let dataTableCaja;
+let dataTableCajaInit = false;
+
+
+const dataTableOptionsCaja = {
+    lengthMenu: [5, 10, 15, 20],
+    columnDefs:[
+        {className: "centered", targets: [0,1,2,3]},
+        {orderable: false, targets: [2]},
+        {width: "8%", targets: [0]},
+        {width: "28%", targets: [3]},
+        {searchable: true, targets: [2,3] }
+    ],
+    pageLength:5,
+    destroy: true,
+    order: [[0, 'desc']], // Ordenar por la columna 0
+    language:{
+        lengthMenu: "Mostrar _MENU_ registros pór página",
+        sZeroRecords: "Ningún registro encontrado",
+        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+        infoEmpty: "Ningún registro encontrado",
+        infoFiltered: "(filtrados desde _MAX_ registros totales)",
+        search: "Buscar: ",
+        loadingRecords: "Cargando...",
+        paginate:{
+            first:"Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior"
+        }
+    }
+};
+
 const initDataTableCaja = async () => {
-    if (dataTableIsInitialized) {
-        dataTable.destroy();
+    if (dataTableCajaInit) {
+        dataTableCaja.destroy();
     }
 
     await TablaCajaAhorro();
 
-    dataTable = $("#tablaCajaAhorro").DataTable(dataTableOptions);
+    dataTableCaja = $("#tablaCajaAhorro").DataTable(dataTableOptionsCaja);
 
-    dataTableIsInitialized = true;
+    dataTableCajaInit = true;
 };
 
 const TablaCajaAhorro= async () => {
