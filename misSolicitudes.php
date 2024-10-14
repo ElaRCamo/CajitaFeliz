@@ -149,13 +149,12 @@
                                         <th class="centered">MI NÓMINA</th>
                                         <th class="centered">FECHA DE SOLICITUD</th>
                                         <th class="centered">MONTO AHORRO </th>
-
                                     </tr>
                                     </thead>
                                     <tbody id="cajaAhorroBody"></tbody>
                                 </table>
 
-                                <h4 class="mb-4">Solicitudes de retiro</h4>
+                                <h4 class="mb-4"><br>Solicitudes de retiro</h4>
                                 <table class="dataTable tableSearch table" id="tablaRetiros" >
                                     <thead>
                                     <tr>
