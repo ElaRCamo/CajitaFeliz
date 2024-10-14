@@ -232,12 +232,12 @@ const initDataTableRetiro = async () => {
 
     await TablaRetiroAhorro();
 
-    dataTableRetiro = $("#tablaCajaAhorro").DataTable(dataTableOptionsRetiro);
+    dataTableRetiro = $("#tablaRetiros").DataTable(dataTableOptionsRetiro);
 
     dataTableRetiroInit = true;
 };
 
-const TablaRetiroAhorro= async () => {
+const TablaRetiroAhorro = async () => {
     try {
         const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoMisRetirosAhorro.php`);
 
@@ -250,28 +250,30 @@ const TablaRetiroAhorro= async () => {
         let content = '';
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
-            const montoSolFormateado = formatearMonto(item.montoAhorro);
 
             content += `
                 <tr>
+                    <td>${item.idRetiro}</td>
                     <td>${item.idCaja}</td>
                     <td>${item.nomina}</td>
                     <td>${fechaSolicitudFormateada}</td>
-                    <td>${montoSolFormateado}</td>
+                    <td>`;
+
+            if (item.estatusRetiro === '0') {
+                content += `
+                        <label class="btn btn-warning">En proceso</label>`;
+            } else if (item.estatusRetiro === '1') {
+                content += `
+                        <label class="btn btn-success">Concluido</label>`;
+            }
+
+            content += `
+                    </td>
                 </tr>`;
         });
 
-        cajaAhorroBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
+        retirosBody.innerHTML = content; // Asegúrate de que retirosBody esté definido
     } catch (error) {
         console.error('Error:', error);
     }
 };
-
-
-function mostrarRespuesta(idSolicitud){
-
-}
-
-function agregarAvales(idSolicitud){
-
-}
