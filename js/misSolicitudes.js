@@ -191,6 +191,83 @@ const TablaCajaAhorro= async () => {
     }
 };
 
+
+let dataTableRetiro;
+let dataTableRetiroInit = false;
+
+
+const dataTableOptionsRetiro = {
+    lengthMenu: [5, 10, 15, 20],
+    columnDefs:[
+        {className: "centered", targets: [0,1,2,3]},
+        {orderable: false, targets: [2]},
+        {width: "8%", targets: [0]},
+        {width: "28%", targets: [3]},
+        {searchable: true, targets: [2,3] }
+    ],
+    pageLength:5,
+    destroy: true,
+    order: [[0, 'desc']], // Ordenar por la columna 0
+    language:{
+        lengthMenu: "Mostrar _MENU_ registros pór página",
+        sZeroRecords: "Ningún registro encontrado",
+        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+        infoEmpty: "Ningún registro encontrado",
+        infoFiltered: "(filtrados desde _MAX_ registros totales)",
+        search: "Buscar: ",
+        loadingRecords: "Cargando...",
+        paginate:{
+            first:"Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior"
+        }
+    }
+};
+
+const initDataTableRetiro = async () => {
+    if (dataTableRetiroInit) {
+        dataTableRetiro.destroy();
+    }
+
+    await TablaRetiroAhorro();
+
+    dataTableRetiro = $("#tablaCajaAhorro").DataTable(dataTableOptionsRetiro);
+
+    dataTableRetiroInit = true;
+};
+
+const TablaRetiroAhorro= async () => {
+    try {
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoMisRetirosAhorro.php`);
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+
+        let content = '';
+        result.data.forEach((item) => {
+            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
+            const montoSolFormateado = formatearMonto(item.montoAhorro);
+
+            content += `
+                <tr>
+                    <td>${item.idCaja}</td>
+                    <td>${item.nomina}</td>
+                    <td>${fechaSolicitudFormateada}</td>
+                    <td>${montoSolFormateado}</td>
+                </tr>`;
+        });
+
+        cajaAhorroBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+
 function mostrarRespuesta(idSolicitud){
 
 }
