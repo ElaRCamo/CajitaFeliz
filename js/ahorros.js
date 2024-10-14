@@ -324,7 +324,12 @@ function retirarAhorros(){
                 Swal.fire({
                     icon: 'success',
                     title: 'Solicitud exitosa',
-                    text: data.message
+                    text: data.message,
+                    confirmButtonText: "OK"
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "https://grammermx.com/RH/CajitaGrammer/misSolicitudes.php";
+                    }
                 });
 
             } else {
