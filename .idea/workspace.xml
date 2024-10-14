@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Back end formulario solicitud de ahorro">
-      <change afterPath="$PROJECT_DIR$/dao/daoRetirarAhorro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Back end formulario retirar ahorro">
+      <change beforePath="$PROJECT_DIR$/dao/daoRetirarAhorro.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoRetirarAhorro.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/ahorros.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ahorros.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,23 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="77829000" />
-    </task>
-    <task id="LOCAL-00033" summary="Fromulario prestamo">
-      <option name="closed" value="true" />
-      <created>1728583880536</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1728583880536</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Fromulario prestamo">
-      <option name="closed" value="true" />
-      <created>1728584046028</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1728584046028</updated>
+      <workItem from="1728394637434" duration="78217000" />
     </task>
     <task id="LOCAL-00035" summary="Fromulario prestamo">
       <option name="closed" value="true" />
@@ -474,7 +456,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728679582248</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Back end formulario retirar ahorro">
+      <option name="closed" value="true" />
+      <created>1728919240059</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1728919240059</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Back end formulario retirar ahorro">
+      <option name="closed" value="true" />
+      <created>1728919318862</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1728919318862</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,6 +484,7 @@
     <MESSAGE value="Conexion a la BD" />
     <MESSAGE value="Fromulario prestamo" />
     <MESSAGE value="Back end formulario solicitud de ahorro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Back end formulario solicitud de ahorro" />
+    <MESSAGE value="Back end formulario retirar ahorro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Back end formulario retirar ahorro" />
   </component>
 </project>

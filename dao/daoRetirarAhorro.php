@@ -13,10 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conex->begin_transaction();
 
     try {
-        $fechaSolicitud = date("Y-m-d");
-        $anio = date("Y");
-
         $obtenerIdCaja = $conex->prepare("SELECT idCaja FROM CajaAhorro WHERE nomina = ? AND fechaSolicitud LIKE ?");
+        $anio = date("Y");
         $fechaFiltro = "$anio%";
         $obtenerIdCaja->bind_param("ss", $nomina, $fechaFiltro);
 
@@ -26,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($obtenerIdCaja->num_rows > 0) {
             $obtenerIdCaja->bind_result($idCaja); // Vincula el resultado
             $obtenerIdCaja->fetch(); // Obtiene el resultado
+
+            $fechaSolicitud = date("Y-m-d");
 
             $rGuardarObjetos = true;
             $insertRetiro = $conex->prepare("INSERT INTO `Beneficiarios` (`idCaja`, `fechaSolicitud`) VALUES (?, ?)");

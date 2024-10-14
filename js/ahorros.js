@@ -255,7 +255,7 @@ function autorizarAhorros(){
         title: 'Autorización requerida',
         text: mensaje,
         input: 'password',
-        inputLabel: 'Ingresa tu TAG',
+        inputLabel: 'Ingresa tu TAG para confirmar la solicitud',
         inputPlaceholder: 'TAG',
         inputAttributes: {
             'aria-label': 'Contraseña'
