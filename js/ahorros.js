@@ -113,7 +113,7 @@ function autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domi
                 });
             } else {
 
-                const formData = new FormData(document.getElementById('formSolicitarPrestamo'));
+                const formData = new FormData(document.getElementById('formRegistrarAhorro'));
 
                 formData.append('password', password);
 
@@ -247,4 +247,101 @@ function validarInput(idInput) {
 function estatutosAhorro() {
     var url = "https://grammermx.com/RH/CajitaGrammer/docs/Estatutos-caja-de-ahorro-2024-v2.pdf";
     window.open(url, '_blank');
+}
+
+function autorizarAhorros(){
+    let mensaje = "Recuerda que el retiro de tu ahorro será total y sólo podrás iniciar un nuevo plan de ahorro hasta el próximo año. Además, si tienes un préstamo, se descontará del monto que has ahorrado."
+    Swal.fire({
+        title: 'Autorización requerida',
+        text: mensaje,
+        input: 'password',
+        inputLabel: 'Ingresa tu TAG',
+        inputPlaceholder: 'TAG',
+        inputAttributes: {
+            'aria-label': 'Contraseña'
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Autorizar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+            const password = result.value;
+
+            if (password === "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Debe ingresar un TAG válido.'
+                });
+            } else {
+
+                const formData = new FormData(document.getElementById('formRetirarAhorro'));
+
+                formData.append('password', password);
+
+                // Enviar los datos al servidor
+                fetch('dao/daoValidarTAG.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+
+                            retirarAhorros();
+
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error',
+                                text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Ocurrió un error al validar la contraseña. Intente nuevamente.'
+                        });
+                    });
+            }
+        }
+    });
+}
+
+function retirarAhorros(){
+
+    fetch('dao/daoRetirarAhorro.php', {
+        method: 'POST'
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Solicitud exitosa',
+                    text: data.message
+                });
+
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Ocurrió un error al validar la contraseña. Intente nuevamente.'
+            });
+        });
+
 }

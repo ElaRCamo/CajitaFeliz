@@ -375,9 +375,9 @@
                 <div class="row">
 
                     <div class="col-lg-6 col-12 mx-auto">
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" id="formRetirarAhorro" action="#" method="post" role="form">
                             <h3 class="mb-4">Retirar mis ahorros</h3>
-                            <button type="submit" class="form-control">Solicitar</button>
+                            <button type="submit" class="form-control" onclick="autorizarAhorros()">Solicitar</button>
                         </form>
                     </div>
                     <div class="col-lg-6 col-12">
