@@ -101,6 +101,7 @@
                     <div class="page-content">
                         <div class="records table-responsive">
                             <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
+                                <h3 class="mb-4">Solicitudes de Préstamo</h3>
                                 <div id="contenedorAzul"></div>
                                 <table class="dataTable tableSearch table" id="tablaSolicitudes" >
                                     <thead>
@@ -122,6 +123,48 @@
                                     </tr>
                                     </thead>
                                     <tbody id="misSolicitudesBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12 p-0">
+                    <div class="page-content">
+                        <div class="records table-responsive">
+                            <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
+                                <h3 class="mb-4">Solicitudes de Caja de Ahorro</h3>
+                                <div id="contenedorAzul"></div>
+                                <h4 class="mb-4">Caja de Ahorro</h4>
+                                <table class="dataTable tableSearch table" id="tablaCajaAhorro" >
+                                    <thead>
+                                    <tr>
+                                        <th class="centered" id="folioCA">FOLIO</th>
+                                        <th class="centered">MI NÓMINA</th>
+                                        <th class="centered">FECHA DE SOLICITUD</th>
+                                        <th class="centered">MONTO AHORRO </th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody id="cajaAhorroBody"></tbody>
+                                </table>
+
+                                <h4 class="mb-4">Solicitudes de retiro</h4>
+                                <table class="dataTable tableSearch table" id="tablaRetiros" >
+                                    <thead>
+                                    <tr>
+                                        <th class="centered" id="folioRetiro">FOLIO</th>
+                                        <th class="centered">MI NÓMINA</th>
+                                        <th class="centered">FECHA DE SOLICITUD</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="retirosBody"></tbody>
                                 </table>
                             </div>
                         </div>
