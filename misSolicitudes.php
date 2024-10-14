@@ -94,34 +94,43 @@
 </nav>
 
 <main>
-    <div class="page-content">
-        <div class="records table-responsive">
-            <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
-                <div id="contenedorAzul"></div>
-                <table class="dataTable tableSearch table" id="tablaSolicitudes" >
-                    <thead>
-                    <tr>
-                        <th class="centered" id="folio">FOLIO</th>
-                        <th class="centered">MI NÓMINA</th>
-                        <th class="centered">FECHA DE SOLICITUD</th>
-                        <th class="centered">MONTO SOLICITADO </th>
-                        <th class="centered">ESTATUS </th>
-                        <th class="centered">ACCIONES</th>
+    <section class="hero-section hero-section-full-height">
+        <div class="container-fluid">
+            <div class="row">
 
-                        <!--
-                        acciones : ver respuesta, Agregar avales
-                        <th class="centered">FECHA RESPUESTA</th>
-                        <th class="centered">MONTO APROBADO </th>
-                        <th class="centered">FECHA DEPÓSITO</th>
-                        <th class="centered">COMENTARIOS</th>
-                        -->
-                    </tr>
-                    </thead>
-                    <tbody id="misSolicitudesBody"></tbody>
-                </table>
+                <div class="col-lg-12 col-12 p-0">
+                    <div class="page-content">
+                        <div class="records table-responsive">
+                            <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
+                                <div id="contenedorAzul"></div>
+                                <table class="dataTable tableSearch table" id="tablaSolicitudes" >
+                                    <thead>
+                                    <tr>
+                                        <th class="centered" id="folio">FOLIO</th>
+                                        <th class="centered">MI NÓMINA</th>
+                                        <th class="centered">FECHA DE SOLICITUD</th>
+                                        <th class="centered">MONTO SOLICITADO </th>
+                                        <th class="centered">ESTATUS </th>
+                                        <th class="centered">ACCIONES</th>
+
+                                        <!--
+                                        acciones : ver respuesta, Agregar avales
+                                        <th class="centered">FECHA RESPUESTA</th>
+                                        <th class="centered">MONTO APROBADO </th>
+                                        <th class="centered">FECHA DEPÓSITO</th>
+                                        <th class="centered">COMENTARIOS</th>
+                                        -->
+                                    </tr>
+                                    </thead>
+                                    <tbody id="misSolicitudesBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </main>
 
 
