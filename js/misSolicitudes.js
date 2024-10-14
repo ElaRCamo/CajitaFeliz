@@ -45,18 +45,7 @@ const initDataTable = async () => {
 
     dataTableIsInitialized = true;
 
-    // Ajusta el padding de los filtros
-    const filtroListadoPruebas = document.getElementById("tablaSolicitudes_filter");
-    if (filtroListadoPruebas) {
-        const contenedor = filtroListadoPruebas.parentNode;
-        contenedor.style.padding = "0";
-    }
 
-    const filtroListadoPruebas2 = document.getElementById("tablaSolicitudes_length");
-    if (filtroListadoPruebas2) {
-        const contenedor2 = filtroListadoPruebas2.parentNode;
-        contenedor2.style.padding = "0";
-    }
 };
 
 const TablaPruebasSolicitante = async () => {
