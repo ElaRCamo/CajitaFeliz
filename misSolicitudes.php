@@ -145,8 +145,7 @@
 <script src="js/click-scroll.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/prestamos.js"></script>
-<script src="js/ahorros.js"></script>
+<script src="js/misSolicitudes.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
