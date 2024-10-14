@@ -1,0 +1,81 @@
+:root {
+    --white-color: #ffffff;
+    --primary-color: #92D5F6;
+}
+#divTablaSolicitudes{
+    padding: 1rem;
+}
+
+#tablaSolicitudes_filter {
+    margin-right: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+#tablaSolicitudes_length {
+    border-top-right-radius: 10px;
+}
+
+#tablaSolicitudess_info {
+    padding: 0 !important;
+}
+
+#tablaSolicitudes_length, #listadoPruebas_filter {
+    padding-right: 900px !important;
+}
+#tablaSolicitudes td{
+    font-size: 0.9rem !important;
+    color: var(--primary-color) !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+
+}
+#tablaSolicitudes #folio{
+    width: 6.8rem !important;
+}
+/*DeataTable*/
+#tablaSolicitudes_filter input, #tablaSolicitudes_length select
+{
+    color: var(--primary-color);
+}
+
+#tablaSolicitudes_length, #tablaSolicitudes_filter{
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    height: 65px !important;
+}
+
+#tablaSolicitudes_length {
+    border-top-left-radius: 10px;
+}
+
+#tablaSolicitudes_filter
+{
+    border-top-right-radius: 10px;
+}
+
+#tablaSolicitudes_filter
+{
+    border-top-right-radius: 10px;
+}
+
+#tablaSolicitudes_info{
+    padding: 1rem !important;
+    color: var(--primary-color) !important;
+    font-size: 0.9rem !important;
+}
+.dataTables_paginate {
+    margin-top: 20px;
+}
+
+.dataTables_paginate .paginate_button, #tablaSolicitudes_previous {
+    border-radius: 4px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background-color:  var(--white-color);
+}
+
+

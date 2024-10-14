@@ -192,7 +192,7 @@
                             <a href="#section_2" class="d-block">
                                 <img src="images/icons/contrato.png" class="imgIcon featured-block-image img-fluid" alt="">
 
-                                <p class="featured-block-text"><strong>Modificar</strong> ahorro</p>
+                                <p class="featured-block-text"><strong>Modificar/Reactivar</strong> ahorro</p>
                             </a>
                         </div>
                     </div>
