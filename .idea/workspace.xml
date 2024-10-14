@@ -77,23 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="86367000" />
-    </task>
-    <task id="LOCAL-00054" summary="Back end formulario solicitud de ahorro">
-      <option name="closed" value="true" />
-      <created>1728654780570</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1728654780570</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Back end formulario solicitud de ahorro">
-      <option name="closed" value="true" />
-      <created>1728654972793</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1728654972793</updated>
+      <workItem from="1728394637434" duration="86579000" />
     </task>
     <task id="LOCAL-00056" summary="Back end formulario solicitud de ahorro">
       <option name="closed" value="true" />
@@ -471,7 +455,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728928032783</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728929256239</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1728929256239</updated>
+    </task>
+    <task id="LOCAL-00104" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728929350005</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1728929350005</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

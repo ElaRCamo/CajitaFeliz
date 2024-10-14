@@ -60,44 +60,44 @@ const TablaPruebasSolicitante = async () => {
         }
 
         const result = await response.json();
+        console.log(result); // Verifica la respuesta del servidor
 
         let content = '';
         result.data.forEach((item) => {
-
-            // Formatea las fechas de solicitud y compromiso
             let fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
             let montoSolFormateado = formatearMonto(item.montoSolicitado);
 
             content += `
-                    <tr>
-                        <td>${item.idSolicitud}</td>
-                        <td>${item.nominaSolicitante}</td>
-                        <td>${fechaSolicitudFormateada}</td>
-                        <td>${montoSolFormateado}</td>
-                        <td>${item.estatusVisual}</td>
-                        <td>
-                            <button class="btn btn-success" onclick="mostrarRespuesta('${item.idSolicitud}')">
-                                <i class="las la-eye"></i><span>Ver respuesta</span>
-                            </button>`;
+                <tr>
+                    <td>${item.idSolicitud}</td>
+                    <td>${item.nominaSolicitante}</td>
+                    <td>${fechaSolicitudFormateada}</td>
+                    <td>${montoSolFormateado}</td>
+                    <td>${item.estatusVisual}</td>
+                    <td>
+                        <button class="btn btn-success" onclick="mostrarRespuesta('${item.idSolicitud}')">
+                            <i class="las la-eye"></i><span>Ver respuesta</span>
+                        </button>`;
 
-            // Si el estatus esta aprobado, mostrar opcion para agregar avales
             if (item.idEstatus === '3') {
                 content += `
-                            <button class="btn btn-secondary" onclick="agregarAvales('${item.idSolicitud}')">
-                                <i class="las la-file-pdf"></i><span>Ver avales</span>
-                            </button>`;
+                    <button class="btn btn-secondary" onclick="agregarAvales('${item.idSolicitud}')">
+                        <i class="las la-file-pdf"></i><span>Ver avales</span>
+                    </button>`;
             }
 
             content += `
-                        </td>
-                    </tr>`;
+                    </td>
+                </tr>`;
         });
 
+        console.log(content); // Asegúrate de que las filas se generen correctamente
         misSolicitudesBody.innerHTML = content;
     } catch (error) {
         console.error('Error:', error);
     }
 };
+
 
 const formatearFecha = (fecha) => {
     if (fecha !== '0000-00-00'){
