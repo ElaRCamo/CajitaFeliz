@@ -158,9 +158,11 @@
                                 <table class="dataTable tableSearch table" id="tablaRetiros" >
                                     <thead>
                                     <tr>
-                                        <th class="centered" id="folioRetiro">FOLIO</th>
+                                        <th class="centered" id="folioRetiro">RETIRO</th>
+                                        <th class="centered" id="folioRetiro">FOLIO CAJA</th>
                                         <th class="centered">MI NÓMINA</th>
                                         <th class="centered">FECHA DE SOLICITUD</th>
+                                        <th class="centered">ESTATUS</th>
                                     </tr>
                                     </thead>
                                     <tbody id="retirosBody"></tbody>
