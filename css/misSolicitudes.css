@@ -7,8 +7,8 @@
 }
 
 #tablaSolicitudes_filter {
-    margin-right: 0 !important;
-    border-top-right-radius: 0 !important;
+    margin-right: 0.8rem !important;
+    border-top-right-radius: 10px !important;
 }
 
 #tablaSolicitudes_length {
@@ -42,7 +42,7 @@
     padding: 1rem;
     background-color: var(--primary-color);
     color: var(--white-color);
-    height: 65px !important;
+    height: 105px !important;
 }
 
 #tablaSolicitudes_length {
