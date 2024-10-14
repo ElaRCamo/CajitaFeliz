@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (!$rGuardarObjetos) { // Verifica la inserción
                 throw new Exception("Error al guardar el registro.");
             } else {
-                $respuesta = array("status" => 'success', "message" => "Tu ahorro ha sido aprobado exitosamente, lo verás reflejado próximamente con el depósito de tu nómina.");
+                $respuesta = array("status" => 'success', "message" => "Tu retiro de ahorro ha sido aprobado exitosamente, lo verás reflejado próximamente con el depósito de tu nómina.");
             }
             $conex->commit();
         } else {
