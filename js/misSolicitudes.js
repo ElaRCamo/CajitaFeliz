@@ -1,60 +1,48 @@
 // DataTables
-let dataTable;
-let dataTableIsInitialized = false;
-
+let dataTable; // Asegúrate de definir dataTable antes de usarlo
+let dataTableIsInitialized = false; // Inicializa la variable para verificar el estado de la tabla
 const dataTableOptions = {
-    lengthMenu: [10, 20, 50, 100],
-    columnDefs:[
-        {className: "centered", targets: [0,1,2,3,4,5,6]},
-        {orderable: false, targets: [0,2,5]},
-        {width: "8%", targets: [0]},
-        {width: "28%", targets: [6]},
-        {searchable: true, targets: [0,1,2,3,4,5,6] }
-    ],
-    pageLength:10,
-    destroy: true,
-    order: [[0, 'desc']], // Ordenar por la columna 0
-    language:{
-        lengthMenu: "Mostrar _MENU_ registros pór página",
-        sZeroRecords: "Ninguna solicitud encontrada",
-        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
-        infoEmpty: "Ninguna solicitud encontrada",
-        infoFiltered: "(filtrados desde _MAX_ registros totales)",
-        search: "Buscar: ",
-        loadingRecords: "Cargando...",
-        paginate:{
-            first:"Primero",
-            last: "Último",
-            next: "Siguiente",
-            previous: "Anterior"
-        }
-    }
+    // Aquí puedes definir las opciones para DataTables según lo que necesites
+    // Ejemplo:
+    paging: true,
+    searching: true,
+    ordering: true,
+    // ...otras opciones
 };
 
 const initDataTable = async () => {
+    // Verifica si la tabla ya está inicializada y destrúyela si es necesario
     if (dataTableIsInitialized) {
         dataTable.destroy();
     }
 
+    // Llama a la función que carga los datos en la tabla
     await TablaPruebasSolicitante();
 
+    // Inicializa DataTables con las opciones definidas
     dataTable = $("#tablaSolicitudes").DataTable(dataTableOptions);
 
     dataTableIsInitialized = true;
 
-    var filtroListadoPruebas = document.getElementById("tablaSolicitudes_filter");
-    var contenedor = filtroListadoPruebas.parentNode;
-    contenedor.style.padding = "0";
+    // Ajusta el padding de los filtros
+    const filtroListadoPruebas = document.getElementById("tablaSolicitudes_filter");
+    if (filtroListadoPruebas) {
+        const contenedor = filtroListadoPruebas.parentNode;
+        contenedor.style.padding = "0";
+    }
 
-    var filtroListadoPruebas2 = document.getElementById("tablaSolicitudes_length");
-    var contenedor2 = filtroListadoPruebas2.parentNode;
-    contenedor2.style.padding = "0";
+    const filtroListadoPruebas2 = document.getElementById("tablaSolicitudes_length");
+    if (filtroListadoPruebas2) {
+        const contenedor2 = filtroListadoPruebas2.parentNode;
+        contenedor2.style.padding = "0";
+    }
 };
 
 const TablaPruebasSolicitante = async () => {
     try {
         const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoMisSolicitudes.php`);
 
+        // Verifica si la respuesta es exitosa
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
@@ -64,8 +52,8 @@ const TablaPruebasSolicitante = async () => {
 
         let content = '';
         result.data.forEach((item) => {
-            let fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
-            let montoSolFormateado = formatearMonto(item.montoSolicitado);
+            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
+            const montoSolFormateado = formatearMonto(item.montoSolicitado);
 
             content += `
                 <tr>
@@ -79,6 +67,7 @@ const TablaPruebasSolicitante = async () => {
                             <i class="las la-eye"></i><span>Ver respuesta</span>
                         </button>`;
 
+            // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
                     <button class="btn btn-secondary" onclick="agregarAvales('${item.idSolicitud}')">
@@ -92,11 +81,12 @@ const TablaPruebasSolicitante = async () => {
         });
 
         console.log(content); // Asegúrate de que las filas se generen correctamente
-        misSolicitudesBody.innerHTML = content;
+        misSolicitudesBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
     } catch (error) {
         console.error('Error:', error);
     }
 };
+
 
 
 const formatearFecha = (fecha) => {
