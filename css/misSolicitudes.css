@@ -77,7 +77,12 @@
 .dataTables_paginate .paginate_button:hover {
     background-color:  var(--white-color);
 }
-
+.dataTables_filter input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    margin-left: 10px;
+}
 .centered {
     text-align: center;
 }
