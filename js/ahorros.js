@@ -30,7 +30,7 @@ function validarFormAhorro() {
             }
 
             nombres.push(nombreBen1.trim());
-            porcentajes.push(porcentajeBen1.trim());
+            porcentajes.push(porcentajeBen1);
             telefonos.push(telefonoBen1.trim());
             domicilios.push(domicilioBen1.trim());
 
