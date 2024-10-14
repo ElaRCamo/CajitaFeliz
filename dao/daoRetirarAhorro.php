@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fechaSolicitud = date("Y-m-d");
 
             $rGuardarObjetos = true;
-            $insertRetiro = $conex->prepare("INSERT INTO `Beneficiarios` (`idCaja`, `fechaSolicitud`) VALUES (?, ?)");
+            $insertRetiro = $conex->prepare("INSERT INTO `RetiroAhorro` (`idCaja`, `fechaSolicitud`) VALUES (?, ?)");
             $insertRetiro->bind_param("is", $idCaja, $fechaSolicitud);
             $rGuardarObjetos = $rGuardarObjetos && $insertRetiro->execute();
 
