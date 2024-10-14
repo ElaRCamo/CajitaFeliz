@@ -309,7 +309,7 @@
                 <h5 class="site-footer-title mb-3">Enlaces rápidos</h5>
 
                 <ul class="footer-menu">
-                    <li class="footer-menu-item"><a href="#top" class="footer-menu-link">Inicio</a></li>
+                    <li class="footer-menu-item"><a href="index.php" class="footer-menu-link">Inicio</a></li>
 
                     <li class="footer-menu-item"><a href="administrar.php" class="footer-menu-link">Préstamo</a></li>
 
