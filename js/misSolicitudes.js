@@ -1,13 +1,34 @@
 // DataTables
-let dataTable; // Asegúrate de definir dataTable antes de usarlo
-let dataTableIsInitialized = false; // Inicializa la variable para verificar el estado de la tabla
+let dataTable;
+let dataTableIsInitialized = false;
+
 const dataTableOptions = {
-    // Aquí puedes definir las opciones para DataTables según lo que necesites
-    // Ejemplo:
-    paging: true,
-    searching: true,
-    ordering: true,
-    // ...otras opciones
+    lengthMenu: [10, 20, 50, 100],
+    columnDefs:[
+        {className: "centered", targets: [0,1,2,3,4,5,6]},
+        {orderable: false, targets: [0,2,5]},
+        {width: "8%", targets: [0]},
+        {width: "28%", targets: [6]},
+        {searchable: true, targets: [0,1,2,3,4,5,6] }
+    ],
+    pageLength:10,
+    destroy: true,
+    order: [[0, 'desc']], // Ordenar por la columna 0
+    language:{
+        lengthMenu: "Mostrar _MENU_ registros pór página",
+        sZeroRecords: "Ninguna solicitud encontrada",
+        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+        infoEmpty: "Ninguna solicitud encontrada",
+        infoFiltered: "(filtrados desde _MAX_ registros totales)",
+        search: "Buscar: ",
+        loadingRecords: "Cargando...",
+        paginate:{
+            first:"Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior"
+        }
+    }
 };
 
 const initDataTable = async () => {
@@ -86,8 +107,6 @@ const TablaPruebasSolicitante = async () => {
         console.error('Error:', error);
     }
 };
-
-
 
 const formatearFecha = (fecha) => {
     if (fecha !== '0000-00-00'){
