@@ -192,6 +192,7 @@
 <script>
     window.addEventListener("load",async () => {
         await initDataTable();
+        await initDataTableCaja();
     })
 </script>
 </body>

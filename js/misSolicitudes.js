@@ -32,15 +32,12 @@ const dataTableOptions = {
 };
 
 const initDataTable = async () => {
-    // Verifica si la tabla ya está inicializada y destrúyela si es necesario
     if (dataTableIsInitialized) {
         dataTable.destroy();
     }
 
-    // Llama a la función que carga los datos en la tabla
-    await TablaPruebasSolicitante();
+    await TablaSolicitudesPrestamos();
 
-    // Inicializa DataTables con las opciones definidas
     dataTable = $("#tablaSolicitudes").DataTable(dataTableOptions);
 
     dataTableIsInitialized = true;
@@ -48,17 +45,15 @@ const initDataTable = async () => {
 
 };
 
-const TablaPruebasSolicitante = async () => {
+const TablaSolicitudesPrestamos = async () => {
     try {
         const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoMisSolicitudes.php`);
 
-        // Verifica si la respuesta es exitosa
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
 
         const result = await response.json();
-        console.log(result); // Verifica la respuesta del servidor
 
         let content = '';
         result.data.forEach((item) => {
@@ -89,9 +84,7 @@ const TablaPruebasSolicitante = async () => {
                     </td>
                 </tr>`;
         });
-
-        console.log(content); // Asegúrate de que las filas se generen correctamente
-        misSolicitudesBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
+        misSolicitudesBody.innerHTML = content;
     } catch (error) {
         console.error('Error:', error);
     }
@@ -122,6 +115,48 @@ function formatearMonto(numero) {
 }
 
 
+const initDataTableCaja = async () => {
+    if (dataTableIsInitialized) {
+        dataTable.destroy();
+    }
+
+    await TablaCajaAhorro();
+
+    dataTable = $("#tablaCajaAhorro").DataTable(dataTableOptions);
+
+    dataTableIsInitialized = true;
+};
+
+const TablaCajaAhorro= async () => {
+    try {
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoMisSolicitudes.php`);
+
+        // Verifica si la respuesta es exitosa
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+
+        let content = '';
+        result.data.forEach((item) => {
+            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
+            const montoSolFormateado = formatearMonto(item.montoAhorro);
+
+            content += `
+                <tr>
+                    <td>${item.idCaja}</td>
+                    <td>${item.nomina}</td>
+                    <td>${fechaSolicitudFormateada}</td>
+                    <td>${montoSolFormateado}</td>
+                </tr>`;
+        });
+
+        cajaAhorroBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
 
 function mostrarRespuesta(idSolicitud){
 
