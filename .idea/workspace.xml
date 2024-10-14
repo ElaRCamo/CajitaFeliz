@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Back end apartado misSolicitudes" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Back end apartado misSolicitudes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/misSolicitudes.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/misSolicitudes.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,23 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
-      <workItem from="1728394637434" duration="88188000" />
-    </task>
-    <task id="LOCAL-00065" summary="Back end formulario solicitud de ahorro">
-      <option name="closed" value="true" />
-      <created>1728666394646</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1728666394647</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Back end formulario solicitud de ahorro">
-      <option name="closed" value="true" />
-      <created>1728667596921</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1728667596921</updated>
+      <workItem from="1728394637434" duration="88504000" />
     </task>
     <task id="LOCAL-00067" summary="Back end formulario solicitud de ahorro">
       <option name="closed" value="true" />
@@ -471,7 +458,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728930925311</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728931006356</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1728931006356</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Back end apartado misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1728931038834</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1728931038834</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

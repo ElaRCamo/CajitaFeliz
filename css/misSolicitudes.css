@@ -87,4 +87,10 @@
     text-align: center;
 }
 
+label {
+    display: ruby-text !important;
+}
 
+.dataTables_filter input {
+    width: 200px !important;
+}
