@@ -3,7 +3,7 @@ let dataTable;
 let dataTableIsInitialized = false;
 
 const dataTableOptions = {
-    lengthMenu: [10, 20, 50, 100],
+    lengthMenu: [5, 10, 15, 20],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4,5,6]},
         {orderable: false, targets: [0,2,5]},
@@ -11,7 +11,7 @@ const dataTableOptions = {
         {width: "28%", targets: [6]},
         {searchable: true, targets: [0,1,2,3,4,5,6] }
     ],
-    pageLength:10,
+    pageLength:5,
     destroy: true,
     order: [[0, 'desc']], // Ordenar por la columna 0
     language:{
