@@ -31,6 +31,69 @@
 
 </head>
 <body>
+<nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container" id="top">
+        <a class="navbar-brand" href="index.php">
+            <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
+            <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
+            <span>
+                    Cajita Feliz
+                    <small>Grammer Automotive Puebla S.A. de C.V</small>
+                </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#top">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#section_1">Préstamo</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#section_2">Caja de Ahorro</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="#section_4">Preguntas Frecuentes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" onclick="estatutosAhorro()">Estatutos</a>
+                </li>
+
+                <?php if($esAdmin == 0 ){ ?>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" onclick="">Mis Solicitudes</a>
+                    </li>
+                <?php }?>
+
+                <?php if($esAdmin == 1 ){ ?>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="administrar.php">Administrar</a>
+                    </li>
+                <?php }?>
+
+                <li class="nav-item ms-3">
+                    <form id="logoutForm" action="dao/daoLogin.php" method="POST" style="display: none;">
+                        <input type="hidden" name="cerrarSesion" value="true">
+                    </form>
+                    <a class="nav-link" id="cerrarSesion" href="#">Salir</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
     <div class="page-content">
         <div class="records table-responsive">
             <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
@@ -59,6 +122,8 @@
             </div>
         </div>
     </div>
+</main>
+
 
     <script>
         window.addEventListener("load",async () => {
