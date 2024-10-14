@@ -71,7 +71,7 @@
 
                 <?php if($esAdmin == 0 ){ ?>
                     <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" onclick="">Mis Solicitudes</a>
+                        <a class="nav-link custom-btn custom-border-btn btn" href="misSolicitudes.php">Mis Solicitudes</a>
                     </li>
                 <?php }?>
 
