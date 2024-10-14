@@ -6,7 +6,7 @@ $id_solicitante = $_SESSION['nomina'];
 resumenPrueba($id_solicitante);
 
 function resumenPrueba($id_solicitante){
-    $con = new LocalConector();
+    $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
     $datosPrueba =  mysqli_query($conex,
