@@ -42,9 +42,6 @@
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="index.php">Inicio</a>
                     </li>
-
-
-
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="index.php#solicitarPrestamoSeccion">Préstamo</a>
                     </li>
@@ -89,9 +86,8 @@
 
                 <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                     <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="donate.html" class="d-block">
+                        <a href="index.php#crearAhorroSeccion" class="d-block">
                             <img src="images/icons/ahorro.png" class="featured-block-image img-fluid" alt="">
-
                             <p class="featured-block-text"><strong>Caja de Ahorro </strong></p>
                         </a>
                     </div>
@@ -111,7 +107,7 @@
                     <button class="btn btn-success text-right"  onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
                         Exportar a Excel
                     </button>
-                    <table class="table table-striped table-bordered mt-3">
+                    <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
                         <thead class="table-dark">
                         <tr>
                             <th>Folio</th>
@@ -124,147 +120,8 @@
                             <th>Acciones</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>2024-10-08</td>
-                            <td>12345</td>
-                            <td>Juan Pérez</td>
-                            <td>$10,000.00</td>
-                            <td>555-1234</td>
-                            <td>54321, María López</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>2024-10-09</td>
-                            <td>67890</td>
-                            <td>Ana García</td>
-                            <td>$15,000.00</td>
-                            <td>555-5678</td>
-                            <td>09876, Carlos Gómez</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>001</td>
-                            <td>2024-10-08</td>
-                            <td>12345</td>
-                            <td>Juan Pérez</td>
-                            <td>$10,000.00</td>
-                            <td>555-1234</td>
-                            <td>54321, María López</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>2024-10-09</td>
-                            <td>67890</td>
-                            <td>Ana García</td>
-                            <td>$15,000.00</td>
-                            <td>555-5678</td>
-                            <td>09876, Carlos Gómez</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>001</td>
-                            <td>2024-10-08</td>
-                            <td>12345</td>
-                            <td>Juan Pérez</td>
-                            <td>$10,000.00</td>
-                            <td>555-1234</td>
-                            <td>54321, María López</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>2024-10-09</td>
-                            <td>67890</td>
-                            <td>Ana García</td>
-                            <td>$15,000.00</td>
-                            <td>555-5678</td>
-                            <td>09876, Carlos Gómez</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>001</td>
-                            <td>2024-10-08</td>
-                            <td>12345</td>
-                            <td>Juan Pérez</td>
-                            <td>$10,000.00</td>
-                            <td>555-1234</td>
-                            <td>54321, María López</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>2024-10-09</td>
-                            <td>67890</td>
-                            <td>Ana García</td>
-                            <td>$15,000.00</td>
-                            <td>555-5678</td>
-                            <td>09876, Carlos Gómez</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>001</td>
-                            <td>2024-10-08</td>
-                            <td>12345</td>
-                            <td>Juan Pérez</td>
-                            <td>$10,000.00</td>
-                            <td>555-1234</td>
-                            <td>54321, María López</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>2024-10-09</td>
-                            <td>67890</td>
-                            <td>Ana García</td>
-                            <td>$15,000.00</td>
-                            <td>555-5678</td>
-                            <td>09876, Carlos Gómez</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#responderModal">
-                                    Responder
-                                </button>
-                            </td>
-                        </tr>
+                        <tbody id="bodyPrestamosAdmin">
+
                         </tbody>
                     </table>
 
@@ -311,11 +168,15 @@
                 <ul class="footer-menu">
                     <li class="footer-menu-item"><a href="index.php" class="footer-menu-link">Inicio</a></li>
 
-                    <li class="footer-menu-item"><a href="administrar.php" class="footer-menu-link">Préstamo</a></li>
+                    <li class="footer-menu-item"><a href="index.php#section_1" class="footer-menu-link">Préstamo</a></li>
 
-                    <li class="footer-menu-item"><a href="cajaAhorro.php" class="footer-menu-link">Caja de Ahorro</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="index.php#section_2">Caja de Ahorro</a>
+                    </li>
 
-                    <li class="footer-menu-item"><a href="#section_preguntas" class="footer-menu-link">Preguntas Frecuentes</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="index.php#section_4">Preguntas Frecuentes</a>
+                    </li>
                 </ul>
             </div>
 

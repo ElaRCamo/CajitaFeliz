@@ -493,9 +493,9 @@
 
                         <li class="footer-menu-item"><a href="administrar.php" class="footer-menu-link">Préstamo</a></li>
 
-                        <li class="footer-menu-item"><a href="cajaAhorro.php" class="footer-menu-link">Caja de Ahorro</a></li>
+                        <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">Caja de Ahorro</a></li>
 
-                        <li class="footer-menu-item"><a href="#section_preguntas" class="footer-menu-link">Preguntas Frecuentes</a></li>
+                        <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
 
@@ -561,8 +561,6 @@
             e.preventDefault(); // Evita el comportamiento predeterminado del enlace
             document.getElementById('logoutForm').submit(); // Envía el formulario
         });
-
-
     </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
