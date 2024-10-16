@@ -32,6 +32,7 @@ const dataTableOptPresAdmin = {
 };
 
 const initDataTablePresAdmin = async () => {
+    alert("initDataTablePresAdmin: "+ initDataTablePresAdmin);
     if (dataTableInitPrestamosAdmin) {
         dataTableAdminPrestamos.destroy();
     }
