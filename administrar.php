@@ -54,8 +54,8 @@
                         <a class="nav-link click-scroll" href="index.php#section_preguntas">Preguntas Frecuentes</a>
                     </li>
 
-                    <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="administrar.php">Administrar</a>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" onclick="estatutosAhorro()">Estatutos</a>
                     </li>
 
                     <li class="nav-item ms-3">
