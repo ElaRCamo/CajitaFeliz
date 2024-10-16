@@ -36,7 +36,7 @@ const initDataTablePresAdmin = async () => {
         dataTableAdminPrestamos.destroy();
     }
 
-    await TablaPrestamosAdmin();
+    await dataTablePrestamosAdmin();
 
     dataTableAdminPrestamos = $("#tablaPrestamosAdmin").DataTable(dataTableOptPresAdmin);
 
@@ -45,7 +45,7 @@ const initDataTablePresAdmin = async () => {
 
 };
 
-const TablaPrestamosAdmin = async () => {
+const dataTablePrestamosAdmin = async () => {
     try {
         const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesPrestamos.php`);
 

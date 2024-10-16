@@ -205,6 +205,10 @@
 
 <!-- JavaScript para exportar la tabla a Excel -->
 <script>
+    window.addEventListener("load",async () => {
+        await initDataTablePresAdmin;
+    })
+
     function exportTableToExcel(tableID, filename = '') {
         var downloadLink;
         var dataType = 'application/vnd.ms-excel';
@@ -234,9 +238,7 @@
             downloadLink.click();
         }
     }
-    window.addEventListener("load",async () => {
-        await initDataTablePresAdmin;
-    })
+
 </script>
 
 <!-- JAVASCRIPT FILES -->
