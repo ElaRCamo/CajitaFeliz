@@ -86,3 +86,34 @@ const dataTablePrestamosAdmin = async () => {
 function responderPrestamo(){
 
 }
+
+
+function exportTableToExcel(tableID, filename = '') {
+    var downloadLink;
+    var dataType = 'application/vnd.ms-excel';
+    var tableSelect = document.getElementById(tableID);
+    var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+    // Especifica el nombre del archivo
+    filename = filename ? filename + '.xls' : 'excel_data.xls';
+
+    // Crea el enlace de descarga
+    downloadLink = document.createElement("a");
+    document.body.appendChild(downloadLink);
+
+    if (navigator.msSaveOrOpenBlob) {
+        var blob = new Blob(['\ufeff', tableHTML], {
+            type: dataType
+        });
+        navigator.msSaveOrOpenBlob(blob, filename);
+    } else {
+        // Crea un enlace temporal para la descarga
+        downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+        // Configura el nombre del archivo
+        downloadLink.download = filename;
+
+        // Dispara la descarga
+        downloadLink.click();
+    }
+}

@@ -17,6 +17,11 @@
 
     <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
+    <?php
+    $conexion = mysqli_connect("127.0.0.1:3306","u909553968_Ale","Grammer2024a","u909553968_testAle");
+    if (!$conexion) {    echo 'conexion exitosa';} else {    echo 'conexion fallida';}
+
+    ?>
 </head>
 
 <body>
@@ -74,25 +79,14 @@
             <div class="row">
 
                 <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Cajita Feliz Grammer</h2>
+                    <h2 class="mb-5">Consulktar solicitudes</h2>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                     <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#solicitarPrestamoSeccion" class="d-block">
-                            <img src="images/icons/prestamo.png" class="featured-block-image img-fluid" alt="">
-
-                            <p class="featured-block-text"> <strong>Préstamo</strong></p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="index.php#crearAhorroSeccion" class="d-block">
-                            <img src="images/icons/ahorro.png" class="featured-block-image img-fluid" alt="">
-                            <p class="featured-block-text"><strong>Caja de Ahorro </strong></p>
-                        </a>
+                        <select>
+                            <option>Préstamos</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -158,7 +152,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-12 mb-4">
-                <img src="images/logo.png" class="logo img-fluid" alt="">
+                <img src="images/logo.png" class="logo img-fluid" alt="Logo">
             </div>
 
             <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -196,50 +190,19 @@
 
                 <p class="text-white d-flex mt-3">
                     <i class="bi-geo-alt me-2"></i>
-                    Av. de la Luz 24, Benito Juárez, 76120 Santiago de Querétaro, Qro.
+                    Av. de la Luz 24, Benito Juárez, 76120
+                    <br>Santiago de Querétaro, Qro.
                 </p>
             </div>
         </div>
     </div>
 </footer>
 
-<!-- JavaScript para exportar la tabla a Excel -->
 <script>
     window.addEventListener("load",async () => {
         alert("cargando ");
         await initDataTablePresAdmin;
     })
-
-    function exportTableToExcel(tableID, filename = '') {
-        var downloadLink;
-        var dataType = 'application/vnd.ms-excel';
-        var tableSelect = document.getElementById(tableID);
-        var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-
-        // Especifica el nombre del archivo
-        filename = filename ? filename + '.xls' : 'excel_data.xls';
-
-        // Crea el enlace de descarga
-        downloadLink = document.createElement("a");
-        document.body.appendChild(downloadLink);
-
-        if (navigator.msSaveOrOpenBlob) {
-            var blob = new Blob(['\ufeff', tableHTML], {
-                type: dataType
-            });
-            navigator.msSaveOrOpenBlob(blob, filename);
-        } else {
-            // Crea un enlace temporal para la descarga
-            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
-
-            // Configura el nombre del archivo
-            downloadLink.download = filename;
-
-            // Dispara la descarga
-            downloadLink.click();
-        }
-    }
-
 </script>
 
 <!-- JAVASCRIPT FILES -->
