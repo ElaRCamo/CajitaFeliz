@@ -57,6 +57,13 @@
                     <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" href="administrar.php">Administrar</a>
                     </li>
+
+                    <li class="nav-item ms-3">
+                        <form id="logoutForm" action="dao/daoLogin.php" method="POST" style="display: none;">
+                            <input type="hidden" name="cerrarSesion" value="true">
+                        </form>
+                        <a class="nav-link" id="cerrarSesion" href="#">Salir</a>
+                    </li>
                 </ul>
             </div>
         </div>
