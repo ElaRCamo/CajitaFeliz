@@ -5,11 +5,11 @@ let dataTableInitPrestamosAdmin = false;
 const dataTableOptPresAdmin = {
     lengthMenu: [5, 10, 15, 20],
     columnDefs:[
-        {className: "centered", targets: [0,1,2,3,4,5]},
-        {orderable: false, targets: [0,2,4]},
+        {className: "centered", targets: [0,1,2,3,4]},
+        {orderable: false, targets: [0,1,2]},
         {width: "8%", targets: [0]},
-        {width: "28%", targets: [5]},
-        {searchable: true, targets: [0,1,2,3,4,5] }
+        {width: "28%", targets: [4]},
+        {searchable: true, targets: [0,1,2,3] }
     ],
     pageLength:5,
     destroy: true,
@@ -35,7 +35,7 @@ const initDataTablePresAdmin = async () => {
     if (dataTableInitPrestamosAdmin) {
         dataTableAdminPrestamos.destroy();
     }
-
+    alert("initDataTablePresAdmin: "+ initDataTablePresAdmin);
     await dataTablePrestamosAdmin();
 
     dataTableAdminPrestamos = $("#tablaPrestamosAdmin").DataTable(dataTableOptPresAdmin);
@@ -54,7 +54,7 @@ const dataTablePrestamosAdmin = async () => {
         }
 
         const result = await response.json();
-
+        alert("response: "+ response);
         let content = '';
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
