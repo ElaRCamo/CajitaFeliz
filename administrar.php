@@ -113,10 +113,8 @@
                             <th>Folio</th>
                             <th>Fecha Solicitud</th>
                             <th>Nómina</th>
-                            <th>Nombre</th>
                             <th>Monto</th>
                             <th>Teléfono</th>
-                            <th>Avales (Nómina, Nombre)</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
