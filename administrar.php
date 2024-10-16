@@ -239,6 +239,9 @@
             downloadLink.click();
         }
     }
+    window.addEventListener("load",async () => {
+        await initDataTablePresAdmin;
+    })
 </script>
 
 <!-- JAVASCRIPT FILES -->

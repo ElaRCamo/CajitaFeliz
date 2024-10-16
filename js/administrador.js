@@ -36,7 +36,7 @@ const initDataTablePresAdmin = async () => {
         dataTableAdminPrestamos.destroy();
     }
 
-    await TablaSolicitudesPrestamos();
+    await TablaPrestamosAdmin();
 
     dataTableAdminPrestamos = $("#tablaPrestamosAdmin").DataTable(dataTableOptPresAdmin);
 
@@ -63,22 +63,14 @@ const TablaPrestamosAdmin = async () => {
             content += `
                 <tr>
                     <td>${item.idSolicitud}</td>
-                    <td>${item.nominaSolicitante}</td>
                     <td>${fechaSolicitudFormateada}</td>
+                    <td>${item.nominaSolicitante}</td>
                     <td>${montoSolFormateado}</td>
-                    <td>${item.estatusVisual}</td>
+                    <td>${item.telefono}</td>
                     <td>
-                        <button class="btn btn-success" onclick="mostrarRespuesta('${item.idSolicitud}')">
-                            <i class="las la-eye"></i><span>Ver respuesta</span>
+                        <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}')">
+                            <i class="las la-eye"></i><span>Responder</span>
                         </button>`;
-
-            // Agrega el botón de avales si el estatus es 3
-            if (item.idEstatus === '3') {
-                content += `
-                    <button class="btn btn-secondary" onclick="agregarAvales('${item.idSolicitud}')">
-                        <i class="las la-file-pdf"></i><span>Ver avales</span>
-                    </button>`;
-            }
 
             content += `
                     </td>
@@ -89,3 +81,7 @@ const TablaPrestamosAdmin = async () => {
         console.error('Error:', error);
     }
 };
+
+function responderPrestamo(){
+
+}
