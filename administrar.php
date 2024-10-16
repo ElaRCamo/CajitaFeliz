@@ -55,10 +55,6 @@
                     </li>
 
                     <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" onclick="">Mis Solicitudes</a>
-                    </li>
-
-                    <li class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" href="administrar.php">Administrar</a>
                     </li>
                 </ul>
