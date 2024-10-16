@@ -169,13 +169,9 @@
 
                     <li class="footer-menu-item"><a href="index.php#section_1" class="footer-menu-link">Préstamo</a></li>
 
-                    <li class="nav-item">
-                        <a class="footer-menu-link" href="index.php#section_2">Caja de Ahorro</a>
-                    </li>
+                    <li class="footer-menu-item"><a class="footer-menu-link" href="index.php#section_2">Caja de Ahorro</a></li>
 
-                    <li class="nav-item">
-                        <a class="footer-menu-link" href="index.php#section_4">Preguntas Frecuentes</a>
-                    </li>
+                    <li class="footer-menu-item"><a class="footer-menu-link" href="index.php#section_4">Preguntas Frecuentes</a></li>
                 </ul>
             </div>
 
