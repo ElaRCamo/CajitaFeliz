@@ -87,8 +87,8 @@
                 <div class="col-lg-10 col-12 text-center mx-auto">
                     <h2 class="mb-5">Consultar solicitudes</h2>
                 </div>
-                <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 justify-content-center align-items-center">
-                    <div class="featured-block d-flex justify-content-center align-items-center p-4 border rounded">
+                <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 text-center mx-auto">
+                    <div id="divForm" class="featured-block d-flex justify-content-center align-items-center p-4 border rounded">
                         <form class="w-100">
                             <div class="form-group mb-3">
                                 <label for="selectTipoConsulta" class="form-label">Tipo de consulta</label>
