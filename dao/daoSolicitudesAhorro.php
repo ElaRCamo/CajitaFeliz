@@ -1,9 +1,11 @@
 <?php
 
 include_once('connectionCajita.php');
-todosLosAhorros();
 
-function todosLosAhorros(){
+$anio = $_GET["anio"];
+todosLosAhorros($anio);
+
+function todosLosAhorros($anio){
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
@@ -16,7 +18,7 @@ function todosLosAhorros(){
                 FROM
                     CajaAhorro s
                 WHERE
-                    s.idEstatus <> 4
+                    YEAR(c.fechaSolicitud) like $anio
                 ORDER BY
                     s.idSolicitud DESC;
                 ");
