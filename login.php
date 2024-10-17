@@ -14,7 +14,7 @@
 
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/login.css">
 

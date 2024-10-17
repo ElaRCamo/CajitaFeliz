@@ -15,7 +15,7 @@
 
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <link href="css/admin.css" rel="stylesheet">
 
@@ -243,6 +243,13 @@
         </div>
     </div>
 </footer>
+
+<!-- -Archivos de jQuery-->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 <!-- JAVASCRIPT FILES -->
 <script src="js/jquery.min.js"></script>
