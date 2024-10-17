@@ -117,3 +117,22 @@ function exportTableToExcel(tableID, filename = '') {
         downloadLink.click();
     }
 }
+
+function cargarAnio() {
+    $.getJSON('https://grammermx.com/Metrologia/MetroTickets/dao/daoConsultaAdmin.php?idTipoConsulta=' + id("selectTipoConsulta").value, function (data) {
+        let selectS = id("selectAnio");
+        selectS.innerHTML = ""; //limpiar contenido
+
+        let createOptionDef = document.createElement("option");
+        createOptionDef.text = "Seleccione el año*";
+        createOptionDef.value = "";
+        selectS.appendChild(createOptionDef);
+
+        for (var i = 0; i < data.data.length; i++) {
+            var createOption = document.createElement("option");
+            createOption.value = data.data[i].anio;
+            createOption.text = data.data[i].anio;
+            selectS.appendChild(createOption);
+        }
+    });
+}

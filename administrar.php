@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kind Heart Charity - Donation</title>
+    <title>Administrar</title>
 
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -82,16 +82,30 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Consulktar solicitudes</h2>
+                    <h2 class="mb-5">Consultar solicitudes</h2>
                 </div>
-
                 <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <select>
-                            <option>Préstamos</option>
-                        </select>
+                    <div class="featured-block d-flex justify-content-center align-items-center p-4 border rounded shadow-sm">
+                        <form class="w-100">
+                            <div class="form-group mb-3">
+                                <label for="selectTipoConsulta" class="form-label">Tipo de consulta</label>
+                                <select id="selectTipoConsulta" name="selectTipoConsulta" class="form-control" onchange="cargarAnio()" required data-error="Por favor seleccione un tipo de consulta.">
+                                    <option value="">Seleccione el tipo de consulta*</option>
+                                    <option value="1">Préstamos</option>
+                                    <option value="2">Caja de ahorro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="selectAnio" class="form-label">Año</label>
+                                <select id="selectAnio" name="selectAnio" class="form-control" required data-error="Por favor seleccione un año válido.">
+                                    <option value="">Seleccione el año*</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Administrar</button>
+                        </form>
                     </div>
                 </div>
             </div>
