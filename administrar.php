@@ -253,7 +253,9 @@
 <script src="js/jquery.sticky.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/general.js"></script>
 <script src="js/administrador.js"></script>
+
 <!-- DataTable -->
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>

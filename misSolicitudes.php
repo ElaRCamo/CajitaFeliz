@@ -186,6 +186,7 @@
 <script src="js/jquery.sticky.js"></script>
 <script src="js/counter.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/general.js"></script>
 <script src="js/misSolicitudes.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- DataTable -->
