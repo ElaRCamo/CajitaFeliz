@@ -55,15 +55,11 @@
                         <a class="nav-link click-scroll" href="index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.php#solicitarPrestamoSeccion">Préstamo</a>
+                        <a class="nav-link click-scroll" href="#adminPrestamosSeccion">Préstamos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.php#crearAhorroSeccion">Caja de Ahorro</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.php#section_preguntas">Preguntas Frecuentes</a>
+                        <a class="nav-link click-scroll" href="#adminAhorroSeccion">Caja de Ahorro</a>
                     </li>
 
                     <li class="nav-item">
@@ -115,7 +111,7 @@
     </section>
 
 
-    <section class="tabla-section" id="solicitarPrestamoSeccion">
+    <section class="tabla-section" id="adminPrestamosSeccion">
         <div class="section-overlay"></div>
         <div class="container">
             <div class="row">
@@ -143,7 +139,7 @@
         </div>
     </section>
 
-    <section class="tabla-section" id="solicitarAhorroSeccion">
+    <section class="tabla-section" id="adminAhorroSeccion">
         <div class="section-overlay"></div>
         <div class="container">
             <div class="row">
