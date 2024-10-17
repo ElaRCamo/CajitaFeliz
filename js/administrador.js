@@ -190,6 +190,21 @@ const dataTableAhorroAdmin = async (anio) => {
     }
 };
 
+const formatearFecha = (fecha) => {
+    if (fecha !== '0000-00-00'){
+        let date = new Date(fecha);
+        let meses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+        let dia = date.getDate();
+        let mes = meses[date.getMonth()];
+        let anio = date.getFullYear();
+        return `${dia}/${mes}/${anio}`;
+    }else{
+        //return '0000-00-00';
+        return 'No asignada';
+    }
+};
+
+
 
 function responderPrestamo(){
 

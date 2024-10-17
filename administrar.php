@@ -266,7 +266,6 @@
         initDataTablePresAdmin(anioActual);
         initDataTableAhorroAdmin(anioActual);
     });
-
 </script>
 
 </body>
