@@ -1,3 +1,9 @@
 #solicitarPrestamoSeccion{
     display: none !important;
 }
+
+footer{
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+
+}

@@ -80,23 +80,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="26400000" />
-    </task>
-    <task id="LOCAL-00112" summary="Back end apartado misSolicitudes">
-      <option name="closed" value="true" />
-      <created>1728930674608</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1728930674608</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Back end apartado misSolicitudes">
-      <option name="closed" value="true" />
-      <created>1728930925311</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1728930925311</updated>
+      <workItem from="1729004663739" duration="26743000" />
     </task>
     <task id="LOCAL-00114" summary="Back end apartado misSolicitudes">
       <option name="closed" value="true" />
@@ -474,7 +458,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729178696435</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Apartado tipo de consulta">
+      <option name="closed" value="true" />
+      <created>1729179076745</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1729179076746</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Apartado tipo de consulta">
+      <option name="closed" value="true" />
+      <created>1729179226412</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1729179226412</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
