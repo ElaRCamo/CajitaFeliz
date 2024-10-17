@@ -120,7 +120,7 @@ function exportTableToExcel(tableID, filename = '') {
 
 function cargarAnio() {
     $.getJSON('https://grammermx.com/Metrologia/MetroTickets/dao/daoAnio.php', function (data) {
-        let selectS = id("selectAnio");
+        let selectS = document.getElementById("selectAnio");
         selectS.innerHTML = ""; //limpiar contenido
 
         let createOptionDef = document.createElement("option");
