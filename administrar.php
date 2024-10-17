@@ -244,12 +244,6 @@
     </div>
 </footer>
 
-<script>
-    window.addEventListener("load",async () => {
-        await initDataTablePresAdmin;
-    })
-</script>
-
 <!-- JAVASCRIPT FILES -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
