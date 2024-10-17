@@ -32,6 +32,7 @@ const dataTableOptPresAdmin = {
 };
 
 const initDataTablePresAdmin = async (anio) => {
+    alert("initDataTablePresAdmin");
     if (dataTableInitPrestamosAdmin) {
         dataTableAdminPrestamos.destroy();
     }
@@ -105,7 +106,6 @@ async function cargarSolicitudes() {
     let tipoConsulta = document.getElementById("selectTipoConsulta").value;
     let anio = document.getElementById("selectAnio").value;
 
-    // Oculta ambas secciones al iniciar para evitar que se muestren simultáneamente
     seccionPrestamo.style.display = "none";
     seccionAhorro.style.display = "none";
 
@@ -151,6 +151,7 @@ const dataTableOptAhorroAdmin = {
     }
 };
 const initDataTableAhorroAdmin = async (anio) => {
+    alert("initDataTablePresAdmin");
     if (dataTableInitAhorroAdmin) {
         dataTableAdminAhorro.destroy();
     }
