@@ -32,18 +32,15 @@ const dataTableOptPresAdmin = {
 };
 
 const initDataTablePresAdmin = async (anio) => {
-    alert("initDataTablePresAdmin: "+ initDataTablePresAdmin);
     if (dataTableInitPrestamosAdmin) {
         dataTableAdminPrestamos.destroy();
     }
-    alert("initDataTablePresAdmin: "+ initDataTablePresAdmin);
+
     await dataTablePrestamosAdmin(anio);
 
     dataTableAdminPrestamos = $("#tablaPrestamosAdmin").DataTable(dataTableOptPresAdmin);
 
     dataTableInitPrestamosAdmin = true;
-
-
 };
 
 const dataTablePrestamosAdmin = async (anio) => {
@@ -55,7 +52,7 @@ const dataTablePrestamosAdmin = async (anio) => {
         }
 
         const result = await response.json();
-        alert("response: "+ response);
+
         let content = '';
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
@@ -152,7 +149,6 @@ const initDataTableAhorroAdmin = async (anio) => {
     if (dataTableInitAhorroAdmin) {
         dataTableAdminAhorro.destroy();
     }
-    alert("initDataTablePresAdmin: "+ initDataTablePresAdmin);
     await dataTableAhorroAdmin(anio);
 
     dataTableAdminAhorro = $("#tablaAhorroAdmin").DataTable(dataTableOptAhorroAdmin);
@@ -170,7 +166,6 @@ const dataTableAhorroAdmin = async (anio) => {
         }
 
         const result = await response.json();
-        alert("response: "+ response);
         let content = '';
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
