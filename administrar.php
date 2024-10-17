@@ -17,6 +17,8 @@
 
     <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
+    <link href="css/admin.css" rel="stylesheet">
+
     <?php
     session_start();
     $nombreUser = $_SESSION['nombreUsuario'];
