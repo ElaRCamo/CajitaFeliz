@@ -106,7 +106,7 @@
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100">Ver solicitudes</button>
+                            <button type="submit" class="btn btn-primary w-100" onclick="cargarSolicitudes()">Ver solicitudes</button>
                         </form>
                     </div>
                 </div>
@@ -137,6 +137,32 @@
                         </tr>
                         </thead>
                         <tbody id="bodyPrestamosAdmin"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabla-section" id="solicitarAhorroSeccion">
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="container mt-5">
+                    <h2 class="text-center">Solicitudes de Caja de Ahorro</h2>
+                    <button class="btn btn-success text-right"  onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
+                        Exportar a Excel
+                    </button>
+                    <table class="table table-striped table-bordered mt-3" id="tablaAhorroAdmin">
+                        <thead class="table-dark">
+                        <tr>
+                            <th>Folio</th>
+                            <th>Fecha Solicitud</th>
+                            <th>Nómina</th>
+                            <th>Monto</th>
+                        </tr>
+                        </thead>
+                        <tbody id="bodyAhorroAdmin"></tbody>
                     </table>
                 </div>
             </div>
@@ -220,7 +246,6 @@
 
 <script>
     window.addEventListener("load",async () => {
-        alert("cargando ");
         await initDataTablePresAdmin;
     })
 </script>
