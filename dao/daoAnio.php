@@ -3,7 +3,7 @@ include_once('connectionCajita.php');
 ContadorAnios();
 
 function ContadorAnios(){
-    $con = new LocalConector();
+    $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
     $datos = mysqli_query($conex, " SELECT DISTINCT YEAR(c.fechaSolicitud) AS anio
