@@ -104,14 +104,16 @@ function cargarAnio() {
 
 async function cargarSolicitudes() {
     const seccionPrestamo = document.getElementById("solicitarPrestamoSeccion");
+    const seccionAhorro = document.getElementById("solicitarAhorroSeccion");
     let tipoConsulta = document.getElementById("selectTipoConsulta").value;
     let anio =  document.getElementById("selectAnio").value;
 
     if (tipoConsulta === "1"){//Préstamos
-
+        seccionPrestamo.style.display = "block";
         await initDataTablePresAdmin(anio);
 
     }else if(tipoConsulta === "2"){//Caja de Ahorro
+        seccionAhorro.style.display = "block";
         await initDataTableAhorroAdmin(anio);
     }
 }
