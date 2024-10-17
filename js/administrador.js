@@ -70,7 +70,6 @@ const dataTablePrestamosAdmin = async (anio) => {
                         <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}')">
                             <i class="las la-eye"></i><span>Responder</span>
                         </button>`;
-
             content += `
                     </td>
                 </tr>`;
