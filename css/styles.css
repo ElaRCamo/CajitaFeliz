@@ -714,6 +714,7 @@ strong {
   VOLUNTEER              
 -----------------------------------------*/
 .volunteer-section {
+  background: var(--secondary-color);
   position: relative;
   overflow: hidden;
 }
@@ -837,6 +838,7 @@ strong {
 }
 
 .news-category-block {
+  background: var(--secondary-color);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -909,6 +911,7 @@ blockquote::before {
 }
 
 .badge {
+  background: var(--secondary-color);
   border-radius: var(--border-radius-medium);
   font-weight: var(--font-weight-normal);
   line-height: normal;
@@ -986,6 +989,7 @@ blockquote::before {
 
 .testimonial-section::after {
   content: "";
+  background: var(--custom-btn-bg-color);
   border-radius: 50%;
   position: absolute;
   bottom: -110px;
@@ -1172,6 +1176,7 @@ blockquote::before {
 }
 
 .custom-form .input-group-text {
+  background: var(--secondary-color);
   border: 0;
   color: var(--white-color);
 }
@@ -1209,6 +1214,7 @@ blockquote::before {
 
 .form-check-radio .form-check-input:hover,
 .form-check-radio .form-check-input:checked {
+  background-color: var(--secondary-color);
   border-color: var(--white-color);
 }
 
@@ -1396,6 +1402,10 @@ blockquote::before {
   background: var(--primary-color);
   color: var(--white-color);
 }
+
+/*---------------------------------------
+  LOGIN MENU
+-----------------------------------------*/
 
 
 /*---------------------------------------
