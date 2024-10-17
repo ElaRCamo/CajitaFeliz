@@ -18,8 +18,13 @@
     <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
     <?php
-    $conexion = mysqli_connect("127.0.0.1:3306","u909553968_Ale","Grammer2024a","u909553968_testAle");
-    if ($conexion) {    echo 'conexion exitosa';} else {    echo 'conexion fallida';}
+    session_start();
+    $nombreUser = $_SESSION['nombreUsuario'];
+    $esAdmin = $_SESSION['admin'];
+
+    if ($nombreUser == null || $esAdmin == 0){
+        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
+    }
 
     ?>
 </head>
