@@ -11,16 +11,16 @@ function todosLosAhorros($anio){
 
     $datosPrueba =  mysqli_query($conex,
         "SELECT
-                    s.idCaja,
-                    s.nomina,
-                    s.montoAhorro,
-                    s.fechaSolicitud
+                    idCaja,
+                    nomina,
+                    montoAhorro,
+                    fechaSolicitud
                 FROM
-                    CajaAhorro s
+                    CajaAhorro 
                 WHERE
-                    YEAR(c.fechaSolicitud) like $anio
+                    YEAR(fechaSolicitud) like '$anio'
                 ORDER BY
-                    s.idSolicitud DESC;
+                    idCaja DESC;
                 ");
 
     $resultado= mysqli_fetch_all($datosPrueba, MYSQLI_ASSOC);
