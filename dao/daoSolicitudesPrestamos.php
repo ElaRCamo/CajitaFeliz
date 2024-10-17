@@ -1,9 +1,10 @@
 <?php
 
 include_once('connectionCajita.php');
-todosLosPrestamos();
+$anio = $_GET["anio"];
+todosLosPrestamos($anio);
 
-function todosLosPrestamos(){
+function todosLosPrestamos($anio){
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
@@ -30,6 +31,7 @@ function todosLosPrestamos(){
                     LEFT JOIN EstatusPrestamo e ON s.idEstatus = e.idEstatus
                 WHERE
                     s.idEstatus <> 4
+                  AND YEAR(s.fechaSolicitud) like '$anio'
                 ORDER BY
                     s.idSolicitud DESC;
                 ");
