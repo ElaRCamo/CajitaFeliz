@@ -100,27 +100,25 @@ function cargarAnio() {
 }
 
 async function cargarSolicitudes() {
-    alert("cargar solicitudes")
     const seccionPrestamo = document.getElementById("solicitarPrestamoSeccion");
     const seccionAhorro = document.getElementById("solicitarAhorroSeccion");
     let tipoConsulta = document.getElementById("selectTipoConsulta").value;
-    let anio =  document.getElementById("selectAnio").value;
+    let anio = document.getElementById("selectAnio").value;
 
-    if (tipoConsulta === "1"){//Préstamos
-        alert("prestamos")
+    // Oculta ambas secciones al iniciar para evitar que se muestren simultáneamente
+    seccionPrestamo.style.display = "none";
+    seccionAhorro.style.display = "none";
+
+    if (tipoConsulta === "1") { // Préstamos
         seccionPrestamo.style.display = "block";
         await initDataTablePresAdmin(anio);
 
-    }else if(tipoConsulta === "2"){//Caja de Ahorro
-
-        alert("ahorro")
+    } else if (tipoConsulta === "2") { // Caja de Ahorro
         seccionAhorro.style.display = "block";
         await initDataTableAhorroAdmin(anio);
     }
-
-
-    alert("nada")
 }
+
 // DataTables
 let dataTableAdminAhorro;
 let dataTableInitAhorroAdmin = false;

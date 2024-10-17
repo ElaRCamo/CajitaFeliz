@@ -52,5 +52,4 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
         $conex->close();
     }
 }
-
 ?>
