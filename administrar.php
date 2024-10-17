@@ -87,7 +87,7 @@
                 <div class="col-lg-10 col-12 text-center mx-auto">
                     <h2 class="mb-5">Consultar solicitudes</h2>
                 </div>
-                <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 justify-content-center align-items-center">
                     <div class="featured-block d-flex justify-content-center align-items-center p-4 border rounded">
                         <form class="w-100">
                             <div class="form-group mb-3">
@@ -106,7 +106,7 @@
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100">Administrar</button>
+                            <button type="submit" class="btn btn-primary w-100">Ver solicitudes</button>
                         </form>
                     </div>
                 </div>
@@ -138,7 +138,6 @@
                         </thead>
                         <tbody id="bodyPrestamosAdmin"></tbody>
                     </table>
-
                 </div>
             </div>
         </div>
