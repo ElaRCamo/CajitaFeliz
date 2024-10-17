@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                     <div class="featured-block d-flex justify-content-center align-items-center p-4 border rounded">
-                        <form class="w-100 d-flex justify-content-center align-items-center">
+                        <form class="w-100">
                             <div class="form-group mb-3">
                                 <label for="selectTipoConsulta" class="form-label">Tipo de consulta</label>
                                 <select id="selectTipoConsulta" name="selectTipoConsulta" class="form-control" onchange="cargarAnio()" required data-error="Por favor seleccione un tipo de consulta.">
