@@ -196,67 +196,42 @@
                     <table class="table">
                         <tr>
                             <td>
-                                <div class="mb-3">
-                                    <label for="folioSolicitud" class="form-label">Folio de solicitud</label>
-                                </div>
+                                <label for="folioSolicitud" class="form-label">Folio de solicitud</label>
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="folioSolicitud">
-                                </div>
+                                <input type="text" class="form-control" id="folioSolicitud">
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <label for="fechaSolicitud" class="form-label">Fecha solicitud</label>
-
-                                </div>
+                                <label for="fechaSolicitud" class="form-label">Fecha solicitud</label>
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="fechaSolicitud">
-                                </div>
+                                <input type="text" class="form-control" id="fechaSolicitud">
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <label for="montoSolicitado" class="form-label">Monto Solicitado</label>
-                                </div>
+                                <label for="montoSolicitado" class="form-label">Monto Solicitado</label>
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="montoSolicitado">
-                                </div>
+                                <input type="text" class="form-control" id="montoSolicitado">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <div class="mb-3">
-                                    <label for="nomina" class="form-label">Nómina</label>
-                                </div>
+                                <label for="nomina" class="form-label">Nómina</label>
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="nomina">
-                                </div>
+                                <input type="text" class="form-control" id="nomina">
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <label for="nombre" class="form-label">Nombre</label>
-                                </div>
+                                <label for="nombre" class="form-label">Nombre</label>
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="nombre">
-                                </div>
+                                <input type="text" class="form-control" id="nombre">
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <label for="telefono" class="form-label">Teléfono</label>
-                                </div>
+                                <label for="telefono" class="form-label">Teléfono</label>
                             </td>
                             <td>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" id="telefono">
-                                </div>
+                                <input type="text" class="form-control" id="telefono">
                             </td>
                         </tr>
                     </table>
