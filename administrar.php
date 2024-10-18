@@ -240,6 +240,10 @@
                             <td>
                                 <div class="mb-3">
                                     <label for="folioSolicitud" class="form-label">Folio de solicitud</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
                                     <input type="text" class="form-control" id="folioSolicitud">
                                 </div>
                             </td>
@@ -251,67 +255,46 @@
                             </td>
                             <td>
                                 <div class="mb-3">
-                                    <label for="montoSolicitado" class="form-label">Monto Solicitado</label>
+                                    <label for="fechaSolicitud" class="form-label">Fecha solicitud</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
                                     <input type="text" class="form-control" id="montoSolicitado">
                                 </div>
                             </td>
                             <td>
                                 <div class="mb-3">
                                     <label for="nomina" class="form-label">Nómina</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
                                     <input type="text" class="form-control" id="nomina">
                                 </div>
                             </td>
                             <td>
                                 <div class="mb-3">
                                     <label for="nombre" class="form-label">Nombre</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
                                     <input type="text" class="form-control" id="nombre">
                                 </div>
                             </td>
                             <td>
                                 <div class="mb-3">
                                     <label for="telefono" class="form-label">Teléfono</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
                                     <input type="text" class="form-control" id="telefono">
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <div class="mb-3">
-                                    <label for="campoExtra1" class="form-label">Campo Extra 1</label>
-                                    <input type="text" class="form-control" id="campoExtra1">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="mb-3">
-                                    <label for="campoExtra2" class="form-label">Campo Extra 2</label>
-                                    <input type="text" class="form-control" id="campoExtra2">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="mb-3">
-                                    <label for="campoExtra3" class="form-label">Campo Extra 3</label>
-                                    <input type="text" class="form-control" id="campoExtra3">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="mb-3">
-                                    <label for="campoExtra4" class="form-label">Campo Extra 4</label>
-                                    <input type="text" class="form-control" id="campoExtra4">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="mb-3">
-                                    <label for="campoExtra5" class="form-label">Campo Extra 5</label>
-                                    <input type="text" class="form-control" id="campoExtra5">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="mb-3">
-                                    <label for="campoExtra6" class="form-label">Campo Extra 6</label>
-                                    <input type="text" class="form-control" id="campoExtra6">
-                                </div>
-                            </td>
-                        </tr>
+
                     </table>
 
 
