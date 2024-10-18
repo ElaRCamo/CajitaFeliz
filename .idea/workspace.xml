@@ -80,23 +80,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="41802000" />
-    </task>
-    <task id="LOCAL-00143" summary="Apartado Solicitudes Prestamos Admin">
-      <option name="closed" value="true" />
-      <created>1729100950918</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1729100950918</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Apartado Solicitudes Prestamos Admin">
-      <option name="closed" value="true" />
-      <created>1729101291179</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1729101291179</updated>
+      <workItem from="1729004663739" duration="42140000" />
     </task>
     <task id="LOCAL-00145" summary="Apartado Solicitudes Prestamos Admin">
       <option name="closed" value="true" />
@@ -474,7 +458,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729263430407</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="Apartado tabla Admin retiros">
+      <option name="closed" value="true" />
+      <created>1729263568991</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1729263568991</updated>
+    </task>
+    <task id="LOCAL-00193" summary="Apartado tabla Admin retiros">
+      <option name="closed" value="true" />
+      <created>1729263698270</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1729263698270</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
