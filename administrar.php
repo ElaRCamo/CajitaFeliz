@@ -136,10 +136,11 @@
                         <thead class="table-dark">
                         <tr>
                             <th>Folio</th>
-                            <th>Id caja</th>
                             <th>Fecha Solicitud</th>
-                            <th>Monto depositado</th>
+                            <th>Id caja</th>
+                            <th>Nómina</th>
                             <th>Fecha de depósito</th>
+                            <th>Monto depositado</th>
                         </tr>
                         </thead>
                         <tbody id="bodyRetirosAdmin"></tbody>
