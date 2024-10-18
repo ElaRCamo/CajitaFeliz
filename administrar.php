@@ -217,20 +217,20 @@
                         <tr>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nomina" placeholder="Nómina">
-                                    <label for="nomina">Nómina</label>
+                                    <input type="text" class="form-control" id="nominaSol" placeholder="Nómina">
+                                    <label for="nominaSol">Nómina</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombreSol" placeholder="Nombre">
+                                    <label for="nombreSol">Nombre</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="telefono" placeholder="Teléfono">
-                                    <label for="telefono">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefonoSol" placeholder="Teléfono">
+                                    <label for="telefonoSol">Teléfono</label>
                                 </div>
                             </td>
                         </tr>
