@@ -271,7 +271,7 @@ function responderPrestamo(idSolicitud){
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
         //codigo para actualizar campos
         var data = response.data[0];
-        alert(data)
+        alert(data.idSolicitud +" "+ data.fechaSolicitud)
 
         $('#folioSolicitud').text(data.idSolicitud);
 
