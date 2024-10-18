@@ -272,18 +272,9 @@ function responderPrestamo(idSolicitud){
         //codigo para actualizar campos
         var data = response.data[0];
 
-        $('#folioSolicitud').text(data.idSolicitud);
-
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
-
-        $('#fechaSolicitud').text(fechaSolicitudFormateada);
-
         let montoFormateado = formatearMonto(data.montoSolicitado);
-        $('#montoSolicitado').text(montoFormateado);
 
-
-        $('#nominaSol').text(data.nominaSolicitante);
-        //$('#nombreSol').text(data.nombreSolic);
         $('#telefonoSol').text(data.telefono);
 
         $('#folioSolicitud').val(data.idSolicitud);
@@ -293,7 +284,7 @@ function responderPrestamo(idSolicitud){
         $('#montoSolicitado').val(montoFormateado);
 
         $('#nominaSol').val(data.nominaSolicitante);
-        //$('#nombreSol').val(data.nombreSolic); // Si se necesita este campo, habilitar
+        //$('#nombreSol').val(data.nombreSolic);
         $('#telefonoSol').val(data.telefono);
     });
 }
