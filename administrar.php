@@ -197,19 +197,19 @@
                         <tr>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="folioSolicitud" class="form-label">Folio de solicitud</label>
+                                    <label for="folioSolicitud" class="form-control">Folio de solicitud</label>
                                     <input type="text" class="form-control" id="folioSolicitud">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="fechaSolicitud" class="form-label">Fecha solicitud</label>
+                                    <label for="fechaSolicitud" class="form-control">Fecha solicitud</label>
                                     <input type="text" class="form-control" id="fechaSolicitud">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="montoSolicitado" class="form-label">Monto Solicitado</label>
+                                    <label for="montoSolicitado" class="form-control">Monto Solicitado</label>
                                     <input type="text" class="form-control" id="montoSolicitado">
                                 </div>
                             </td>
@@ -217,19 +217,19 @@
                         <tr>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="nomina" class="form-label">Nómina</label>
+                                    <label for="nomina" class="form-control">Nómina</label>
                                     <input type="text" class="form-control" id="nomina">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <label for="nombre" class="form-control">Nombre</label>
                                     <input type="text" class="form-control" id="nombre">
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <label for="telefono" class="form-control">Teléfono</label>
                                     <input type="text" class="form-control" id="telefono">
                                 </div>
                             </td>
