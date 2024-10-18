@@ -56,7 +56,7 @@ const dataTablePrestamosAdmin = async (anio) => {
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
             const montoSolFormateado = formatearMonto(item.montoSolicitado);
-            const titulo = "Responder Solicitud de Préstamo Folio "
+
 
             content += `
                 <tr>
@@ -66,7 +66,7 @@ const dataTablePrestamosAdmin = async (anio) => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.telefono}</td>
                     <td>
-                        <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}'), actualizarTitulo('#respModalTit','${item.idSolicitud}',${titulo} )" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
+                        <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
                             <span>Responder</span>
                         </button>`;
             content += `
@@ -264,7 +264,11 @@ const dataTableRetiroAdmin = async (anio) => {
 };
 
 
-function responderPrestamo(){
+function responderPrestamo(idSolicitud){
+    const titulo = "Responder Solicitud de Préstamo Folio " + idSolicitud;
+    alert(titulo);
+    actualizarTitulo('#respModalTit',titulo);
+
 
 }
 

@@ -21,9 +21,9 @@ function formatearMonto(numero) {
     return `$${numero.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
     //return `$${numero.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
-function actualizarTitulo(idTitulo, id, titulo) {
+function actualizarTitulo(idTitulo, titulo) {
     let titulo5 = document.querySelector(idTitulo);
     if (titulo5) {
-        titulo5.textContent = titulo + id;
+        titulo5.textContent = titulo;
     }
 }
