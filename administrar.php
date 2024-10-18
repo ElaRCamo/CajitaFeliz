@@ -192,7 +192,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
+<!--
                     <table class="table table-bordered table-hover table-sm  table-responsive" id="solPrestamoPorId">
                         <tbody>
                             <tr class="bg-primary">
@@ -212,7 +212,7 @@
                                 <td id="telefonoSol" colspan="3"></td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>-->
 
                     <table class="table">
                         <tr>
