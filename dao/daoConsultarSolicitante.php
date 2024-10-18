@@ -1,10 +1,10 @@
 <?php
 include_once('connection.php');
 
-$nomina = $_GET["solicitante"];
+$nomina = $_GET["sol"];
 consultarsolicitante($nomina);
 function consultarsolicitante($Nomina){
-    $con = new LocalConectorCajita();
+    $con = new LocalConector();
     $conexion=$con->conectar();
 
     $consP="SELECT NomUser FROM Empleados WHERE IdUser = '$Nomina'";
