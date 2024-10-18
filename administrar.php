@@ -262,8 +262,8 @@
                     </table>
 
                     <form>
-                        <div class="container">
-                            <div class="mb-3 row col-md-12">
+                        <div class="container  col-md-12">
+                            <div class="mb-3 row">
                                 <div class="col-sm-5 col-md-6">
                                     <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
                                     <input type="number" class="form-control" id="inMontoAprobado" placeholder="$5,000">
