@@ -294,15 +294,12 @@ function responderPrestamo(idSolicitud){
     });
 }
 function fCargarSolicitante(nomina){
-    const formData = new FormData(document.getElementById('formSolicitarPrestamo'));
 
-    formData.append('solicitante', nomina);
-
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php', function (response) {
-
-        $('#nombreSol').val(response.data[0].nominaSolicitante);
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
+        $('#nombreSol').val(response.data[0].NomUser);
     });
 }
+
 function fCargarEstatus(idEstatus){
 
 }
