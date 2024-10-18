@@ -285,14 +285,15 @@
 
                     <form>
                         <div class="container col-md-12">
-                            <div class="mb-3 row">
-                                <div class="col-sm-5 col-md-6">
+                            <div class="row">
+                                <!-- Primer div: Monto Aprobado -->
+                                <div class="col-sm-5 col-md-6 mb-3">
                                     <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
                                     <input type="number" class="form-control" id="inMontoAprobado" placeholder="$5,000">
                                 </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <div class="col-sm-5 col-md-6">
+
+                                <!-- Segundo div: Estatus del préstamo -->
+                                <div class="col-sm-5 col-md-6 mb-3">
                                     <label for="selEstatus" class="form-label">Estatus del préstamo</label>
                                     <select class="form-control" id="selEstatus">
                                         <option value="">Seleccione un estatus*</option>
@@ -300,6 +301,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="mb-3">
                             <label for="textareaComentarios" class="form-label">Comentarios</label>
                             <textarea class="form-control" id="textareaComentarios" rows="3" placeholder="Escribe tus observaciones aquí..."></textarea>
