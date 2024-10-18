@@ -7,6 +7,7 @@
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Apartado tabla Admin retiros">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,23 +84,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="39261000" />
-    </task>
-    <task id="LOCAL-00139" summary="Apartado Solicitudes Prestamos Admin">
-      <option name="closed" value="true" />
-      <created>1729099944387</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1729099944387</updated>
-    </task>
-    <task id="LOCAL-00140" summary="Apartado Solicitudes Prestamos Admin">
-      <option name="closed" value="true" />
-      <created>1729100015942</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1729100015942</updated>
+      <workItem from="1729004663739" duration="41458000" />
     </task>
     <task id="LOCAL-00141" summary="Apartado Solicitudes Prestamos Admin">
       <option name="closed" value="true" />
@@ -477,7 +462,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729260833470</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Apartado tabla Admin retiros">
+      <option name="closed" value="true" />
+      <created>1729261007735</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1729261007736</updated>
+    </task>
+    <task id="LOCAL-00189" summary="Apartado tabla Admin retiros">
+      <option name="closed" value="true" />
+      <created>1729261085878</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1729261085878</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

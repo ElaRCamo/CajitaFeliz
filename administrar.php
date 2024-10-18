@@ -184,18 +184,71 @@
 
 
     <!-- Modal para responder solicitud -->
-    <div class="modal fade" id="responderModal" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalRespPrestamo" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="responderModalLabel">Responder Solicitud</h5>
+                    <h5 class="modal-title" id="responderModalLabel">Responder Solicitud de Préstamo Folio <span id="numSolPres"></span></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="folioSolicitud" class="form-label">Folio de solicitud</label>
+                                    <input type="text" class="form-control" id="folioSolicitud">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="fechaSolicitud" class="form-label">Fecha solicitud</label>
+                                    <input type="text" class="form-control" id="fechaSolicitud">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="montoSolicitado" class="form-label">Monto Solicitado</label>
+                                    <input type="text" class="form-control" id="montoSolicitado">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="nomina" class="form-label">Nómina</label>
+                                    <input type="text" class="form-control" id="nomina">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+
                     <form>
                         <div class="mb-3">
-                            <label for="respuesta" class="form-label">Escribe tu respuesta</label>
-                            <textarea class="form-control" id="respuesta" rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                            <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
+                            <input type="number" class="form-control" id="inMontoAprobado" placeholder="$5,000">
+                        </div>
+                        <div class="mb-3">
+                            <label for="selEstatus" class="form-label">Estatus del préstamo</label>
+                            <select class="form-control" id="selEstatus"></select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="textareaComentarios" class="form-label">Comentarios</label>
+                            <textarea class="form-control" id="textareaComentarios" rows="3" placeholder="Escribe tus observaciones aquí..."></textarea>
                         </div>
                     </form>
                 </div>
@@ -207,6 +260,7 @@
         </div>
     </div>
 </main>
+
 
 <footer class="site-footer">
     <div class="container">
@@ -286,6 +340,19 @@
         initDataTablePresAdmin(anioActual);
         initDataTableAhorroAdmin(anioActual);
         initDataTableRetiroAdmin(anioActual);
+    });
+
+    $("#montoAprobado").on({
+        "focus": function (event) {
+            $(event.target).select();
+        },
+        "keyup": function (event) {
+            $(event.target).val(function (index, value ) {
+                return value.replace(/\D/g, "")
+                    .replace(/([0-9])([0-9]{2})$/, '$1.$2')
+                    .replace(/\B(?=(\d{3})+(?!\d)\.?)/g, ",");
+            });
+        }
     });
 </script>
 

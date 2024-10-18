@@ -65,8 +65,8 @@ const dataTablePrestamosAdmin = async (anio) => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.telefono}</td>
                     <td>
-                        <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}')">
-                            <i class="las la-eye"></i><span>Responder</span>
+                        <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
+                            <span>Responder</span>
                         </button>`;
             content += `
                     </td>
@@ -267,7 +267,6 @@ function responderPrestamo(){
 
 }
 
-
-function exportTableToExcel(tableID, filename = '') {
+function exportTableToExcel() {
 
 }
