@@ -276,10 +276,13 @@ function responderPrestamo(idSolicitud){
         $('#folioSolicitud').text(data.idSolicitud);
 
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
+        alert(fechaSolicitudFormateada)
         $('#fechaSolicitud').text(fechaSolicitudFormateada);
 
         let montoFormateado = formatearMonto(data.montoSolicitado);
         $('#montoSolicitado').text(montoFormateado);
+
+        alert(montoFormateado)
 
         $('#nominaSol').text(data.nominaSolicitante);
         //$('#nombreSol').text(data.nombreSolic);
