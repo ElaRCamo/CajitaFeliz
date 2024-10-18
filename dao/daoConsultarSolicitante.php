@@ -1,7 +1,7 @@
 <?php
 include_once('connection.php');
 
-$nomina = $_POST["solicitante"];
+$nomina = $_GET["solicitante"];
 consultarsolicitante($nomina);
 function consultarsolicitante($Nomina){
     $con = new LocalConectorCajita();
