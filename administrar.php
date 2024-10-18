@@ -263,13 +263,17 @@
 
                     <form>
                         <div class="container">
-                            <div class="mb-3 row col-sm-5 col-md-6">
-                                <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
-                                <input type="number" class="form-control" id="inMontoAprobado" placeholder="$5,000">
+                            <div class="mb-3 row ">
+                                <div class="col-sm-5 col-md-6">
+                                    <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
+                                    <input type="number" class="form-control" id="inMontoAprobado" placeholder="$5,000">
+                                </div>
                             </div>
-                            <div class="mb-3 row col-sm-5 col-md-6">
-                                <label for="selEstatus" class="form-label">Estatus del préstamo</label>
-                                <select class="form-control" id="selEstatus"></select>
+                            <div class="mb-3 row">
+                                <div class="col-sm-5 col-md-6">
+                                    <label for="selEstatus" class="form-label">Estatus del préstamo</label>
+                                    <select class="form-control" id="selEstatus"></select>
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">
