@@ -284,7 +284,7 @@
                     -->
 
                     <form>
-                        <div class="container  col-md-12">
+                        <div class="container col-md-12">
                             <div class="mb-3 row">
                                 <div class="col-sm-5 col-md-6">
                                     <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
