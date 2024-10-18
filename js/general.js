@@ -8,7 +8,7 @@ const formatearFecha = (fecha) => {
         return `${dia}/${mes}/${anio}`;
     }else{
         //return '0000-00-00';
-        return 'No asignada';
+        return 'Sin registro';
     }
 };
 
