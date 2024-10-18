@@ -302,7 +302,7 @@ function fCargarSolicitante(nomina){
 
 function fCargarEstatus(idSeleccionado){
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoEstatusSol.php', function (data){
-        var selectS = id("solEstatus");
+        let selectS = id("solEstatus");
         selectS.innerHTML = ""; //limpiar contenido
 
         for (var j = 0; j < data.data.length; j++) {
@@ -310,7 +310,7 @@ function fCargarEstatus(idSeleccionado){
             createOption.value = data.data[j].idEstatus;
             createOption.text = data.data[j].descripcion;
             selectS.appendChild(createOption);
-            // Si el valor actual coincide con id_estatusSol, se selecciona por defecto
+            // Si el valor actual coincide con idSeleccionado, se selecciona por defecto
             if (data.data[j].idEstatus === idSeleccionado) {
                 createOption.selected = true;
             }
