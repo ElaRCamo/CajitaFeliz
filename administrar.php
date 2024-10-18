@@ -112,7 +112,7 @@
 
                 <div class="container mt-5">
                     <h2 class="text-center">Solicitudes de Caja de Ahorro</h2>
-                    <h3 class="text-center">Iniciar ahorro</h3>
+                    <h3 class="text-center"><br>Iniciar ahorro</br></h3>
                     <button class="btn btn-success text-right"  onclick="exportTableToExcel()">
                         Exportar a Excel
                     </button>
@@ -128,7 +128,7 @@
                         <tbody id="bodyAhorroAdmin"></tbody>
                     </table>
 
-                    <h3 class="text-center">Retiros</h3>
+                    <h3 class="text-center"><br>Retiros</br></h3>
                     <button class="btn btn-success text-right"  onclick="exportTableToExcel()">
                         Exportar a Excel
                     </button>
@@ -167,7 +167,6 @@
                                     <option value="2">Caja de ahorro</option>
                                 </select>
                             </div>
-
                             <div class="form-group mb-3">
                                 <label for="selectAnio" class="form-label">Año</label>
                                 <select id="selectAnio" name="selectAnio" class="form-control" required data-error="Por favor seleccione un año válido.">
