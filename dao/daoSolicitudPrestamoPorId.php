@@ -15,14 +15,10 @@ function obtenerPrestamoPorId($idSolicitud){
                     s.fechaSolicitud,
                     s.montoSolicitado,
                     s.idEstatus,
-                    e.descripcion,
                     s.telefono
                 FROM
                     Prestamo s
-                    LEFT JOIN EstatusPrestamo e ON s.idEstatus = e.idEstatus
-                WHERE
-                    s.idEstatus <> 4
-                  AND idSolicitud = '$idSolicitud'
+                WHERE idSolicitud = '$idSolicitud'
                 ");
 
     $resultado= mysqli_fetch_all($datosPrueba, MYSQLI_ASSOC);

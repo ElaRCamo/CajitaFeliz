@@ -267,10 +267,11 @@ const dataTableRetiroAdmin = async (anio) => {
 function responderPrestamo(idSolicitud){
     const titulo = "Responder Solicitud de Préstamo Folio " + idSolicitud;
     actualizarTitulo('#respModalTit', titulo);
+    let data = "";
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
         //codigo para actualizar campos
-        var data = response.data[0];
+        data = response.data[0];
 
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
         let montoFormateado = formatearMonto(data.montoSolicitado);
@@ -286,7 +287,24 @@ function responderPrestamo(idSolicitud){
         $('#nominaSol').val(data.nominaSolicitante);
         //$('#nombreSol').val(data.nombreSolic);
         $('#telefonoSol').val(data.telefono);
+    }).then(function(){
+        fCargarSolicitante(data.nominaSolicitante);
+    }).then(function(){
+        fCargarEstatus(data.idEstatus);
     });
+}
+function fCargarSolicitante(nomina){
+    const formData = new FormData(document.getElementById('formSolicitarPrestamo'));
+
+    formData.append('solicitante', nomina);
+
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php', function (response) {
+
+        $('#nombreSol').val(response.data[0].nominaSolicitante);
+    });
+}
+function fCargarEstatus(idEstatus){
+
 }
 
 function exportTableToExcel() {
