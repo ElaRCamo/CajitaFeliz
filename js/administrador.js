@@ -271,22 +271,30 @@ function responderPrestamo(idSolicitud){
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
         //codigo para actualizar campos
         var data = response.data[0];
-        alert(data.idSolicitud +" "+ data.fechaSolicitud)
 
         $('#folioSolicitud').text(data.idSolicitud);
 
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
-        alert(fechaSolicitudFormateada)
+
         $('#fechaSolicitud').text(fechaSolicitudFormateada);
 
         let montoFormateado = formatearMonto(data.montoSolicitado);
         $('#montoSolicitado').text(montoFormateado);
 
-        alert(montoFormateado)
 
         $('#nominaSol').text(data.nominaSolicitante);
         //$('#nombreSol').text(data.nombreSolic);
         $('#telefonoSol').text(data.telefono);
+
+        $('#folioSolicitud').val(data.idSolicitud);
+
+        $('#fechaSolicitud').val(fechaSolicitudFormateada);
+
+        $('#montoSolicitado').val(montoFormateado);
+
+        $('#nominaSol').val(data.nominaSolicitante);
+        //$('#nombreSol').val(data.nombreSolic); // Si se necesita este campo, habilitar
+        $('#telefonoSol').val(data.telefono);
     });
 }
 
