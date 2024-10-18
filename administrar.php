@@ -19,7 +19,7 @@
 
     <link href="css/admin.css" rel="stylesheet">
 
-    <?php
+    <!-- ?php
     session_start();
     $nombreUser = $_SESSION['nombreUsuario'];
     $esAdmin = $_SESSION['admin'];
@@ -28,7 +28,7 @@
         header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
     }
 
-    ?>
+    ?>-->
 </head>
 
 <body>
@@ -37,7 +37,8 @@
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="images/logo.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
+                <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
                 <span>
                     Cajita Feliz
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
@@ -78,13 +79,12 @@
     </nav>
 
     <section class="tabla-section" id="adminPrestamosSeccion">
-        <div class="section-overlay"></div>
+        <div class=""></div>
         <div class="container">
             <div class="row">
-
                 <div class="container mt-5">
                     <h2 class="text-center">Solicitudes de Préstamos</h2>
-                    <button class="btn btn-success text-right"  onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
+                    <button class="btn btn-success text-right" onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
@@ -112,7 +112,8 @@
 
                 <div class="container mt-5">
                     <h2 class="text-center">Solicitudes de Caja de Ahorro</h2>
-                    <button class="btn btn-success text-right"  onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
+                    <h3 class="text-center">Iniciar ahorro</h3>
+                    <button class="btn btn-success text-right"  onclick="exportTableToExcel()">
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaAhorroAdmin">
@@ -125,6 +126,23 @@
                         </tr>
                         </thead>
                         <tbody id="bodyAhorroAdmin"></tbody>
+                    </table>
+
+                    <h3 class="text-center">Retiros</h3>
+                    <button class="btn btn-success text-right"  onclick="exportTableToExcel()">
+                        Exportar a Excel
+                    </button>
+                    <table class="table table-striped table-bordered mt-3" id="tablaRetirosAdmin">
+                        <thead class="table-dark">
+                        <tr>
+                            <th>Folio</th>
+                            <th>Id caja</th>
+                            <th>Fecha Solicitud</th>
+                            <th>Monto depositado</th>
+                            <th>Fecha de depósito</th>
+                        </tr>
+                        </thead>
+                        <tbody id="bodyRetirosAdmin"></tbody>
                     </table>
                 </div>
             </div>
@@ -267,6 +285,7 @@
         const anioActual = new Date().getFullYear();
         initDataTablePresAdmin(anioActual);
         initDataTableAhorroAdmin(anioActual);
+        initDataTableRetiroAdmin(anioActual);
     });
 </script>
 

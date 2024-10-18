@@ -8,7 +8,6 @@ const dataTableOptPresAdmin = {
         {className: "centered", targets: [0,1,2,3,4]},
         {orderable: false, targets: [0,1,2]},
         {width: "8%", targets: [0]},
-        {width: "28%", targets: [4]},
         {searchable: true, targets: [0,1,2,3] }
     ],
     pageLength:5,
@@ -32,7 +31,6 @@ const dataTableOptPresAdmin = {
 };
 
 const initDataTablePresAdmin = async (anio) => {
-    alert("initDataTablePresAdmin");
     if (dataTableInitPrestamosAdmin) {
         dataTableAdminPrestamos.destroy();
     }
@@ -150,7 +148,6 @@ const dataTableOptAhorroAdmin = {
     }
 };
 const initDataTableAhorroAdmin = async (anio) => {
-    alert("initDataTablePresAdmin");
     if (dataTableInitAhorroAdmin) {
         dataTableAdminAhorro.destroy();
     }
@@ -189,6 +186,82 @@ const dataTableAhorroAdmin = async (anio) => {
         console.error('Error:', error);
     }
 };
+
+
+// DataTables
+let dataTableAdminRetiro;
+let dataTableInitRetiroAdmin = false;
+
+const dataTableOptRetiroAdmin = {
+    lengthMenu: [5, 10, 15, 20],
+    columnDefs:[
+        {className: "centered", targets: [0,1,2,3]},
+        {orderable: false, targets: [0,1,2]},
+        {width: "8%", targets: [0]},
+        {searchable: true, targets: [0,1,2] }
+    ],
+    pageLength:5,
+    destroy: true,
+    order: [[0, 'desc']], // Ordenar por la columna 0
+    language:{
+        lengthMenu: "Mostrar _MENU_ registros pór página",
+        sZeroRecords: "Ninguna solicitud encontrada",
+        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+        infoEmpty: "Ninguna solicitud encontrada",
+        infoFiltered: "(filtrados desde _MAX_ registros totales)",
+        search: "Buscar: ",
+        loadingRecords: "Cargando...",
+        paginate:{
+            first:"Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior"
+        }
+    }
+};
+const initDataTableRetiroAdmin = async (anio) => {
+    if (dataTableInitRetiroAdmin) {
+        dataTableAdminRetiro.destroy();
+    }
+    await dataTableRetiroAdmin(anio);
+
+    dataTableAdminRetiro = $("#tablaRetirosAdmin").DataTable(dataTableOptRetiroAdmin);
+
+    dataTableInitRetiroAdmin = true;
+};
+
+
+const dataTableRetiroAdmin = async (anio) => {
+    try {
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesRetiro.php?anio=` + anio);
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        let content = '';
+        result.data.forEach((item) => {
+            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
+            const fechaDepositoFormateada = formatearFecha(item.fechaDeposito);
+            const montoDepFormateado = formatearMonto(item.montoDepositado);
+
+            content += `
+                <tr>
+                    <td>${item.idRetiro}</td>
+                    <td>${fechaSolicitudFormateada}</td>
+                    <td>${item.idCaja}</td>
+                    <td>${item.nomina}</td>
+                    <td>${fechaDepositoFormateada}</td>
+                    <td>${montoDepFormateado}</t>
+                </tr>`;
+        });
+        bodyRetirosAdmin.innerHTML = content;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
 
 function responderPrestamo(){
 
