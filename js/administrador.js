@@ -302,7 +302,7 @@ function fCargarSolicitante(nomina){
 
 function fCargarEstatus(idSeleccionado){
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoEstatusSol.php', function (data){
-        let selectS = id("solEstatus");
+        let selectS = document.getElementById("solEstatus");
         selectS.innerHTML = ""; //limpiar contenido
 
         for (var j = 0; j < data.data.length; j++) {
