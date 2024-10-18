@@ -300,18 +300,18 @@ function fCargarSolicitante(nomina){
     });
 }
 
-function fCargarEstatus(idEstatus){
+function fCargarEstatus(idSeleccionado){
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoEstatusSol.php', function (data){
         var selectS = id("solEstatus");
         selectS.innerHTML = ""; //limpiar contenido
 
         for (var j = 0; j < data.data.length; j++) {
             var createOption = document.createElement("option");
-            createOption.value = data.data[j].id_estatusPrueba;
-            createOption.text = data.data[j].descripcionEstatus;
+            createOption.value = data.data[j].idEstatus;
+            createOption.text = data.data[j].descripcion;
             selectS.appendChild(createOption);
             // Si el valor actual coincide con id_estatusSol, se selecciona por defecto
-            if (data.data[j].id_estatusPrueba === idEstatus) {
+            if (data.data[j].idEstatus === idSeleccionado) {
                 createOption.selected = true;
             }
         }
