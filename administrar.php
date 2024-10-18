@@ -197,46 +197,48 @@
                         <tr>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="folioSolicitud" class="form-control">Folio de solicitud</label>
-                                    <input type="text" class="form-control" id="folioSolicitud">
+                                    <input type="text" class="form-control" id="folioSolicitud" placeholder="Folio de solicitud">
+                                    <label for="folioSolicitud">Folio de solicitud</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="fechaSolicitud" class="form-control">Fecha solicitud</label>
-                                    <input type="text" class="form-control" id="fechaSolicitud">
+                                    <input type="text" class="form-control" id="fechaSolicitud" placeholder="Fecha solicitud">
+                                    <label for="fechaSolicitud">Fecha solicitud</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="montoSolicitado" class="form-control">Monto Solicitado</label>
-                                    <input type="text" class="form-control" id="montoSolicitado">
+                                    <input type="text" class="form-control" id="montoSolicitado" placeholder="Monto solicitado">
+                                    <label for="montoSolicitado">Monto solicitado</label>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="nomina" class="form-control">Nómina</label>
-                                    <input type="text" class="form-control" id="nomina">
+                                    <input type="text" class="form-control" id="nomina" placeholder="Nómina">
+                                    <label for="nomina">Nómina</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="nombre" class="form-control">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre">
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                    <label for="nombre">Nombre</label>
                                 </div>
                             </td>
                             <td>
                                 <div class="form-floating mb-3">
-                                    <label for="telefono" class="form-control">Teléfono</label>
-                                    <input type="text" class="form-control" id="telefono">
+                                    <input type="text" class="form-control" id="telefono" placeholder="Teléfono">
+                                    <label for="telefono">Teléfono</label>
                                 </div>
                             </td>
                         </tr>
                     </table>
 
 
+
+                    <!--
                     <table class="table">
                         <tr>
                             <td>
@@ -279,6 +281,7 @@
                             </td>
                         </tr>
                     </table>
+                    -->
 
                     <form>
                         <div class="container  col-md-12">
