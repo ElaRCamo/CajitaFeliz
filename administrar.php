@@ -315,8 +315,8 @@
 
                                 <!-- Segundo div: Estatus del préstamo -->
                                 <div class="col-sm-5 col-md-6 mb-3">
-                                    <label for="selEstatus" class="form-label">Estatus del préstamo</label>
-                                    <select class="form-control" id="selEstatus">
+                                    <label for="solEstatus" class="form-label">Estatus del préstamo</label>
+                                    <select class="form-control" id="solEstatus">
                                         <option value="">Seleccione un estatus*</option>
                                     </select>
                                 </div>

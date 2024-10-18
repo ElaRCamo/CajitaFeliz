@@ -301,7 +301,21 @@ function fCargarSolicitante(nomina){
 }
 
 function fCargarEstatus(idEstatus){
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoEstatusSol.php', function (data){
+        var selectS = id("solEstatus");
+        selectS.innerHTML = ""; //limpiar contenido
 
+        for (var j = 0; j < data.data.length; j++) {
+            var createOption = document.createElement("option");
+            createOption.value = data.data[j].id_estatusPrueba;
+            createOption.text = data.data[j].descripcionEstatus;
+            selectS.appendChild(createOption);
+            // Si el valor actual coincide con id_estatusSol, se selecciona por defecto
+            if (data.data[j].id_estatusPrueba === idEstatus) {
+                createOption.selected = true;
+            }
+        }
+    });
 }
 
 function exportTableToExcel() {
