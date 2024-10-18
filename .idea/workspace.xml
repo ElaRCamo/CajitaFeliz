@@ -80,31 +80,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="42922000" />
-    </task>
-    <task id="LOCAL-00150" summary="Apartado tipo de consulta">
-      <option name="closed" value="true" />
-      <created>1729174562826</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1729174562826</updated>
-    </task>
-    <task id="LOCAL-00151" summary="Apartado tipo de consulta">
-      <option name="closed" value="true" />
-      <created>1729174615318</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1729174615319</updated>
-    </task>
-    <task id="LOCAL-00152" summary="Apartado tipo de consulta">
-      <option name="closed" value="true" />
-      <created>1729174781516</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1729174781516</updated>
+      <workItem from="1729004663739" duration="43450000" />
     </task>
     <task id="LOCAL-00153" summary="Apartado tipo de consulta">
       <option name="closed" value="true" />
@@ -474,7 +450,31 @@
       <option name="project" value="LOCAL" />
       <updated>1729264546186</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="Apartado tabla Admin retiros">
+      <option name="closed" value="true" />
+      <created>1729264605985</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1729264605986</updated>
+    </task>
+    <task id="LOCAL-00200" summary="Apartado tabla Admin retiros">
+      <option name="closed" value="true" />
+      <created>1729264682298</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1729264682298</updated>
+    </task>
+    <task id="LOCAL-00201" summary="Apartado tabla Admin retiros">
+      <option name="closed" value="true" />
+      <created>1729264781771</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1729264781771</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
