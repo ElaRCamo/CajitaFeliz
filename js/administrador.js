@@ -361,7 +361,7 @@ function actualizarSolicitud() {
     // Llamada a fetch sin paréntesis adicionales
     fetch("https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarSolPresAdmin.php", {
         method: 'POST',
-        body: dataForm
+        body: data
     })
         .then(response => response.json())
         .then(data => {
