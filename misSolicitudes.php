@@ -265,11 +265,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-lg-12 col-12">
-                        <h4>Avales</h4>
+                        <strong><i class="bi bi-exclamation-triangle"></i>Importante: Recuerda que tu aval debe estar activo en caja</strong>
                         <div class="col-lg-12 col-12 row">
-                            <h5>Aval 1
-                                <i class="bi bi-exclamation-triangle" id="tooltipAvales1" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuerda que tu aval debe estar activo en caja"></i>
-                            </h5>
+                            <h5>Aval 1</h5>
                             <div class="col-lg-3 col-12">
                                 <label for="nominaAval1">Nómina: </label>
                                 <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="00012345" required>
@@ -280,9 +278,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 col-12 row">
-                            <h5>Aval 2
-                                <i class="bi bi-exclamation-triangle" id="tooltipAvales1" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuerda que tu aval debe estar activo en caja"></i>
-                            </h5>
+                            <h5>Aval 2</h5>
                             <div class="col-lg-3 col-12">
                                 <label for="nominaAval2">Nómina: </label>
                                 <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="00023456" required>
