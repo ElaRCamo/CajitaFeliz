@@ -315,15 +315,14 @@ function deshabilitarInputs() {
     $('#fechaSolicitud').prop('disabled', true);
     $('#montoSolicitado').prop('disabled', true);
     $('#nominaSol').prop('disabled', true);
-    $('#NomUser').prop('disabled', true);
 }
 
 function fCargarSolicitante(nomina){
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
         $('#nombreSol').val(response.data[0].NomUser);
-        alert(response.data[0].NomUser);
     });
+    $('#NomUser').prop('disabled', true);
 }
 
 function fCargarEstatus(idSeleccionado){
