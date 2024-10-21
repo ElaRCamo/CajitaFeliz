@@ -270,10 +270,12 @@ function responderPrestamo(idSolicitud){
     let data = "";
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
-        fCargarSolicitante(data.nominaSolicitante);
+
 
         //codigo para actualizar campos
         data = response.data[0];
+
+        fCargarSolicitante(data.nominaSolicitante);
 
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
         let montoForSol = formatearMonto(data.montoSolicitado);
