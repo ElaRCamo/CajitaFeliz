@@ -296,9 +296,9 @@ function responderPrestamo(idSolicitud){
             "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
             "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
             "Nómina: " + $('#nominaSol').val() + "\n" +
-            "Teléfono: " + $('#telefonoSol').val() + "\n" +
+            "Teléfono: " +data.telefono + "\n" +
             "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
-            "Monto Aprobado: " + $('#inMontoAprobado').val()
+            "Monto Aprobado: " + montoForAut
         );
     }).then(function(){
         fCargarSolicitante(data.nominaSolicitante);
