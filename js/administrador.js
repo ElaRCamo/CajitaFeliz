@@ -371,6 +371,10 @@ function actualizarSolicitud() {
                     icon: 'success',
                     title: 'Actualización exitosa',
                     text: data.message // Mostrar el mensaje devuelto por el servidor
+                }).then(() => {
+                    // Cerrar el modal
+                    $('#modalRespPrestamo').modal('hide');
+                    initDataTablePresAdmin(anioActual);
                 });
             } else {
                 Swal.fire({
@@ -379,8 +383,7 @@ function actualizarSolicitud() {
                     text: data.message // Mostrar el mensaje devuelto por el servidor
                 });
             }
-        })
-        .catch(error => {
+        }).catch(error => {
             console.error('Error:', error);
         });
 }
