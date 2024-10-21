@@ -68,7 +68,7 @@ const TablaSolicitudesPrestamos = async () => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-success" onclick="mostrarRespuesta('${item.idSolicitud}')">
+                        <button class="btn btn-success" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')">
                             <i class="las la-eye"></i><span>Ver respuesta</span>
                         </button>`;
 
@@ -76,7 +76,7 @@ const TablaSolicitudesPrestamos = async () => {
             if (item.idEstatus === '3') {
                 content += `
                     <button class="btn btn-secondary" onclick="agregarAvales('${item.idSolicitud}')">
-                        <i class="las la-file-pdf"></i><span>Ver avales</span>
+                        <i class="las la-file-pdf"></i><span>Avales</span>
                     </button>`;
             }
 
@@ -267,4 +267,86 @@ const TablaRetiroAhorro = async () => {
 
 function consultarRetiro(idRetiro){
 
+}
+
+
+function mostrarRespuestaPrestamo(idSolicitud){
+    const titulo = "Solicitud de Préstamo Folio " + idSolicitud;
+    actualizarTitulo('#respModalTitSol', titulo);
+    let data = "";
+
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+
+        data = response.data[0];
+
+        let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
+        let montoForSol = formatearMonto(data.montoSolicitado);
+        let montoForAut = formatearMonto(data.montoAprobado);
+
+        $("#folioSolicitudMS").val(data.idSolicitud);
+
+        $("#fechaSolicitudMS").val(fechaSolicitudFormateada);
+
+        $("#montoSolicitadoMS").val(montoForSol);
+
+        $("#nominaSolMS").val(data.nominaSolicitante);
+
+        $('#telefonoSolMS').val(data.telefono);
+
+        $("#comentariosMS").val(data.comentariosAdmin);
+
+        $("#montoAprobadoMS").val(montoForAut);
+
+        /*alert(
+            "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
+            "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
+            "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
+            "Nómina: " + $('#nominaSol').val() + "\n" +
+            "Teléfono: " +data.telefono + "\n" +
+            "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
+            "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
+        );*/
+    }).then(function(){
+        fCargarSolicitanteMS(data.nominaSolicitante);
+    }).then(function(){
+        fCargarEstatusMS(data.idEstatus);
+    }).then(function(){
+        deshabilitarInputsMS();
+    });
+}
+
+function fCargarSolicitanteMS(nomina){
+
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
+        $('#nombreSolMS').val(response.data[0].NomUser);
+    });
+}
+
+function fCargarEstatusMS(idSeleccionado){
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoEstatusSol.php', function (data){
+        let selectS = document.getElementById("solEstatus");
+        selectS.innerHTML = ""; //limpiar contenido
+
+        for (var j = 0; j < data.data.length; j++) {
+            var createOption = document.createElement("option");
+            if (data.data[j].idEstatus === idSeleccionado) {
+                createOption.value = data.data[j].idEstatus;
+                createOption.text = data.data[j].descripcion;
+                selectS.appendChild(createOption);
+                createOption.selected = true;
+            }
+        }
+    });
+}
+
+function deshabilitarInputsMS() {
+    document.getElementById('folioSolicitudMS').disabled = true;
+    document.getElementById('fechaSolicitudMS').disabled = true;
+    document.getElementById('montoSolicitadoMS').disabled = true;
+    document.getElementById('nominaSolMS').disabled = true;
+    document.getElementById('nombreSolMS').disabled = true;
+    document.getElementById('telefonoSolMS').disabled = true;
+    document.getElementById('montoAprobadoMS').disabled = true;
+    document.getElementById('estatusMS').disabled = true;
+    document.getElementById('comentariosMS').disabled = true;
 }
