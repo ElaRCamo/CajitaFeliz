@@ -65,6 +65,7 @@ const dataTablePrestamosAdmin = async (anio) => {
                     <td>${item.nominaSolicitante}</td>
                     <td>${montoSolFormateado}</td>
                     <td>${item.telefono}</td>
+                    <td>${item.estatusVisual}</td>
                     <td>
                         <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
                             <span>Responder</span>
@@ -365,7 +366,7 @@ function actualizarSolicitud() {
     })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
+            if (data.status === ["success"]) {
                 Swal.fire({
                     icon: 'success',
                     title: 'Actualización exitosa',

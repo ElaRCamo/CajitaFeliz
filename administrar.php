@@ -95,6 +95,7 @@
                             <th>Nómina</th>
                             <th>Monto</th>
                             <th>Teléfono</th>
+                            <th>Estatus</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
