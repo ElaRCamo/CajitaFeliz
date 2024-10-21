@@ -366,7 +366,7 @@ function actualizarSolicitud() {
     })
         .then(response => response.json())
         .then(data => {
-            if (data.status === ["success"]) {
+            if (data.status === "success") {
                 Swal.fire({
                     icon: 'success',
                     title: 'Actualización exitosa',
