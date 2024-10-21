@@ -265,7 +265,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-lg-12 col-12">
-                        <strong><i class="bi bi-exclamation-triangle"></i>Importante: Recuerda que tu aval debe estar activo en caja</strong>
+                        <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
                         <div class="col-lg-12 col-12 row">
                             <h5>Aval 1</h5>
                             <div class="col-lg-3 col-12">

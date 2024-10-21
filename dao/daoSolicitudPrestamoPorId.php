@@ -17,7 +17,9 @@ function obtenerPrestamoPorId($idSolicitud){
                     s.idEstatus,
                     s.telefono,
                     s.montoAprobado,
-                    s.comentariosAdmin
+                    s.comentariosAdmin,
+                    s.nominaAval1,
+                    s.nominaAval2
                 FROM
                     Prestamo s
                 WHERE idSolicitud = '$idSolicitud'

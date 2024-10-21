@@ -353,42 +353,55 @@ function guardarAvales(idSolicitud){
     const titulo = "Registrar avales para la Solicitud " + idSolicitud;
     actualizarTitulo('#modalTitAvales', titulo);
     let data = "";
+    let aval1 ="";
+    let aval2 = "";
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
 
         data = response.data[0];
+        //si data mo esta vacio:
+        aval1 = data.nominaAval1;
+        aval2 = data.nominaAval1;
 
-        let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
-        let montoForSol = formatearMonto(data.montoSolicitado);
-        let montoForAut = formatearMonto(data.montoAprobado);
-
-        $("#folioSolicitudMS").text(data.idSolicitud);
-
-        $("#fechaSolicitudMS").text(fechaSolicitudFormateada);
-
-        $("#montoSolicitadoMS").text(montoForSol);
-
-        $("#nominaSolMS").text(data.nominaSolicitante);
-
-        $('#telefonoSolMS').text(data.telefono);
-
-        $("#comentariosMS").text(data.comentariosAdmin);
-
-        $("#montoAprobadoMS").text(montoForAut);
-
-        /*alert(
-            "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
-            "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
-            "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
-            "Nómina: " + $('#nominaSol').val() + "\n" +
-            "Teléfono: " +data.telefono + "\n" +
-            "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
-            "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
-        );*/
     }).then(function(){
-        fCargarSolicitanteMS(data.nominaSolicitante);
-    }).then(function(){
-        fCargarEstatusMS(data.idEstatus);
-    }).then(function(){
-        deshabilitarInputsMS();
+        fCargarAvales(aval1,aval2);
     });
+}
+
+function fCargarAvales(aval1,aval2){
+
+    let formData = new FormData();
+
+    formData.append('nom1', aval1);
+    formData.append('nom2', aval2);
+
+    // Enviar los datos al servidor
+    fetch('dao/daoNombresAvales.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                let nomina1 = document.getElementById("nombreAval1");
+                let nomina2 = document.getElementById("nombreAval2");
+
+
+
+
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Ocurrió un error al validar la contraseña. Intente nuevamente.'
+            });
+        });
 }
