@@ -1719,3 +1719,6 @@ blockquote::before {
 }
 
 
+#tablaModalSolicitante td{
+  background: var(--primary-color);
+}

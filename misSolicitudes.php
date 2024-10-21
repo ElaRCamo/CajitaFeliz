@@ -190,69 +190,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!--<table class="table">
-                        <tr>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="folioSolicitudMS" placeholder="Folio de solicitud" disabled>
-                                    <label for="folioSolicitudMS">Folio de solicitud</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="fechaSolicitudMS" placeholder="Fecha solicitud" disabled>
-                                    <label for="fechaSolicitudMS">Fecha solicitud</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="montoSolicitadoMS" placeholder="Monto solicitado" disabled>
-                                    <label for="montoSolicitadoMS">Monto solicitado</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nominaSolMS" placeholder="Nómina" disabled>
-                                    <label for="nominaSolMS">Nómina</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="nombreSolMS" placeholder="Nombre" disabled>
-                                    <label for="nombreSolMS">Nombre</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="telefonoSolMS" placeholder="Teléfono" disabled>
-                                    <label for="telefonoSolMS">Teléfono</label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="montoAprobadoMS" placeholder="Nómina" disabled>
-                                    <label for="montoAprobadoMS">Monto Aprobado</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="estatusMS" placeholder="Nombre" disabled>
-                                    <label for="estatusMS">Estatus del préstamo</label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="form-floating mb-3">
-                                    <textarea type="text" class="form-control" id="comentariosMS" placeholder="Teléfono" disabled></textarea>
-                                    <label for="comentariosMS">Comentarios</label>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>-->
-                    <table class="table">
+                    <table class="table" id="tablaModalSolicitante">
                         <tr>
                             <td>
                                 <strong>Folio de solicitud:</strong>
