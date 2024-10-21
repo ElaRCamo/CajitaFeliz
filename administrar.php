@@ -192,28 +192,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-<!--
-                    <table class="table table-bordered table-hover table-sm  table-responsive" id="solPrestamoPorId">
-                        <tbody>
-                            <tr class="bg-primary">
-                                <th class="p-2 mb-2">Folio de solicitud: </th>
-                                <td id="folioSolicitud"> </td>
-                                <th class="p-2 mb-2"> Fecha de Solicitud: </th>
-                                <td id="fechaSolicitud"> </td>
-                                <th class="p-2 mb-2"> Monto solicitado: </th>
-                                <td id="montoSolicitado"> </td>
-                            </tr>
-                            <tr id="">
-                                <th class="p-2 mb-2">Nómina: </th>
-                                <td id="nominaSol"></td>
-                                <th class="p-2 mb-2"> Solicitante:</th>
-                                <td id="nombreSol"> </td>
-                                <th class="p-2 mb-2">Teléfono: </th>
-                                <td id="telefonoSol" colspan="3"></td>
-                            </tr>
-                        </tbody>
-                    </table>-->
-
                     <table class="table">
                         <tr>
                             <td>
