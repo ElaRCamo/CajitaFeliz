@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Loan: Update by admin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Loan: Read by applicant" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,23 +80,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="69960000" />
-    </task>
-    <task id="LOCAL-00200" summary="Apartado tabla Admin retiros">
-      <option name="closed" value="true" />
-      <created>1729264682298</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1729264682298</updated>
-    </task>
-    <task id="LOCAL-00201" summary="Apartado tabla Admin retiros">
-      <option name="closed" value="true" />
-      <created>1729264781771</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1729264781771</updated>
+      <workItem from="1729004663739" duration="70285000" />
     </task>
     <task id="LOCAL-00202" summary="Apartado tabla Admin retiros">
       <option name="closed" value="true" />
@@ -479,7 +458,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729530625335</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="Loan: Read by applicant">
+      <option name="closed" value="true" />
+      <created>1729532850115</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1729532850115</updated>
+    </task>
+    <task id="LOCAL-00250" summary="Loan: Read by applicant">
+      <option name="closed" value="true" />
+      <created>1729532926528</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1729532926528</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,6 +508,7 @@
     <MESSAGE value="Apartado solicitante" />
     <MESSAGE value="Se carga estatus prestamo" />
     <MESSAGE value="Loan: Update by admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loan: Update by admin" />
+    <MESSAGE value="Loan: Read by applicant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loan: Read by applicant" />
   </component>
 </project>
