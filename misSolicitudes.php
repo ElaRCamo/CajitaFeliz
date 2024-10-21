@@ -192,55 +192,55 @@
                 <div class="modal-body">
                     <table class="table" id="tablaModalSolicitante">
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Folio de solicitud:</strong>
                             </td>
                             <td id="folioSolicitudMS">[Folio de solicitud]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Fecha solicitud:</strong>
                             </td>
                             <td id="fechaSolicitudMS">[Fecha solicitud]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Monto solicitado:</strong>
                             </td>
                             <td id="montoSolicitadoMS">[Monto solicitado]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Nómina:</strong>
                             </td>
                             <td id="nominaSolMS">[Nómina]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Nombre:</strong>
                             </td>
                             <td id="nombreSolMS">[Nombre]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Teléfono:</strong>
                             </td>
                             <td id="telefonoSolMS">[Teléfono]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Monto Aprobado:</strong>
                             </td>
                             <td id="montoAprobadoMS">[Monto Aprobado]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Estatus del préstamo:</strong>
                             </td>
                             <td id="estatusMS">[Estatus del préstamo]</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="etiqueta">
                                 <strong>Comentarios:</strong>
                             </td>
                             <td id="comentariosMS">[Comentarios]</td>
