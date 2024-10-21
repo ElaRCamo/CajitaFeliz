@@ -286,7 +286,10 @@ function responderPrestamo(idSolicitud){
 
         $('#nominaSol').val(data.nominaSolicitante);
         //$('#nombreSol').val(data.nombreSolic);
-        $('#telefonoSol').val(data.telefono);
+        $('#textareaComentarios').val(data.comentariosAdmin);
+
+        $('#inMontoAprobado').val(data.montoAprobado);
+
     }).then(function(){
         fCargarSolicitante(data.nominaSolicitante);
     }).then(function(){

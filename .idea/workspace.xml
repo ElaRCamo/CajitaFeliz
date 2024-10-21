@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Apartado solicitante">
-      <change afterPath="$PROJECT_DIR$/dao/daoEstatusSol.php" afterDir="false" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Se carga estatus prestamo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,39 +82,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="53197000" />
-    </task>
-    <task id="LOCAL-00174" summary="Apartado tabla Admin ahorros">
-      <option name="closed" value="true" />
-      <created>1729183962245</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1729183962245</updated>
-    </task>
-    <task id="LOCAL-00175" summary="Apartado tabla Admin ahorros">
-      <option name="closed" value="true" />
-      <created>1729185114024</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1729185114024</updated>
-    </task>
-    <task id="LOCAL-00176" summary="Apartado tabla Admin ahorros">
-      <option name="closed" value="true" />
-      <created>1729186783496</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1729186783496</updated>
-    </task>
-    <task id="LOCAL-00177" summary="Apartado tabla Admin ahorros">
-      <option name="closed" value="true" />
-      <created>1729187013817</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1729187013817</updated>
+      <workItem from="1729004663739" duration="57235000" />
     </task>
     <task id="LOCAL-00178" summary="Apartado tabla Admin ahorros">
       <option name="closed" value="true" />
@@ -479,7 +444,39 @@
       <option name="project" value="LOCAL" />
       <updated>1729282227087</updated>
     </task>
-    <option name="localTasksCounter" value="223" />
+    <task id="LOCAL-00223" summary="Se carga estatus prestamo">
+      <option name="closed" value="true" />
+      <created>1729282566529</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1729282566529</updated>
+    </task>
+    <task id="LOCAL-00224" summary="Se carga estatus prestamo">
+      <option name="closed" value="true" />
+      <created>1729282669996</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1729282669996</updated>
+    </task>
+    <task id="LOCAL-00225" summary="Se carga estatus prestamo">
+      <option name="closed" value="true" />
+      <created>1729282806571</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1729282806571</updated>
+    </task>
+    <task id="LOCAL-00226" summary="Se carga estatus prestamo">
+      <option name="closed" value="true" />
+      <created>1729282896518</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1729282896518</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,6 +508,7 @@
     <MESSAGE value="Apartado tabla Admin ahorros" />
     <MESSAGE value="Apartado tabla Admin retiros" />
     <MESSAGE value="Apartado solicitante" />
-    <option name="LAST_COMMIT_MESSAGE" value="Apartado solicitante" />
+    <MESSAGE value="Se carga estatus prestamo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se carga estatus prestamo" />
   </component>
 </project>
