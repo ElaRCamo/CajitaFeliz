@@ -324,7 +324,7 @@ function fCargarSolicitanteMS(nomina){
 
 function fCargarEstatusMS(idSeleccionado){
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoEstatusSol.php', function (data){
-        let selectS = document.getElementById("solEstatus");
+        let selectS = document.getElementById("estatusMS");
         selectS.innerHTML = ""; //limpiar contenido
 
         for (var j = 0; j < data.data.length; j++) {
