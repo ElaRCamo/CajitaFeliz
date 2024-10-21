@@ -289,7 +289,7 @@ function responderPrestamo(idSolicitud){
 
         $("#textareaComentarios").val(data.comentariosAdmin);
 
-        $('#inMontoAprobado').val(montoForAut);
+        $("#inMontoAprobado").val(montoForAut);
 
         alert(
             "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
@@ -298,7 +298,7 @@ function responderPrestamo(idSolicitud){
             "Nómina: " + $('#nominaSol').val() + "\n" +
             "Teléfono: " +data.telefono + "\n" +
             "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
-            "Monto Aprobado: " + montoForAut
+            "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
         );
     }).then(function(){
         deshabilitarInputs();
