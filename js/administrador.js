@@ -270,6 +270,8 @@ function responderPrestamo(idSolicitud){
     let data = "";
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+        fCargarSolicitante(data.nominaSolicitante);
+
         //codigo para actualizar campos
         data = response.data[0];
 
@@ -305,7 +307,7 @@ function responderPrestamo(idSolicitud){
     }).then(function(){
         fCargarEstatus(data.idEstatus);
     }).then(function(){
-        fCargarSolicitante(data.nominaSolicitante);
+       // fCargarSolicitante(data.nominaSolicitante);
     });
 }
 
