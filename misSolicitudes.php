@@ -181,7 +181,7 @@
         </div>
     </section>
 
-    <!-- Modal para ver respusta de prestamo -->
+    <!-- Modal para ver respuesta de prestamo -->
     <div class="modal fade" id="modalRespPresSol" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -246,6 +246,54 @@
                             <td id="comentariosMS">[Comentarios]</td>
                         </tr>
                     </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="btnAvales" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardarAvales()">Agregar avales</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar avales del prestamo -->
+    <div class="modal fade" id="modalAgregarAvales" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitAvales">Registrar avales para la Solicitud <span id="folioSolPres"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-lg-12 col-12">
+                        <h4>Avales</h4>
+                        <div class="col-lg-12 col-12 row">
+                            <h5>Aval 1
+                                <i class="bi bi-exclamation-triangle" id="tooltipAvales1" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuerda que tu aval debe estar activo en caja"></i>
+                            </h5>
+                            <div class="col-lg-3 col-12">
+                                <label for="nominaAval1">Nómina: </label>
+                                <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="00012345" required>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <label for="nombreAval1">Nombre: </label>
+                                <input type="text" name="nombreAval1" id="nombreAval1" class="form-control" placeholder="Juan Perez" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-12 row">
+                            <h5>Aval 2
+                                <i class="bi bi-exclamation-triangle" id="tooltipAvales1" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuerda que tu aval debe estar activo en caja"></i>
+                            </h5>
+                            <div class="col-lg-3 col-12">
+                                <label for="nominaAval2">Nómina: </label>
+                                <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="00023456" required>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <label for="nombreAval2">Nombre: </label>
+                                <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="María Hernández" required>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="modal-footer">

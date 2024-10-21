@@ -221,37 +221,6 @@
                                            placeholder="$1,000.00" required>
                                 </div>
                             </div>
-
-                            <!--<div class="col-lg-12 col-12">
-                                <h4>Avales</h4>
-
-                                <div class="col-lg-12 col-12 row">
-                                    <h5>Aval 1
-                                        <i class="bi bi-exclamation-triangle" id="tooltipAvales1" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuerda que tu aval debe estar activo en caja"></i>
-                                    </h5>
-                                    <div class="col-lg-3 col-12">
-                                        <label for="nominaAval1">Nómina: </label>
-                                        <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="00012345" required>
-                                    </div>
-                                    <div class="col-lg-9 col-12">
-                                        <label for="nombreAval1">Nombre: </label>
-                                        <input type="text" name="nombreAval1" id="nombreAval1" class="form-control" placeholder="Juan Perez" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-12 row">
-                                    <h5>Aval 2
-                                        <i class="bi bi-exclamation-triangle" id="tooltipAvales1" data-bs-toggle="tooltip" data-bs-placement="top" title="Recuerda que tu aval debe estar activo en caja"></i>
-                                    </h5>
-                                    <div class="col-lg-3 col-12">
-                                        <label for="nominaAval2">Nómina: </label>
-                                        <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="00023456" required>
-                                    </div>
-                                    <div class="col-lg-9 col-12">
-                                        <label for="nombreAval2">Nombre: </label>
-                                        <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="María Hernández" required>
-                                    </div>
-                                </div>
-                            </div>-->
                             <button type="button" class="form-control" onclick="autorizarSolicitud()">Solicitar</button>
                         </form>
                     </div>
