@@ -310,11 +310,12 @@ function responderPrestamo(idSolicitud){
 }
 
 function deshabilitarInputs() {
-    $('#telefonoSol').prop('disabled', true);
-    $('#folioSolicitud').prop('disabled', true);
-    $('#fechaSolicitud').prop('disabled', true);
-    $('#montoSolicitado').prop('disabled', true);
-    $('#nominaSol').prop('disabled', true);
+    document.getElementById('telefonoSol').disabled = true;
+    document.getElementById('folioSolicitud').disabled = true;
+    document.getElementById('fechaSolicitud').disabled = true;
+    document.getElementById('montoSolicitado').disabled = true;
+    document.getElementById('nominaSol').disabled = true;
+    document.getElementById('nombreSol').disabled = true;
 }
 
 function fCargarSolicitante(nomina){
@@ -322,7 +323,6 @@ function fCargarSolicitante(nomina){
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
         $('#nombreSol').val(response.data[0].NomUser);
     });
-    $('#NomUser').prop('disabled', true);
 }
 
 function fCargarEstatus(idSeleccionado){
