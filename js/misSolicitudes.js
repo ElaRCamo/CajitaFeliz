@@ -283,19 +283,19 @@ function mostrarRespuestaPrestamo(idSolicitud){
         let montoForSol = formatearMonto(data.montoSolicitado);
         let montoForAut = formatearMonto(data.montoAprobado);
 
-        $("#folioSolicitudMS").val(data.idSolicitud);
+        $("#folioSolicitudMS").text(data.idSolicitud);
 
-        $("#fechaSolicitudMS").val(fechaSolicitudFormateada);
+        $("#fechaSolicitudMS").text(fechaSolicitudFormateada);
 
-        $("#montoSolicitadoMS").val(montoForSol);
+        $("#montoSolicitadoMS").text(montoForSol);
 
-        $("#nominaSolMS").val(data.nominaSolicitante);
+        $("#nominaSolMS").text(data.nominaSolicitante);
 
-        $('#telefonoSolMS').val(data.telefono);
+        $('#telefonoSolMS').text(data.telefono);
 
-        $("#comentariosMS").val(data.comentariosAdmin);
+        $("#comentariosMS").text(data.comentariosAdmin);
 
-        $("#montoAprobadoMS").val(montoForAut);
+        $("#montoAprobadoMS").text(montoForAut);
 
         /*alert(
             "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
@@ -318,7 +318,7 @@ function mostrarRespuestaPrestamo(idSolicitud){
 function fCargarSolicitanteMS(nomina){
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
-        $('#nombreSolMS').val(response.data[0].NomUser);
+        $('#nombreSolMS').text(response.data[0].NomUser);
     });
 }
 
