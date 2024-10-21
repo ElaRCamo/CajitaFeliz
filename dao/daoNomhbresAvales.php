@@ -7,6 +7,8 @@ if (isset ($_POST["nom1"],$_POST["nom2"])){
     $nomina2 = $_POST["nom2"];
 
     consultarNombreAval($nomina1, $nomina2);
+}else{
+    echo json_encode(array("data" => "Faltan datos en el formulario"));
 }
 
 function consultarNombreAval($Nomina1, $Nomina2){
