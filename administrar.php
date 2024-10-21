@@ -241,7 +241,7 @@
                                 <!-- Primer div: Monto Aprobado -->
                                 <div class="col-sm-5 col-md-6 mb-3">
                                     <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
-                                    <input type="number" class="form-control" id="inMontoAprobado" placeholder="$5,000">
+                                    <input type="text" class="form-control" id="inMontoAprobado" placeholder="$5,000">
                                 </div>
 
                                 <!-- Segundo div: Estatus del préstamo -->
