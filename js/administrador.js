@@ -372,8 +372,6 @@ function actualizarSolicitud() {
                     title: 'Actualización exitosa',
                     text: data.message // Mostrar el mensaje devuelto por el servidor
                 }).then(() => {
-                    // Cerrar el modal
-                    $('#modalRespPrestamo').modal('hide');
                     initDataTablePresAdmin(anioActual);
                 });
             } else {
