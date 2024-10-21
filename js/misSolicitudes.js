@@ -75,7 +75,7 @@ const TablaSolicitudesPrestamos = async () => {
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
-                    <button class="btn btn-secondary" onclick="guardarAvales('${item.idSolicitud}')">
+                    <button class="btn btn-secondary" onclick="guardarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
                         <i class="las la-file-pdf"></i><span>Avales</span>
                     </button>`;
             }
