@@ -1717,6 +1717,6 @@ blockquote::before {
   z-index: 1; /* Asegura que el mensaje esté por debajo del ícono */
   color: #dc3545;
 }
-.etiqueta{
+#modalRespPresSol .etiqueta{
   background: var(--primary-color);
 }

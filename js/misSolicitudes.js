@@ -337,6 +337,14 @@ function fCargarEstatusMS(idSeleccionado){
             }
         }
     });
+
+    let btnAvales = document.getElementById("btnAvales");
+    alert(idSeleccionado);
+    if(idSeleccionado === '3'){
+        btnAvales.style.display = "block";
+    }else{
+        btnAvales.style.display = "none";
+    }
 }
 
 function deshabilitarInputsMS() {
