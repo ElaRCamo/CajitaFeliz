@@ -274,22 +274,32 @@ function responderPrestamo(idSolicitud){
         data = response.data[0];
 
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
-        let montoFormateado = formatearMonto(data.montoSolicitado);
-
-        $('#telefonoSol').text(data.telefono);
+        let montoForSol = formatearMonto(data.montoSolicitado);
+        let montoForAut = formatearMonto(data.montoAprobado);
 
         $('#folioSolicitud').val(data.idSolicitud);
 
         $('#fechaSolicitud').val(fechaSolicitudFormateada);
 
-        $('#montoSolicitado').val(montoFormateado);
+        $('#montoSolicitado').val(montoForSol);
 
         $('#nominaSol').val(data.nominaSolicitante);
-        //$('#nombreSol').val(data.nombreSolic);
+
+        $('#telefonoSol').text(data.telefono);
+
         $('#textareaComentarios').val(data.comentariosAdmin);
 
-        $('#inMontoAprobado').val(data.montoAprobado);
+        $('#inMontoAprobado').val(montoForAut);
 
+        alert(
+            "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
+            "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
+            "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
+            "Nómina: " + $('#nominaSol').val() + "\n" +
+            "Teléfono: " + $('#telefonoSol').val() + "\n" +
+            "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
+            "Monto Aprobado: " + $('#inMontoAprobado').val()
+        );
     }).then(function(){
         fCargarSolicitante(data.nominaSolicitante);
     }).then(function(){
@@ -312,6 +322,7 @@ function fCargarSolicitante(nomina){
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
         $('#nombreSol').val(response.data[0].NomUser);
+        alert(response.data[0].NomUser);
     });
 }
 

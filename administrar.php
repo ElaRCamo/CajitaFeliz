@@ -257,53 +257,6 @@
                         </tr>
                     </table>
 
-
-
-                    <!--
-                    <table class="table">
-                        <tr>
-                            <td>
-                                <label for="folioSolicitud" class="form-label">Folio de solicitud</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" id="folioSolicitud">
-                            </td>
-                            <td>
-                                <label for="fechaSolicitud" class="form-label">Fecha solicitud</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" id="fechaSolicitud">
-                            </td>
-                            <td>
-                                <label for="montoSolicitado" class="form-label">Monto Solicitado</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" id="montoSolicitado">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="nomina" class="form-label">Nómina</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" id="nomina">
-                            </td>
-                            <td>
-                                <label for="nombre" class="form-label">Nombre</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" id="nombre">
-                            </td>
-                            <td>
-                                <label for="telefono" class="form-label">Teléfono</label>
-                            </td>
-                            <td>
-                                <input type="text" class="form-control" id="telefono">
-                            </td>
-                        </tr>
-                    </table>
-                    -->
-
                     <form>
                         <div class="container col-md-12">
                             <div class="row">
