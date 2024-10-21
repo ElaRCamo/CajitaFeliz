@@ -277,17 +277,17 @@ function responderPrestamo(idSolicitud){
         let montoForSol = formatearMonto(data.montoSolicitado);
         let montoForAut = formatearMonto(data.montoAprobado);
 
-        $('#folioSolicitud').val(data.idSolicitud);
+        $("#folioSolicitud").val(data.idSolicitud);
 
-        $('#fechaSolicitud').val(fechaSolicitudFormateada);
+        $("#fechaSolicitud").val(fechaSolicitudFormateada);
 
-        $('#montoSolicitado').val(montoForSol);
+        $("#montoSolicitado").val(montoForSol);
 
-        $('#nominaSol').val(data.nominaSolicitante);
+        $("#nominaSol").val(data.nominaSolicitante);
 
         $('#telefonoSol').text(data.telefono);
 
-        $('#textareaComentarios').val(data.comentariosAdmin);
+        $("#textareaComentarios").val(data.comentariosAdmin);
 
         $('#inMontoAprobado').val(montoForAut);
 
@@ -301,11 +301,11 @@ function responderPrestamo(idSolicitud){
             "Monto Aprobado: " + montoForAut
         );
     }).then(function(){
-        fCargarSolicitante(data.nominaSolicitante);
+        deshabilitarInputs();
     }).then(function(){
         fCargarEstatus(data.idEstatus);
     }).then(function(){
-        deshabilitarInputs();
+        fCargarSolicitante(data.nominaSolicitante);
     });
 }
 
