@@ -271,11 +271,15 @@ function responderPrestamo(idSolicitud){
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
 
-
-        //codigo para actualizar campos
         data = response.data[0];
-
         fCargarSolicitante(data.nominaSolicitante);
+
+    }).then(function(){
+        deshabilitarInputs();
+    }).then(function(){
+        fCargarEstatus(data.idEstatus);
+    }).then(function(){
+       // fCargarSolicitante(data.nominaSolicitante);
 
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
         let montoForSol = formatearMonto(data.montoSolicitado);
@@ -304,12 +308,6 @@ function responderPrestamo(idSolicitud){
             "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
             "Monto Aprobado: " + montoForAut
         );
-    }).then(function(){
-        deshabilitarInputs();
-    }).then(function(){
-        fCargarEstatus(data.idEstatus);
-    }).then(function(){
-       // fCargarSolicitante(data.nominaSolicitante);
     });
 }
 
