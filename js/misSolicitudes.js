@@ -68,7 +68,7 @@ const TablaSolicitudesPrestamos = async () => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-success" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol>
+                        <button class="btn btn-success" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
                             <i class="las la-eye"></i><span>Ver respuesta</span>
                         </button>`;
 
