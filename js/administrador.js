@@ -294,8 +294,20 @@ function responderPrestamo(idSolicitud){
         fCargarSolicitante(data.nominaSolicitante);
     }).then(function(){
         fCargarEstatus(data.idEstatus);
+    }).then(function(){
+        deshabilitarInputs();
     });
 }
+
+function deshabilitarInputs() {
+    $('#telefonoSol').prop('disabled', true);
+    $('#folioSolicitud').prop('disabled', true);
+    $('#fechaSolicitud').prop('disabled', true);
+    $('#montoSolicitado').prop('disabled', true);
+    $('#nominaSol').prop('disabled', true);
+    $('#NomUser').prop('disabled', true);
+}
+
 function fCargarSolicitante(nomina){
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
