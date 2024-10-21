@@ -250,7 +250,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" id="btnAvales" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardarAvales()">Agregar avales</button>
                 </div>
             </div>
         </div>

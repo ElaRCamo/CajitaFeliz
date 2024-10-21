@@ -75,7 +75,7 @@ const TablaSolicitudesPrestamos = async () => {
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
-                    <button class="btn btn-secondary" onclick="agregarAvales('${item.idSolicitud}')">
+                    <button class="btn btn-secondary" onclick="guardarAvales('${item.idSolicitud}')">
                         <i class="las la-file-pdf"></i><span>Avales</span>
                     </button>`;
             }
@@ -269,12 +269,10 @@ function consultarRetiro(idRetiro){
 
 }
 
-
 function mostrarRespuestaPrestamo(idSolicitud){
     const titulo = "Solicitud de Préstamo Folio " + idSolicitud;
     actualizarTitulo('#respModalTitSol', titulo);
     let data = "";
-
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
 
         data = response.data[0];
@@ -337,14 +335,6 @@ function fCargarEstatusMS(idSeleccionado){
             }
         }
     });
-
-    let btnAvales = document.getElementById("btnAvales");
-
-    if(idSeleccionado === '3'){
-        btnAvales.style.display = "block";
-    }else{
-        btnAvales.style.display = "none";
-    }
 }
 
 function deshabilitarInputsMS() {
@@ -357,4 +347,48 @@ function deshabilitarInputsMS() {
     document.getElementById('montoAprobadoMS').disabled = true;
     document.getElementById('estatusMS').disabled = true;
     document.getElementById('comentariosMS').disabled = true;
+}
+
+function guardarAvales(idSolicitud){
+    const titulo = "Registrar avales para la Solicitud " + idSolicitud;
+    actualizarTitulo('#modalTitAvales', titulo);
+    let data = "";
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+
+        data = response.data[0];
+
+        let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
+        let montoForSol = formatearMonto(data.montoSolicitado);
+        let montoForAut = formatearMonto(data.montoAprobado);
+
+        $("#folioSolicitudMS").text(data.idSolicitud);
+
+        $("#fechaSolicitudMS").text(fechaSolicitudFormateada);
+
+        $("#montoSolicitadoMS").text(montoForSol);
+
+        $("#nominaSolMS").text(data.nominaSolicitante);
+
+        $('#telefonoSolMS').text(data.telefono);
+
+        $("#comentariosMS").text(data.comentariosAdmin);
+
+        $("#montoAprobadoMS").text(montoForAut);
+
+        /*alert(
+            "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
+            "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
+            "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
+            "Nómina: " + $('#nominaSol').val() + "\n" +
+            "Teléfono: " +data.telefono + "\n" +
+            "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
+            "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
+        );*/
+    }).then(function(){
+        fCargarSolicitanteMS(data.nominaSolicitante);
+    }).then(function(){
+        fCargarEstatusMS(data.idEstatus);
+    }).then(function(){
+        deshabilitarInputsMS();
+    });
 }
