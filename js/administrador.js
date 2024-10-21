@@ -301,11 +301,11 @@ function responderPrestamo(idSolicitud){
             "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
         );
     }).then(function(){
-        deshabilitarInputs();
+        fCargarSolicitante(data.nominaSolicitante);
     }).then(function(){
         fCargarEstatus(data.idEstatus);
     }).then(function(){
-       fCargarSolicitante(data.nominaSolicitante);
+        deshabilitarInputs();
     });
 }
 

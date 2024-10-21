@@ -82,23 +82,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="62169000" />
-    </task>
-    <task id="LOCAL-00187" summary="Apartado tabla Admin retiros">
-      <option name="closed" value="true" />
-      <created>1729260833470</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1729260833470</updated>
-    </task>
-    <task id="LOCAL-00188" summary="Apartado tabla Admin retiros">
-      <option name="closed" value="true" />
-      <created>1729261007735</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1729261007736</updated>
+      <workItem from="1729004663739" duration="62541000" />
     </task>
     <task id="LOCAL-00189" summary="Apartado tabla Admin retiros">
       <option name="closed" value="true" />
@@ -476,7 +460,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729524520335</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary="Se carga estatus prestamo">
+      <option name="closed" value="true" />
+      <created>1729524621246</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1729524621246</updated>
+    </task>
+    <task id="LOCAL-00237" summary="Se carga estatus prestamo">
+      <option name="closed" value="true" />
+      <created>1729524814847</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1729524814847</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
