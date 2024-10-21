@@ -291,7 +291,7 @@ function responderPrestamo(idSolicitud){
 
         $("#inMontoAprobado").val(montoForAut);
 
-        alert(
+        /*alert(
             "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
             "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
             "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
@@ -299,7 +299,7 @@ function responderPrestamo(idSolicitud){
             "Teléfono: " +data.telefono + "\n" +
             "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
             "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
-        );
+        );*/
     }).then(function(){
         fCargarSolicitante(data.nominaSolicitante);
     }).then(function(){
@@ -342,6 +342,48 @@ function fCargarEstatus(idSeleccionado){
         }
     });
 }
+
+function actualizarSolicitud() {
+    let idsolicitud = document.getElementById("folioSolicitud").value;
+    let montoAprobado = document.getElementById("inMontoAprobado").value;
+    let estatus = document.getElementById("solEstatus").value;
+    let comentarios = document.getElementById("textareaComentarios").value;
+
+    // Crear objeto FormData
+    let data = new FormData();
+
+    // Agregar los datos al FormData
+    data.append("idsolicitud", idsolicitud.trim());
+    data.append("montoAprobado", montoAprobado.trim());
+    data.append("estatus", estatus.trim());
+    data.append("comentarios", comentarios.trim());
+
+    // Llamada a fetch sin paréntesis adicionales
+    fetch("https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarSolPresAdmin.php", {
+        method: 'POST',
+        body: dataForm
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Actualización exitosa',
+                    text: data.message // Mostrar el mensaje devuelto por el servidor
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: data.message // Mostrar el mensaje devuelto por el servidor
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
 
 function exportTableToExcel() {
 

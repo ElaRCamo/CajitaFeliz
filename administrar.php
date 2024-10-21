@@ -262,7 +262,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Enviar Respuesta</button>
+                    <button type="button" class="btn btn-primary" onclick="actualizarSolicitud()">Enviar Respuesta</button>
                 </div>
             </div>
         </div>
