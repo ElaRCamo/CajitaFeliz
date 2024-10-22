@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Loan: add endorsements">
-      <change afterPath="$PROJECT_DIR$/dao/daoNomhbresAvales.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/daoSolicitudPrestamoPorId.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoSolicitudPrestamoPorId.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,23 +82,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="78047000" />
-    </task>
-    <task id="LOCAL-00213" summary="Apartado tabla Admin retiros">
-      <option name="closed" value="true" />
-      <created>1729279780542</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1729279780542</updated>
-    </task>
-    <task id="LOCAL-00214" summary="Apartado tabla Admin retiros">
-      <option name="closed" value="true" />
-      <created>1729280186293</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1729280186293</updated>
+      <workItem from="1729004663739" duration="81717000" />
     </task>
     <task id="LOCAL-00215" summary="Apartado tabla Admin retiros">
       <option name="closed" value="true" />
@@ -480,7 +460,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729543660925</updated>
     </task>
-    <option name="localTasksCounter" value="262" />
+    <task id="LOCAL-00262" summary="Loan: add endorsements">
+      <option name="closed" value="true" />
+      <created>1729545770117</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1729545770117</updated>
+    </task>
+    <task id="LOCAL-00263" summary="Loan: add endorsements">
+      <option name="closed" value="true" />
+      <created>1729545839302</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1729545839302</updated>
+    </task>
+    <option name="localTasksCounter" value="264" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
