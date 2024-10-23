@@ -369,17 +369,18 @@ function consultarAvales(idSolicitud){
         aval2 = data.nominaAval1;
 
     }).then(function(){
-        fCargarAvales(aval1,aval2);
+        fCargarAvales(aval1,aval2,idSolicitud);
     });
 }
 
-function fCargarAvales(aval1, aval2) {
-
-    console.log("aval1:"+aval1 +", aval2: "+aval2);
+function fCargarAvales(aval1, aval2, idSolicitud) {
 
     if(aval1 === '00000000' && aval2 === '00000000'){
         return;
     }
+
+    const titulo = "Avales para la Solicitud " + idSolicitud;
+    actualizarTitulo('#modalTitAvales', titulo);
 
     let formData = new FormData();
 
