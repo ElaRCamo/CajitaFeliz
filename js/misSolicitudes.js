@@ -474,3 +474,27 @@ function guardarAvales(){
         });
 
 }
+function generarNomina(nomina) {
+
+    if (nomina.length === 1){return nomina = "0000000"+nomina;}
+    if (nomina.length === 2){return nomina = "000000"+nomina;}
+    if (nomina.length === 3){return nomina = "00000"+nomina;}
+    if (nomina.length === 4){return nomina = "0000"+nomina;}
+    if (nomina.length === 5){return nomina = "000"+nomina;}
+    if (nomina.length === 6){return nomina = "00"+nomina;}
+    if (nomina.length === 7){return nomina = "0"+nomina;}
+    if (nomina.length === 8){return nomina = nomina;}
+}
+
+function consultarNombreAval(nomina, campoNombre) {
+    const nominaGenerada = generarNomina(nomina);
+    $.getJSON('https://grammermx.com/RH/Cursos/dao/consultarSolicitante.php?sol=' + nominaGenerada, function(data) {
+        if (data.data.length > 0) {
+            $(campoNombre).val(data.data[0].NomUser);
+        } else {
+            $(campoNombre).val('Ingresa un número de nómina válido.');
+        }
+    }).fail(function() {
+        alert('Error al consultar el nombre del aval.');
+    });
+}

@@ -264,32 +264,33 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="col-lg-12 col-12">
-                        <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
-                        <div class="col-lg-12 col-12 row">
-                            <h5><br>Aval 1</h5>
-                            <div class="col-lg-3 col-12">
-                                <label for="nominaAval1">Nómina: </label>
-                                <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="Nómina" required>
+                    <form method="post">
+                        <div class="col-lg-12 col-12">
+                            <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
+                            <div class="col-lg-12 col-12 row">
+                                <h5><br>Aval 1</h5>
+                                <div class="col-lg-3 col-12">
+                                    <label for="nominaAval1">Nómina: </label>
+                                    <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="Nómina" required>
+                                </div>
+                                <div class="col-lg-9 col-12">
+                                    <label for="nombreAval1">Nombre: </label>
+                                    <input type="text" name="nombreAval1" id="nombreAval1" class="form-control" placeholder="Nombre aval 1" required>
+                                </div>
                             </div>
-                            <div class="col-lg-9 col-12">
-                                <label for="nombreAval1">Nombre: </label>
-                                <input type="text" name="nombreAval1" id="nombreAval1" class="form-control" placeholder="Nombre aval 1" required>
+                            <div class="col-lg-12 col-12 row">
+                                <h5><br>Aval 2</h5>
+                                <div class="col-lg-3 col-12">
+                                    <label for="nominaAval2">Nómina: </label>
+                                    <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="Nómina" required>
+                                </div>
+                                <div class="col-lg-9 col-12">
+                                    <label for="nombreAval2">Nombre: </label>
+                                    <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="Nombre aval 2" required>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-12 row">
-                            <h5><br>Aval 2</h5>
-                            <div class="col-lg-3 col-12">
-                                <label for="nominaAval2">Nómina: </label>
-                                <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="Nómina" required>
-                            </div>
-                            <div class="col-lg-9 col-12">
-                                <label for="nombreAval2">Nombre: </label>
-                                <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="Nombre aval 2" required>
-                            </div>
-                        </div>
-                    </div>
-
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -313,6 +314,7 @@
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -320,6 +322,26 @@
         initDataTableCaja();
         initDataTableRetiro();
     });
+
+    $(document).ready(function() {
+
+        // Listener para Aval 1
+        $('#nominaAval1').on('input blur', function() {
+            const nomina = $(this).val(); // Obtener el valor del campo de nómina
+            if (nomina) {
+                consultarNombreAval(nomina, '#nombreAval1');
+            }
+        });
+
+        // Listener para Aval 2
+        $('#nominaAval2').on('input blur', function() {
+            const nomina = $(this).val(); // Obtener el valor del campo de nómina
+            if (nomina) {
+                consultarNombreAval(nomina, '#nombreAval2');
+            }
+        });
+    });
 </script>
+
 </body>
 </html>
