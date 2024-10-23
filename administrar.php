@@ -268,6 +268,9 @@
             </div>
         </div>
     </div>
+
+    <?php require_once('modalAvales.php'); ?>
+
 </main>
 
 <footer class="site-footer">
