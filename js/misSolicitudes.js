@@ -453,14 +453,14 @@ function guardarAvales(){
                 Swal.fire({
                     icon: 'success',
                     title: 'Actualización exitosa',
-                    text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                    text: data.message
                 });
 
             } else {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                    text: data.message
                 });
             }
         })
