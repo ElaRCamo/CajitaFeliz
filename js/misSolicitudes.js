@@ -350,8 +350,11 @@ function deshabilitarInputsMS() {
 }
 
 function consultarAvales(idSolicitud){
-    const titulo = "Registrar avales para la Solicitud " + idSolicitud;
+    const folio = document.querySelector("#modalTitAvales input");
+    folio.value = idSolicitud;
+    const titulo = "Registrar avales para la Solicitud " + folio;
     actualizarTitulo('#modalTitAvales', titulo);
+
     let data = "";
     let aval1 ="";
     let aval2 = "";
