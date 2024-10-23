@@ -400,11 +400,11 @@ function fCargarAvales(aval1, aval2, idSolicitud) {
                 let nombre1 = document.getElementById("nombreAval1");
                 let nombre2 = document.getElementById("nombreAval2");
 
-                let valNomina1 = data[0].IdUser;
-                let valNomina2 = data[1].IdUser;
+                let valNomina1 = data.data[0]?.IdUser || '';
+                let valNomina2 = data.data[1]?.IdUser || '';
 
-                let valNombre1 = data[0].NomUser;
-                let valNombre2 = data[1].NomUser;
+                let valNombre1 = data.data[0]?.NomUser || '';
+                let valNombre2 = data.data[1]?.NomUser || '';
 
                 nomina1.value = valNomina1;
                 nomina2.value = valNomina2;
