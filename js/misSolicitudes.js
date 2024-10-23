@@ -357,7 +357,6 @@ function consultarAvales(idSolicitud){
         console.error("Elemento con ID 'folioSolPres' no encontrado.");
     }
 
-
     let data = "";
     let aval1 ="";
     let aval2 = "";
@@ -366,7 +365,7 @@ function consultarAvales(idSolicitud){
         data = response.data[0];
         //si data no esta vacio:
         aval1 = data.nominaAval1;
-        aval2 = data.nominaAval1;
+        aval2 = data.nominaAval2;
 
     }).then(function(){
         fCargarAvales(aval1,aval2,idSolicitud);
