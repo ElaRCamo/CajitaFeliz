@@ -324,27 +324,25 @@
     });
 
     $(document).ready(function() {
-        let debounceTimer;
-
         // Listener para Aval 1
-        $('#nominaAval1').on('input', function() {
-            clearTimeout(debounceTimer); // Limpiar el temporizador anterior
-            const nomina = $(this).val(); // Obtener el valor del campo de nómina
-            if (nomina) {
-                debounceTimer = setTimeout(function() { // Establecer un nuevo temporizador
+        $('#nominaAval1').on('keypress', function(e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                const nomina = $(this).val(); // Obtener el valor del campo de nómina
+                if (nomina) {
                     consultarNombreAval(nomina, '#nombreAval1');
-                }, 500); // Retraso de 500 ms
+                }
+                e.preventDefault(); // Evitar el envío del formulario si es necesario
             }
         });
 
         // Listener para el campo de nómina del Aval 2
-        $('#nominaAval2').on('input', function() {
-            clearTimeout(debounceTimer); // Limpiar el temporizador anterior
-            const nomina = $(this).val(); // Obtener el valor del campo de nómina
-            if (nomina) {
-                debounceTimer = setTimeout(function() { // Establecer un nuevo temporizador
+        $('#nominaAval2').on('keypress', function(e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                const nomina = $(this).val(); // Obtener el valor del campo de nómina
+                if (nomina) {
                     consultarNombreAval(nomina, '#nombreAval2');
-                }, 500); // Retraso de 500 ms
+                }
+                e.preventDefault(); // Evitar el envío del formulario si es necesario
             }
         });
     });
