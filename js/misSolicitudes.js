@@ -488,7 +488,7 @@ function generarNomina(nomina) {
 
 function consultarNombreAval(nomina, campoNombre) {
     const nominaGenerada = generarNomina(nomina);
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/consultarSolicitante.php?sol=' + nominaGenerada, function(data) {
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol=' + nominaGenerada, function(data) {
         if (data.data.length > 0) {
             $(campoNombre).val(data.data[0].NomUser);
         } else {
