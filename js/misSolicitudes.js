@@ -369,6 +369,12 @@ function guardarAvales(idSolicitud){
 
 function fCargarAvales(aval1, aval2) {
 
+    console.log("aval1:"+aval1 +", aval2: "+aval2);
+
+    if(aval1 === '00000000' && aval2 === '00000000'){
+        return;
+    }
+
     let formData = new FormData();
 
     formData.append('nom1', aval1);
