@@ -375,7 +375,7 @@ function fCargarAvales(aval1, aval2) {
     formData.append('nom2', aval2);
 
     // Enviar los datos al servidor
-    fetch('dao/daoNombresAvales.php', {
+    fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoNombresAvales.php', {
         method: 'POST',
         body: formData
     })
