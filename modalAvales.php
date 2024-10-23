@@ -9,7 +9,12 @@ global$esAdmin; <!-- Modal para agregar avales del prestamo -->
             <div class="modal-body">
                 <form method="post">
                     <div class="col-lg-12 col-12">
-                        <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
+                        <?php
+                        global $esAdmin;
+                        if($esAdmin == 0){?>
+                            <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
+                        <?php }
+                        ?>
                         <div class="col-lg-12 col-12 row">
                             <h5><br>Aval 1</h5>
                             <div class="col-lg-3 col-12">
@@ -37,7 +42,7 @@ global$esAdmin; <!-- Modal para agregar avales del prestamo -->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <?php global $esAdmin;
+                <?php
                     if($esAdmin == 0){?>
                         <button type="button" id="btnAvales" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardarAvales()">Agregar avales</button>
                     <?php }
