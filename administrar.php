@@ -338,6 +338,7 @@
 <script src="js/custom.js"></script>
 <script src="js/general.js"></script>
 <script src="js/administrador.js"></script>
+<script src="js/misSolicitudes.js"></script>
 
 <!-- DataTable -->
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
