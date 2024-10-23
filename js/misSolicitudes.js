@@ -350,7 +350,7 @@ function deshabilitarInputsMS() {
 }
 
 function consultarAvales(idSolicitud){
-    const folio = document.querySelector("#modalTitAvales input");
+    const folio = document.getElementById("folioSolPres");
     folio.value = idSolicitud;
 
     let data = "";
