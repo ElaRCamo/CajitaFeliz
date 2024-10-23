@@ -75,7 +75,7 @@ const TablaSolicitudesPrestamos = async () => {
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
-                    <button class="btn btn-secondary" onclick="guardarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
+                    <button class="btn btn-secondary" onclick="consultarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
                         <i class="las la-file-pdf"></i><span>Avales</span>
                     </button>`;
             }
@@ -349,7 +349,7 @@ function deshabilitarInputsMS() {
     document.getElementById('comentariosMS').disabled = true;
 }
 
-function guardarAvales(idSolicitud){
+function consultarAvales(idSolicitud){
     const titulo = "Registrar avales para la Solicitud " + idSolicitud;
     actualizarTitulo('#modalTitAvales', titulo);
     let data = "";
@@ -422,4 +422,47 @@ function fCargarAvales(aval1, aval2) {
                 text: 'Ocurrió un error al consultar la información. Intente nuevamente.'
             });
         });
+}
+
+function guardarAvales(){
+    let solicitud = document.getElementById("folioSolPres").value;
+    let nomina1 = document.getElementById("nominaAval1").value;
+    let nomina2 = document.getElementById("nominaAval2").value;
+
+    let formData = new FormData();
+
+    formData.append('idSolicitud', solicitud);
+    formData.append('nom1', nomina1.trim());
+    formData.append('nom2', nomina2.trim());
+
+    fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarAvales.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Actualización exitosa',
+                    text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                });
+
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Ocurrió un error al consultar la información. Intente nuevamente.'
+            });
+        });
+
 }

@@ -267,25 +267,25 @@
                     <div class="col-lg-12 col-12">
                         <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
                         <div class="col-lg-12 col-12 row">
-                            <h5>Aval 1</h5>
+                            <h5><br>Aval 1</h5>
                             <div class="col-lg-3 col-12">
                                 <label for="nominaAval1">Nómina: </label>
-                                <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="00012345" required>
+                                <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="Nómina" required>
                             </div>
                             <div class="col-lg-9 col-12">
                                 <label for="nombreAval1">Nombre: </label>
-                                <input type="text" name="nombreAval1" id="nombreAval1" class="form-control" placeholder="Juan Perez" required>
+                                <input type="text" name="nombreAval1" id="nombreAval1" class="form-control" placeholder="Nombre aval 1" required>
                             </div>
                         </div>
                         <div class="col-lg-12 col-12 row">
-                            <h5>Aval 2</h5>
+                            <h5><br>Aval 2</h5>
                             <div class="col-lg-3 col-12">
                                 <label for="nominaAval2">Nómina: </label>
-                                <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="00023456" required>
+                                <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="Nómina" required>
                             </div>
                             <div class="col-lg-9 col-12">
                                 <label for="nombreAval2">Nombre: </label>
-                                <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="María Hernández" required>
+                                <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="Nombre aval 2" required>
                             </div>
                         </div>
                     </div>
