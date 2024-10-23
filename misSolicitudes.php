@@ -314,7 +314,7 @@
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -324,20 +324,27 @@
     });
 
     $(document).ready(function() {
+        let debounceTimer;
 
         // Listener para Aval 1
-        $('#nominaAval1').on('input blur', function() {
+        $('#nominaAval1').on('input', function() {
+            clearTimeout(debounceTimer); // Limpiar el temporizador anterior
             const nomina = $(this).val(); // Obtener el valor del campo de nómina
             if (nomina) {
-                consultarNombreAval(nomina, '#nombreAval1');
+                debounceTimer = setTimeout(function() { // Establecer un nuevo temporizador
+                    consultarNombreAval(nomina, '#nombreAval1');
+                }, 500); // Retraso de 500 ms
             }
         });
 
-        // Listener para Aval 2
-        $('#nominaAval2').on('input blur', function() {
+        // Listener para el campo de nómina del Aval 2
+        $('#nominaAval2').on('input', function() {
+            clearTimeout(debounceTimer); // Limpiar el temporizador anterior
             const nomina = $(this).val(); // Obtener el valor del campo de nómina
             if (nomina) {
-                consultarNombreAval(nomina, '#nombreAval2');
+                debounceTimer = setTimeout(function() { // Establecer un nuevo temporizador
+                    consultarNombreAval(nomina, '#nombreAval2');
+                }, 500); // Retraso de 500 ms
             }
         });
     });
