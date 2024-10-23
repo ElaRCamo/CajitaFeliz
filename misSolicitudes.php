@@ -329,7 +329,7 @@
             if (e.key === 'Enter' || e.keyCode === 13) {
                 const nomina = $(this).val(); // Obtener el valor del campo de nómina
                 if (nomina) {
-                    consultarNombreAval(nomina, '#nombreAval1');
+                    consultarNombreAval(nomina, '#nombreAval1','nominaAval1');
                 }
                 e.preventDefault(); // Evitar el envío del formulario si es necesario
             }
@@ -340,7 +340,7 @@
             if (e.key === 'Enter' || e.keyCode === 13) {
                 const nomina = $(this).val(); // Obtener el valor del campo de nómina
                 if (nomina) {
-                    consultarNombreAval(nomina, '#nombreAval2');
+                    consultarNombreAval(nomina, '#nombreAval2','nominaAval2');
                 }
                 e.preventDefault(); // Evitar el envío del formulario si es necesario
             }

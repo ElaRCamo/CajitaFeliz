@@ -486,9 +486,9 @@ function generarNomina(nomina) {
     if (nomina.length === 8){return nomina = nomina;}
 }
 
-function consultarNombreAval(nomina, campoNombre) {
+function consultarNombreAval(nomina, campoNombre, idNominaInput) {
     const nominaGenerada = generarNomina(nomina);
-    document.getElementById("nominaAval1").value = nominaGenerada;
+    document.getElementById(idNominaInput).value = nominaGenerada;
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol=' + nominaGenerada, function(data) {
         if (data.data.length > 0) {
             $(campoNombre).val(data.data[0].NomUser);
