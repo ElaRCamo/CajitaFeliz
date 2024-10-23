@@ -350,8 +350,7 @@ function deshabilitarInputsMS() {
 }
 
 function consultarAvales(idSolicitud){
-    const folio = document.getElementById("folioSolPres");
-    folio.value = idSolicitud;
+    document.getElementById("folioSolPres").textContent = idSolicitud;
 
     let data = "";
     let aval1 ="";
@@ -426,7 +425,7 @@ function fCargarAvales(aval1, aval2) {
 }
 
 function guardarAvales(){
-    let solicitud = document.getElementById("folioSolPres").value;
+    let solicitud = document.getElementById("folioSolPres").textContent;
     let nomina1 = document.getElementById("nominaAval1").value;
     let nomina2 = document.getElementById("nominaAval2").value;
 
