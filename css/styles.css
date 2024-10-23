@@ -1721,11 +1721,4 @@ blockquote::before {
   background: var(--primary-color);
 }
 
-/*folio para avales*/
-#folioSolPres {
-  border: none;
-  background-color: transparent;
-  font-size: inherit;
-  width: auto;
-  pointer-events: none;
-}
+
