@@ -425,7 +425,7 @@ function fCargarAvales(aval1, aval2) {
 }
 
 function guardarAvales(){
-    let solicitud = document.getElementById("folioSolPres").textContent;
+    let solicitud = document.getElementById("folioSolPres").value;
     let nomina1 = document.getElementById("nominaAval1").value;
     let nomina2 = document.getElementById("nominaAval2").value;
 
