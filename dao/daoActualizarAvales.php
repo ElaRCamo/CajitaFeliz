@@ -14,7 +14,7 @@ echo json_encode($response);
 
 
 function guardarAvalesDB($solicitud, $Nomina1, $Nomina2){
-    $con = new LocalConector();
+    $con = new LocalConectorCajita();
     $conexion=$con->conectar();
 
     $updateAvales = $conexion->prepare("UPDATE Prestamo 
