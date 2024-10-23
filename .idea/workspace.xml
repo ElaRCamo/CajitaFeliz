@@ -80,15 +80,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="88880000" />
-    </task>
-    <task id="LOCAL-00236" summary="Se carga estatus prestamo">
-      <option name="closed" value="true" />
-      <created>1729524621246</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1729524621246</updated>
+      <workItem from="1729004663739" duration="89395000" />
     </task>
     <task id="LOCAL-00237" summary="Se carga estatus prestamo">
       <option name="closed" value="true" />
@@ -474,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729698123472</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="Loan: add endorsements">
+      <option name="closed" value="true" />
+      <created>1729698643935</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1729698643935</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

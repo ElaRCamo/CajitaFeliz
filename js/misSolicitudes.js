@@ -393,7 +393,7 @@ function fCargarAvales(aval1, aval2, idSolicitud) {
     })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
+            if (data.status === "success") {
                 let nomina1 = document.getElementById("nominaAval1");
                 let nomina2 = document.getElementById("nominaAval2");
 
