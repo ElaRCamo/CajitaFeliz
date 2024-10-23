@@ -382,11 +382,23 @@ function fCargarAvales(aval1,aval2){
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                let nomina1 = document.getElementById("nombreAval1");
-                let nomina2 = document.getElementById("nombreAval2");
+                let nomina1 = document.getElementById("nominaAval1");
+                let nomina2 = document.getElementById("nominaAval2");
 
+                let nombre1 = document.getElementById("nombreAval1");
+                let nombre2 = document.getElementById("nombreAval2");
 
+                let valNomina1 = response.data[0].IdUser;
+                let valNomina2 = response.data[1].IdUser;
 
+                let valNombre1 = response.data[0].NomUser;
+                let valNombre2 = response.data[1].NomUser;
+
+                nomina1.val(valNomina1);
+                nomina2.val(valNomina2);
+
+                nombre1.val(valNombre1);
+                nombre2.val(valNombre2);
 
             } else {
                 Swal.fire({
