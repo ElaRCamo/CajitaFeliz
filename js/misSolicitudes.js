@@ -350,7 +350,13 @@ function deshabilitarInputsMS() {
 }
 
 function consultarAvales(idSolicitud){
-    document.getElementById("folioSolPres").textContent = idSolicitud;
+    const folioSpan = document.getElementById("folioSolPres");
+    if (folioSpan) {
+        folioSpan.textContent = idSolicitud;
+    } else {
+        console.error("Elemento con ID 'folioSolPres' no encontrado.");
+    }
+
 
     let data = "";
     let aval1 ="";
