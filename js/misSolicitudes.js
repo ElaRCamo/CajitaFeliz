@@ -367,7 +367,7 @@ function guardarAvales(idSolicitud){
     });
 }
 
-function fCargarAvales(aval1,aval2){
+function fCargarAvales(aval1, aval2) {
 
     let formData = new FormData();
 
@@ -388,17 +388,17 @@ function fCargarAvales(aval1,aval2){
                 let nombre1 = document.getElementById("nombreAval1");
                 let nombre2 = document.getElementById("nombreAval2");
 
-                let valNomina1 = response.data[0].IdUser;
-                let valNomina2 = response.data[1].IdUser;
+                let valNomina1 = data[0].IdUser;
+                let valNomina2 = data[1].IdUser;
 
-                let valNombre1 = response.data[0].NomUser;
-                let valNombre2 = response.data[1].NomUser;
+                let valNombre1 = data[0].NomUser;
+                let valNombre2 = data[1].NomUser;
 
-                nomina1.val(valNomina1);
-                nomina2.val(valNomina2);
+                nomina1.value = valNomina1;
+                nomina2.value = valNomina2;
 
-                nombre1.val(valNombre1);
-                nombre2.val(valNombre2);
+                nombre1.value = valNombre1;
+                nombre2.value = valNombre2;
 
             } else {
                 Swal.fire({
@@ -413,7 +413,7 @@ function fCargarAvales(aval1,aval2){
             Swal.fire({
                 icon: 'error',
                 title: 'Error',
-                text: 'Ocurrió un error al validar la contraseña. Intente nuevamente.'
+                text: 'Ocurrió un error al consultar la información. Intente nuevamente.'
             });
         });
 }
