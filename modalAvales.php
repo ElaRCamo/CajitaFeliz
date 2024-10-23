@@ -1,4 +1,4 @@
-<!-- Modal para agregar avales del prestamo -->
+global$esAdmin; <!-- Modal para agregar avales del prestamo -->
 <div class="modal fade" id="modalAgregarAvales" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -37,7 +37,12 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" id="btnAvales" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardarAvales()">Agregar avales</button>
+                <?php
+                    if($esAdmin == 1){?>
+                        <button type="button" id="btnAvales" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardarAvales()">Agregar avales</button>
+                    <?php }
+                ?>
+
             </div>
         </div>
     </div>

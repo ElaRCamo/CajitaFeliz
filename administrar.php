@@ -19,7 +19,7 @@
 
     <link href="css/admin.css" rel="stylesheet">
 
-    <!-- ?php
+    <?php
     session_start();
     $nombreUser = $_SESSION['nombreUsuario'];
     $esAdmin = $_SESSION['admin'];
@@ -28,7 +28,7 @@
         header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
     }
 
-    ?>-->
+    ?>
 </head>
 
 <body>
