@@ -429,9 +429,11 @@ function guardarAvales(){
     let nomina1 = document.getElementById("nominaAval1").value;
     let nomina2 = document.getElementById("nominaAval2").value;
 
+    alert("solicitud: "+solicitud)
+
     let formData = new FormData();
 
-    formData.append('idSolicitud', solicitud);
+    formData.append('idSolicitud', solicitud.trim());
     formData.append('nom1', nomina1.trim());
     formData.append('nom2', nomina2.trim());
 
