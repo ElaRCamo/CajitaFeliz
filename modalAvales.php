@@ -38,7 +38,7 @@ global$esAdmin; <!-- Modal para agregar avales del prestamo -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 <?php global $esAdmin;
-                    if($esAdmin == 1){?>
+                    if($esAdmin == 0){?>
                         <button type="button" id="btnAvales" class="btn btn-primary" data-bs-dismiss="modal" onclick="guardarAvales()">Agregar avales</button>
                     <?php }
                 ?>
