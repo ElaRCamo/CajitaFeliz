@@ -323,6 +323,8 @@
         initDataTableRetiro();
     });
 
+    //Falta listener que funcione en celulares
+
     $(document).ready(function() {
         // Listener para Aval 1
         $('#nominaAval1').on('keypress', function(e) {
