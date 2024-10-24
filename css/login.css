@@ -3,36 +3,31 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: linear-gradient(to right, #00BFFF, #FFB6C1); /* Azul a rosa pastel */
     font-family: Arial, sans-serif;
+    background-image: url('../images/slide/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Necesario para el pseudo-elemento */
 }
 
 
-
 .login {
-    width: 100%;
     padding: 0.75rem;
-    background-color: #00BFFF;
+    background-color:#005195;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    margin-top: 10px;
+    width: 20rem !important;
 }
 
-.login {
-    background-color: #008CBA;
+.login:hover{
+    background-color: #69A032;
+    color: white;
 }
 
-
-/* Estilos responsivos
-@media (max-width: 600px) {
-    .form {
-        padding: 1rem;
-        max-width: 100%;
-    }
-}
-*/
 
 /* Centrado vertical y horizontal */
 .container-center {
@@ -47,7 +42,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     width: 70%;
-    height: 400px; /* Ajusta la altura según sea necesario */
+    height: 500px; /* Ajusta la altura según sea necesario */
     display: flex;
 }
 
@@ -55,13 +50,39 @@ body {
 .left-side {
     flex: 1;
     background-color: #f8f9fa; /* Color de fondo de la parte izquierda */
-    padding: 20px;
+    padding: 20px 20px 20px 4rem;
 }
 
 /* Estilo de la parte derecha con la imagen de fondo */
 .right-side {
     flex: 1;
-    background-image: url('../images/slide/pigCajita.png');
+    background-image: url('../images/slide/plantita.jpg');
     background-size: cover;
     background-position: center;
+}
+
+#divSiguenos{
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #05BBEE;;
+}
+
+small{
+    color: #6c757d;;
+}
+
+.form-floating{
+    width: 20rem !important;
+}
+
+#grammerLogo{
+    max-width: 3.4rem;
+}
+
+#grammerCROC{
+    max-width: 6.5rem;
+}
+
+#divLogos{
+    padding: 1rem;
 }

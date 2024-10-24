@@ -18,41 +18,54 @@
 
     <link rel="stylesheet" href="css/login.css">
 
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+
 </head>
 <body>
     <main>
         <div class="container container-center">
-            <div class="rounded-div shadow">
+            <div class="rounded-div shadow"  id="divPrincipalLogin">
                 <div class="left-side">
-                    <small><strong>Cajita Feliz Grammer</strong></small>
+
+                    <small><strong><br>Prestamos y Caja de Ahorro Grammer</strong></small>
                     <h2 id="iniciarSesion"><br>¡Hola,</h2>
                     <h2 ><strong>Bienvenido!</strong></h2>
-                    <form id="formInicioSesion" action="dao/daoLogin.php" method="post"  >
-                        <div class="input-box form-group" id="userDiv">
-                            <label for="numNomina">Nómina</label>
+                    <form id="formInicioSesion" class="form-floating" action="dao/daoLogin.php" method="post">
+                        <div class="input-box form-floating" id="userDiv">
                             <input type="text" class="form-control" name="numNomina" id="numNomina" placeholder="No. de nómina" required data-error="Ingrese un número de nómina válido.">
-                            <i class="las la-user"></i>
+                            <label for="numNomina"><i class="las la-user"></i> Nómina</label>
                             <div class="invalid-feedback"></div>
                         </div>
-                        <div class="input-box form-group" id="tagDiv">
-                            <label for="password">TAG</label>
-                            <input type="password" class="form-control" name="password"  id="password" placeholder="TAG" required data-error="Ingrese un TAG válido.">
-                            <i class="las la-lock"></i>
+                        <div class="input-box form-floating" id="tagDiv">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="TAG" required data-error="Ingrese un TAG válido.">
+                            <label for="password"><i class="las la-lock"></i> TAG</label>
                             <div class="invalid-feedback"></div>
                         </div>
-                        <button type="button" class="btn login" name="iniciarSesionBtn">Iniciar Sesión</button>
+                        <button type="submit" class="btn login" name="iniciarSesionBtn">Iniciar Sesión</button>
                     </form>
-                    <div>
-                        <label>Siguenos</label>
-                        <a href="">facebook</a>
+
+                    <div id="divSiguenos">
+                        <label>SÍGUENOS</label>
+                        <a href="https://www.facebook.com/grammermexico/?locale=es_LA"><i class="lab la-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/grammerqro/"><i class="lab la-instagram"></i></a>
+                        <a href="https://mx.linkedin.com/company/grammer-automotive-puebla-s-a-de-c-v-"><i class="lab la-linkedin"></i></a>
                     </div>
+
                 </div>
-                <div class="right-side">
+                <div class="right-side" >
                     <!-- La parte derecha tendrá la imagen de fondo -->
+                    <div id="divLogos">
+                        <img src="images/icons/GrammerAzul.png" id="grammerLogo" class="float-start img-fluid" alt="Grammer Logo">
+                        <img src="images/icons/croc_logo.png" id="grammerCROC" class="float-start img-fluid" alt="CROC Logo">
+                    </div>
+
                 </div>
+
             </div>
         </div>
+
     </main>
+
 </body>
 
 <!-- JAVASCRIPT FILES -->
