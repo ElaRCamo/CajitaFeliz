@@ -56,7 +56,7 @@ body {
 /* Estilo de la parte derecha con la imagen de fondo */
 .right-side {
     flex: 1;
-    background-image: url('../images/slide/plantita.jpg');
+    background-image: url('../images/slide/pigCorona.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -80,9 +80,56 @@ small{
 }
 
 #grammerCROC{
-    max-width: 6.5rem;
+    max-width: 4rem;
+    margin-left: 1rem;
 }
 
 #divLogos{
     padding: 1rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .rounded-div {
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        flex-direction: column; /* Cambia la dirección de flex para apilar los elementos */
+    }
+
+    .left-side {
+        order:2;
+    }
+
+    .left-side, .right-side {
+        padding: 20px; /* Ajusta el padding para mejor visualización */
+        width: 100%; /* Asegura que ambos lados ocupen todo el ancho */
+    }
+
+    .login {
+        width: 100%; /* Botón de inicio de sesión ocupa el ancho completo */
+        margin-top: 10px; /* Mantiene un margen en la parte superior */
+    }
+
+    .right-side {
+        background-image: url('../images/slide/pigCorona.jpg');
+        border-color: transparent;
+        order:1;
+    }
+
+    #divLogos {
+        display: flex; /* Usar flex para alinear los logos */
+        justify-content: flex-end; /* Alinear los logos al final */
+        width: 100%; /* Asegura que el contenedor de los logos ocupe todo el ancho */
+        padding:0;
+    }
+}
+
+@media (max-width: 480px) {
+    .login {
+        font-size: 0.9rem; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+
+    #divSiguenos {
+        font-size: 0.7rem; /* Reduce el tamaño de fuente para redes sociales */
+    }
 }
