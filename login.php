@@ -26,9 +26,12 @@
         <div class="container container-center">
             <div class="rounded-div shadow"  id="divPrincipalLogin">
                 <div class="left-side">
+                    <div id="divLogos">
+                        <img src="images/icons/GrammerAzul.png" id="grammerLogo" class="float-end img-fluid" alt="Grammer Logo">
+                        <img src="images/icons/croc_logo.png" id="grammerCROC" class="float-end img-fluid" alt="CROC Logo">
+                    </div>
 
-                    <small><strong><br>Prestamos y Caja de Ahorro Grammer</strong></small>
-                    <h2 id="iniciarSesionTit"><br>¡Hola,</h2>
+                    <h2 id="iniciarSesionTit">¡Hola,</h2>
                     <h2 ><strong>Bienvenido!</strong></h2>
                     <form id="formInicioSesion" class="form-floating" action="dao/daoLogin.php" method="post">
                         <div class="input-box form-floating" id="userDiv">
@@ -45,7 +48,7 @@
                     </form>
 
                     <div id="divSiguenos">
-                        <label>SÍGUENOS</label>
+                        <label>S Í G U E N O S </label>
                         <a href="https://www.facebook.com/grammermexico/?locale=es_LA"><i class="lab la-facebook-f"></i></a>
                         <a href="https://www.instagram.com/grammerqro/"><i class="lab la-instagram"></i></a>
                         <a href="https://mx.linkedin.com/company/grammer-automotive-puebla-s-a-de-c-v-"><i class="lab la-linkedin"></i></a>
@@ -54,9 +57,11 @@
                 </div>
                 <div class="right-side" >
                     <!-- La parte derecha tendrá la imagen de fondo -->
-                    <div id="divLogos">
-                        <img src="images/icons/GrammerAzul.png" id="grammerLogo" class="float-start img-fluid" alt="Grammer Logo">
-                        <img src="images/icons/croc_logo.png" id="grammerCROC" class="float-start img-fluid" alt="CROC Logo">
+
+                    <div class="d-flex flex-column justify-content-end align-items-end" style="height: 100%;">
+                        <div class="p-2">
+                            <small><strong>Prestamos y Caja de Ahorro Grammer</strong></small>
+                        </div>
                     </div>
 
                 </div>
