@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Styles login">
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Responsive login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icons/croc_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/icons/croc_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,15 +84,7 @@
       <updated>1728322111868</updated>
       <workItem from="1728322114883" duration="9421000" />
       <workItem from="1728394637434" duration="95656000" />
-      <workItem from="1729004663739" duration="105724000" />
-    </task>
-    <task id="LOCAL-00257" summary="Loan: Read by applicant">
-      <option name="closed" value="true" />
-      <created>1729537498368</created>
-      <option name="number" value="00257" />
-      <option name="presentableId" value="LOCAL-00257" />
-      <option name="project" value="LOCAL" />
-      <updated>1729537498368</updated>
+      <workItem from="1729004663739" duration="106293000" />
     </task>
     <task id="LOCAL-00258" summary="Loan: add endorsements">
       <option name="closed" value="true" />
@@ -478,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729792945153</updated>
     </task>
-    <option name="localTasksCounter" value="306" />
+    <task id="LOCAL-00306" summary="Responsive login">
+      <option name="closed" value="true" />
+      <created>1729794912122</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1729794912122</updated>
+    </task>
+    <option name="localTasksCounter" value="307" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +515,8 @@
     <MESSAGE value="Loan: Read by applicant" />
     <MESSAGE value="Loan: add endorsements" />
     <MESSAGE value="Styles login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styles login" />
+    <MESSAGE value="Responsive login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -28,7 +28,7 @@
                 <div class="left-side">
 
                     <small><strong><br>Prestamos y Caja de Ahorro Grammer</strong></small>
-                    <h2 id="iniciarSesion"><br>¡Hola,</h2>
+                    <h2 id="iniciarSesionTit"><br>¡Hola,</h2>
                     <h2 ><strong>Bienvenido!</strong></h2>
                     <form id="formInicioSesion" class="form-floating" action="dao/daoLogin.php" method="post">
                         <div class="input-box form-floating" id="userDiv">
