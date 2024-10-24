@@ -40,7 +40,7 @@
                             <i class="las la-lock"></i>
                             <div class="invalid-feedback"></div>
                         </div>
-                        <button type="submit" class="btn login" name="iniciarSesionBtn">Iniciar Sesión</button>
+                        <button type="button" class="btn login" name="iniciarSesionBtn">Iniciar Sesión</button>
                     </form>
                     <div>
                         <label>Siguenos</label>

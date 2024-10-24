@@ -9,7 +9,7 @@ body {
 
 
 
-.form button {
+.login {
     width: 100%;
     padding: 0.75rem;
     background-color: #00BFFF;
@@ -20,7 +20,7 @@ body {
     font-size: 1rem;
 }
 
-.form button:hover {
+.login {
     background-color: #008CBA;
 }
 
