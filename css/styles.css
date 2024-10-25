@@ -552,10 +552,13 @@ strong {
 /*---------------------------------------
   HERO & HERO SLIDE         
 -----------------------------------------*/
+
+
 .hero-section-full-height {
   height: 350px;
   min-height: 300px;
   position: relative;
+
 }
 
 .carousel:hover .carousel-control-next-icon, 
@@ -566,6 +569,8 @@ strong {
 #hero-slide .carousel-item {
   height: 350px;
   min-height: 80px;
+
+
 }
 
 #hero-slide .carousel-caption {
@@ -581,13 +586,6 @@ strong {
   min-height: 350px;
   padding: 100px 100px 50px 100px;
 }
-
-.carousel-image {
-  display: block;
-  width: 100%;
-  min-height: 680px;
-}
-
 #hero-slide .carousel-indicators-wrap {
   position: absolute;
   bottom: 0;
@@ -622,6 +620,14 @@ strong {
   background-color: var(--primary-color);
 }
 
+.carousel-image {
+  display: block;
+  width: auto;
+  height: 100%; /* Asegura que la altura se ajuste proporcionalmente */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 /*---------------------------------------
   FEATURE BLOCK              

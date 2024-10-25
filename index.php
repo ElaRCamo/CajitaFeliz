@@ -105,7 +105,7 @@
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="images/slide/pigDorado.png"
+                                    <img src="images/slide/text.png"
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Impulsa <br>tus Metas</h1>
@@ -114,7 +114,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/pigCarrito.jpg"
+                                    <img src="images/slide/escritorio.png"
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
@@ -124,7 +124,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/pigTarget.jpg"
+                                    <img src="images/slide/escritorio2.png"
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Hazlo Realidad</h1>
