@@ -96,25 +96,23 @@
     </nav>
 
     <main>
-
         <section class="hero-section hero-section-full-height">
             <div class="container-fluid">
                 <div class="row">
-
                     <div class="col-lg-12 col-12 p-0">
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="images/slide/text.png"
+                                    <img src="images/slide/pigCajita.png"
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1>Impulsa <br>tus Metas</h1>
-                                        <p>Cada centavo ahorrado <br>es un paso más hacia tus objetivos.</p>
+                                        <h1>Impulsa tus Metas</h1>
+                                        <p>Cada centavo ahorrado es un paso más hacia tus objetivos.</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/escritorio.png"
+                                    <img src="images/slide/plantita2.jpg"
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
@@ -124,7 +122,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/escritorio2.png"
+                                    <img src="images/slide/globos.jpg"
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Hazlo Realidad</h1>

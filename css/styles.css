@@ -551,7 +551,7 @@ strong {
 
 
 /*---------------------------------------
-  HERO & HERO SLIDE
+  CARRUSEL
 -----------------------------------------*/
 
 
@@ -559,7 +559,6 @@ strong {
   height: 350px;
   min-height: 300px;
   position: relative;
-
 }
 
 .carousel:hover .carousel-control-next-icon,
@@ -570,22 +569,18 @@ strong {
 #hero-slide .carousel-item {
   height: 350px;
   min-height: 80px;
-
-
 }
 
 #hero-slide .carousel-caption {
   background: var(--white-color);
   clip-path: polygon(100% 100%, 100% 150px, 0 100%);
   color: var(--secondary-color);
-  top: 1px;
   bottom: -1px;
   right: 0;
-  left: auto;
   text-align: right;
   min-width: 350px;
   min-height: 350px;
-  padding: 100px 100px 50px 100px;
+  background-color: linen;
 }
 #hero-slide .carousel-indicators-wrap {
   position: absolute;
@@ -623,7 +618,7 @@ strong {
 
 .carousel-image {
   display: block;
-  width: auto;
+  width: 2650px;
   height: 100%; /* Asegura que la altura se ajuste proporcionalmente */
   object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
   background-position: center center;
