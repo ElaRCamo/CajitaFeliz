@@ -16,7 +16,7 @@
 
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/styles.css" rel="stylesheet">
+   <link href="css/styles.css" rel="stylesheet">
 
     <?php
         session_start();
@@ -450,7 +450,7 @@
             <div class="row">
                 <div class="col-lg-3 col-12 mb-4">
                     <img src="images/icons/GrammerBlanco.png" class="logo img-fluid" alt="Logo Grammer">
-                    <img src="images/icons/CROCblanco.png" class="logo img-fluid" alt="Logo CROC">
+                    <img src="images/icons/CROCblanco.png" class="logo img-fluid m-gl-3" alt="Logo CROC">
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
