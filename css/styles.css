@@ -763,13 +763,18 @@ strong {
 
 
 /*---------------------------------------
-  DONATE              
+  SECCIONES
 -----------------------------------------*/
-.donate-section {
-  background-image: url('../images/slide/escritorio.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.solPrestamo-section{
+    background-color: pink;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+
+.prestamo-section {
+    background-color: #05BBEE;
   position: relative;
   padding-top: 150px;
   padding-bottom: 150px;
@@ -807,13 +812,6 @@ strong {
   padding-bottom: 150px;
 }
 
-.donate-form {
-  background: var(--white-color);
-  border-radius: var(--border-radius-medium);
-  position: relative;
-  overflow: hidden;
-  padding: 50px;
-}
 
 
 /*---------------------------------------
@@ -1152,9 +1150,6 @@ blockquote::before {
   margin-bottom: 20px;
 }
 
-.donate-form .form-check-group-donation-frequency {
-  padding-right: 0;
-}
 
 .form-check-group-donation-frequency + .form-check-group-donation-frequency {
   padding-right: 12px;
@@ -1304,9 +1299,6 @@ blockquote::before {
   background: var(--white-color);
 }
 
-.donate-form .form-control {
-  margin-bottom: 0;
-}
 
 
 /*---------------------------------------
@@ -1472,10 +1464,6 @@ blockquote::before {
 
   .hero-form {
     padding-bottom: 40px;
-  }
-
-  .donate-form {
-    padding: 35px;
   }
 
   .navbar {
@@ -1689,9 +1677,6 @@ blockquote::before {
     margin-bottom: 10px;
   }
 
-  .donate-form {
-    padding: 25px;
-  }
 }
 
 #cerrarSesion {

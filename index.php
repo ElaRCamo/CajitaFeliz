@@ -37,7 +37,7 @@
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">
                 <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
-                <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
+                <img src="images/icons/GrammerAzul.png" class="m-lg-3 logo img-fluid" alt="Logo Grammer">
                 <span>
                     Cajita Feliz
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
@@ -201,7 +201,7 @@
             </div>
         </section>
 
-        <section class="donate-section" id="section_1"><!--solicitarPrestamoSeccion-->
+        <section class="solPrestamo-section" id="section_1"><!--solicitarPrestamoSeccion-->
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -225,8 +225,6 @@
                         </form>
                     </div>
                     <div class="col-lg-6 col-12">
-                        <img src="images/slide/pigAhorro.jpg"
-                             class="volunteer-image img-fluid" alt="">
 
                         <div class="custom-block-body text-center">
                             <h4 class="text-white mt-lg-3 mb-lg-3">Recuerda:</h4>
@@ -338,7 +336,7 @@
             </div>
         </section>
 
-        <section class="donate-section" id="section_3"><!--retirarAhorroSeccion-->
+        <section class="prestamo-section" id="section_3"><!--retirarAhorroSeccion-->
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
@@ -451,7 +449,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12 mb-4">
-                    <img src="images/logo.png" class="logo img-fluid" alt="">
+                    <img src="images/icons/GrammerBlanco.png" class="logo img-fluid" alt="Logo Grammer">
+                    <img src="images/icons/CROCblanco.png" class="logo img-fluid" alt="Logo CROC">
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
