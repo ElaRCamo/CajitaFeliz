@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cajita Feliz</title>
+    <title>Cajita Feliz Grammer</title>
 
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -31,15 +31,15 @@
 
 </head>
 
-<body id="section_1">
+<body>
 
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">
-                <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
                 <img src="images/icons/GrammerAzul.png" class="m-lg-3 logo img-fluid" alt="Logo Grammer">
+                <img src="images/icons/croc_logo.png" class="m-lg-3 logo img-fluid" alt="Logo CROC">
                 <span>
-                    Cajita Feliz
+                    Cajita Feliz Grammer
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
                 </span>
             </a>
@@ -116,7 +116,6 @@
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
-
                                         <p>Prestamos fáciles, sueños posibles: ¡comencemos!</p>
                                     </div>
                                 </div>
@@ -126,7 +125,6 @@
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Hazlo Realidad</h1>
-
                                         <p>Cada peso cuenta: ahorra y celebra cada logro.</p>
                                     </div>
                                 </div>
@@ -169,7 +167,6 @@
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="#section_2" class="d-block">
                                 <img src="images/icons/ahorro.png" class="imgIcon featured-block-image img-fluid" alt="">
-
                                 <p class="featured-block-text"><strong>Crear </strong>ahorro  </p>
                             </a>
                         </div>
@@ -179,7 +176,6 @@
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="#section_3" class="d-block">
                                 <img src="images/icons/salario.png" class="imgIcon featured-block-image img-fluid" alt="">
-
                                 <p class="featured-block-text"> <strong>Retirar</strong> ahorro</p>
                             </a>
                         </div>
@@ -189,25 +185,21 @@
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="#section_2" class="d-block">
                                 <img src="images/icons/contrato.png" class="imgIcon featured-block-image img-fluid" alt="">
-
                                 <p class="featured-block-text"><strong>Modificar/Reactivar</strong> ahorro</p>
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <section class="solPrestamo-section" id="section_1"><!--solicitarPrestamoSeccion-->
+        <section class="solPrestamo-section" id="section_1">
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-6 col-12 mx-auto">
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="" method="post" role="form" id="formSolicitarPrestamo">
                             <h3 class="mb-4">Solicitar Préstamo</h3>
-
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <label for="telefono">Teléfono: </label>
@@ -215,48 +207,44 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <label for="montoPrestamo">Monto solicitado: </label>
-                                    <input type="text" name="montoPrestamo" id="montoPrestamo" class="form-control"
-                                           placeholder="$1,000.00" required>
+                                    <input type="text" name="montoPrestamo" id="montoPrestamo" class="form-control" placeholder="$1,000.00" required>
                                 </div>
                             </div>
-                            <button type="button" class="form-control" onclick="autorizarSolicitud()">Solicitar</button>
+                            <button type="button"  class="form-control" onclick="autorizarSolicitud()">Solicitar</button>
                         </form>
                     </div>
-                    <div class="col-lg-6 col-12">
-
-                        <div class="custom-block-body text-center">
+                    <div class="col-lg-6 col-12" id="divMontos">
+                        <div class="custom-block-body text-center" id="section_1_div">
                             <h4 class="text-white mt-lg-3 mb-lg-3">Recuerda:</h4>
-
-                            <p class="text-white">
-                                El monto final del préstamo autorizado dependerá de varios factores, entre ellos el límite establecido:
-                            </p>
+                            <p class="text-white">El monto final del préstamo autorizado dependerá de varios factores, entre ellos el límite establecido:</p>
                             <ul class="text-white list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center"><strong>Sindicalizados:</strong>
-
-                                    <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <strong>Sindicalizados:</strong>
+                                    <ul class="list-group" id="sindUl">
                                         <li class="list-group-item d-flex justify-content-between align-items-center">Menos de 3 meses de antigüedad: $5,000</li>
                                         <li class="list-group-item d-flex justify-content-between align-items-center">Menos de 6 meses de antigüedad: $10,000</li>
-                                        <li class="list-group-item d-flex justify-content-between align-items-center"> Hasta $30,000 </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">Hasta $30,000</li>
                                     </ul>
-
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center"><strong>Administrativos:</strong> Hasta 3 meses de salario</li>
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
+
 
 
         <section class="ahorro-section" id="section_2"><!--crearAhorroSeccion-->
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-12">
-                        <img src="images/slide/pigCajita.png"
-                             class="volunteer-image img-fluid" alt="">
+                    <div class="col-lg-6 col-12" >
+                        <div id="divCrearAhorroImg" class="custom-block-body">
+                            <img src="images/slide/plantita.jpg"
+                                 class="volunteer-image img-fluid" alt="">
+                        </div>
 
                         <div class="custom-block-body text-center">
                             <h4 class="text-white mt-lg-3 mb-lg-3">Recuerda:</h4>
@@ -355,93 +343,76 @@
         </section>
     </main>
 
-    <section class="section-padding section-bg" id="section_4"><!--section_preguntas-->
+    <section class="section-padding section-bg text-gray" id="section_4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-12 text-center mx-auto">
                     <h2 class="mb-5">Preguntas frecuentes</h2>
                 </div>
-                <div class="col-lg-6 col-12">
+                <div class="col-lg-10 col-12 mx-auto">
                     <div class="custom-text-box">
-
-                        <h5 class="mb-3 ">¿Cuál es el monto mínimo que puedo ahorrar? </h5>
-
-                        <p class="mb-0">Puedes ahorrar un mínimo de $100 pesos.</p>
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Cuál es el monto mínimo que puedo ahorrar?</h5>
+                        <p class="mb-0 answer">Puedes ahorrar un mínimo de $100 pesos.</p>
                     </div>
                     <div class="custom-text-box">
-
-                        <h5 class="mb-3">¿Cuál es el monto máximo que puedo ahorrar?  </h5>
-
-                        <p class="mb-0"> Si eres personal sindicalizado, puedes ahorrar hasta $1,000 pesos.<br/></p>
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Cuál es el monto máximo que puedo ahorrar?</h5>
+                        <p class="mb-0 answer">Si eres personal sindicalizado, puedes ahorrar hasta $1,000 pesos.</p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué días puedo retirar mi ahorro para que se refleje en la misma semana?</h5>
+                        <p class="mb-0 answer">Debes solicitar tu ahorro el lunes o martes para que el depósito se realice el viernes de esa misma semana. Si lo solicitas a partir del miércoles, se procesará hasta la siguiente semana.</p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> Si tengo un préstamo, ¿puedo retirar mi ahorro?</h5>
+                        <p class="mb-0 answer">Sí, puedes retirar tu ahorro siempre que el monto ahorrado sea mayor que la deuda restante. En este caso, se liquidará la deuda y se te entregará la diferencia.</p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> Si soy aval, ¿puedo retirar mi ahorro?</h5>
+                        <p class="mb-0 answer">Puedes retirar tu ahorro siempre y cuando el préstamo de tu aval esté en la mitad de su plazo.</p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> Me fui de incapacidad, ¿por qué dejaron de descontar mi caja de ahorro?</h5>
+                        <p class="mb-0 answer">Recuerda que si no tienes ingresos o tus ingresos son reducidos, es imposible realizar el descuento de tu ahorro. Es tu responsabilidad solicitar la reactivación del mismo. </p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué criterios se consideran para otorgar un préstamo?</h5>
+                        <p class="mb-0 answer">Se evalúa el historial de los últimos seis meses, incluyendo faltas, amonestaciones, descuentos de Fonacot e Infonavit, así como pensiones y juicios mercantiles.</p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué requisitos debo cumplir para ser aval?</h5>
+                        <p class="mb-0 answer">Debes estar ahorrando (cualquier cantidad) y tener un contrato de planta</p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿A qué hora se refleja el depósito de mi caja de ahorro o préstamo?</h5>
+                        <p class="mb-0 answer">Los depósitos se realizan el viernes después de las 2:00 p.m. directamente en la cuenta de HSBC del solicitante.</p>
+                    </div>
+                    <div class="custom-text-box">
+                        <h5 class="mb-3 question"><span class="toggle-icon">+</span>Quiero liquidar mi préstamo, ¿qué debo hacer?</h5>
+                        <p class="mb-0 answer">Acércate al departamento de nóminas para que te informen el monto a pagar y el número de cuenta para realizar el depósito. Solo necesitarás entregar el comprobante para registrarlo y eliminar el descuento.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="custom-text-box">
-
-                        <h5 class="mb-3">¿Qué días puedo retirar mi ahorro para que se refleje en la misma semana?  </h5>
-
-                        <p class="mb-0"> Debes solicitar tu ahorro el lunes o martes para que el depósito se realice el viernes de esa misma semana. Si lo solicitas a partir del miércoles, se procesará hasta la siguiente semana.<br/></p>
-                    </div>
-
-                    <div class="custom-text-box">
-
-                        <h5 class="mb-3">Si tengo un préstamo, ¿puedo retirar mi ahorro? </h5>
-
-                        <p class="mb-0">Sí, puedes retirar tu ahorro siempre que el monto ahorrado sea mayor que la deuda restante. En este caso, se liquidará la deuda y se te entregará la diferencia.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                    <div class="custom-text-box">
-
-                        <h5 class="mb-3">Si soy aval, ¿puedo retirar mi ahorro?</h5>
-
-                        <p class="mb-0"> Puedes retirar tu ahorro siempre y cuando el préstamo de tu aval esté en la mitad de su plazo.</p>
-                    </div>
-                    <div class="custom-text-box">
-
-                        <h5 class="mb-3">Me fui de incapacidad, ¿por qué dejaron de descontar mi caja de ahorro?</h5>
-
-                        <p class="mb-0">Recuerda que si no tienes ingresos o tus ingresos son reducidos, es imposible realizar el descuento de tu ahorro. Es tu responsabilidad solicitar la reactivación del mismo.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="custom-text-box">
-
-                        <h5 class="mb-3">¿Qué criterios se consideran para otorgar un préstamo?</h5>
-
-                        <p class="mb-0"> Se evalúa el historial de los últimos seis meses, incluyendo faltas, amonestaciones, descuentos de Fonacot e Infonavit, así como pensiones y juicios mercantiles.<br/></p>
-                    </div>
-
-                    <div class="custom-text-box">
-
-                        <h5 class="mb-3">¿Qué requisitos debo cumplir para ser aval?</h5>
-
-                        <p class="mb-0">Debes estar ahorrando (cualquier cantidad) y tener un contrato de planta.</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <div class="custom-text-box ">
-
-                        <h5 class="mb-3">¿A qué hora se refleja el depósito de mi caja de ahorro o préstamo?</h5>
-
-                        <p class="mb-0"> Los depósitos se realizan el viernes después de las 2:00 p.m. directamente en la cuenta de HSBC de cada trabajador solicitante.<br/></p>
-                    </div>
-
-                    <div class="custom-text-box ">
-
-                        <h5 class="mb-3">Quiero liquidar mi préstamo, ¿qué debo hacer?</h5>
-
-                        <p class="mb-0"> Acércate al departamento de nóminas para que te informen el monto a pagar y el número de cuenta para realizar el depósito. Solo necesitarás entregar el comprobante para registrarlo y eliminar el descuento.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.toggle-icon');
+
+                if (answer.style.display === 'none' || answer.style.display === '') {
+                    answer.style.display = 'block';
+                    icon.textContent = '-';
+                } else {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                }
+            });
+        });
+
+    </script>
+
 
     <footer class="site-footer">
         <div class="container">
@@ -526,6 +497,52 @@
         document.getElementById('cerrarSesion').addEventListener('click', function(e) {
             e.preventDefault(); // Evita el comportamiento predeterminado del enlace
             document.getElementById('logoutForm').submit(); // Envía el formulario
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const section = document.getElementById('section_1');
+            const numberOfCircles = 20; // Número de círculos a generar
+
+            for (let i = 0; i < numberOfCircles; i++) {
+                const circle = document.createElement('div');
+                circle.classList.add('circle_1');
+
+                // Generar un tamaño aleatorio para el círculo
+                const size = Math.random() * 100 + 20; // Entre 20px y 120px
+                circle.style.width = `${size}px`;
+                circle.style.height = `${size}px`;
+
+                // Posición aleatoria dentro de la sección
+                const top = Math.random() * (window.innerHeight - size); // Asegura que no se salga del viewport
+                const left = Math.random() * (window.innerWidth - size); // Asegura que no se salga del viewport
+                circle.style.top = `${top}px`;
+                circle.style.left = `${left}px`;
+
+                section.appendChild(circle);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const section = document.getElementById('section_2');
+            const numberOfCircles = 20; // Número de círculos a generar
+
+            for (let i = 0; i < numberOfCircles; i++) {
+                const circle = document.createElement('div');
+                circle.classList.add('circle_2');
+
+                // Generar un tamaño aleatorio para el círculo
+                const size = Math.random() * 100 + 20; // Entre 20px y 120px
+                circle.style.width = `${size}px`;
+                circle.style.height = `${size}px`;
+
+                // Posición aleatoria dentro de la sección
+                const top = Math.random() * (window.innerHeight - size); // Asegura que no se salga del viewport
+                const left = Math.random() * (window.innerWidth - size); // Asegura que no se salga del viewport
+                circle.style.top = `${top}px`;
+                circle.style.left = `${left}px`;
+
+                section.appendChild(circle);
+            }
         });
     </script>
     <script src="js/jquery.min.js"></script>

@@ -44,12 +44,15 @@
   --secondary-color:              #5a6f80;
   --section-bg-color:             #f0f8ff;
   --site-footer-bg-color:         #44525d;
-  --custom-btn-bg-color:          #597081;
-  --custom-btn-bg-hover-color:    #05BBEE;
+  --custom-btn-bg-color:          #84b6f4;
+  --custom-btn-bg-hover-color:    #ffe6ef;
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #e9eaeb;
-  --p-bg-color:                   #FFCBDB;
+  --rosa-pastel:                  #FFCBDB;
+  --azul-claro:                   #e1fcff;
+  --gris-pastel:                  #97989a;
+  --lila:                         #f3e1ff;
 
   --body-font-family:             'Metropolis', sans-serif;
 
@@ -59,7 +62,7 @@
   --h4-font-size:                 28px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  16px;
+  --p-font-size:                  14px;
   --btn-font-size:                18px;
   --copyright-font-size:          14px;
 
@@ -168,6 +171,68 @@ strong {
 /*---------------------------------------
   SECTION
 -----------------------------------------*/
+#section_1, #section_1 * {
+  color: var(--gris-pastel) !important;
+}
+
+/* ---------------------------
+    BURBUJAS SECTION 1
+ ------------------------------*/
+#section_1 {
+  position: relative; /* Permite el uso de z-index */
+  overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+}
+
+.section-overlay {
+  position: absolute; /* Overlay cubriendo toda la sección */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Opcional: fondo oscuro semitransparente */
+  z-index: 1; /* Overlay arriba de los círculos */
+}
+
+.circle_1 {
+  position: absolute; /* Círculos en posición absoluta */
+  border-radius: 50%;
+  background-color: var(--azul-claro);
+  opacity: 0.5;
+  z-index: 0; /* Círculos detrás del contenido */
+}
+
+.custom-form {
+  position: relative; /* Asegura que el formulario esté arriba */
+  z-index: 2; /* Formulario en frente del overlay y círculos */
+}
+
+.custom-block-body {
+  position: relative; /* Asegura que el bloque esté arriba */
+  z-index: 2; /* Contenido del bloque en frente del overlay y círculos */
+}
+
+/* ---------------------------
+    BURBUJAS SECTION 2
+ ------------------------------*/
+#section_2 {
+  position: relative; /* Permite el uso de z-index */
+  overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+}
+
+.circle_2 {
+  position: absolute; /* Círculos en posición absoluta */
+  border-radius: 50%;
+  background-color: var(--lila);
+  opacity: 0.5;
+  z-index: 0; /* Círculos detrás del contenido */
+}
+
+
+#section_2, #section_2 * , #section_3, #section_3 * {
+  color: var(--gris-pastel) !important;
+}
+
+
 .section-padding {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -222,8 +287,6 @@ strong {
   border-radius: 0;
   display: block;
 }
-
-
 
 /*---------------------------------------
   PROGRESS BAR
@@ -338,7 +401,7 @@ strong {
 .custom-border-btn:hover {
   background: var(--custom-btn-bg-hover-color);
   border-color: transparent;
-  color: var(--white-color);
+  color: var(--white-color) !important;
 }
 
 
@@ -379,7 +442,8 @@ strong {
 .navbar-expand-lg .navbar-nav .nav-link {
   margin-right: 0;
   margin-left: 0;
-  padding: 20px;
+  padding: 20px 10px; /*centra elementos del nav*/
+
 }
 
 .navbar-nav .nav-link {
@@ -409,7 +473,7 @@ strong {
 
 .dropdown-item {
   display: inline-block;
-  color: var(--p-bg-color);
+  color: var(--rosa-pastel);
   font-size: var(--menu-font-size);
   font-weight: var(--font-weight-medium);
   position: relative;
@@ -553,7 +617,6 @@ strong {
 /*---------------------------------------
   CARRUSEL
 -----------------------------------------*/
-
 
 .hero-section-full-height {
   height: 350px;
@@ -713,15 +776,15 @@ strong {
 
 
 /*---------------------------------------
-  VOLUNTEER
+  prestamo-section
 -----------------------------------------*/
-.volunteer-section {
+.prestamo-section {
   background: var(--secondary-color);
   position: relative;
   overflow: hidden;
 }
 
-.volunteer-section::after {
+.prestamo-section::after {
   content: "";
   background: var(--primary-color);
   border-radius: 50%;
@@ -748,12 +811,12 @@ strong {
   object-fit: cover;
 }
 
-.volunteer-section .custom-block-body {
+.prestamo-section .custom-block-body {
   max-width: 440px;
   margin: 0 auto;
 }
 
-.volunteer-section .custom-block-body p {
+.prestamo-section .custom-block-body p {
   line-height: 1.7;
 }
 
@@ -761,26 +824,31 @@ strong {
 /*---------------------------------------
   SECCIONES
 -----------------------------------------*/
-.solPrestamo-section{
-  background-color: pink;
-  position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
+
+section button{
+
 }
-
-
-.prestamo-section {
-  background-color: #05BBEE;
+.solPrestamo-section{
+  background-color: #ffe6ef;
   position: relative;
   padding-top: 150px;
   padding-bottom: 150px;
 }
 
 .ahorro-section{
-  background-image: url('../images/slide/auto.jpg');
+  /*background-image: url('../images/slide/auto.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;*/
+  background-color: var(--azul-claro);
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+
+.prestamo-section {
+  background-color: var(--lila);
   position: relative;
   padding-top: 150px;
   padding-bottom: 150px;
@@ -1237,7 +1305,7 @@ blockquote::before {
   padding: 0;
 }
 
-.custom-form button[type="submit"] {
+.custom-form button {
   background: var(--custom-btn-bg-color);
   border: none;
   border-radius: var(--border-radius-large);
@@ -1248,8 +1316,8 @@ blockquote::before {
   margin-bottom: 0;
 }
 
-.custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
+.custom-form button:hover,
+.custom-form button:focus {
   background: var(--custom-btn-bg-hover-color);
   border-color: transparent;
 }
@@ -1270,7 +1338,7 @@ blockquote::before {
   padding-right: 50px;
 }
 
-.search-form button[type="submit"] {
+.search-form button {
   background: transparent;
   position: absolute;
   top: 0;
@@ -1280,7 +1348,7 @@ blockquote::before {
   padding: 12px;
 }
 
-.search-form button[type="submit"]:hover {
+.search-form button:hover {
   background: transparent;
   color: var(--dark-color);
 }
@@ -1428,9 +1496,9 @@ blockquote::before {
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1170px) {
   h1 {
-    font-size: 42px;
+    font-size: 35px;
   }
 
   h2 {
@@ -1472,9 +1540,8 @@ blockquote::before {
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 8px 20px;
+    padding: 8px 2px;
   }
-
   .site-header .social-icon {
     text-align: left;
     margin-top: 5px;
@@ -1673,6 +1740,18 @@ blockquote::before {
     margin-bottom: 10px;
   }
 
+  .toggle-icon{
+    width: 25px !important;
+    height: 25px !important;
+    padding: 0.2rem;
+    border-radius: 50%;
+  }
+
+  .question {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
 }
 
 #cerrarSesion {
@@ -1710,5 +1789,60 @@ blockquote::before {
 
 .login-container{
   margin: 400px;
+}
+/* P R E G U N T A S*/
+.section-padding {
+  padding: 40px 0;
+}
+
+.section-bg {
+  background-color: #f9f9f9;
+}
+
+.custom-text-box {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.question {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+.answer {
+  display: none;
+  padding-top: 5px;
+  padding-left: 3rem;
+}
+
+
+.toggle-icon {
+  font-weight: bold;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+}
+
+.list-group, .list-group-item{
+  background-color: var(--azul-claro);
+  border-color: var(--azul-claro);
+}
+
+#sindUl .list-group-item {
+  border-color: transparent;
+}
+
+#divCrearAhorroImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
