@@ -62,7 +62,7 @@
   --h4-font-size:                 28px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  14px;
+  --p-font-size:                  16px;
   --btn-font-size:                18px;
   --copyright-font-size:          14px;
 
@@ -206,7 +206,7 @@ strong {
   z-index: 2; /* Formulario en frente del overlay y círculos */
 }
 
-.custom-block-body {
+.custom-block-body, .divImg {
   position: relative; /* Asegura que el bloque esté arriba */
   z-index: 2; /* Contenido del bloque en frente del overlay y círculos */
 }
@@ -223,6 +223,22 @@ strong {
   position: absolute; /* Círculos en posición absoluta */
   border-radius: 50%;
   background-color: var(--lila);
+  opacity: 0.5;
+  z-index: 0; /* Círculos detrás del contenido */
+}
+
+/* ---------------------------
+    BURBUJAS SECTION 3
+ ------------------------------*/
+#section_3 {
+  position: relative; /* Permite el uso de z-index */
+  overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+}
+
+.circle_3 {
+  position: absolute; /* Círculos en posición absoluta */
+  border-radius: 50%;
+  background-color: var(--azul-claro);
   opacity: 0.5;
   z-index: 0; /* Círculos detrás del contenido */
 }
@@ -795,8 +811,8 @@ strong {
   border-radius: 100%;
   display: block;
   margin: auto;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -820,8 +836,8 @@ section button{
 .solPrestamo-section{
   background-color: #ffe6ef;
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .ahorro-section{
@@ -831,16 +847,16 @@ section button{
   background-size: cover;
   position: relative;*/
   background-color: var(--azul-claro);
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 
 .prestamo-section {
   background-color: var(--lila);
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 
@@ -1835,3 +1851,46 @@ blockquote::before {
   justify-content: center;
 }
 
+/* Estilos generales para #section_3 */
+#section_3 {
+  position: relative;
+  overflow: hidden;
+}
+
+#section_3 .divImg {
+  position: relative;
+}
+
+
+/* Estilos específicos para pantallas móviles en #section_3 */
+@media (max-width: 768px) {
+  #section_3 .container {
+    position: relative;
+  }
+
+  #section_3 .divImg {
+    position: absolute !important;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section_3 .custom-form {
+    position: relative;
+    z-index: 2 !important;
+    margin-top: 100px !important;
+  }
+
+  #titCajita{
+    display: none;
+  }
+
+  h1{
+    font-size: 14px;
+  }
+
+}

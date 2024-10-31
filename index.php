@@ -38,7 +38,7 @@
             <a class="navbar-brand" href="index.php">
                 <img src="images/icons/GrammerAzul.png" class="m-lg-3 logo img-fluid" alt="Logo Grammer">
                 <img src="images/icons/croc_logo.png" class="m-lg-3 logo img-fluid" alt="Logo CROC">
-                <span>
+                <span id="titCajita">
                     Cajita Feliz Grammer
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
                 </span>
@@ -116,16 +116,16 @@
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
-                                        <p>Prestamos fáciles, sueños posibles: ¡comencemos!</p>
+                                        <p>Recuerda que puedes ahorrar a partir de $100 pesos.</p>
                                     </div>
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/globos.jpg"
+                                    <img src="images/slide/globos.png"
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1>Hazlo Realidad</h1>
-                                        <p>Cada peso cuenta: ahorra y celebra cada logro.</p>
+                                        <h1>Recuerda</h1>
+                                        <p>Tus avales deben tenerestar activos en la caja de ahorro.</p>
                                     </div>
                                 </div>
                             </div>
@@ -324,16 +324,15 @@
 
         <section class="prestamo-section" id="section_3"><!--retirarAhorroSeccion-->
             <div class="section-overlay"></div>
-            <div class="container">
+            <div class="container" id="divSection_3">
                 <div class="row">
-
-                    <div class="col-lg-6 col-12 mx-auto">
+                    <div class="col-lg-6 col-12 mx-auto custom-form ">
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" id="formRetirarAhorro" action="#" method="post" role="form">
                             <h3 class="mb-4">Retirar mis ahorros</h3>
                             <button type="button" class="form-control" onclick="autorizarAhorros()">Solicitar</button>
                         </form>
                     </div>
-                    <div class="col-lg-6 col-12">
+                    <div class="col-lg-6 col-12 divImg">
                         <img src="images/slide/pigVerde.png"
                              class="volunteer-image img-fluid" alt="">
                     </div>
@@ -529,6 +528,29 @@
             for (let i = 0; i < numberOfCircles; i++) {
                 const circle = document.createElement('div');
                 circle.classList.add('circle_2');
+
+                // Generar un tamaño aleatorio para el círculo
+                const size = Math.random() * 100 + 20; // Entre 20px y 120px
+                circle.style.width = `${size}px`;
+                circle.style.height = `${size}px`;
+
+                // Posición aleatoria dentro de la sección
+                const top = Math.random() * (window.innerHeight - size); // Asegura que no se salga del viewport
+                const left = Math.random() * (window.innerWidth - size); // Asegura que no se salga del viewport
+                circle.style.top = `${top}px`;
+                circle.style.left = `${left}px`;
+
+                section.appendChild(circle);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const section = document.getElementById('section_3');
+            const numberOfCircles = 20; // Número de círculos a generar
+
+            for (let i = 0; i < numberOfCircles; i++) {
+                const circle = document.createElement('div');
+                circle.classList.add('circle_3');
 
                 // Generar un tamaño aleatorio para el círculo
                 const size = Math.random() * 100 + 20; // Entre 20px y 120px
