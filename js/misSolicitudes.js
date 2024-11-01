@@ -68,7 +68,7 @@ const TablaSolicitudesPrestamos = async () => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-success" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
+                        <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
                             <i class="las la-eye"></i><span>Ver respuesta</span>
                         </button>`;
 
@@ -242,7 +242,7 @@ const TablaRetiroAhorro = async () => {
             if (item.estatusRetiro === '0') {
                 content += `<label class="badge bg-warning text-dark">En proceso</label>`;
             } else if (item.estatusRetiro === '1') {
-                content += `<label class="badge bg-success">Concluido</label>`;
+                content += `<label class="badge btn-primary">Concluido</label>`;
             }
 
             content += `</td>
