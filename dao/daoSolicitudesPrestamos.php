@@ -22,7 +22,7 @@ function todosLosPrestamos($anio){
                         WHEN s.idEstatus = 2 
                             THEN CONCAT('<span class=\"badge bg-danger\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
                         WHEN s.idEstatus = 3 
-                            THEN CONCAT('<span class=\"badge bg-success text-dark\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
+                            THEN CONCAT('<span class=\"badge bg-success\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
                         WHEN s.idEstatus = 4 
                             THEN CONCAT('<span class=\"badge bg-dark\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
                     END AS estatusVisual
