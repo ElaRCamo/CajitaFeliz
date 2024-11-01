@@ -396,6 +396,13 @@ function actualizarSolicitud() {
 }
 
 
-function exportTableToExcel() {
+function exportTableToExcel(tableId, filename,name) {
+    // Obtén la referencia a la tabla
+    const table = document.getElementById(tableId);
 
+    // Convierte la tabla a un libro de Excel
+    const workbook = XLSX.utils.table_to_book(table, {sheet: name});
+
+    // Genera el archivo Excel
+    XLSX.writeFile(workbook, filename);
 }

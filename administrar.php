@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="container mt-5">
                     <h2 class="text-center">Solicitudes de Préstamos</h2>
-                    <button class="btn btn-success text-right btnExcel" onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
+                    <button class="btn btn-success text-right btnExcel" onclick="exportTableToExcel('tablaPrestamosAdmin', 'SolicitudesPrestamos.xlsx', 'SolicitudesDePrestamos')">
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
@@ -357,6 +357,8 @@
 <!-- DataTable -->
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 
