@@ -234,8 +234,6 @@
             </div>
         </section>
 
-
-
         <section class="ahorro-section" id="section_2"><!--crearAhorroSeccion-->
             <div class="section-overlay"></div>
             <div class="container">
