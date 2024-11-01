@@ -17,9 +17,10 @@
 
     <link href="css/styles.css" rel="stylesheet">
 
+    <link href="css/misSolicitudes.css" rel="stylesheet">
+
     <link href="css/admin.css" rel="stylesheet">
 
-    <link href="css/misSolicitudes.css" rel="stylesheet">
 
     <?php
     session_start();
