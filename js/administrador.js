@@ -5,7 +5,7 @@ let dataTableInitPrestamosAdmin = false;
 const dataTableOptPresAdmin = {
     lengthMenu: [5, 10, 15, 20],
     columnDefs:[
-        {className: "centered", targets: [0,1,2,3,4]},
+        {className: "centered", targets: [0,1,2,3,4,6,6]},
         {orderable: false, targets: [0,1,2]},
         {width: "8%", targets: [0]},
         {searchable: true, targets: [0,1,2,3] }
@@ -206,7 +206,7 @@ let dataTableInitRetiroAdmin = false;
 const dataTableOptRetiroAdmin = {
     lengthMenu: [5, 10, 15, 20],
     columnDefs:[
-        {className: "centered", targets: [0,1,2,3]},
+        {className: "centered", targets: [0,1,2,3,4,5]},
         {orderable: false, targets: [0,1,2,3,4]},
         {width: "8%", targets: [0]},
         {searchable: true, targets: [0,1,2,3,4] }
