@@ -205,11 +205,16 @@ const initDataTableRetiro = async () => {
         dataTableRetiro.destroy();
     }
 
+    // Asegúrate de que los datos estén cargados primero
     await TablaRetiroAhorro();
 
-    dataTableRetiro = $("#tablaRetiros").DataTable(dataTableOptionsRetiro);
-
-    dataTableRetiroInit = true;
+    // Verifica que haya filas en la tabla antes de inicializar DataTables
+    if ($("#tablaRetiros tbody tr").length > 0) {
+        dataTableRetiro = $("#tablaRetiros").DataTable(dataTableOptionsRetiro);
+        dataTableRetiroInit = true;
+    } else {
+        console.warn("No se encontraron datos para inicializar DataTables en tablaRetiros.");
+    }
 };
 
 const TablaRetiroAhorro = async () => {
@@ -235,16 +240,13 @@ const TablaRetiroAhorro = async () => {
                     <td>`;
 
             if (item.estatusRetiro === '0') {
-                content += `
-                        <label class="badge bg-warning text-dark">En proceso</label>`;
+                content += `<label class="badge bg-warning text-dark">En proceso</label>`;
             } else if (item.estatusRetiro === '1') {
-                content += `
-                        <label class="badge bg-success">Concluido</label>`;
+                content += `<label class="badge bg-success">Concluido</label>`;
             }
 
-            content += `
-                    </td>
-                </tr>`;
+            content += `</td>
+                    <td>`; // Nueva celda para acciones
 
             // Agrega el botón consultarRetiro si el estatus es 1
             if (item.estatusRetiro === '1') {
@@ -254,12 +256,10 @@ const TablaRetiroAhorro = async () => {
                     </button>`;
             }
 
-            content += `
-                    </td>
-                </tr>`;
+            content += `</td></tr>`;
         });
 
-        retirosBody.innerHTML = content; // Asegúrate de que retirosBody esté definido
+        retirosBody.innerHTML = content;
     } catch (error) {
         console.error('Error:', error);
     }
