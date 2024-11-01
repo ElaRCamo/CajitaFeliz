@@ -90,7 +90,7 @@
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
-                        <thead class="table-dark">
+                        <thead>
                         <tr>
                             <th>Folio</th>
                             <th>Fecha Solicitud</th>
@@ -120,7 +120,7 @@
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaAhorroAdmin">
-                        <thead class="table-dark">
+                        <thead>
                         <tr>
                             <th>Folio</th>
                             <th>Fecha Solicitud</th>
@@ -136,7 +136,7 @@
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaRetirosAdmin">
-                        <thead class="table-dark">
+                        <thead>
                         <tr>
                             <th>Folio</th>
                             <th>Fecha Solicitud</th>
