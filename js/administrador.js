@@ -67,7 +67,7 @@ const dataTablePrestamosAdmin = async (anio) => {
                     <td>${item.telefono}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-success" onclick="responderPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
+                        <button class="btn btn-primary" onclick="responderPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
                             <span>Responder</span>
                         </button>`;
 
