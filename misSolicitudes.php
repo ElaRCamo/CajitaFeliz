@@ -42,7 +42,7 @@
             <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
             <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
             <span>
-                    Cajita Feliz
+                    Cajita Feliz Grammer
                     <small>Grammer Automotive Puebla S.A. de C.V</small>
                 </span>
         </a>
@@ -189,7 +189,7 @@
                     <h5 class="modal-title" id="respModalTitSol">Solicitud de Préstamo Folio <span id="folioSolPres"></span></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="divTablaModalSol">
                     <table class="table" id="tablaModalSolicitante">
                         <tr>
                             <td class="etiqueta">

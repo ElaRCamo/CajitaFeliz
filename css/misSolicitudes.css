@@ -1,65 +1,104 @@
 :root {
     --white-color: #ffffff;
-    --primary-color: #92D5F6;
+    --primary-color:   #005195;
+    --gris-pastel: #97989a;
+    --lila: #84b6f4;
+    --gris-oscuro: #717275;
+
+}
+
+h4, table{
+    color: var(--gris-pastel) !important;;
+}
+
+h3{
+    color: var(--primary-color) !important;;
 }
 #divTablaSolicitudes{
     padding: 1rem;
 }
 
-#tablaSolicitudes_filter {
+#tablaSolicitudes_filter,
+#tablaCajaAhorro_filter,
+#tablaRetiros_filter
+{
     margin-right: 0.8rem !important;
     border-top-right-radius: 10px !important;
 }
 
-#tablaSolicitudes_length {
+#tablaSolicitudes_length,
+#tablaCajaAhorro_length,
+#tablaRetiros_length{
     border-top-right-radius: 10px;
 }
 
-#tablaSolicitudess_info {
+#tablaSolicitudess_info,
+#tablaCajaAhorro_info,
+#tablaRetiros_info
+{
     padding: 0 !important;
 }
 
-#tablaSolicitudes_length, #listadoPruebas_filter {
+#tablaSolicitudes_length, #listadoPruebas_filter,
+#tablaCajaAhorro_length,
+#tablaRetiros_length
+{
     padding-right: 900px !important;
 }
-#tablaSolicitudes td{
+
+#tablaSolicitudes td,
+#tablaCajaAhorro td,
+#tablaRetiros td
+{
     font-size: 0.9rem !important;
     color: var(--primary-color) !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
 
 }
-#tablaSolicitudes #folio{
+
+#tablaSolicitudes #folio,
+#tablaCajaAhorro #folio,
+#tablaRetiros #folio
+{
     width: 6.8rem !important;
 }
 /*DeataTable*/
-#tablaSolicitudes_filter input, #tablaSolicitudes_length select
+#tablaSolicitudes_filter input, #tablaSolicitudes_length select,
+#tablaCajaAhorro_filter input, #tablaCajaAhorro_length select,
+#tablaRetiros_filter input, #tablaRetiros_length select
 {
     color: var(--primary-color);
 }
 
-#tablaSolicitudes_length, #tablaSolicitudes_filter{
+#tablaSolicitudes_length, #tablaSolicitudes_filter,
+#tablaCajaAhorro_length, #tablaCajaAhorro_filter,
+#tablaRetiros_length, #tablaRetiros_filter
+{
     padding: 3rem;
     background-color: var(--primary-color);
     color: var(--white-color);
     height: 15px !important;
 }
 
-#tablaSolicitudes_length {
+#tablaSolicitudes_length,
+#tablaCajaAhorro_length,
+#tablaRetiros_length
+{
     border-top-left-radius: 10px;
 }
 
-#tablaSolicitudes_filter
+#tablaSolicitudes_filter,
+#tablaCajaAhorro_filter,
+#tablaRetiros_filter
 {
     border-top-right-radius: 10px;
 }
 
-#tablaSolicitudes_filter
+#tablaSolicitudes_info,
+#tablaCajaAhorro_info,
+#tablaRetiros_info
 {
-    border-top-right-radius: 10px;
-}
-
-#tablaSolicitudes_info{
     padding: 1rem !important;
     color: var(--primary-color) !important;
     font-size: 0.9rem !important;
@@ -68,7 +107,11 @@
     margin-top: 20px;
 }
 
-.dataTables_paginate .paginate_button, #tablaSolicitudes_previous {
+.dataTables_paginate .paginate_button,
+#tablaSolicitudes_previous,
+#tablaCajaAhorro_previous,
+#tablaRetiros_previous
+{
     border-radius: 4px;
     margin: 0 2px;
     cursor: pointer;
