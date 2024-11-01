@@ -396,13 +396,35 @@ function actualizarSolicitud() {
 }
 
 
-function exportTableToExcel(tableId, filename,name) {
-    // Obtén la referencia a la tabla
-    const table = document.getElementById(tableId);
+function exportTableToExcel(tableId, filename, sheetName) {
+    // Obtén la instancia del DataTable
+    const dataTable = $(`#${tableId}`).DataTable();
 
-    // Convierte la tabla a un libro de Excel
-    const workbook = XLSX.utils.table_to_book(table, {sheet: name});
+    // Obtén todos los datos de todas las páginas
+    const allData = dataTable.rows().data().toArray();
 
-    // Genera el archivo Excel
+    // Crea la estructura de datos para la hoja de cálculo
+    const worksheetData = [];
+
+    // Agrega los encabezados de la tabla
+    const headers = [];
+    $(`#${tableId} thead tr th`).each(function () {
+        headers.push($(this).text());
+    });
+    worksheetData.push(headers);
+
+    // Agrega las filas de datos a worksheetData
+    allData.forEach(rowData => {
+        const row = [];
+        rowData.forEach(cellData => row.push(cellData));
+        worksheetData.push(row);
+    });
+
+    // Crea el libro y la hoja de Excel usando los datos recopilados
+    const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+
+    // Descarga el archivo de Excel
     XLSX.writeFile(workbook, filename);
 }
