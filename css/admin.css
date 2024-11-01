@@ -1,4 +1,9 @@
 
 .tabla-section {
-    padding-top: 50px !important;
+    padding-top: 0 !important;
+}
+
+.btnExcel{
+    margin-bottom: 1rem;
+
 }

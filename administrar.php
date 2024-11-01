@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="container mt-5">
                     <h2 class="text-center">Solicitudes de Préstamos</h2>
-                    <button class="btn btn-success text-right" onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
+                    <button class="btn btn-success text-right btnExcel" onclick="exportTableToExcel('solicitudes', 'SolicitudesDePrestamos')">
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
@@ -117,7 +117,7 @@
                 <div class="container mt-5" id="divAhorroAdmin">
                     <h2 class="text-center">Solicitudes de Caja de Ahorro</h2>
                     <h3 class="text-center"><br>Iniciar ahorro</br></h3>
-                    <button class="btn btn-success text-right"  onclick="exportTableToExcel()">
+                    <button class="btn btn-success text-right btnExcel"  onclick="exportTableToExcel()">
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaAhorroAdmin">
@@ -133,7 +133,7 @@
                     </table>
 
                     <h3 class="text-center"><br>Retiros</br></h3>
-                    <button class="btn btn-success text-right"  onclick="exportTableToExcel()">
+                    <button class="btn btn-success text-right btnExcel"  onclick="exportTableToExcel()">
                         Exportar a Excel
                     </button>
                     <table class="table table-striped table-bordered mt-3" id="tablaRetirosAdmin">
