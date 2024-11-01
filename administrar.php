@@ -113,7 +113,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="container mt-5">
+                <div class="container mt-5" id="divAhorroAdmin">
                     <h2 class="text-center">Solicitudes de Caja de Ahorro</h2>
                     <h3 class="text-center"><br>Iniciar ahorro</br></h3>
                     <button class="btn btn-success text-right"  onclick="exportTableToExcel()">
