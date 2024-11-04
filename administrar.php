@@ -176,6 +176,7 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary w-100" onclick="cargarSolicitudes()">Ver solicitudes</button>
+                            <input type="file" id="fileInputRetiros" accept=".xlsx, .xls" style="display: none;" />
                         </form>
                     </div>
                 </div>
