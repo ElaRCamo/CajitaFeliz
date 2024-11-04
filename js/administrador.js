@@ -1,7 +1,7 @@
 // DataTables
 let dataTableAdminPrestamos;
 let dataTableInitPrestamosAdmin = false;
-let datosPrestamosAdmin = "";
+let datosPrestamosAdmin;
 
 const dataTableOptPresAdmin = {
     lengthMenu: [5, 10, 15, 20],
@@ -68,7 +68,8 @@ async function prepararExcelPrestamos(data) {
 }
 
 document.getElementById('btnExcelPrestamos').addEventListener('click', () => {
-    prepararExcelPrestamos(result.data);
+    prepararExcelPrestamos(datosPrestamosAdmin);
+
 });
 
 const dataTablePrestamosAdmin = async (anio) => {
@@ -114,7 +115,7 @@ const dataTablePrestamosAdmin = async (anio) => {
         bodyPrestamosAdmin.innerHTML = content;
 
         // Preparar datos para convertir a Excel
-        await prepararExcelPrestamos(result.data);  // Pasa los datos directamente a la función
+        datosPrestamosAdmin = result.data;  // Pasa los datos directamente a la función
 
     } catch (error) {
         console.error('Error:', error);
