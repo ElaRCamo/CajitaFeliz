@@ -30,7 +30,6 @@ function todosLosPrestamos($anio){
                     Prestamo s
                     LEFT JOIN EstatusPrestamo e ON s.idEstatus = e.idEstatus
                 WHERE
-                    s.idEstatus <> 4
                   AND YEAR(s.fechaSolicitud) like '$anio'
                 ORDER BY
                     s.idSolicitud DESC;
