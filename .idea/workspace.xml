@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="excel for db">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/daoActualizarRetirosExcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoActualizarRetirosExcel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="excel for db" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,23 +86,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="54945000" />
-    </task>
-    <task id="LOCAL-00316" summary="styles index">
-      <option name="closed" value="true" />
-      <created>1730398630692</created>
-      <option name="number" value="00316" />
-      <option name="presentableId" value="LOCAL-00316" />
-      <option name="project" value="LOCAL" />
-      <updated>1730398630692</updated>
-    </task>
-    <task id="LOCAL-00317" summary="styles index">
-      <option name="closed" value="true" />
-      <created>1730407537499</created>
-      <option name="number" value="00317" />
-      <option name="presentableId" value="LOCAL-00317" />
-      <option name="project" value="LOCAL" />
-      <updated>1730407537499</updated>
+      <workItem from="1730319660375" duration="55404000" />
     </task>
     <task id="LOCAL-00318" summary="styles misSolicitudes">
       <option name="closed" value="true" />
@@ -485,7 +464,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730753794152</updated>
     </task>
-    <option name="localTasksCounter" value="365" />
+    <task id="LOCAL-00365" summary="excel for db">
+      <option name="closed" value="true" />
+      <created>1730760362624</created>
+      <option name="number" value="00365" />
+      <option name="presentableId" value="LOCAL-00365" />
+      <option name="project" value="LOCAL" />
+      <updated>1730760362624</updated>
+    </task>
+    <task id="LOCAL-00366" summary="excel for db">
+      <option name="closed" value="true" />
+      <created>1730760768389</created>
+      <option name="number" value="00366" />
+      <option name="presentableId" value="LOCAL-00366" />
+      <option name="project" value="LOCAL" />
+      <updated>1730760768389</updated>
+    </task>
+    <option name="localTasksCounter" value="367" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
