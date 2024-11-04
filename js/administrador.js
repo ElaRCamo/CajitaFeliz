@@ -73,7 +73,7 @@ async function prepararExcelPrestamos(data) {
     const url = URL.createObjectURL(datosPrestamosAdmin);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `Prestamos_${new Date().getFullYear()}.xlsx`;
+    a.download = `Prestamos_${primerAnio}.xlsx`;
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
