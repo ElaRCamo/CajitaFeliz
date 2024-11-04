@@ -1,3 +1,7 @@
+/***********************************************************************************************************************
+ *********************************************SOLICITUDES DE PRESTAMOS *************************************************
+ * *********************************************************************************************************************/
+
 // DataTables
 let dataTableAdminPrestamos;
 let dataTableInitPrestamosAdmin = false;
@@ -141,190 +145,6 @@ const dataTablePrestamosAdmin = async (anio) => {
     }
 };
 
-function cargarAnio() {
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoAnio.php', function (data) {
-        let selectS = document.getElementById("selectAnio");
-        selectS.innerHTML = ""; //limpiar contenido
-
-        let createOptionDef = document.createElement("option");
-        createOptionDef.text = "Seleccione el año*";
-        createOptionDef.value = "";
-        selectS.appendChild(createOptionDef);
-
-        for (var i = 0; i < data.data.length; i++) {
-            var createOption = document.createElement("option");
-            createOption.value = data.data[i].anio;
-            createOption.text = data.data[i].anio;
-            selectS.appendChild(createOption);
-        }
-    });
-}
-
-async function cargarSolicitudes() {
-    const seccionPrestamo = document.getElementById("solicitarPrestamoSeccion");
-    const seccionAhorro = document.getElementById("solicitarAhorroSeccion");
-    let tipoConsulta = document.getElementById("selectTipoConsulta").value;
-    let anio = document.getElementById("selectAnio").value;
-
-    seccionPrestamo.style.display = "none";
-    seccionAhorro.style.display = "none";
-
-    if (tipoConsulta === "1") { // Préstamos
-        seccionPrestamo.style.display = "block";
-        await initDataTablePresAdmin(anio);
-
-    } else if (tipoConsulta === "2") { // Caja de Ahorro
-        seccionAhorro.style.display = "block";
-        await initDataTableAhorroAdmin(anio);
-    }
-}
-
-// DataTables
-let dataTableAdminAhorro;
-let dataTableInitAhorroAdmin = false;
-
-const dataTableOptAhorroAdmin = {
-    lengthMenu: [5, 10, 15, 20],
-    columnDefs:[
-        {className: "centered", targets: [0,1,2,3]},
-        {orderable: false, targets: [0,1,2]},
-        {width: "8%", targets: [0]},
-        {searchable: true, targets: [0,1,2] }
-    ],
-    pageLength:5,
-    destroy: true,
-    order: [[0, 'desc']], // Ordenar por la columna 0
-    language:{
-        lengthMenu: "Mostrar _MENU_ registros pór página",
-        sZeroRecords: "Ninguna solicitud encontrada",
-        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
-        infoEmpty: "Ninguna solicitud encontrada",
-        infoFiltered: "(filtrados desde _MAX_ registros totales)",
-        search: "Buscar: ",
-        loadingRecords: "Cargando...",
-        paginate:{
-            first:"Primero",
-            last: "Último",
-            next: "Siguiente",
-            previous: "Anterior"
-        }
-    }
-};
-const initDataTableAhorroAdmin = async (anio) => {
-    if (dataTableInitAhorroAdmin) {
-        dataTableAdminAhorro.destroy();
-    }
-    await dataTableAhorroAdmin(anio);
-
-    dataTableAdminAhorro = $("#tablaAhorroAdmin").DataTable(dataTableOptAhorroAdmin);
-
-    dataTableInitAhorroAdmin = true;
-};
-
-
-const dataTableAhorroAdmin = async (anio) => {
-    try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesAhorro.php?anio=` + anio);
-
-        if (!response.ok) {
-            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
-        }
-
-        const result = await response.json();
-        let content = '';
-        result.data.forEach((item) => {
-            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
-            const montoSolFormateado = formatearMonto(item.montoAhorro);
-
-            content += `
-                <tr>
-                    <td>${item.idCaja}</td>
-                    <td>${fechaSolicitudFormateada}</td>
-                    <td>${item.nomina}</td>
-                    <td>${montoSolFormateado}</td>
-                </tr>`;
-        });
-        bodyAhorroAdmin.innerHTML = content;
-    } catch (error) {
-        console.error('Error:', error);
-    }
-};
-
-
-// DataTables
-let dataTableAdminRetiro;
-let dataTableInitRetiroAdmin = false;
-
-const dataTableOptRetiroAdmin = {
-    lengthMenu: [5, 10, 15, 20],
-    columnDefs:[
-        {className: "centered", targets: [0,1,2,3,4,5]},
-        {orderable: false, targets: [0,1,2,3,4]},
-        {width: "8%", targets: [0]},
-        {searchable: true, targets: [0,1,2,3,4] }
-    ],
-    pageLength:5,
-    destroy: true,
-    order: [[0, 'desc']], // Ordenar por la columna 0
-    language:{
-        lengthMenu: "Mostrar _MENU_ registros pór página",
-        sZeroRecords: "Ninguna solicitud encontrada",
-        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
-        infoEmpty: "Ninguna solicitud encontrada",
-        infoFiltered: "(filtrados desde _MAX_ registros totales)",
-        search: "Buscar: ",
-        loadingRecords: "Cargando...",
-        paginate:{
-            first:"Primero",
-            last: "Último",
-            next: "Siguiente",
-            previous: "Anterior"
-        }
-    }
-};
-const initDataTableRetiroAdmin = async (anio) => {
-    if (dataTableInitRetiroAdmin) {
-        dataTableAdminRetiro.destroy();
-    }
-    await dataTableRetiroAdmin(anio);
-
-    dataTableAdminRetiro = $("#tablaRetirosAdmin").DataTable(dataTableOptRetiroAdmin);
-
-    dataTableInitRetiroAdmin = true;
-};
-
-
-const dataTableRetiroAdmin = async (anio) => {
-    try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesRetiro.php?anio=` + anio);
-
-        if (!response.ok) {
-            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
-        }
-
-        const result = await response.json();
-        let content = '';
-        result.data.forEach((item) => {
-            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
-            const fechaDepositoFormateada = formatearFecha(item.fechaDeposito);
-            const montoDepFormateado = formatearMonto(item.montoDepositado);
-
-            content += `
-                <tr>
-                    <td>${item.idRetiro}</td>
-                    <td>${fechaSolicitudFormateada}</td>
-                    <td>${item.idCaja}</td>
-                    <td>${item.nomina}</td>
-                    <td>${fechaDepositoFormateada}</td>
-                    <td>${montoDepFormateado}</t>
-                </tr>`;
-        });
-        bodyRetirosAdmin.innerHTML = content;
-    } catch (error) {
-        console.error('Error:', error);
-    }
-};
-
 
 function responderPrestamo(idSolicitud){
     const titulo = "Responder Solicitud de Préstamo Folio " + idSolicitud;
@@ -443,17 +263,256 @@ function actualizarSolicitud() {
                 });
             }
         }).catch(error => {
-            console.error('Error:', error);
-        });
+        console.error('Error:', error);
+    });
 }
 
-function exportTableToExcel(csvContent){
 
+/***********************************************************************************************************************
+ *********************************************SOLICITUDES DE AHORRO ****************************************************
+ * *********************************************************************************************************************/
+
+// DataTables
+let dataTableAdminAhorro;
+let dataTableInitAhorroAdmin = false;
+let datosSolicitudesAhorro;
+let anioCajaAhorro;
+
+const dataTableOptAhorroAdmin = {
+    lengthMenu: [5, 10, 15, 20],
+    columnDefs:[
+        {className: "centered", targets: [0,1,2,3]},
+        {orderable: false, targets: [0,1,2]},
+        {width: "8%", targets: [0]},
+        {searchable: true, targets: [0,1,2] }
+    ],
+    pageLength:5,
+    destroy: true,
+    order: [[0, 'desc']], // Ordenar por la columna 0
+    language:{
+        lengthMenu: "Mostrar _MENU_ registros pór página",
+        sZeroRecords: "Ninguna solicitud encontrada",
+        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+        infoEmpty: "Ninguna solicitud encontrada",
+        infoFiltered: "(filtrados desde _MAX_ registros totales)",
+        search: "Buscar: ",
+        loadingRecords: "Cargando...",
+        paginate:{
+            first:"Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior"
+        }
+    }
+};
+const initDataTableAhorroAdmin = async (anio) => {
+    if (dataTableInitAhorroAdmin) {
+        dataTableAdminAhorro.destroy();
+    }
+    await dataTableAhorroAdmin(anio);
+
+    dataTableAdminAhorro = $("#tablaAhorroAdmin").DataTable(dataTableOptAhorroAdmin);
+
+    dataTableInitAhorroAdmin = true;
+};
+
+
+const dataTableAhorroAdmin = async (anio) => {
+    try {
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesAhorro.php?anio=` + anio);
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        let content = '';
+        result.data.forEach((item) => {
+            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
+            const montoSolFormateado = formatearMonto(item.montoAhorro);
+
+            content += `
+                <tr>
+                    <td>${item.idCaja}</td>
+                    <td>${fechaSolicitudFormateada}</td>
+                    <td>${item.nomina}</td>
+                    <td>${montoSolFormateado}</td>
+                </tr>`;
+        });
+        bodyAhorroAdmin.innerHTML = content;
+
+
+        datosSolicitudesAhorro = result.data;
+        anioCajaAhorro = anio;
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+
+async function prepararExcelAhorro(data) {
+    // Filtra y renombra las columnas de los datos
+    const datosFiltrados = data.map(item => ({
+        ID_Caja: item.idCaja,
+        Nomina_Solicitante: item.nomina,
+        Monto_Ahorro: item.montoAhorro,
+        Fecha_Solicitud: item.fechaSolicitud
+    }));
+
+    // Convierte el JSON filtrado y renombrado en una hoja de Excel
+    const worksheet = XLSX.utils.json_to_sheet(datosFiltrados);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Solicitudes de Prestamos");
+
+    // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const datosPrestamosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
+
+    // Crear enlace de descarga y disparar clic
+    const url = URL.createObjectURL(datosPrestamosAdmin);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Caja_de_Ahorro_'+anioCajaAhorro+'.xlsx';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Liberar el objeto URL
+    URL.revokeObjectURL(url);
+}
+
+
+document.getElementById('btnExcelAhorro').addEventListener('click', () => {
+    prepararExcelAhorro(datosSolicitudesAhorro);
+
+});
+
+/***********************************************************************************************************************
+ *********************************************RETIROS DE AHORRO ********************************************************
+ * *********************************************************************************************************************/
+
+// DataTables
+let dataTableAdminRetiro;
+let dataTableInitRetiroAdmin = false;
+
+const dataTableOptRetiroAdmin = {
+    lengthMenu: [5, 10, 15, 20],
+    columnDefs:[
+        {className: "centered", targets: [0,1,2,3,4,5]},
+        {orderable: false, targets: [0,1,2,3,4]},
+        {width: "8%", targets: [0]},
+        {searchable: true, targets: [0,1,2,3,4] }
+    ],
+    pageLength:5,
+    destroy: true,
+    order: [[0, 'desc']], // Ordenar por la columna 0
+    language:{
+        lengthMenu: "Mostrar _MENU_ registros pór página",
+        sZeroRecords: "Ninguna solicitud encontrada",
+        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+        infoEmpty: "Ninguna solicitud encontrada",
+        infoFiltered: "(filtrados desde _MAX_ registros totales)",
+        search: "Buscar: ",
+        loadingRecords: "Cargando...",
+        paginate:{
+            first:"Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior"
+        }
+    }
+};
+const initDataTableRetiroAdmin = async (anio) => {
+    if (dataTableInitRetiroAdmin) {
+        dataTableAdminRetiro.destroy();
+    }
+    await dataTableRetiroAdmin(anio);
+
+    dataTableAdminRetiro = $("#tablaRetirosAdmin").DataTable(dataTableOptRetiroAdmin);
+
+    dataTableInitRetiroAdmin = true;
+};
+
+
+const dataTableRetiroAdmin = async (anio) => {
+    try {
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesRetiro.php?anio=` + anio);
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        let content = '';
+        result.data.forEach((item) => {
+            const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
+            const fechaDepositoFormateada = formatearFecha(item.fechaDeposito);
+            const montoDepFormateado = formatearMonto(item.montoDepositado);
+
+            content += `
+                <tr>
+                    <td>${item.idRetiro}</td>
+                    <td>${fechaSolicitudFormateada}</td>
+                    <td>${item.idCaja}</td>
+                    <td>${item.nomina}</td>
+                    <td>${fechaDepositoFormateada}</td>
+                    <td>${montoDepFormateado}</t>
+                </tr>`;
+        });
+        bodyRetirosAdmin.innerHTML = content;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+/***********************************************************************************************************************
+ *****************************************CARGAR SOLICITUDES POR AÑO****************************************************
+ * *********************************************************************************************************************/
+
+
+function cargarAnio() {
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoAnio.php', function (data) {
+        let selectS = document.getElementById("selectAnio");
+        selectS.innerHTML = ""; //limpiar contenido
+
+        let createOptionDef = document.createElement("option");
+        createOptionDef.text = "Seleccione el año*";
+        createOptionDef.value = "";
+        selectS.appendChild(createOptionDef);
+
+        for (var i = 0; i < data.data.length; i++) {
+            var createOption = document.createElement("option");
+            createOption.value = data.data[i].anio;
+            createOption.text = data.data[i].anio;
+            selectS.appendChild(createOption);
+        }
+    });
+}
+
+async function cargarSolicitudes() {
+    const seccionPrestamo = document.getElementById("solicitarPrestamoSeccion");
+    const seccionAhorro = document.getElementById("solicitarAhorroSeccion");
+    let tipoConsulta = document.getElementById("selectTipoConsulta").value;
+    let anio = document.getElementById("selectAnio").value;
+
+    seccionPrestamo.style.display = "none";
+    seccionAhorro.style.display = "none";
+
+    if (tipoConsulta === "1") { // Préstamos
+        seccionPrestamo.style.display = "block";
+        await initDataTablePresAdmin(anio);
+
+    } else if (tipoConsulta === "2") { // Caja de Ahorro
+        seccionAhorro.style.display = "block";
+        await initDataTableAhorroAdmin(anio);
+    }
 }
 
 /*
 
-//Obtener datos a partir de un datatable
+//Obtener datos a partir de un datatable para excel
 
 //ejemplo llamada
 // exportTableToExcel('tablaPrestamosAdmin', 'SolicitudesPrestamos.xlsx', 'SolicitudesDePrestamos')
