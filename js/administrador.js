@@ -569,10 +569,8 @@ async function prepararExcelRetiros(data) {
     URL.revokeObjectURL(url);
 }
 
-
 document.getElementById('btnRetirosExcel').addEventListener('click', () => {
     prepararExcelRetiros(datosRetirosAhorro);
-
 });
 
 /******************Cargar e insertar datos de Excel*******************/

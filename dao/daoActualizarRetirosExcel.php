@@ -5,31 +5,38 @@ include_once('funcionesGenerales.php');
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Decodificar el cuerpo JSON
     $inputData = json_decode(file_get_contents("php://input"), true);
 
     if (isset($inputData['retiros']) && is_array($inputData['retiros'])) {
-        $respuesta = array();
+        $todosExitosos = true; // Indicador de éxito global
 
         foreach ($inputData['retiros'] as $retiro) {
-            // Validar y asignar valores
             $idRetiro = isset($retiro['idRetiro']) ? trim($retiro['idRetiro']) : null;
             $montoDepositado = isset($retiro['montoDepositado']) ? trim($retiro['montoDepositado']) : null;
             $fechaDeposito = isset($retiro['fechaDeposito']) ? trim($retiro['fechaDeposito']) : null;
             $fechaFormateada = formatearFecha($fechaDeposito);
-            if ($fechaFormateada === false) {
-                $respuesta = array("status" => 'error', "message" => "La fecha es inválida. Asegúrese de usar un formato correcto.");
-            } else {
-                // Llamar a la función de actualización con la fecha en el formato correcto
-                $resultado = actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaFormateada);
-                $respuesta[] = $resultado;
-            }
 
             // Validar datos
-            if (empty($idRetiro) || empty($montoDepositado) || empty($fechaDeposito)) {
-                $respuesta[] = array("status" => 'error', "message" => "Campos requeridos vacíos en una fila.");
-                continue;
+            if (empty($idRetiro) || empty($montoDepositado) || empty($fechaDeposito) || $fechaFormateada === false) {
+                $respuesta = array("status" => 'error', "message" => "Error en los datos de entrada o en el formato de fecha.");
+                $todosExitosos = false;
+                break;
             }
+
+            // Llamar a la función de actualización con la fecha en el formato correcto
+            $resultado = actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaFormateada);
+
+            // Verificar el resultado y detener si hay un error
+            if ($resultado['status'] !== 'success') {
+                $respuesta = $resultado;
+                $todosExitosos = false;
+                break;
+            }
+        }
+
+        // Respuesta final si todos fueron exitosos
+        if ($todosExitosos) {
+            $respuesta = array("status" => 'success', "message" => "Todos los retiros se actualizaron exitosamente.");
         }
     } else {
         $respuesta = array("status" => 'error', "message" => "Datos no válidos.");
@@ -50,21 +57,20 @@ function actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaDeposito
         $fechaResp = date("Y-m-d");
 
         $updateSol = $conex->prepare("UPDATE RetiroAhorro 
-                                               SET fechaDeposito = ?, 
-                                                   montoDepositado = ?,
-                                                   estatusRetiro = 1
-                                             WHERE idRetiro = ?");
+                                       SET fechaDeposito = ?, 
+                                           montoDepositado = ?,
+                                           estatusRetiro = 1
+                                       WHERE idRetiro = ?");
         $updateSol->bind_param("ssi", $fechaDeposito, $montoDepositado, $idRetiro);
         $resultado = $updateSol->execute();
 
         if (!$resultado) {
             $respuesta = array('status' => 'error', 'message' => 'Error al actualizar la solicitud.');
         } else {
-            // Registro en la bitácora
             $nomina = $_SESSION["nomina"];
             $descripcion = "Actualización RetiroAhorro por admin. idRetiro:".$idRetiro." Monto depositado: $".$montoDepositado." Fecha Deposito:".$fechaDeposito;
 
-            $resultadoBitacora = actualizarBitacoraCambios( $nomina, $fechaResp, $descripcion, $conex);
+            $resultadoBitacora = actualizarBitacoraCambios($nomina, $fechaResp, $descripcion, $conex);
 
             if (!$resultadoBitacora) {
                 $respuesta = array('status' => 'error', 'message' => 'Error al registrar en bitácora.');
@@ -74,7 +80,6 @@ function actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaDeposito
             }
         }
     } catch (Exception $e) {
-        // Deshacer la transacción en caso de error
         $conex->rollback();
         $respuesta = array("status" => 'error', "message" => $e->getMessage());
     } finally {
