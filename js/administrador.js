@@ -396,6 +396,8 @@ document.getElementById('btnExcelAhorro').addEventListener('click', () => {
 // DataTables
 let dataTableAdminRetiro;
 let dataTableInitRetiroAdmin = false;
+let datosRetirosAhorro;
+let anioRetiroAhorro;
 
 const dataTableOptRetiroAdmin = {
     lengthMenu: [5, 10, 15, 20],
@@ -462,10 +464,55 @@ const dataTableRetiroAdmin = async (anio) => {
                 </tr>`;
         });
         bodyRetirosAdmin.innerHTML = content;
+
+        datosRetirosAhorro = result.data;
+        anioRetiroAhorro = anio;
+
     } catch (error) {
         console.error('Error:', error);
     }
 };
+
+
+async function prepararExcelRetiros(data) {
+    // Filtra y renombra las columnas de los datos
+    const datosFiltrados = data.map(item => ({
+        ID_Retiro: item.idRetiro,
+        id_Caja: item.idCaja,
+        Fecha_Solicitud: item.fechaSolicitud,
+        Nomina_Solicitante: item.nomina,
+        Fecha_Deposito: item.fechaDeposito,
+        Monto_Depositado: item.montoDepositado
+    }));
+
+    // Convierte el JSON filtrado y renombrado en una hoja de Excel
+    const worksheet = XLSX.utils.json_to_sheet(datosFiltrados);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Retiros de Caja de Ahorro");
+
+    // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const datosPrestamosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
+
+    // Crear enlace de descarga y disparar clic
+    const url = URL.createObjectURL(datosPrestamosAdmin);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Retiros_de_Ahorro_'+anioRetiroAhorro+'.xlsx';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Liberar el objeto URL
+    URL.revokeObjectURL(url);
+}
+
+
+document.getElementById('btnRetirosExcel').addEventListener('click', () => {
+    prepararExcelRetiros(datosRetirosAhorro);
+
+});
 
 /***********************************************************************************************************************
  *****************************************CARGAR SOLICITUDES POR AÑO****************************************************
