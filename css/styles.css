@@ -40,7 +40,7 @@
 -----------------------------------------*/
 :root {
   --white-color:                  #ffffff;
-  --primary-color:                #92D5F6;
+  --primary-color:                #005195;
   --secondary-color:              #5a6f80;
   --section-bg-color:             #f0f8ff;
   --site-footer-bg-color:         #44525d;
@@ -127,7 +127,7 @@ h4 {
 }
 
 h5 {
-  color: var(--primary-color);
+  color: var(--custom-btn-bg-color);
   font-size: var(--h5-font-size);
 }
 
