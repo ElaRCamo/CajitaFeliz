@@ -8,14 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Decodificar el cuerpo JSON
     $inputData = json_decode(file_get_contents("php://input"), true);
 
-    if (isset($inputData['prestamos']) && is_array($inputData['prestamos'])) {
+    if (isset($inputData['retiros']) && is_array($inputData['retiros'])) {
         $respuesta = array();
 
-        foreach ($inputData['prestamos'] as $prestamo) {
+        foreach ($inputData['retiros'] as $retiro) {
             // Validar y asignar valores
-            $idSolicitud = isset($prestamo['idSolicitud']) ? trim($prestamo['idSolicitud']) : null;
-            $montoDepositado = isset($prestamo['montoDepositado']) ? trim($prestamo['montoDepositado']) : null;
-            $fechaDeposito = isset($prestamo['fechaDeposito']) ? trim($prestamo['fechaDeposito']) : null;
+            $idSolicitud = isset($retiro['idSolicitud']) ? trim($retiro['idSolicitud']) : null;
+            $montoDepositado = isset($retiro['montoDepositado']) ? trim($retiro['montoDepositado']) : null;
+            $fechaDeposito = isset($retiro['fechaDeposito']) ? trim($retiro['fechaDeposito']) : null;
             $fechaFormateada = formatearFecha($fechaDeposito);
             if ($fechaFormateada === false) {
                 $respuesta = array("status" => 'error', "message" => "La fecha es inválida. Asegúrese de usar un formato correcto.");
@@ -49,10 +49,10 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
     try {
         $fechaResp = date("Y-m-d");
 
-        $updateSol = $conex->prepare("UPDATE Prestamo 
-                                      SET fechaDeposito = ?, 
-                                          montoDepositado = ?
-                                      WHERE idSolicitud = ?");
+        $updateSol = $conex->prepare("UPDATE RetiroAhorro 
+                                               SET fechaDeposito = ?, 
+                                                   montoDepositado = ?
+                                             WHERE idSolicitud = ?");
         $updateSol->bind_param("ssi", $fechaDeposito, $montoDepositado, $idSolicitud);
         $resultado = $updateSol->execute();
 
@@ -61,7 +61,7 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
         } else {
             // Registro en la bitácora
             $nomina = $_SESSION["nomina"];
-            $descripcion = "Actualización Prestamo por admin. idSolicitud:".$idSolicitud." Monto depositado: $".$montoDepositado." Fecha Deposito:".$fechaDeposito;
+            $descripcion = "Actualización RetiroAhorro por admin. idSolicitud:".$idSolicitud." Monto depositado: $".$montoDepositado." Fecha Deposito:".$fechaDeposito;
 
             $resultadoBitacora = actualizarBitacoraCambios( $nomina, $fechaResp, $descripcion, $conex);
 
@@ -81,4 +81,5 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
     }
     return $respuesta;
 }
+
 ?>
