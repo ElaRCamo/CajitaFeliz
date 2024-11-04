@@ -222,7 +222,7 @@ function actualizarSolicitud() {
     });
 }
 
-/******************Descargar Excel*******************/
+/******************Descargar Excel Prestamos*******************/
 
 document.getElementById('btnExcelPrestamos').addEventListener('click', () => {
     prepararExcelPrestamos(datosPrestamosAdmin);
@@ -233,6 +233,7 @@ async function prepararExcelPrestamos(data) {
     const datosFiltrados = data.map(item => ({
         ID_Solicitud: item.idSolicitud,
         Nomina_Solicitante: item.nominaSolicitante,
+        Nombre_Solicitante: item.NomUser,
         Fecha_Solicitud: item.fechaSolicitud,
         Monto_Solicitado: item.montoSolicitado,
         Telefono: item.telefono,
