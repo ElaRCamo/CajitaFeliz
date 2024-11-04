@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="data to excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,23 +88,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="38285000" />
-    </task>
-    <task id="LOCAL-00293" summary="Loan: add endorsements">
-      <option name="closed" value="true" />
-      <created>1729701771552</created>
-      <option name="number" value="00293" />
-      <option name="presentableId" value="LOCAL-00293" />
-      <option name="project" value="LOCAL" />
-      <updated>1729701771552</updated>
-    </task>
-    <task id="LOCAL-00294" summary="Loan: add endorsements">
-      <option name="closed" value="true" />
-      <created>1729701901605</created>
-      <option name="number" value="00294" />
-      <option name="presentableId" value="LOCAL-00294" />
-      <option name="project" value="LOCAL" />
-      <updated>1729701901605</updated>
+      <workItem from="1730319660375" duration="39092000" />
     </task>
     <task id="LOCAL-00295" summary="Loan: add endorsements">
       <option name="closed" value="true" />
@@ -484,7 +466,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730730520677</updated>
     </task>
-    <option name="localTasksCounter" value="342" />
+    <task id="LOCAL-00342" summary="data to excel">
+      <option name="closed" value="true" />
+      <created>1730731815054</created>
+      <option name="number" value="00342" />
+      <option name="presentableId" value="LOCAL-00342" />
+      <option name="project" value="LOCAL" />
+      <updated>1730731815054</updated>
+    </task>
+    <task id="LOCAL-00343" summary="data to excel">
+      <option name="closed" value="true" />
+      <created>1730732091318</created>
+      <option name="number" value="00343" />
+      <option name="presentableId" value="LOCAL-00343" />
+      <option name="project" value="LOCAL" />
+      <updated>1730732091318</updated>
+    </task>
+    <option name="localTasksCounter" value="344" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

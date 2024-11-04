@@ -44,8 +44,24 @@ const initDataTablePresAdmin = async (anio) => {
 };
 
 async function prepararExcelPrestamos(data) {
-    // Convierte el JSON en una hoja de Excel
-    const worksheet = XLSX.utils.json_to_sheet(data);
+    // Filtra y renombra las columnas de los datos
+    const datosFiltrados = data.map(item => ({
+        ID_Solicitud: item.idSolicitud,
+        Nomina_Solicitante: item.nominaSolicitante,
+        Fecha_Solicitud: item.fechaSolicitud,
+        Monto_Solicitado: item.montoSolicitado,
+        Telefono: item.telefono,
+        Estatus: item.descripcion,
+        Nomina_Aval1: item.nominaAval1,
+        Nomina_Aval2: item.nominaAval2,
+        Fecha_Respuesta: item.fechaRespuesta,
+        Monto_Aprobado: item.montoAprobado,
+        Fecha_Deposito: item.fechaDeposito,
+        Comentarios_Admin: item.comentariosAdmin
+    }));
+
+    // Convierte el JSON filtrado y renombrado en una hoja de Excel
+    const worksheet = XLSX.utils.json_to_sheet(datosFiltrados);
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Solicitudes de Prestamos");
 
@@ -57,7 +73,7 @@ async function prepararExcelPrestamos(data) {
     const url = URL.createObjectURL(datosPrestamosAdmin);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `Prestamos_${new Date().getFullYear()}.xlsx`; // Usa el año actual
+    a.download = `Prestamos_${new Date().getFullYear()}.xlsx`;
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
@@ -66,6 +82,7 @@ async function prepararExcelPrestamos(data) {
     // Liberar el objeto URL
     URL.revokeObjectURL(url);
 }
+
 
 document.getElementById('btnExcelPrestamos').addEventListener('click', () => {
     prepararExcelPrestamos(datosPrestamosAdmin);
