@@ -301,7 +301,7 @@ async function insertarExcelPrestamos(file) {
         // Extraer y mapear los datos de las columnas
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
-                idSolicitud: row[0],
+                idRetiro: row[0],
                 montoDepositado: row[1],
                 fechaDeposito: excelDateToJSDate(row[2]) // Convertir la fecha
             };
