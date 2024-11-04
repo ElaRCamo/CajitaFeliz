@@ -87,9 +87,7 @@
             <div class="row">
                 <div class="container mt-5">
                     <h2 class="text-center">Solicitudes de Préstamos</h2>
-                    <button class="btn btn-success text-right btnExcel" onclick="exportTableToExcel('tablaPrestamosAdmin', 'SolicitudesPrestamos.xlsx', 'SolicitudesDePrestamos')">
-                        Exportar a Excel
-                    </button>
+                    <button class="btn btn-success text-right btnExcel" id="btnExcelPrestamos">Exportar a Excel</button>
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
                         <thead>
                         <tr>

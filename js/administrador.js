@@ -43,17 +43,34 @@ const initDataTablePresAdmin = async (anio) => {
     dataTableInitPrestamosAdmin = true;
 };
 
-async function prepararExcel(response) {
-    //Se prepara excel:
-    const data = await response.json(); // Suponiendo que data es un array de objetos
+async function prepararExcelPrestamos(data) {
+    // Convierte el JSON en una hoja de Excel
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Solicitudes de Prestamos");
 
-    // Crear los encabezados y filas en formato CSV
-    let csvContent = "ID,Nombre,Fecha,Monto\n"; // Encabezados personalizados
-    data.forEach(row => {
-        csvContent += `${row.id},${row.nombre},${row.fecha},${row.monto}\n`; // Agrega los valores de cada fila
-    });
-    datosPrestamosAdmin = csvContent;
+    // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const datosPrestamosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
+
+    // Crear enlace de descarga y disparar clic
+    const url = URL.createObjectURL(datosPrestamosAdmin);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `Prestamos_${new Date().getFullYear()}.xlsx`; // Usa el año actual
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Liberar el objeto URL
+    URL.revokeObjectURL(url);
 }
+
+document.getElementById('btnExcelPrestamos').addEventListener('click', () => {
+    prepararExcelPrestamos(result.data);
+});
+
 const dataTablePrestamosAdmin = async (anio) => {
     try {
         const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesPrestamos.php?anio=` + anio);
@@ -62,14 +79,12 @@ const dataTablePrestamosAdmin = async (anio) => {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
 
-
         const result = await response.json();
 
         let content = '';
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
             const montoSolFormateado = formatearMonto(item.montoSolicitado);
-
 
             content += `
                 <tr>
@@ -98,8 +113,8 @@ const dataTablePrestamosAdmin = async (anio) => {
         });
         bodyPrestamosAdmin.innerHTML = content;
 
-        //Preparar datos para convertir a excel
-        await prepararExcel(response);
+        // Preparar datos para convertir a Excel
+        await prepararExcelPrestamos(result.data);  // Pasa los datos directamente a la función
 
     } catch (error) {
         console.error('Error:', error);
@@ -412,6 +427,16 @@ function actualizarSolicitud() {
         });
 }
 
+function exportTableToExcel(csvContent){
+
+}
+
+/*
+
+//Obtener datos a partir de un datatable
+
+//ejemplo llamada
+// exportTableToExcel('tablaPrestamosAdmin', 'SolicitudesPrestamos.xlsx', 'SolicitudesDePrestamos')
 
 function exportTableToExcel(tableId, filename, sheetName) {
     const dataTable = $(`#${tableId}`).DataTable();
@@ -443,4 +468,4 @@ function exportTableToExcel(tableId, filename, sheetName) {
 
     // Descarga el archivo de Excel
     XLSX.writeFile(workbook, filename);
-}
+}*/

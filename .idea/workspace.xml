@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="styles misSolicitudes" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="data to excel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,15 +90,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="36780000" />
-    </task>
-    <task id="LOCAL-00292" summary="Loan: add endorsements">
-      <option name="closed" value="true" />
-      <created>1729701644102</created>
-      <option name="number" value="00292" />
-      <option name="presentableId" value="LOCAL-00292" />
-      <option name="project" value="LOCAL" />
-      <updated>1729701644102</updated>
+      <workItem from="1730319660375" duration="38285000" />
     </task>
     <task id="LOCAL-00293" summary="Loan: add endorsements">
       <option name="closed" value="true" />
@@ -480,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730729755100</updated>
     </task>
-    <option name="localTasksCounter" value="341" />
+    <task id="LOCAL-00341" summary="data to excel">
+      <option name="closed" value="true" />
+      <created>1730730520677</created>
+      <option name="number" value="00341" />
+      <option name="presentableId" value="LOCAL-00341" />
+      <option name="project" value="LOCAL" />
+      <updated>1730730520677</updated>
+    </task>
+    <option name="localTasksCounter" value="342" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +524,8 @@
     <MESSAGE value="Responsive login" />
     <MESSAGE value="styles index" />
     <MESSAGE value="styles misSolicitudes" />
-    <option name="LAST_COMMIT_MESSAGE" value="styles misSolicitudes" />
+    <MESSAGE value="data to excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="data to excel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
