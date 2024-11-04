@@ -16,12 +16,12 @@ function formatearFecha($fecha) {
         return $fechaFormateada->format('Y/m/d');
     } else {
         // Intentar crear un objeto DateTime desde la fecha en otros formatos comunes
-        $fechaAlternativa = DateTime::createFromFormat('d/m/Y', $fecha)
-            ?: DateTime::createFromFormat('m/d/Y', $fecha)
-                ?: DateTime::createFromFormat('Y-m-d', $fecha)
-                    ?: DateTime::createFromFormat('d/m/y', $fecha)
-                        ?: DateTime::createFromFormat('m/d/y', $fecha)
-                            ?: DateTime::createFromFormat('Y-m-d H:i:s', $fecha);
+        $fechaAlternativa = DateTime::createFromFormat('d/m/Y', $fecha) // d/m/Y
+            ?: DateTime::createFromFormat('m/d/Y', $fecha) // m/d/Y
+                ?: DateTime::createFromFormat('Y-m-d', $fecha) // Y-m-d
+                    ?: DateTime::createFromFormat('d/m/y', $fecha) // d/m/y
+                        ?: DateTime::createFromFormat('m/d/y', $fecha) // m/d/y
+                            ?: DateTime::createFromFormat('Y-m-d H:i:s', $fecha); // Y-m-d H:i:s
 
         // Manejo del formato con mes en texto
         if (!$fechaAlternativa) {
