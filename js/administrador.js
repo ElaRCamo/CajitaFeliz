@@ -289,6 +289,54 @@ async function insertarExcelPrestamos(file) {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
+        // Función para convertir el número de fecha de Excel a una cadena de fecha
+        function excelDateToJSDate(excelDate) {
+            const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
+            const year = jsDate.getFullYear();
+            const month = String(jsDate.getMonth() + 1).padStart(2, '0');
+            const day = String(jsDate.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        // Extraer y mapear los datos de las columnas
+        const prestamosData = jsonData.slice(1).map((row) => {
+            return {
+                idSolicitud: row[0],
+                montoDepositado: row[1],
+                fechaDeposito: excelDateToJSDate(row[2]) // Convertir la fecha
+            };
+        });
+
+        // Enviar los datos al backend en un solo array
+        const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ prestamos: prestamosData }) // Enviar como un array bajo la clave "prestamos"
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error en la inserción: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        alert(result.message || 'Datos insertados exitosamente.');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Ocurrió un error al procesar el archivo.');
+    }
+}
+
+/*
+async function insertarExcelPrestamos(file) {
+    try {
+        // Leer el archivo Excel
+        const data = await file.arrayBuffer();
+        const workbook = XLSX.read(data, { type: 'array' });
+        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
         // Extraer y mapear los datos de las columnas
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
@@ -317,7 +365,7 @@ async function insertarExcelPrestamos(file) {
         console.error('Error:', error);
         alert('Ocurrió un error al procesar el archivo.');
     }
-}
+}*/
 
 /***********************************************************************************************************************
  *********************************************SOLICITUDES DE AHORRO ****************************************************
