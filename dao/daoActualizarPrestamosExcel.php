@@ -56,7 +56,7 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
         } else {
             // Registro en la bitácora
             $nomina = $_SESSION["nomina"];
-            $descripcion = "Actualización por admin. Se carga excel de depositos de prestamos.";
+            $descripcion = "Actualización por admin. idSolicitud:".$idSolicitud." Monto depositado: $".$montoDepositado." Fecha Deposito:".$fechaDeposito;
             $insertBitacora = $conex->prepare("INSERT INTO BitacoraCambios (nomina, fecha, descripcion) VALUES(?,?,?)");
             $insertBitacora->bind_param("sss", $nomina, $fechaResp, $descripcion);
             $resultadoBitacora = $insertBitacora->execute();
