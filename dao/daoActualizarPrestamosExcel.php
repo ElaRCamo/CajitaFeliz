@@ -1,5 +1,6 @@
 <?php
 include_once('connectionCajita.php');
+include_once('funcionesGenerales.php');
 
 session_start();
 
@@ -15,16 +16,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $idSolicitud = isset($prestamo['idSolicitud']) ? trim($prestamo['idSolicitud']) : null;
             $montoDepositado = isset($prestamo['montoDepositado']) ? trim($prestamo['montoDepositado']) : null;
             $fechaDeposito = isset($prestamo['fechaDeposito']) ? trim($prestamo['fechaDeposito']) : null;
+            $fechaFormateada = formatearFecha($fechaDeposito);
+            if ($fechaFormateada === false) {
+                $respuesta = array("status" => 'error', "message" => "La fecha es inválida. Asegúrese de usar un formato correcto.");
+            } else {
+                // Llamar a la función de actualización con la fecha en el formato correcto
+                $resultado = actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaFormateada);
+                $respuesta[] = $resultado;
+            }
 
             // Validar datos
             if (empty($idSolicitud) || empty($montoDepositado) || empty($fechaDeposito)) {
                 $respuesta[] = array("status" => 'error', "message" => "Campos requeridos vacíos en una fila.");
                 continue;
             }
-
-            // Actualizar en la base de datos
-            $resultado = actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito);
-            $respuesta[] = $resultado;
         }
     } else {
         $respuesta = array("status" => 'error', "message" => "Datos no válidos.");
@@ -57,9 +62,8 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
             // Registro en la bitácora
             $nomina = $_SESSION["nomina"];
             $descripcion = "Actualización por admin. idSolicitud:".$idSolicitud." Monto depositado: $".$montoDepositado." Fecha Deposito:".$fechaDeposito;
-            $insertBitacora = $conex->prepare("INSERT INTO BitacoraCambios (nomina, fecha, descripcion) VALUES(?,?,?)");
-            $insertBitacora->bind_param("sss", $nomina, $fechaResp, $descripcion);
-            $resultadoBitacora = $insertBitacora->execute();
+
+            $resultadoBitacora = actualizarBitacoraCambios( $nomina, $fechaResp, $descripcion, $conex);
 
             if (!$resultadoBitacora) {
                 $respuesta = array('status' => 'error', 'message' => 'Error al registrar en bitácora.');
