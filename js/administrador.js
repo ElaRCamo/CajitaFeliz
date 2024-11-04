@@ -429,7 +429,7 @@ async function prepararExcelAhorro(data) {
     // Convierte el JSON filtrado y renombrado en una hoja de Excel
     const worksheet = XLSX.utils.json_to_sheet(datosFiltrados);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Solicitudes de Prestamos");
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Solicitudes de Retiros");
 
     // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
