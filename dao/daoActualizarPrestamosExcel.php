@@ -4,19 +4,30 @@ include_once('connectionCajita.php');
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['idsolicitud'], $_POST['montoDepositado'], $_POST['fechaDeposito'])) {
-        $idSolicitud = trim($_POST['idsolicitud']);
-        $montoDepositado = trim($_POST['montoDepositado']);
-        $fechaDeposito = trim($_POST['fechaDeposito']);
+    // Decodificar el cuerpo JSON
+    $inputData = json_decode(file_get_contents("php://input"), true);
 
-        // Validar datos
-        if (empty($idSolicitud) || empty($montoAprobado) || empty($estatus)) {
-            $respuesta = array("status" => 'error', "message" => "Algunos campos requeridos están vacíos.");
-        } else {
-            $respuesta = actualizarPresAdminExcel($idSolicitud, $montoAprobado, $estatus);
+    if (isset($inputData['prestamos']) && is_array($inputData['prestamos'])) {
+        $respuesta = array();
+
+        foreach ($inputData['prestamos'] as $prestamo) {
+            // Validar y asignar valores
+            $idSolicitud = isset($prestamo['idSolicitud']) ? trim($prestamo['idSolicitud']) : null;
+            $montoDepositado = isset($prestamo['montoDepositado']) ? trim($prestamo['montoDepositado']) : null;
+            $fechaDeposito = isset($prestamo['fechaDeposito']) ? trim($prestamo['fechaDeposito']) : null;
+
+            // Validar datos
+            if (empty($idSolicitud) || empty($montoDepositado) || empty($fechaDeposito)) {
+                $respuesta[] = array("status" => 'error', "message" => "Campos requeridos vacíos en una fila.");
+                continue;
+            }
+
+            // Actualizar en la base de datos
+            $resultado = actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito);
+            $respuesta[] = $resultado;
         }
     } else {
-        $respuesta = array("status" => 'error', "message" => "Faltan datos en el formulario.");
+        $respuesta = array("status" => 'error', "message" => "Datos no válidos.");
     }
 } else {
     $respuesta = array("status" => 'error', "message" => "Se esperaba REQUEST_METHOD POST");
@@ -42,7 +53,7 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
 
         if (!$resultado) {
             $respuesta = array('status' => 'error', 'message' => 'Error al actualizar la solicitud.');
-        }else{
+        } else {
             // Registro en la bitácora
             $nomina = $_SESSION["nomina"];
             $descripcion = "Actualización por admin. Se carga excel de depositos de prestamos.";
@@ -52,7 +63,7 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
 
             if (!$resultadoBitacora) {
                 $respuesta = array('status' => 'error', 'message' => 'Error al registrar en bitácora.');
-            }else {
+            } else {
                 $conex->commit();
                 $respuesta = array("status" => 'success', "message" => "Solicitud $idSolicitud actualizada exitosamente.");
             }

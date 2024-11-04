@@ -293,18 +293,18 @@ async function insertarExcelPrestamos(file) {
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
                 idSolicitud: row[0],
-                montoAprobado: row[1],
+                montoDepositado: row[1],
                 fechaDeposito: row[2]
             };
         });
 
-        // Enviar los datos al backend
+        // Enviar los datos al backend en un solo array
         const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(prestamosData)
+            body: JSON.stringify({ prestamos: prestamosData }) // Enviar como un array bajo la clave "prestamos"
         });
 
         if (!response.ok) {
@@ -318,7 +318,6 @@ async function insertarExcelPrestamos(file) {
         alert('Ocurrió un error al procesar el archivo.');
     }
 }
-
 
 /***********************************************************************************************************************
  *********************************************SOLICITUDES DE AHORRO ****************************************************
