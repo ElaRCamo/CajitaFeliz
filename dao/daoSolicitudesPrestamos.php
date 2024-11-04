@@ -25,7 +25,14 @@ function todosLosPrestamos($anio){
                             THEN CONCAT('<span class=\"badge bg-success\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
                         WHEN s.idEstatus = 4 
                             THEN CONCAT('<span class=\"badge bg-dark\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
-                    END AS estatusVisual
+                    END AS estatusVisual,
+                    e.descripcion,
+                    nominaAval1,
+                    nominaAval2,
+                    fechaRespuesta,
+                    montoAprobado,
+                    fechaDeposito,
+                    comentariosAdmin
                 FROM
                     Prestamo s
                     LEFT JOIN EstatusPrestamo e ON s.idEstatus = e.idEstatus
