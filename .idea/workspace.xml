@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="styles misSolicitudes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,23 +89,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="34339000" />
-    </task>
-    <task id="LOCAL-00289" summary="Loan: add endorsements">
-      <option name="closed" value="true" />
-      <created>1729701023786</created>
-      <option name="number" value="00289" />
-      <option name="presentableId" value="LOCAL-00289" />
-      <option name="project" value="LOCAL" />
-      <updated>1729701023786</updated>
-    </task>
-    <task id="LOCAL-00290" summary="Loan: add endorsements">
-      <option name="closed" value="true" />
-      <created>1729701221062</created>
-      <option name="number" value="00290" />
-      <option name="presentableId" value="LOCAL-00290" />
-      <option name="project" value="LOCAL" />
-      <updated>1729701221062</updated>
+      <workItem from="1730319660375" duration="36323000" />
     </task>
     <task id="LOCAL-00291" summary="Loan: add endorsements">
       <option name="closed" value="true" />
@@ -483,7 +467,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730486359156</updated>
     </task>
-    <option name="localTasksCounter" value="338" />
+    <task id="LOCAL-00338" summary="styles misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1730727726061</created>
+      <option name="number" value="00338" />
+      <option name="presentableId" value="LOCAL-00338" />
+      <option name="project" value="LOCAL" />
+      <updated>1730727726061</updated>
+    </task>
+    <task id="LOCAL-00339" summary="styles misSolicitudes">
+      <option name="closed" value="true" />
+      <created>1730728195048</created>
+      <option name="number" value="00339" />
+      <option name="presentableId" value="LOCAL-00339" />
+      <option name="project" value="LOCAL" />
+      <updated>1730728195048</updated>
+    </task>
+    <option name="localTasksCounter" value="340" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

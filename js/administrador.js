@@ -1,6 +1,7 @@
 // DataTables
 let dataTableAdminPrestamos;
 let dataTableInitPrestamosAdmin = false;
+let datosPrestamosAdmin = "";
 
 const dataTableOptPresAdmin = {
     lengthMenu: [5, 10, 15, 20],
@@ -42,6 +43,17 @@ const initDataTablePresAdmin = async (anio) => {
     dataTableInitPrestamosAdmin = true;
 };
 
+async function prepararExcel(response) {
+    //Se prepara excel:
+    const data = await response.json(); // Suponiendo que data es un array de objetos
+
+    // Crear los encabezados y filas en formato CSV
+    let csvContent = "ID,Nombre,Fecha,Monto\n"; // Encabezados personalizados
+    data.forEach(row => {
+        csvContent += `${row.id},${row.nombre},${row.fecha},${row.monto}\n`; // Agrega los valores de cada fila
+    });
+    datosPrestamosAdmin = csvContent;
+}
 const dataTablePrestamosAdmin = async (anio) => {
     try {
         const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesPrestamos.php?anio=` + anio);
@@ -49,6 +61,7 @@ const dataTablePrestamosAdmin = async (anio) => {
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
+
 
         const result = await response.json();
 
@@ -84,6 +97,10 @@ const dataTablePrestamosAdmin = async (anio) => {
                 </tr>`;
         });
         bodyPrestamosAdmin.innerHTML = content;
+
+        //Preparar datos para convertir a excel
+        await prepararExcel(response);
+
     } catch (error) {
         console.error('Error:', error);
     }
@@ -397,7 +414,6 @@ function actualizarSolicitud() {
 
 
 function exportTableToExcel(tableId, filename, sheetName) {
-    // Obtén la instancia del DataTable
     const dataTable = $(`#${tableId}`).DataTable();
 
     // Obtén todos los datos de todas las páginas

@@ -29,8 +29,7 @@ function todosLosPrestamos($anio){
                 FROM
                     Prestamo s
                     LEFT JOIN EstatusPrestamo e ON s.idEstatus = e.idEstatus
-                WHERE
-                  AND YEAR(s.fechaSolicitud) like '$anio'
+                WHERE YEAR(s.fechaSolicitud) like '$anio'
                 ORDER BY
                     s.idSolicitud DESC;
                 ");
