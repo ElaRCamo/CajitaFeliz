@@ -310,26 +310,22 @@
 
                 <p class="text-white d-flex">
                     <i class="bi-envelope me-2"></i>
-
-                    <a href="Yomara.soto@grammer.com" class="site-footer-link">
                         Lic. Irma Yomara Soto Cabello<br>
                         Coordinadora Nóminas<br>
                         yomara.soto@grammer.com<br>
-                    </a>
                 </p>
 
                 <p class="text-white d-flex">
                     <i class="bi-envelope me-2"></i>
-                    <a href="juanroberto.arreola@grammer.com" class="site-footer-link">
                         Lic. Juan Roberto Arreola Hernandez<br>
                         Administrador y analista de nómina<br>
                         juanroberto.arreola@grammer.com
-                    </a>
                 </p>
 
                 <p class="text-white d-flex mt-3">
                     <i class="bi-geo-alt me-2"></i>
-                    Av. de la Luz 24, Benito Juárez, 76120 Santiago de Querétaro, Qro.
+                    Av. de la Luz 24, Benito Juárez, 76120<br>
+                    Santiago de Querétaro, Qro.
                 </p>
             </div>
         </div>

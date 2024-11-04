@@ -301,7 +301,7 @@ async function insertarExcelPrestamos(file) {
         // Extraer y mapear los datos de las columnas
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
-                idRetiro: row[0],
+                idSolicitud: row[0],
                 montoDepositado: row[1],
                 fechaDeposito: excelDateToJSDate(row[2]) // Convertir la fecha
             };
@@ -448,10 +448,6 @@ async function prepararExcelAhorro(data) {
     // Liberar el objeto URL
     URL.revokeObjectURL(url);
 }
-
-
-
-
 
 
 /***********************************************************************************************************************
@@ -609,9 +605,9 @@ async function insertarExcelRetiros(file) {
         }
 
         // Extraer y mapear los datos de las columnas
-        const prestamosData = jsonData.slice(1).map((row) => {
+        const retirosData = jsonData.slice(1).map((row) => {
             return {
-                idSolicitud: row[0],
+                idRetiro: row[0],
                 montoDepositado: row[1],
                 fechaDeposito: excelDateToJSDate(row[2]) // Convertir la fecha
             };
@@ -623,7 +619,7 @@ async function insertarExcelRetiros(file) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ retiros: prestamosData }) // Enviar como un array bajo la clave "retiros"
+            body: JSON.stringify({ retiros: retirosData }) // Enviar como un array bajo la clave "retiros"
         });
 
         if (!response.ok) {

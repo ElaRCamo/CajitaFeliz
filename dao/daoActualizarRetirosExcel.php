@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $respuesta = array("status" => 'error', "message" => "La fecha es inválida. Asegúrese de usar un formato correcto.");
             } else {
                 // Llamar a la función de actualización con la fecha en el formato correcto
-                $resultado = actualizarPresAdminExcel($idRetiro, $montoDepositado, $fechaFormateada);
+                $resultado = actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaFormateada);
                 $respuesta[] = $resultado;
             }
 
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo json_encode($respuesta);
 
-function actualizarPresAdminExcel($idRetiro, $montoDepositado, $fechaDeposito) {
+function actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaDeposito) {
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
@@ -51,7 +51,8 @@ function actualizarPresAdminExcel($idRetiro, $montoDepositado, $fechaDeposito) {
 
         $updateSol = $conex->prepare("UPDATE RetiroAhorro 
                                                SET fechaDeposito = ?, 
-                                                   montoDepositado = ?
+                                                   montoDepositado = ?,
+                                                   estatusRetiro = 1
                                              WHERE idRetiro = ?");
         $updateSol->bind_param("ssi", $fechaDeposito, $montoDepositado, $idRetiro);
         $resultado = $updateSol->execute();
