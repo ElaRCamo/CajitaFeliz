@@ -2,6 +2,7 @@
 let dataTableAdminPrestamos;
 let dataTableInitPrestamosAdmin = false;
 let datosPrestamosAdmin;
+let anioPrestamos;
 
 const dataTableOptPresAdmin = {
     lengthMenu: [5, 10, 15, 20],
@@ -73,7 +74,7 @@ async function prepararExcelPrestamos(data) {
     const url = URL.createObjectURL(datosPrestamosAdmin);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `Prestamos_${primerAnio}.xlsx`;
+    a.download = 'Solicitudes_Prestamos_'+anioPrestamos+'.xlsx';
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
@@ -133,6 +134,7 @@ const dataTablePrestamosAdmin = async (anio) => {
 
         // Preparar datos para convertir a Excel
         datosPrestamosAdmin = result.data;  // Pasa los datos directamente a la función
+        anioPrestamos = anio;
 
     } catch (error) {
         console.error('Error:', error);
