@@ -132,6 +132,7 @@
                     <h3 class="text-center"><br>Retiros</br></h3>
                     <button class="btn btn-success text-right btnExcel" id="btnRetirosExcel"> Exportar a Excel</button>
                     <button class="btn btn-info text-right btnExcel" id="btnInsertarRetirosExcel"> Cargar Archivo</button>
+                    <input type="file" id="fileInputPrestamos" accept=".xlsx, .xls" style="display: none;" />
                     <table class="table table-striped table-bordered mt-3" id="tablaRetirosAdmin">
                         <thead>
                         <tr>

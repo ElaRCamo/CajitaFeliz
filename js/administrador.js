@@ -48,51 +48,6 @@ const initDataTablePresAdmin = async (anio) => {
     dataTableInitPrestamosAdmin = true;
 };
 
-async function prepararExcelPrestamos(data) {
-    // Filtra y renombra las columnas de los datos
-    const datosFiltrados = data.map(item => ({
-        ID_Solicitud: item.idSolicitud,
-        Nomina_Solicitante: item.nominaSolicitante,
-        Fecha_Solicitud: item.fechaSolicitud,
-        Monto_Solicitado: item.montoSolicitado,
-        Telefono: item.telefono,
-        Estatus: item.descripcion,
-        Nomina_Aval1: item.nominaAval1,
-        Nomina_Aval2: item.nominaAval2,
-        Fecha_Respuesta: item.fechaRespuesta,
-        Monto_Aprobado: item.montoAprobado,
-        Fecha_Deposito: item.fechaDeposito,
-        Comentarios_Admin: item.comentariosAdmin
-    }));
-
-    // Convierte el JSON filtrado y renombrado en una hoja de Excel
-    const worksheet = XLSX.utils.json_to_sheet(datosFiltrados);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Solicitudes de Prestamos");
-
-    // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const datosPrestamosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
-
-    // Crear enlace de descarga y disparar clic
-    const url = URL.createObjectURL(datosPrestamosAdmin);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Solicitudes_Prestamos_'+anioPrestamos+'.xlsx';
-    a.style.display = 'none';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-
-    // Liberar el objeto URL
-    URL.revokeObjectURL(url);
-}
-
-
-document.getElementById('btnExcelPrestamos').addEventListener('click', () => {
-    prepararExcelPrestamos(datosPrestamosAdmin);
-
-});
 
 const dataTablePrestamosAdmin = async (anio) => {
     try {
@@ -265,6 +220,103 @@ function actualizarSolicitud() {
         }).catch(error => {
         console.error('Error:', error);
     });
+}
+
+/******************Descargar Excel*******************/
+
+document.getElementById('btnExcelPrestamos').addEventListener('click', () => {
+    prepararExcelPrestamos(datosPrestamosAdmin);
+
+});
+async function prepararExcelPrestamos(data) {
+    // Filtra y renombra las columnas de los datos
+    const datosFiltrados = data.map(item => ({
+        ID_Solicitud: item.idSolicitud,
+        Nomina_Solicitante: item.nominaSolicitante,
+        Fecha_Solicitud: item.fechaSolicitud,
+        Monto_Solicitado: item.montoSolicitado,
+        Telefono: item.telefono,
+        Estatus: item.descripcion,
+        Nomina_Aval1: item.nominaAval1,
+        Nomina_Aval2: item.nominaAval2,
+        Fecha_Respuesta: item.fechaRespuesta,
+        Monto_Aprobado: item.montoAprobado,
+        Fecha_Deposito: item.fechaDeposito,
+        Comentarios_Admin: item.comentariosAdmin
+    }));
+
+    // Convierte el JSON filtrado y renombrado en una hoja de Excel
+    const worksheet = XLSX.utils.json_to_sheet(datosFiltrados);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Solicitudes de Prestamos");
+
+    // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
+    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+    const datosPrestamosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
+
+    // Crear enlace de descarga y disparar clic
+    const url = URL.createObjectURL(datosPrestamosAdmin);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Solicitudes_Prestamos_'+anioPrestamos+'.xlsx';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Liberar el objeto URL
+    URL.revokeObjectURL(url);
+}
+
+
+/******************Cargar e insertar datos de Excel*******************/
+document.getElementById('btnInsertarPrestamosExcel').addEventListener('click', () => {
+    document.getElementById('fileInputPrestamos').click();
+});
+
+document.getElementById('fileInputPrestamos').addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        insertarExcelPrestamos(file);
+    }
+});
+
+async function insertarExcelPrestamos(file) {
+    try {
+        // Leer el archivo Excel
+        const data = await file.arrayBuffer();
+        const workbook = XLSX.read(data, { type: 'array' });
+        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+        const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+        // Extraer y mapear los datos de las columnas
+        const prestamosData = jsonData.slice(1).map((row) => {
+            return {
+                idSolicitud: row[0],
+                montoAprobado: row[1],
+                fechaDeposito: row[2]
+            };
+        });
+
+        // Enviar los datos al backend
+        const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(prestamosData)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error en la inserción: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        alert(result.message || 'Datos insertados exitosamente.');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Ocurrió un error al procesar el archivo.');
+    }
 }
 
 
@@ -513,6 +565,15 @@ document.getElementById('btnRetirosExcel').addEventListener('click', () => {
     prepararExcelRetiros(datosRetirosAhorro);
 
 });
+
+/******************Cargar e insertar datos de Excel*******************/
+document.getElementById('btnInsertarRetirosExcel').addEventListener('click', () => {
+    insertarExcelRetiros();
+});
+
+function insertarExcelRetiros(){
+
+}
 
 /***********************************************************************************************************************
  *****************************************CARGAR SOLICITUDES POR AÑO****************************************************
