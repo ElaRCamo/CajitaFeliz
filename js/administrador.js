@@ -433,10 +433,10 @@ async function prepararExcelAhorro(data) {
 
     // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const datosPrestamosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
+    const datosRetirosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
 
     // Crear enlace de descarga y disparar clic
-    const url = URL.createObjectURL(datosPrestamosAdmin);
+    const url = URL.createObjectURL(datosRetirosAdmin);
     const a = document.createElement('a');
     a.href = url;
     a.download = 'Caja_de_Ahorro_'+anioCajaAhorro+'.xlsx';
@@ -553,10 +553,10 @@ async function prepararExcelRetiros(data) {
 
     // Guarda el archivo Excel en un Blob (Archivo temporal en memoria)
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const datosPrestamosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
+    const datosRetirosAdmin = new Blob([excelBuffer], { type: "application/octet-stream" });
 
     // Crear enlace de descarga y disparar clic
-    const url = URL.createObjectURL(datosPrestamosAdmin);
+    const url = URL.createObjectURL(datosRetirosAdmin);
     const a = document.createElement('a');
     a.href = url;
     a.download = 'Retiros_de_Ahorro_'+anioRetiroAhorro+'.xlsx';
