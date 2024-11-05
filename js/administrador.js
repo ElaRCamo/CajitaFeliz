@@ -544,6 +544,7 @@ async function prepararExcelRetiros(data) {
         id_Caja: item.idCaja,
         Fecha_Solicitud: item.fechaSolicitud,
         Nomina_Solicitante: item.nomina,
+        Nombre: item.NomUser,
         Fecha_Deposito: item.fechaDeposito,
         Monto_Depositado: item.montoDepositado
     }));
