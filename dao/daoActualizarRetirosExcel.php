@@ -1,8 +1,13 @@
 <?php
 include_once('connectionCajita.php');
+include_once('connection.php');
 include_once('funcionesGenerales.php');
 
 session_start();
+
+function ObtenerNombresRetiros($retiros){
+
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputData = json_decode(file_get_contents("php://input"), true);
