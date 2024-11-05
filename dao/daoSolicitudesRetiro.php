@@ -7,6 +7,8 @@ $anio = $_GET["anio"];
 $retiros = todosLosRetiros($anio);
 $retirosConNombres = ObtenerNombresRetiros($retiros);
 
+echo json_encode(array("data" => $retirosConNombres));
+
 function ObtenerNombresRetiros($retiros)
 {
     $con = new LocalConector();
