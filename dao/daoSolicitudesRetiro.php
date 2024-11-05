@@ -56,6 +56,6 @@ function todosLosRetiros($anio){
                     R.fechaSolicitud DESC;
                 ");
 
-    $resultado= mysqli_fetch_all($datosPrueba, MYSQLI_ASSOC);
+    return mysqli_fetch_all($datosPrueba, MYSQLI_ASSOC);
 }
 ?>
