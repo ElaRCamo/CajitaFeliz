@@ -423,6 +423,7 @@ async function prepararExcelAhorro(data) {
     const datosFiltrados = data.map(item => ({
         ID_Caja: item.idCaja,
         Nomina_Solicitante: item.nomina,
+        Nombre: item.NomUser,
         Monto_Ahorro: item.montoAhorro,
         Fecha_Solicitud: item.fechaSolicitud
     }));
