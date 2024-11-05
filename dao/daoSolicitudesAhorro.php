@@ -16,7 +16,7 @@ function ObtenerNombresAhorros($ahorros)
     $ahorrosConNombres = [];
 
     foreach($ahorros as $ahorro){
-        $nomina = $ahorro['nominaSolicittante'];
+        $nomina = $ahorro['nomina'];
         $result = mysqli_query($conex, "SELECT NomUser FROM Empleados WHERE IdUser = '$nomina'");
 
             if($row = mysqli_fetch_assoc($result)){
