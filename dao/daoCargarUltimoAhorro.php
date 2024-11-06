@@ -23,7 +23,6 @@ function cargarUltimoAhorro()
 
     $resultadoConsulta = mysqli_query($conexion,$consultaAhorro);
     mysqli_close($conexion);
-
     $resultado = mysqli_fetch_all($resultadoConsulta, MYSQLI_ASSOC);
     echo json_encode(array("data" => $resultado));
 }
