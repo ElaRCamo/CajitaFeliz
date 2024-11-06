@@ -86,9 +86,9 @@ function fExisteAhorro(){
 
         //Beneficiario 1
         $("#nombreBen1").val(data.nombre);
-        $("#porcentajeBen1").val(data.direccion);
+        $("#porcentajeBen1").val(data.porcentaje);
         $("#telefonoBen1").val(data.telefono);
-        $("#domicilioBen1").val(data.porcentaje);
+        $("#domicilioBen1").val(data.direccion);
 
 
         if(data2 !== null) {
@@ -96,9 +96,9 @@ function fExisteAhorro(){
             divBen2.style.display = "block";
             //Beneficiario 2
             $("#nombreBen2").val(ata2.nombre);
-            $("#porcentajeBen2").val(data2.direccion);
+            $("#porcentajeBen2").val(data2.porcentaje);
             $("#telefonoBen2").val(data2.telefono);
-            $("#domicilioBen2").val(data2.porcentaje);
+            $("#domicilioBen2").val(data2.direccion);
         }
 
     });
