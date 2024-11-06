@@ -105,10 +105,9 @@ function validarMonto(montoAhorro) {
             title: 'Monto inválido',
             text: "Ingrese un monto válido"
         });
-        return;
+    }else{
+        return numero; // Retorna el número
     }
-
-    return numero; // Retorna el número
 }
 
 function autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios){
