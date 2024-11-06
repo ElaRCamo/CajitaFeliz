@@ -51,8 +51,6 @@ function fExistePrestamo(){
 
         let montoSolicitado = formatearMonto(data.montoSolicitado);
 
-        alert(montoSolicitado);
-
         $("#montoPrestamo").val(montoSolicitado);
 
         $('#telefono').val(data.telefono);
@@ -67,8 +65,45 @@ function fCrearAhorro(){
         sectionSolAhorro.style.display = "none";
     }else{
         sectionSolAhorro.style.display = "block";
+
+        fExisteAhorro();
     }
 }
+
+function fExisteAhorro(){
+    let data = "";
+
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoCargarUltimoAhorro.php', function (response) {
+
+        data = response.data[0];
+        let data2 = response.data[2];
+
+        let montoSolicitado = formatearMonto(data.montoAhorro);
+
+        alert(montoSolicitado);
+
+        $("#montoAhorro").val(montoSolicitado);
+
+        //Beneficiario 1
+        $("#nombreBen1").val(data.nombre);
+        $("#porcentajeBen1").val(data.direccion);
+        $("#telefonoBen1").val(data.telefono);
+        $("#domicilioBen1").val(data.porcentaje);
+
+
+        if(data2 !== null) {
+            let divBen2 = document.getElementById("divBeneficiario2");
+            divBen2.style.display = "block";
+            //Beneficiario 2
+            $("#nombreBen2").val(ata2.nombre);
+            $("#porcentajeBen2").val(data2.direccion);
+            $("#telefonoBen2").val(data2.telefono);
+            $("#domicilioBen2").val(data2.porcentaje);
+        }
+
+    });
+}
+
 
 function fSolicitarRetiro(){
     let sectionSolRetiro = document.getElementById("section_3");
