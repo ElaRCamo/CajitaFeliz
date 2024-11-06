@@ -28,11 +28,9 @@
     }
 
     ?>
-
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">
@@ -48,10 +46,6 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#top">Inicio</a>
-                    </li>
-
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="#section_1">Préstamo</a>
                     </li>
@@ -144,7 +138,6 @@
                 </div>
             </div>
         </section>
-
 
         <section class="section-padding">
             <div class="container">
@@ -419,6 +412,8 @@
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <h5 class="site-footer-title mb-3">Enlaces rápidos</h5>
                     <ul class="footer-menu">
+                        <li class="footer-menu-item"><a class="footer-menu-link" href="#top">Inicio</a></li>
+
                         <li class="footer-menu-item"><a href="#section_1" class="footer-menu-link" onclick="fCargarPrestamo()">Solicitar préstamo</a></li>
 
                         <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link" onclick="fCrearAhorro()">Caja de Ahorro</a></li>
@@ -426,6 +421,7 @@
                         <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link" onclick="fSolicitarRetiro()">Retiro de Ahorro</a></li>
 
                         <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link" onclick="fCargarPreguntas()">Preguntas Frecuentes</a></li>
+
                     </ul>
                 </div>
 
