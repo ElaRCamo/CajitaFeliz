@@ -52,7 +52,6 @@ function fExistePrestamo(){
         let montoSolicitado = formatearMonto(data.montoSolicitado);
 
         $("#montoPrestamo").val(montoSolicitado);
-
         $('#telefono').val(data.telefono);
 
     });
