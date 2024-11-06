@@ -1,5 +1,5 @@
 <?php
-require_once ("connectionCajita.php");
+require_once "connectionCajita.php";
 session_start();
 
 cargarUltimoPrestamo();
