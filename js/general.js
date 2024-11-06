@@ -37,9 +37,26 @@ function fCargarPrestamo() {
         sectionSolPrestamo.style.display = "none"; // Oculta la sección si está visible
     } else {
         sectionSolPrestamo.style.display = "block"; // Muestra la sección si está oculta
+
+        fExistePrestamo();
     }
 }
 
+function fExistePrestamo(){
+    let data = "";
+
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoCargarUltimoPrestamo.php', function (response) {
+
+        data = response.data[0];
+
+        let montoSolicitado = formatearMonto(data.montoSolicitado);
+
+        $("#montoSPrestamo").val(montoSolicitado);
+
+        $('#telefono').val(data.telefono);
+
+    });
+}
 
 function fCrearAhorro(){
     let sectionSolAhorro = document.getElementById("section_2");

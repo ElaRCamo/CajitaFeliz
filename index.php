@@ -116,7 +116,7 @@
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Recuerda</h1>
-                                        <p>Tus avales deben tenerestar activos en la caja de ahorro.</p>
+                                        <p>Tus avales deben estar activos en la caja de ahorro.</p>
                                     </div>
                                 </div>
                             </div>
