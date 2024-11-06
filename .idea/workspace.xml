@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Precargar datos">
-      <change afterPath="$PROJECT_DIR$/dao/daoCargarUltimoPrestamo.php" afterDir="false" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Precargar datos prestamo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/general.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoCargarUltimoPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoCargarUltimoPrestamo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,15 +89,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="69387000" />
-    </task>
-    <task id="LOCAL-00330" summary="styles misSolicitudes">
-      <option name="closed" value="true" />
-      <created>1730484169251</created>
-      <option name="number" value="00330" />
-      <option name="presentableId" value="LOCAL-00330" />
-      <option name="project" value="LOCAL" />
-      <updated>1730484169251</updated>
+      <workItem from="1730319660375" duration="70022000" />
     </task>
     <task id="LOCAL-00331" summary="styles misSolicitudes">
       <option name="closed" value="true" />
@@ -485,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730905949534</updated>
     </task>
-    <option name="localTasksCounter" value="379" />
+    <task id="LOCAL-00379" summary="Precargar datos prestamo">
+      <option name="closed" value="true" />
+      <created>1730908205476</created>
+      <option name="number" value="00379" />
+      <option name="presentableId" value="LOCAL-00379" />
+      <option name="project" value="LOCAL" />
+      <updated>1730908205476</updated>
+    </task>
+    <option name="localTasksCounter" value="380" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit inicial" />
     <MESSAGE value="Se agrega login" />
     <MESSAGE value="Conexion a la BD" />
     <MESSAGE value="Fromulario prestamo" />
@@ -528,7 +525,8 @@
     <MESSAGE value="data to excel" />
     <MESSAGE value="excel for db" />
     <MESSAGE value="Precargar datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Precargar datos" />
+    <MESSAGE value="Precargar datos prestamo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Precargar datos prestamo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

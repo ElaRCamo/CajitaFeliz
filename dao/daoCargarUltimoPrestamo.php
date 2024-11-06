@@ -2,6 +2,8 @@
 require_once ("connectionCajita.php");
 session_start();
 
+cargarUltimoPrestamo();
+
 function cargarUltimoPrestamo()
 {
     $con = new LocalConectorCajita();
