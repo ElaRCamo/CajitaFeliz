@@ -79,8 +79,6 @@ function fExisteAhorro(){
 
         let montoSolicitado = formatearMonto(data.montoAhorro);
 
-        alert(montoSolicitado);
-
         $("#montoAhorro").val(montoSolicitado);
 
         //Beneficiario 1
