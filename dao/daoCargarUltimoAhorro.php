@@ -1,5 +1,4 @@
 <?php
-
 require_once ["connectionCajita.php"];
 session_start();
 
@@ -22,17 +21,9 @@ function cargarUltimoAhorro()
                              WHERE nomina = '$nomina');";
 
     $resultadoConsulta = mysqli_query($conexion,$consultaAhorro);
-
-    if (!$resultadoConsulta) {
-        echo "Error en la consulta SQL: " . mysqli_error($conexion);
-        mysqli_close($conexion);
-        return;
-    }
-
     mysqli_close($conexion);
     $resultado = mysqli_fetch_all($resultadoConsulta, MYSQLI_ASSOC);
     echo json_encode(array("data" => $resultado));
 }
 
 ?>
-
