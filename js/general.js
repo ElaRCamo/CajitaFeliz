@@ -53,7 +53,7 @@ function fExistePrestamo(){
 
         alert(montoSolicitado);
 
-        $("#montoSPrestamo").val(montoSolicitado);
+        $("#montoPrestamo").val(montoSolicitado);
 
         $('#telefono').val(data.telefono);
 
