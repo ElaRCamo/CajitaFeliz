@@ -19,7 +19,7 @@ function validarFormAhorro() {
 
     // Validación para asegurarse de que todos los campos del Beneficiario 1 estén llenos
     if (montoValido && nombreBen1Valido && porcentajeBen1Valido && telefonoBen1Valido && domicilioBen1Valido) {
-
+        let montoAhorroValidado = validarMonto(montoAhorro);
         //alert("montoValido:"+montoValido +"nombreBen1Valido:"+ nombreBen1Valido +"porcentajeBen1Valido:"+ porcentajeBen1Valido  +"telefonoBen1Valido:"+ telefonoBen1Valido +"domicilioBen1Valido:"+ domicilioBen1Valido)
         let valporcentajeBen1 = validarPorcentaje(porcentajeBen1);
         let valtelefonoBen1 = validarTelefono(telefonoBen1);
@@ -71,7 +71,7 @@ function validarFormAhorro() {
             }
 
             // Si todo está validado, llamar a autorizarSolicitudAhorro
-            autorizarSolicitudAhorro(montoAhorro, nombres, porcentajes, telefonos, domicilios);
+            autorizarSolicitudAhorro(montoAhorroValidado, nombres, porcentajes, telefonos, domicilios);
         } else {
             let mensaje = "";
             if (!valporcentajeBen1) mensaje = "Ingrese un porcentaje válido";
@@ -85,6 +85,30 @@ function validarFormAhorro() {
             });
         }
     }
+}
+
+//Funcion que elimina signo "$" de la cantidad y valida que sea un numero váliudo
+function validarMonto(montoAhorro) {
+    // Elimina el signo de pesos si está al principio
+    let valor = montoAhorro.trim();
+    if (valor.startsWith('$')) {
+        valor = valor.slice(1); // Elimina el primer carácter '$'
+    }
+
+    // Convierte el valor en número
+    const numero = parseFloat(valor);
+
+    // Verifica si el valor es un número válido
+    if (isNaN(numero)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Monto inválido',
+            text: "Ingrese un monto válido"
+        });
+        return null; // Retorna null si no es un número válido
+    }
+
+    return numero; // Retorna el número
 }
 
 function autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios){
