@@ -12,10 +12,10 @@ function cargarUltimoPrestamo()
     $nomina = $_SESSION["nomina"];
 
     $consultaPrestamo = "SELECT telefono, montoSolicitado 
-                            FROM Prestamo 
-                            WHERE nominaSolicitante = '$nomina'
-                            ORDER BY idSolicitud DESC 
-                            LIMIT 1";
+                           FROM Prestamo 
+                          WHERE nominaSolicitante = '$nomina'
+                       ORDER BY idSolicitud DESC 
+                          LIMIT 1";
 
     $resultadoConsulta = mysqli_query($conexion, $consultaPrestamo);
     mysqli_close($conexion);

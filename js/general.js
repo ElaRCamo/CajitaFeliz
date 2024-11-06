@@ -51,6 +51,8 @@ function fExistePrestamo(){
 
         let montoSolicitado = formatearMonto(data.montoSolicitado);
 
+        alert(montoSolicitado);
+
         $("#montoSPrestamo").val(montoSolicitado);
 
         $('#telefono').val(data.telefono);
