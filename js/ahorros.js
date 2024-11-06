@@ -87,7 +87,7 @@ function validarFormAhorro() {
     }
 }
 
-//Funcion que elimina signo "$" de la cantidad y valida que sea un numero váliudo
+//Funcion que elimina signo "$" de la cantidad y valida que sea un numero válido
 function validarMonto(montoAhorro) {
     // Elimina el signo de pesos si está al principio
     let valor = montoAhorro.trim();
@@ -177,7 +177,7 @@ function autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domi
 function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios) {
 
     const formData = new FormData();
-    formData.append('montoAhorro', montoAhorro.trim());
+    formData.append('montoAhorro', montoAhorro);
     formData.append('nombres', nombres.join(', '));
     formData.append('porcentajes', porcentajes.join(', '));
     formData.append('telefonos', telefonos.join(', '));
