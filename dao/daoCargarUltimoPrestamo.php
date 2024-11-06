@@ -18,7 +18,7 @@ function cargarUltimoPrestamo()
                             LIMIT 1";
 
     $resultadoConsulta = mysqli_query($conexion, $consultaPrestamo);
-    mysqli_query($conexion);
+    mysqli_close($conexion);
     $resultado = mysqli_fetch_all($resultadoConsulta, MYSQLI_ASSOC);
     echo json_encode(array("data" => $resultado));
 }
