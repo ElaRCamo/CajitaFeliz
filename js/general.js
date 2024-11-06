@@ -28,3 +28,45 @@ function actualizarTitulo(idTitulo, titulo) {
         titulo5.textContent = titulo;
     }
 }
+
+
+function fCargarPrestamo() {
+    let sectionSolPrestamo = document.getElementById("section_1");
+
+    if (sectionSolPrestamo.style.display === "block") {
+        sectionSolPrestamo.style.display = "none"; // Oculta la sección si está visible
+    } else {
+        sectionSolPrestamo.style.display = "block"; // Muestra la sección si está oculta
+    }
+}
+
+
+function fCrearAhorro(){
+    let sectionSolAhorro = document.getElementById("section_2");
+
+    if(sectionSolAhorro.style.display === "block"){
+        sectionSolAhorro.style.display = "none";
+    }else{
+        sectionSolAhorro.style.display = "block";
+    }
+}
+
+function fSolicitarRetiro(){
+    let sectionSolRetiro = document.getElementById("section_3");
+
+    if(sectionSolRetiro.style.display === "block"){
+        sectionSolRetiro.style.display = "none";
+    }else{
+        sectionSolRetiro.style.display = "block";
+    }
+}
+
+function fCargarPreguntas(){
+    let sectionPreguntas = document.getElementById("section_4");
+
+    if (sectionPreguntas.style.display === "block"){
+        sectionPreguntas.style.display = "none";
+    }else{
+        sectionPreguntas.style.display = "block";
+    }
+}

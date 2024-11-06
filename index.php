@@ -38,10 +38,7 @@
             <a class="navbar-brand" href="index.php">
                 <img src="images/icons/GrammerAzul.png" class="m-lg-3 logo img-fluid" alt="Logo Grammer">
                 <img src="images/icons/croc_logo.png" class="m-lg-3 logo img-fluid" alt="Logo CROC">
-                <span id="titCajita">
-                    Cajita Feliz Grammer
-                    <small>Grammer Automotive Puebla S.A. de C.V</small>
-                </span>
+                <span id="titCajita">Cajita Feliz Grammer</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -155,37 +152,37 @@
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#section_1" class="d-block">
+                            <a href="#section_1" class="d-block" onclick="fCargarPrestamo()">
                                 <img src="images/icons/prestamo.png" class="imgIcon featured-block-image img-fluid" alt="">
 
-                                <p class="featured-block-text">Solicitar <strong>préstamo</strong></p>
+                                <p class="featured-block-text"> <strong>Solicitar  préstamo</strong></p>
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#section_2" class="d-block">
+                            <a href="#section_2" class="d-block" onclick="fCrearAhorro()">
                                 <img src="images/icons/ahorro.png" class="imgIcon featured-block-image img-fluid" alt="">
-                                <p class="featured-block-text"><strong>Crear </strong>ahorro  </p>
+                                <p class="featured-block-text"><strong>Caja de ahorro</strong></p>
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#section_3" class="d-block">
+                            <a href="#section_3" class="d-block" onclick="fSolicitarRetiro()">
                                 <img src="images/icons/salario.png" class="imgIcon featured-block-image img-fluid" alt="">
-                                <p class="featured-block-text"> <strong>Retirar</strong> ahorro</p>
+                                <p class="featured-block-text"> <strong>Retirar ahorro</strong></p>
                             </a>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="#section_2" class="d-block">
+                            <a href="#section_4" class="d-block" onclick="fCargarPreguntas()">
                                 <img src="images/icons/contrato.png" class="imgIcon featured-block-image img-fluid" alt="">
-                                <p class="featured-block-text"><strong>Modificar/Reactivar</strong> ahorro</p>
+                                <p class="featured-block-text"><strong>Preguntas frecuentes</strong></p>
                             </a>
                         </div>
                     </div>
@@ -421,15 +418,14 @@
 
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <h5 class="site-footer-title mb-3">Enlaces rápidos</h5>
-
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#top" class="footer-menu-link">Inicio</a></li>
+                        <li class="footer-menu-item"><a href="#section_1" class="footer-menu-link" onclick="fCargarPrestamo()">Solicitar préstamo</a></li>
 
-                        <li class="footer-menu-item"><a href="administrar.php" class="footer-menu-link">Préstamo</a></li>
+                        <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link" onclick="fCrearAhorro()">Caja de Ahorro</a></li>
 
-                        <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">Caja de Ahorro</a></li>
+                        <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link" onclick="fSolicitarRetiro()">Retiro de Ahorro</a></li>
 
-                        <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link">Preguntas Frecuentes</a></li>
+                        <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link" onclick="fCargarPreguntas()">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
 
@@ -438,7 +434,6 @@
 
                     <p class="text-white d-flex mb-2">
                         <i class="bi-telephone me-2"></i>
-
                         <a href="tel: 442-475-2898" class="site-footer-link">
                             442 475 2898
                         </a>
@@ -446,8 +441,7 @@
 
                     <p class="text-white d-flex">
                         <i class="bi-envelope me-2"></i>
-
-                        <a href="Yomara.soto@grammer.com" class="site-footer-link">
+                        <a href="#" class="site-footer-link">
                             Lic. Irma Yomara Soto Cabello<br>
                             Coordinadora Nóminas<br>
                             yomara.soto@grammer.com<br>
@@ -456,7 +450,7 @@
 
                     <p class="text-white d-flex">
                         <i class="bi-envelope me-2"></i>
-                        <a href="juanroberto.arreola@grammer.com" class="site-footer-link">
+                        <a href="#" class="site-footer-link">
                             Lic. Juan Roberto Arreola Hernandez<br>
                             Administrador y analista de nómina<br>
                             juanroberto.arreola@grammer.com
@@ -465,7 +459,9 @@
 
                     <p class="text-white d-flex mt-3">
                         <i class="bi-geo-alt me-2"></i>
-                        Av. de la Luz 24, Benito Juárez, 76120 Santiago de Querétaro, Qro.
+                        Grammer Automotive Puebla S.A. de C.V.<br>
+                        Av. de la Luz 24, Benito Juárez, 76120<br>
+                        Santiago de Querétaro, Qro.
                     </p>
                 </div>
             </div>
@@ -573,6 +569,7 @@
     <script src="js/custom.js"></script>
     <script src="js/prestamos.js"></script>
     <script src="js/ahorros.js"></script>
+    <script src="js/general.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

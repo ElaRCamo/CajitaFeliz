@@ -39,12 +39,9 @@
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container" id="top">
         <a class="navbar-brand" href="index.php">
+            <img src="images/icons/GrammerAzul.png" class="logo img-fluid" alt="Logo Grammer">
             <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
-            <img src="images/logo.png" class="logo img-fluid" alt="Logo Grammer">
-            <span>
-                    Cajita Feliz Grammer
-                    <small>Grammer Automotive Puebla S.A. de C.V</small>
-                </span>
+            <span>Cajita Feliz Grammer</span>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -63,7 +60,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="index.php#section_2">Caja de Ahorro</a>
+                    <a class="nav-link click-scroll" href="index.php#section_2">Mi Caja de Ahorro</a>
                 </li>
 
                 <li class="nav-item">
@@ -146,7 +143,8 @@
                             <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
                                 <h3 class="mb-4">Solicitudes de Caja de Ahorro</h3>
                                 <div id="contenedorAzul"></div>
-                                <h4 class="mb-4">Caja de Ahorro</h4>
+                                <h4 class="mb-4">Mi Caja de Ahorro</h4>
+                                <span id="spanAvisoCA"></span>
                                 <table class="dataTable tableSearch table" id="tablaCajaAhorro" >
                                     <thead>
                                     <tr>
