@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Precargar datos ahorro" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Precargar datos ahorro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,31 +88,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="72768000" />
-    </task>
-    <task id="LOCAL-00337" summary="styles misSolicitudes">
-      <option name="closed" value="true" />
-      <created>1730486359156</created>
-      <option name="number" value="00337" />
-      <option name="presentableId" value="LOCAL-00337" />
-      <option name="project" value="LOCAL" />
-      <updated>1730486359156</updated>
-    </task>
-    <task id="LOCAL-00338" summary="styles misSolicitudes">
-      <option name="closed" value="true" />
-      <created>1730727726061</created>
-      <option name="number" value="00338" />
-      <option name="presentableId" value="LOCAL-00338" />
-      <option name="project" value="LOCAL" />
-      <updated>1730727726061</updated>
-    </task>
-    <task id="LOCAL-00339" summary="styles misSolicitudes">
-      <option name="closed" value="true" />
-      <created>1730728195048</created>
-      <option name="number" value="00339" />
-      <option name="presentableId" value="LOCAL-00339" />
-      <option name="project" value="LOCAL" />
-      <updated>1730728195048</updated>
+      <workItem from="1730319660375" duration="73753000" />
     </task>
     <task id="LOCAL-00340" summary="styles misSolicitudes">
       <option name="closed" value="true" />
@@ -480,7 +458,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730911259946</updated>
     </task>
-    <option name="localTasksCounter" value="386" />
+    <task id="LOCAL-00386" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730911386037</created>
+      <option name="number" value="00386" />
+      <option name="presentableId" value="LOCAL-00386" />
+      <option name="project" value="LOCAL" />
+      <updated>1730911386037</updated>
+    </task>
+    <task id="LOCAL-00387" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730911457289</created>
+      <option name="number" value="00387" />
+      <option name="presentableId" value="LOCAL-00387" />
+      <option name="project" value="LOCAL" />
+      <updated>1730911457289</updated>
+    </task>
+    <task id="LOCAL-00388" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730911575581</created>
+      <option name="number" value="00388" />
+      <option name="presentableId" value="LOCAL-00388" />
+      <option name="project" value="LOCAL" />
+      <updated>1730911575581</updated>
+    </task>
+    <option name="localTasksCounter" value="389" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
