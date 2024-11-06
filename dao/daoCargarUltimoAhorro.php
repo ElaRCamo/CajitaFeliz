@@ -12,10 +12,14 @@ function cargarUltimoAhorro()
 
     $nomina = $_SESSION["nomina"];
 
-    $consultaAhorro = "SELECT montoAhorro, nombre,direccion,telefono, porcentaje
-                         FROM CajaAhorro ca, Beneficiarios b
-                        WHERE nomina = '$nomina'
-                          AND ca.idCaja = b.idCaja";
+    $consultaAhorro = "SELECT ca.montoAhorro, b.nombre, b.direccion, b.telefono, b.porcentaje
+                        FROM CajaAhorro ca
+                        JOIN Beneficiarios b ON ca.idCaja = b.idCaja
+                       WHERE ca.nomina = '$nomina'
+                         AND ca.idCaja = (
+                             SELECT MAX(idCaja)
+                             FROM CajaAhorro
+                             WHERE nomina = '$nomina');";
 
     $resultadoConsulta = mysqli_query($conexion,$consultaAhorro);
     mysqli_close($conexion);
@@ -25,3 +29,4 @@ function cargarUltimoAhorro()
 }
 
 ?>
+
