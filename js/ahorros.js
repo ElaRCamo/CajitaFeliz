@@ -105,7 +105,7 @@ function validarMonto(montoAhorro) {
             title: 'Monto inválido',
             text: "Ingrese un monto válido"
         });
-        return null; // Retorna null si no es un número válido
+        return;
     }
 
     return numero; // Retorna el número
