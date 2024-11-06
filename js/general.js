@@ -89,13 +89,7 @@ function fExisteAhorro(){
         $("#telefonoBen1").val(data.telefono);
         $("#domicilioBen1").val(data.direccion);
 
-        if (data2) {
-            alert("Contenido de data2: " + JSON.stringify(data2, null, 2));
-        } else {
-            alert("data2 no tiene contenido o no existe.");
-        }
-
-        if(data2 !== null) {
+        if(data2) {
             let divBen2 = document.getElementById("divBeneficiario2");
             divBen2.style.display = "block";
             //Beneficiario 2
