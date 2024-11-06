@@ -412,7 +412,7 @@
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <h5 class="site-footer-title mb-3">Enlaces rápidos</h5>
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a class="footer-menu-link" href="#top">Inicio</a></li>
+                        <li class="footer-menu-item"><a href="#top" class="footer-menu-link" >Inicio</a></li>
 
                         <li class="footer-menu-item"><a href="#section_1" class="footer-menu-link" onclick="fCargarPrestamo()">Solicitar préstamo</a></li>
 
