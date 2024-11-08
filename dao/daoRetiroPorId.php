@@ -19,9 +19,9 @@ function obtenerRetiroPorId($idSolicitud){
                     c.nomina as usuario,
                     CASE
                         WHEN r.estatusRetiro = 0
-                            THEN CONCAT('<label class=\"badge bg-warning text-dark\" title=\"En proceso\">En proceso</label>')
+                            THEN CONCAT('En proceso')
                         WHEN r.estatusRetiro = 1
-                            THEN CONCAT('<label class=\"badge bg-success\" title=\"Completado\">Completado</label>')
+                            THEN CONCAT('Completado')
                     END AS estatusVisual
                 FROM
                     RetiroAhorro r, CajaAhorro c
