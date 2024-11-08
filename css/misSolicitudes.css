@@ -27,7 +27,6 @@ h3{
 #tablaPrestamosAdmin_filter,
 #tablaRetirosAdmin_filter
 {
-    margin-right: 0.8rem !important;
     border-top-right-radius: 10px !important;
 }
 
@@ -181,7 +180,26 @@ label {
     width: 60px !important;
 }
 
+#tablaSolicitudes_filter,
+#tablaCajaAhorro_filter,
+#tablaRetiros_filter,
+#tablaAhorroAdmin_filter,
+#tablaRetirosAdmin_filter {
+    text-align: right;
+}
+
+#tituloCajita{
+   margin-left: 1rem;
+}
+
 /* Media Query para pantallas de tamaño tablet (ancho máximo de 1024px) */
+@media (max-width: 1400px) {
+
+    #tituloCajita {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
 
     body *{
@@ -198,6 +216,7 @@ label {
 
     #tituloCajita{
         display: none;
+
     }
     /* Ajuste del padding y tamaño de fuente en filtros y selectores */
     #tablaSolicitudes_length, #tablaSolicitudes_filter,
