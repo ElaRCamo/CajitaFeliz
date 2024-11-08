@@ -80,7 +80,6 @@
                         </form>
                         <a class="nav-link" id="cerrarSesion" href="#">Salir</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -98,7 +97,7 @@
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Impulsa tus Metas</h1>
-                                        <p>Cada centavo ahorrado es un paso más hacia tus objetivos.</p>
+                                        <p class="msjVaner">Cada centavo ahorrado es un paso más hacia tus objetivos.</p>
                                     </div>
                                 </div>
 
@@ -107,7 +106,7 @@
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
-                                        <p>Recuerda que puedes ahorrar a partir de $100 pesos.</p>
+                                        <p class="msjVaner">Recuerda que puedes ahorrar a partir de $100 pesos.</p>
                                     </div>
                                 </div>
 
@@ -116,7 +115,7 @@
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Recuerda</h1>
-                                        <p>Tus avales deben estar activos en la caja de ahorro.</p>
+                                        <p class="msjVaner">Tus avales deben estar activos en la caja de ahorro.</p>
                                     </div>
                                 </div>
                             </div>
@@ -430,27 +429,21 @@
 
                     <p class="text-white d-flex mb-2">
                         <i class="bi-telephone me-2"></i>
-                        <a href="tel: 442-475-2898" class="site-footer-link">
                             442 475 2898
-                        </a>
                     </p>
 
                     <p class="text-white d-flex">
                         <i class="bi-envelope me-2"></i>
-                        <a href="#" class="site-footer-link">
                             Lic. Irma Yomara Soto Cabello<br>
                             Coordinadora Nóminas<br>
                             yomara.soto@grammer.com<br>
-                        </a>
                     </p>
 
                     <p class="text-white d-flex">
                         <i class="bi-envelope me-2"></i>
-                        <a href="#" class="site-footer-link">
                             Lic. Juan Roberto Arreola Hernandez<br>
                             Administrador y analista de nómina<br>
                             juanroberto.arreola@grammer.com
-                        </a>
                     </p>
 
                     <p class="text-white d-flex mt-3">

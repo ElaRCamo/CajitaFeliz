@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Precargar datos ahorro">
-      <change beforePath="$PROJECT_DIR$/js/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/general.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,55 +90,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="76503000" />
-    </task>
-    <task id="LOCAL-00349" summary="data to excel">
-      <option name="closed" value="true" />
-      <created>1730740743487</created>
-      <option name="number" value="00349" />
-      <option name="presentableId" value="LOCAL-00349" />
-      <option name="project" value="LOCAL" />
-      <updated>1730740743487</updated>
-    </task>
-    <task id="LOCAL-00350" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730742568685</created>
-      <option name="number" value="00350" />
-      <option name="presentableId" value="LOCAL-00350" />
-      <option name="project" value="LOCAL" />
-      <updated>1730742568685</updated>
-    </task>
-    <task id="LOCAL-00351" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730742847344</created>
-      <option name="number" value="00351" />
-      <option name="presentableId" value="LOCAL-00351" />
-      <option name="project" value="LOCAL" />
-      <updated>1730742847345</updated>
-    </task>
-    <task id="LOCAL-00352" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730743787686</created>
-      <option name="number" value="00352" />
-      <option name="presentableId" value="LOCAL-00352" />
-      <option name="project" value="LOCAL" />
-      <updated>1730743787686</updated>
-    </task>
-    <task id="LOCAL-00353" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730744451444</created>
-      <option name="number" value="00353" />
-      <option name="presentableId" value="LOCAL-00353" />
-      <option name="project" value="LOCAL" />
-      <updated>1730744451444</updated>
-    </task>
-    <task id="LOCAL-00354" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730744659783</created>
-      <option name="number" value="00354" />
-      <option name="presentableId" value="LOCAL-00354" />
-      <option name="project" value="LOCAL" />
-      <updated>1730744659783</updated>
+      <workItem from="1730319660375" duration="84498000" />
     </task>
     <task id="LOCAL-00355" summary="excel for db">
       <option name="closed" value="true" />
@@ -482,7 +436,55 @@
       <option name="project" value="LOCAL" />
       <updated>1730915726873</updated>
     </task>
-    <option name="localTasksCounter" value="398" />
+    <task id="LOCAL-00398" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730916170117</created>
+      <option name="number" value="00398" />
+      <option name="presentableId" value="LOCAL-00398" />
+      <option name="project" value="LOCAL" />
+      <updated>1730916170117</updated>
+    </task>
+    <task id="LOCAL-00399" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730916210505</created>
+      <option name="number" value="00399" />
+      <option name="presentableId" value="LOCAL-00399" />
+      <option name="project" value="LOCAL" />
+      <updated>1730916210505</updated>
+    </task>
+    <task id="LOCAL-00400" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730916693618</created>
+      <option name="number" value="00400" />
+      <option name="presentableId" value="LOCAL-00400" />
+      <option name="project" value="LOCAL" />
+      <updated>1730916693618</updated>
+    </task>
+    <task id="LOCAL-00401" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730916852535</created>
+      <option name="number" value="00401" />
+      <option name="presentableId" value="LOCAL-00401" />
+      <option name="project" value="LOCAL" />
+      <updated>1730916852535</updated>
+    </task>
+    <task id="LOCAL-00402" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730917054585</created>
+      <option name="number" value="00402" />
+      <option name="presentableId" value="LOCAL-00402" />
+      <option name="project" value="LOCAL" />
+      <updated>1730917054585</updated>
+    </task>
+    <task id="LOCAL-00403" summary="Precargar datos ahorro">
+      <option name="closed" value="true" />
+      <created>1730917433234</created>
+      <option name="number" value="00403" />
+      <option name="presentableId" value="LOCAL-00403" />
+      <option name="project" value="LOCAL" />
+      <updated>1730917433234</updated>
+    </task>
+    <option name="localTasksCounter" value="404" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
