@@ -1897,3 +1897,7 @@ blockquote::before {
 .msjAdvertencia{
   color: var(--lila);
 }
+
+.etiquetaR{
+  background-color: #ecf7ff !important;
+}
