@@ -68,14 +68,14 @@ const TablaSolicitudesPrestamos = async () => {
                     <td>${item.estatusVisual}</td>
                     <td>
                         <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
-                            <i class="las la-eye"></i><span>Detalles</span>
+                            <span>Detalles</span>
                         </button>`;
 
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
                     <button class="btn btn-secondary" onclick="consultarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
-                        <i class="las la-file-pdf"></i><span>Avales</span>
+                        </i><span>Avales</span>
                     </button>`;
             }
 
@@ -251,7 +251,7 @@ const TablaRetiroAhorro = async () => {
             if (item.estatusRetiro === '1') {
                 content += `
                     <button class="btn btn-secondary" onclick="consultarRetiro('${item.idRetiro}')">
-                        <i class="las la-file-pdf"></i><span>Ver detalles</span>
+                        </i><span>Detalles</span>
                     </button>`;
             }
 
