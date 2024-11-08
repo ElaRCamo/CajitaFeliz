@@ -3,7 +3,7 @@ let dataTable;
 let dataTableIsInitialized = false;
 
 const dataTableOptions = {
-    lengthMenu: [5, 10, 15, 20],
+    lengthMenu: [5, 15, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4]},
         {orderable: false, targets: [0,1,2]},
@@ -94,7 +94,7 @@ let dataTableCajaInit = false;
 
 
 const dataTableOptionsCaja = {
-    lengthMenu: [5, 10, 15, 20],
+    lengthMenu: [5, 15, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3]},
         {orderable: false, targets: [2]},
@@ -171,13 +171,13 @@ let dataTableRetiroInit = false;
 
 
 const dataTableOptionsRetiro = {
-    lengthMenu: [5, 10, 15, 20],
+    lengthMenu: [5, 15, 50, 100],
     columnDefs:[
-        {className: "centered", targets: [0,1,2,3,4,5]},
-        {orderable: false, targets: [0,1,3]},
+        {className: "centered", targets: [0,1,2,3,4]},
+        {orderable: false, targets: [0,1,2]},
         {width: "8%", targets: [0]},
-        {width: "28%", targets: [5]},
-        {searchable: true, targets: [2,3] }
+        {width: "28%", targets: [4]},
+        {searchable: true, targets: [0,1,2] }
     ],
     pageLength:5,
     destroy: true,
@@ -234,7 +234,6 @@ const TablaRetiroAhorro = async () => {
                 <tr>
                     <td>${item.idRetiro}</td>
                     <td>${item.idCaja}</td>
-                    <td>${item.nomina}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>`;
 

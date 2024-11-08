@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="misSolicitudes responsive">
+      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,22 +90,6 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-    </task>
-    <task id="LOCAL-00363" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730753700086</created>
-      <option name="number" value="00363" />
-      <option name="presentableId" value="LOCAL-00363" />
-      <option name="project" value="LOCAL" />
-      <updated>1730753700086</updated>
-    </task>
-    <task id="LOCAL-00364" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730753794152</created>
-      <option name="number" value="00364" />
-      <option name="presentableId" value="LOCAL-00364" />
-      <option name="project" value="LOCAL" />
-      <updated>1730753794152</updated>
     </task>
     <task id="LOCAL-00365" summary="excel for db">
       <option name="closed" value="true" />
@@ -482,7 +467,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731083291336</updated>
     </task>
-    <option name="localTasksCounter" value="412" />
+    <task id="LOCAL-00412" summary="misSolicitudes responsive">
+      <option name="closed" value="true" />
+      <created>1731083384684</created>
+      <option name="number" value="00412" />
+      <option name="presentableId" value="LOCAL-00412" />
+      <option name="project" value="LOCAL" />
+      <updated>1731083384684</updated>
+    </task>
+    <task id="LOCAL-00413" summary="misSolicitudes responsive">
+      <option name="closed" value="true" />
+      <created>1731083497439</created>
+      <option name="number" value="00413" />
+      <option name="presentableId" value="LOCAL-00413" />
+      <option name="project" value="LOCAL" />
+      <updated>1731083497439</updated>
+    </task>
+    <option name="localTasksCounter" value="414" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
