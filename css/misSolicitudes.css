@@ -180,3 +180,113 @@ label {
 .form-select-sm {
     width: 60px !important;
 }
+
+/* Media Query para pantallas de tamaño tablet (ancho máximo de 1024px) */
+@media (max-width: 1024px) {
+
+    body *{
+        font-size: 0.9rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: 1.2rem;
+    }
+
+    #tituloCajita{
+        display: none;
+    }
+    /* Ajuste del padding y tamaño de fuente en filtros y selectores */
+    #tablaSolicitudes_length, #tablaSolicitudes_filter,
+    #tablaCajaAhorro_length, #tablaCajaAhorro_filter,
+    #tablaRetiros_length, #tablaRetiros_filter,
+    #tablaAhorroAdmin_length, #tablaAhorroAdmin_filter,
+    #tablaPrestamosAdmin_length, #tablaPrestamosAdmin_filter,
+    #tablaRetirosAdmin_length, #tablaRetirosAdmin_filter {
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Ancho de los inputs en los filtros */
+    .dataTables_filter input {
+        width: 150px !important;
+    }
+}
+
+/* Media Query para pantallas móviles (ancho máximo de 768px) */
+@media (max-width: 768px) {
+
+    body *{
+        font-size: 0.7rem;
+    }
+
+    h3{
+        font-size: 1.3rem;
+    }
+
+    h4{
+        font-size: 1rem;
+    }
+
+    .paginate_button{
+        font-size: 0.6rem;
+    }
+    /* Reduce padding y tamaño de texto en filtros y selectores */
+    #tablaSolicitudes_length, #tablaSolicitudes_filter,
+    #tablaCajaAhorro_length, #tablaCajaAhorro_filter,
+    #tablaRetiros_length, #tablaRetiros_filter,
+    #tablaAhorroAdmin_length, #tablaAhorroAdmin_filter,
+    #tablaPrestamosAdmin_length, #tablaPrestamosAdmin_filter,
+    #tablaRetirosAdmin_length, #tablaRetirosAdmin_filter {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Reduce tamaño de input en los filtros */
+    .dataTables_filter input {
+        margin-left: 0;
+        font-size: .7rem;
+    }
+
+    /* Centrar elementos de paginación */
+    .dataTables_paginate {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: .3rem;
+    }
+
+    /* Ajustes de ancho y tamaño de celdas */
+    #tablaSolicitudes td, #tablaCajaAhorro td,
+    #tablaRetiros td, #tablaAhorroAdmin td,
+    #tablaPrestamosAdmin td, #tablaRetirosAdmin td {
+        font-size: 0.8rem !important;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+    }
+
+    #tablaSolicitudes_length,
+    #tablaCajaAhorro_length,
+    #tablaRetiros_length,
+    #tablaAhorroAdmin_length,
+    #tablaPrestamosAdmin_length,
+    #tablaRetirosAdmin_lenth
+    {
+        border-top-left-radius: 0 !important;
+    }
+
+    #tablaSolicitudes_filter,
+    #tablaCajaAhorro_filter,
+    #tablaRetiros_filter,
+    #tablaAhorroAdmin_filter,
+    #tablaPrestamosAdmin_filter,
+    #tablaRetirosAdmin_filter
+    {
+        border-top-right-radius: 0 !important;
+    }
+
+
+}
