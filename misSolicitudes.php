@@ -99,7 +99,7 @@
                 <div class="col-lg-12 col-12 p-0">
                     <div class="page-content">
                         <div class="records table-responsive">
-                            <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
+                            <div class="table-Conteiner table-responsive-sm" id="divTablaSolicitudes">
                                 <h3 class="mb-4">Solicitudes de Préstamo</h3>
                                 <div id="contenedorAzul"></div>
                                 <table class="dataTable tableSearch table" id="tablaSolicitudes" >
@@ -182,7 +182,7 @@
                     <h5 class="modal-title" id="respModalTitSol">Solicitud de Préstamo Folio <span id="folioSolPres"></span></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="divTablaModalSol">
+                <div class="modal-body table-responsive" id="divTablaModalSol">
                     <table class="table" id="tablaModalSolicitante">
                         <tr>
                             <td class="etiqueta">
@@ -258,7 +258,7 @@
                     <h5 class="modal-title" id="titModalRetiro">Solicitud de Retiro de Caja de Ahorro<span id="folioRetiro"></span></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body" id="divTablaModalRetiro">
+                <div class="modal-body table-responsive" id="divTablaModalRetiro">
                     <table class="table" id="tablaModalRetiroSol">
                         <tr>
                             <td class="etiquetaR">
