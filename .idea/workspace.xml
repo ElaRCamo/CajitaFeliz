@@ -90,22 +90,6 @@
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
     </task>
-    <task id="LOCAL-00390" summary="Precargar datos ahorro">
-      <option name="closed" value="true" />
-      <created>1730913424083</created>
-      <option name="number" value="00390" />
-      <option name="presentableId" value="LOCAL-00390" />
-      <option name="project" value="LOCAL" />
-      <updated>1730913424084</updated>
-    </task>
-    <task id="LOCAL-00391" summary="Precargar datos ahorro">
-      <option name="closed" value="true" />
-      <created>1730913723780</created>
-      <option name="number" value="00391" />
-      <option name="presentableId" value="LOCAL-00391" />
-      <option name="project" value="LOCAL" />
-      <updated>1730913723780</updated>
-    </task>
     <task id="LOCAL-00392" summary="Precargar datos ahorro">
       <option name="closed" value="true" />
       <created>1730913987935</created>
@@ -482,7 +466,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731099456705</updated>
     </task>
-    <option name="localTasksCounter" value="439" />
+    <task id="LOCAL-00439" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731099546282</created>
+      <option name="number" value="00439" />
+      <option name="presentableId" value="LOCAL-00439" />
+      <option name="project" value="LOCAL" />
+      <updated>1731099546282</updated>
+    </task>
+    <task id="LOCAL-00440" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731099702430</created>
+      <option name="number" value="00440" />
+      <option name="presentableId" value="LOCAL-00440" />
+      <option name="project" value="LOCAL" />
+      <updated>1731099702430</updated>
+    </task>
+    <option name="localTasksCounter" value="441" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
