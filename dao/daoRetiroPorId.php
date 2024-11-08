@@ -18,10 +18,8 @@ function obtenerRetiroPorId($idSolicitud){
                     r.estatusRetiro as estatusRet,
                     c.nomina as usuario,
                     CASE
-                        WHEN r.estatusRetiro = 0
-                            THEN CONCAT('En proceso')
-                        WHEN r.estatusRetiro = 1
-                            THEN CONCAT('Completado')
+                        WHEN r.estatusRetiro = 0 THEN 'En proceso'
+                        WHEN r.estatusRetiro = 1 THEN 'Completado'
                     END AS estatusVisual
                 FROM
                     RetiroAhorro r, CajaAhorro c
