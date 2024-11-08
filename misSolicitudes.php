@@ -105,7 +105,7 @@
                                 <h3 class="mb-4">Solicitudes de Préstamo</h3>
                                 <div id="contenedorAzul"></div>
                                 <table class="dataTable tableSearch table" id="tablaSolicitudes" >
-                                    <thead>
+                                    <thead class="thead-light">
                                     <tr>
                                         <th class="centered" id="folio">FOLIO</th>
                                         <th class="centered">FECHA</th>
@@ -144,7 +144,7 @@
                                 <h4 class="mb-4">Mi Caja de Ahorro</h4>
                                 <span id="spanAvisoCA"></span>
                                 <table class="dataTable tableSearch table" id="tablaCajaAhorro" >
-                                    <thead>
+                                    <thead class="thead-light">
                                     <tr>
                                         <th class="centered" id="folioCA">FOLIO</th>
                                         <th class="centered">MI NÓMINA</th>
@@ -157,7 +157,7 @@
 
                                 <h4 class="mb-4"><br>Solicitudes de retiro</h4>
                                 <table class="dataTable tableSearch table" id="tablaRetiros" >
-                                    <thead>
+                                    <thead class="thead-light">
                                     <tr>
                                         <th class="centered" id="folioRetiro">RETIRO</th>
                                         <th class="centered" id="folioCaja">FOLIO CAJA</th>
