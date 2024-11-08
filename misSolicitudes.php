@@ -14,10 +14,6 @@
 
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
-    <link href="css/styles.css" rel="stylesheet">
-
-    <link href="css/misSolicitudes.css" rel="stylesheet">
-
     <link href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css" rel="stylesheet">
 
     <link href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" rel="stylesheet">
@@ -25,6 +21,10 @@
     <link href="https://cdn.datatables.net/rowreorder/1.5.0/css/rowReorder.dataTables.css" rel="stylesheet">
 
     <link href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+
+    <link href="css/misSolicitudes.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
