@@ -90,22 +90,6 @@
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
     </task>
-    <task id="LOCAL-00378" summary="Precargar datos">
-      <option name="closed" value="true" />
-      <created>1730905949534</created>
-      <option name="number" value="00378" />
-      <option name="presentableId" value="LOCAL-00378" />
-      <option name="project" value="LOCAL" />
-      <updated>1730905949534</updated>
-    </task>
-    <task id="LOCAL-00379" summary="Precargar datos prestamo">
-      <option name="closed" value="true" />
-      <created>1730908205476</created>
-      <option name="number" value="00379" />
-      <option name="presentableId" value="LOCAL-00379" />
-      <option name="project" value="LOCAL" />
-      <updated>1730908205476</updated>
-    </task>
     <task id="LOCAL-00380" summary="Precargar datos prestamo">
       <option name="closed" value="true" />
       <created>1730908521758</created>
@@ -482,7 +466,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731089971090</updated>
     </task>
-    <option name="localTasksCounter" value="427" />
+    <task id="LOCAL-00427" summary="modal read retiro">
+      <option name="closed" value="true" />
+      <created>1731090100661</created>
+      <option name="number" value="00427" />
+      <option name="presentableId" value="LOCAL-00427" />
+      <option name="project" value="LOCAL" />
+      <updated>1731090100661</updated>
+    </task>
+    <task id="LOCAL-00428" summary="modal read retiro">
+      <option name="closed" value="true" />
+      <created>1731091356119</created>
+      <option name="number" value="00428" />
+      <option name="presentableId" value="LOCAL-00428" />
+      <option name="project" value="LOCAL" />
+      <updated>1731091356119</updated>
+    </task>
+    <option name="localTasksCounter" value="429" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
