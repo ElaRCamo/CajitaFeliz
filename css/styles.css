@@ -1896,7 +1896,4 @@ blockquote::before {
 
 .msjAdvertencia{
   color: var(--lila);
-  border-radius: 10px;
-  padding: 5px;
-  border-color: var(--lila);
 }
