@@ -525,3 +525,7 @@ function consultarNombreAval(nomina, campoNombre, idNominaInput) {
         alert('Error al consultar el nombre del aval.');
     });
 }
+
+$('#tablaSolicitudes').DataTable( {
+    responsive: true
+} );
