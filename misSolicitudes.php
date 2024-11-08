@@ -185,7 +185,7 @@
                 </div>
                 <div class="modal-body" id="divTablaModalSol">
                     <table class="table" id="tablaModalSolicitante">
-                        <tr class="msjAdvertencia">
+                        <tr>
                             <td class="etiqueta">
                                 <strong >Folio de solicitud:</strong>
                             </td>

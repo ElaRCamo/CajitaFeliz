@@ -12,7 +12,7 @@
                         <?php
                         global$esAdmin;
                         if($esAdmin == 0){?>
-                            <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
+                            <strong class="msjAdvertencia"><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
                         <?php }
                         ?>
                         <div class="col-lg-12 col-12 row">
