@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="modal read retiro">
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="datatable responsive">
       <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,22 +89,6 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-    </task>
-    <task id="LOCAL-00385" summary="Precargar datos ahorro">
-      <option name="closed" value="true" />
-      <created>1730911259946</created>
-      <option name="number" value="00385" />
-      <option name="presentableId" value="LOCAL-00385" />
-      <option name="project" value="LOCAL" />
-      <updated>1730911259946</updated>
-    </task>
-    <task id="LOCAL-00386" summary="Precargar datos ahorro">
-      <option name="closed" value="true" />
-      <created>1730911386037</created>
-      <option name="number" value="00386" />
-      <option name="presentableId" value="LOCAL-00386" />
-      <option name="project" value="LOCAL" />
-      <updated>1730911386037</updated>
     </task>
     <task id="LOCAL-00387" summary="Precargar datos ahorro">
       <option name="closed" value="true" />
@@ -482,7 +466,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731092304194</updated>
     </task>
-    <option name="localTasksCounter" value="434" />
+    <task id="LOCAL-00434" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731092578530</created>
+      <option name="number" value="00434" />
+      <option name="presentableId" value="LOCAL-00434" />
+      <option name="project" value="LOCAL" />
+      <updated>1731092578530</updated>
+    </task>
+    <task id="LOCAL-00435" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731092783502</created>
+      <option name="number" value="00435" />
+      <option name="presentableId" value="LOCAL-00435" />
+      <option name="project" value="LOCAL" />
+      <updated>1731092783502</updated>
+    </task>
+    <option name="localTasksCounter" value="436" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +500,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Back end formulario retirar ahorro" />
     <MESSAGE value="Back end apartado misSolicitudes" />
     <MESSAGE value="Apartado misSolicitudes caja de ahorro" />
     <MESSAGE value="Apartado misSolicitudes RETIROS" />
@@ -525,7 +524,8 @@
     <MESSAGE value="Index responsive" />
     <MESSAGE value="misSolicitudes responsive" />
     <MESSAGE value="modal read retiro" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal read retiro" />
+    <MESSAGE value="datatable responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="datatable responsive" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
