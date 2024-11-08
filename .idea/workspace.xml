@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="Index responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/misSolicitudes.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/misSolicitudes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modalAvales.php" beforeDir="false" afterPath="$PROJECT_DIR$/modalAvales.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,15 +90,7 @@
       <workItem from="1729004663739" duration="116372000" />
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
-      <workItem from="1730319660375" duration="86254000" />
-    </task>
-    <task id="LOCAL-00356" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730745797892</created>
-      <option name="number" value="00356" />
-      <option name="presentableId" value="LOCAL-00356" />
-      <option name="project" value="LOCAL" />
-      <updated>1730745797892</updated>
+      <workItem from="1730319660375" duration="86649000" />
     </task>
     <task id="LOCAL-00357" summary="excel for db">
       <option name="closed" value="true" />
@@ -484,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731078112067</updated>
     </task>
-    <option name="localTasksCounter" value="405" />
+    <task id="LOCAL-00405" summary="Index responsive">
+      <option name="closed" value="true" />
+      <created>1731079989347</created>
+      <option name="number" value="00405" />
+      <option name="presentableId" value="LOCAL-00405" />
+      <option name="project" value="LOCAL" />
+      <updated>1731079989348</updated>
+    </task>
+    <option name="localTasksCounter" value="406" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

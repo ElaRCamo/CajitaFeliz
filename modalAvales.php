@@ -1,4 +1,4 @@
-global$esAdmin; <!-- Modal para agregar avales del prestamo -->
+ <!-- Modal para agregar avales del prestamo -->
 <div class="modal fade" id="modalAgregarAvales" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -10,7 +10,7 @@ global$esAdmin; <!-- Modal para agregar avales del prestamo -->
                 <form method="post">
                     <div class="col-lg-12 col-12">
                         <?php
-                        global $esAdmin;
+                        global$esAdmin;
                         if($esAdmin == 0){?>
                             <strong><i class="bi bi-exclamation-triangle"></i> Recuerda que tu aval debe estar activo en caja<br></strong>
                         <?php }
