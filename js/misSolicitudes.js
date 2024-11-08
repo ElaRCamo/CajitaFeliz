@@ -249,7 +249,7 @@ const TablaRetiroAhorro = async () => {
             // Agrega el botón consultarRetiro si el estatus es 1
             if (item.estatusRetiro === '1') {
                 content += `
-                    <button class="btn btn-secondary" onclick="consultarRetiro('${item.idRetiro}')">
+                    <button class="btn btn-primary" onclick="consultarRetiro('${item.idRetiro}')">
                         </i><span>Detalles</span>
                     </button>`;
             }
@@ -264,6 +264,47 @@ const TablaRetiroAhorro = async () => {
 };
 
 function consultarRetiro(idRetiro){
+    const titulo = "Solicitud de Retiro Folio " + idRetiro;
+    actualizarTitulo('#respModalTitSol', titulo);
+    let data = "";
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+
+        data = response.data[0];
+
+        let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
+        let montoForSol = formatearMonto(data.montoSolicitado);
+        let montoForAut = formatearMonto(data.montoAprobado);
+
+        $("#folioSolicitudMS").text(data.idSolicitud);
+
+        $("#fechaSolicitudMS").text(fechaSolicitudFormateada);
+
+        $("#montoSolicitadoMS").text(montoForSol);
+
+        $("#nominaSolMS").text(data.nominaSolicitante);
+
+        $('#telefonoSolMS').text(data.telefono);
+
+        $("#comentariosMS").text(data.comentariosAdmin);
+
+        $("#montoAprobadoMS").text(montoForAut);
+
+        /*alert(
+            "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
+            "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
+            "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
+            "Nómina: " + $('#nominaSol').val() + "\n" +
+            "Teléfono: " +data.telefono + "\n" +
+            "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
+            "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
+        );*/
+    }).then(function(){
+        fCargarSolicitanteMS(data.nominaSolicitante);
+    }).then(function(){
+        fCargarEstatusMS(data.idEstatus);
+    }).then(function(){
+        deshabilitarInputsMS();
+    });
 
 }
 
