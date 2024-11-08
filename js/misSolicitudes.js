@@ -249,7 +249,7 @@ const TablaRetiroAhorro = async () => {
             // Agrega el botón consultarRetiro si el estatus es 1
             if (item.estatusRetiro === '1') {
                 content += `
-                    <button class="btn btn-primary" onclick="consultarRetiro('${item.idRetiro}')" data-bs-toggle="modal" data-bs-target="#modalConsultaRetiro>
+                    <button class="btn btn-primary" onclick="consultarRetiro('${item.idRetiro}')" data-bs-toggle="modal" data-bs-target="#modalConsultaRetiro">
                         </i><span>Detalles</span>
                     </button>`;
             }
