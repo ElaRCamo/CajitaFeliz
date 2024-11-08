@@ -250,6 +250,68 @@
 
     <?php require_once('modalAvales.php'); ?>
 
+    <!-- Modal para ver solicitud de retiro -->
+    <div class="modal fade" id="modalConsultaRetiro" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titModalRetiro">Solicitud de Retiro de Caja de Ahorro<span id="folioRetiro"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="divTablaModalRetiro">
+                    <table class="table" id="tablaModalRetiroSol">
+                        <tr>
+                            <td class="etiqueta">
+                                <strong >Folio de solicitud:</strong>
+                            </td>
+                            <td id="folioRetiroSol">[Folio de solicitud]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong >Folio de caja:</strong>
+                            </td>
+                            <td id="folioRetiroCaja">[Folio de caja]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong>Fecha solicitud:</strong>
+                            </td>
+                            <td id="fechaSolRetiro">[Fecha solicitud]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong>Monto solicitado:</strong>
+                            </td>
+                            <td id="montoRetiroSol">[Monto solicitado]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong>Nómina:</strong>
+                            </td>
+                            <td id="nominaSolRetiro">[Nómina]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong>Nombre:</strong>
+                            </td>
+                            <td id="nombreSolRetiro">[Nombre]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong>Estatus del préstamo:</strong>
+                            </td>
+                            <td id="estatusRetiroSol">[Estatus del préstamo]</td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 <script src="js/jquery.min.js"></script>

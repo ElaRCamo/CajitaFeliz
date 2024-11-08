@@ -249,7 +249,7 @@ const TablaRetiroAhorro = async () => {
             // Agrega el botón consultarRetiro si el estatus es 1
             if (item.estatusRetiro === '1') {
                 content += `
-                    <button class="btn btn-primary" onclick="consultarRetiro('${item.idRetiro}')">
+                    <button class="btn btn-primary" onclick="consultarRetiro('${item.idRetiro}')" data-bs-toggle="modal" data-bs-target="#modalConsultaRetiro>
                         </i><span>Detalles</span>
                     </button>`;
             }
@@ -264,8 +264,8 @@ const TablaRetiroAhorro = async () => {
 };
 
 function consultarRetiro(idRetiro){
-    const titulo = "Solicitud de Retiro Folio " + idRetiro;
-    actualizarTitulo('#respModalTitSol', titulo);
+    const titulo = "Solicitud de Retiro de Caja de Ahorro " + idRetiro;
+    actualizarTitulo('#titModalRetiro', titulo);
     let data = "";
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
 
