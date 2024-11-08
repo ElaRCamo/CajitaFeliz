@@ -88,14 +88,6 @@
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
     </task>
-    <task id="LOCAL-00371" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730837274682</created>
-      <option name="number" value="00371" />
-      <option name="presentableId" value="LOCAL-00371" />
-      <option name="project" value="LOCAL" />
-      <updated>1730837274682</updated>
-    </task>
     <task id="LOCAL-00372" summary="excel for db">
       <option name="closed" value="true" />
       <created>1730839100975</created>
@@ -480,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731088685178</updated>
     </task>
-    <option name="localTasksCounter" value="420" />
+    <task id="LOCAL-00420" summary="modal read retiro">
+      <option name="closed" value="true" />
+      <created>1731088998963</created>
+      <option name="number" value="00420" />
+      <option name="presentableId" value="LOCAL-00420" />
+      <option name="project" value="LOCAL" />
+      <updated>1731088998963</updated>
+    </task>
+    <option name="localTasksCounter" value="421" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
