@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="misSolicitudes responsive">
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="modal read retiro">
+      <change afterPath="$PROJECT_DIR$/dao/daoRetiroPorId.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,22 +92,6 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-    </task>
-    <task id="LOCAL-00367" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730761050480</created>
-      <option name="number" value="00367" />
-      <option name="presentableId" value="LOCAL-00367" />
-      <option name="project" value="LOCAL" />
-      <updated>1730761050480</updated>
-    </task>
-    <task id="LOCAL-00368" summary="excel for db">
-      <option name="closed" value="true" />
-      <created>1730761817407</created>
-      <option name="number" value="00368" />
-      <option name="presentableId" value="LOCAL-00368" />
-      <option name="project" value="LOCAL" />
-      <updated>1730761817407</updated>
     </task>
     <task id="LOCAL-00369" summary="excel for db">
       <option name="closed" value="true" />
@@ -483,7 +469,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731084043389</updated>
     </task>
-    <option name="localTasksCounter" value="416" />
+    <task id="LOCAL-00416" summary="modal read retiro">
+      <option name="closed" value="true" />
+      <created>1731087111093</created>
+      <option name="number" value="00416" />
+      <option name="presentableId" value="LOCAL-00416" />
+      <option name="project" value="LOCAL" />
+      <updated>1731087111093</updated>
+    </task>
+    <task id="LOCAL-00417" summary="modal read retiro">
+      <option name="closed" value="true" />
+      <created>1731087301750</created>
+      <option name="number" value="00417" />
+      <option name="presentableId" value="LOCAL-00417" />
+      <option name="project" value="LOCAL" />
+      <updated>1731087301750</updated>
+    </task>
+    <option name="localTasksCounter" value="418" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Back end formulario solicitud de ahorro" />
     <MESSAGE value="Back end formulario retirar ahorro" />
     <MESSAGE value="Back end apartado misSolicitudes" />
     <MESSAGE value="Apartado misSolicitudes caja de ahorro" />
@@ -526,7 +527,8 @@
     <MESSAGE value="Precargar datos ahorro" />
     <MESSAGE value="Index responsive" />
     <MESSAGE value="misSolicitudes responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="misSolicitudes responsive" />
+    <MESSAGE value="modal read retiro" />
+    <option name="LAST_COMMIT_MESSAGE" value="modal read retiro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

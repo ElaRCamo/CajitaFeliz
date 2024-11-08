@@ -262,7 +262,7 @@
                     <table class="table" id="tablaModalRetiroSol">
                         <tr>
                             <td class="etiqueta">
-                                <strong >Folio de solicitud:</strong>
+                                <strong >Folio de retiro:</strong>
                             </td>
                             <td id="folioRetiroSol">[Folio de solicitud]</td>
                         </tr>
@@ -280,9 +280,15 @@
                         </tr>
                         <tr>
                             <td class="etiqueta">
-                                <strong>Monto solicitado:</strong>
+                                <strong>Fecha deposito:</strong>
                             </td>
-                            <td id="montoRetiroSol">[Monto solicitado]</td>
+                            <td id="fechaDepRetiro">[Fecha solicitud]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong>Monto depositado:</strong>
+                            </td>
+                            <td id="montoRetiroSol">[Monto depositado]</td>
                         </tr>
                         <tr>
                             <td class="etiqueta">

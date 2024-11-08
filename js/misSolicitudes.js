@@ -267,43 +267,30 @@ function consultarRetiro(idRetiro){
     const titulo = "Solicitud de Retiro de Caja de Ahorro " + idRetiro;
     actualizarTitulo('#titModalRetiro', titulo);
     let data = "";
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoRetiroPorId.php?ret='+idRetiro, function (response) {
 
         data = response.data[0];
 
-        let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
-        let montoForSol = formatearMonto(data.montoSolicitado);
-        let montoForAut = formatearMonto(data.montoAprobado);
+        let fechaSolicitudFormateada = formatearFecha(data.fechaSol);
+        let fechaDepFormateada = formatearFecha(data.fechaDep);
+        let montoDep = formatearMonto(data.montoDep);
 
-        $("#folioSolicitudMS").text(data.idSolicitud);
+        $("#folioRetiroSol").text(data.folioRetiro);
 
-        $("#fechaSolicitudMS").text(fechaSolicitudFormateada);
+        $("#folioRetiroCaja").text(data.folioCaja);
 
-        $("#montoSolicitadoMS").text(montoForSol);
+        $("#fechaSolRetiro").text(fechaSolicitudFormateada);
 
-        $("#nominaSolMS").text(data.nominaSolicitante);
+        $("#fechaDepRetiro").text(fechaDepFormateada);
 
-        $('#telefonoSolMS').text(data.telefono);
+        $("#montoRetiroSol").text(montoDep);
 
-        $("#comentariosMS").text(data.comentariosAdmin);
+        $("#nominaSolMS").text(data.usuario);
 
-        $("#montoAprobadoMS").text(montoForAut);
+        $("#estatusRetiroSol").text(data.estatusVisual);
 
-        /*alert(
-            "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
-            "Fecha Solicitud: " + $('#fechaSolicitud').val() + "\n" +
-            "Monto Solicitado: " + $('#montoSolicitado').val() + "\n" +
-            "Nómina: " + $('#nominaSol').val() + "\n" +
-            "Teléfono: " +data.telefono + "\n" +
-            "Comentarios Admin: " + $('#textareaComentarios').val() + "\n" +
-            "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
-        );*/
     }).then(function(){
-        fCargarSolicitanteMS(data.nominaSolicitante);
-    }).then(function(){
-        fCargarEstatusMS(data.idEstatus);
-    }).then(function(){
-        deshabilitarInputsMS();
+        fCargarSolicitanteMS(data.usuario);
     });
 
 }
