@@ -285,12 +285,12 @@ function consultarRetiro(idRetiro){
 
         $("#montoRetiroSol").text(montoDep);
 
-        $("#nominaSolMS").text(data.usuario);
+        $('#nominaSolRetiro').text(data.usuario);
 
         $("#estatusRetiroSol").text(data.estatusVisual);
 
     }).then(function(){
-        fCargarSolicitanteMS(data.usuario);
+        fCargarSolicitanteMS(data.usuario, '#nombreSolRetiro');
     });
 
 }
@@ -331,7 +331,7 @@ function mostrarRespuestaPrestamo(idSolicitud){
             "Monto Aprobado: " + montoForAut + "\n" + data.montoAprobado
         );*/
     }).then(function(){
-        fCargarSolicitanteMS(data.nominaSolicitante);
+        fCargarSolicitanteMS(data.nominaSolicitante, '#nombreSolMS');
     }).then(function(){
         fCargarEstatusMS(data.idEstatus);
     }).then(function(){
@@ -339,10 +339,10 @@ function mostrarRespuestaPrestamo(idSolicitud){
     });
 }
 
-function fCargarSolicitanteMS(nomina){
+function fCargarSolicitanteMS(nomina, elemento){
 
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
-        $('#nombreSolMS').text(response.data[0].NomUser);
+        $(elemento).text(response.data[0].NomUser);
     });
 }
 
