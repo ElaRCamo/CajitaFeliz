@@ -138,7 +138,7 @@
                 <div class="col-lg-12 col-12 p-0">
                     <div class="page-content">
                         <div class="records table-responsive">
-                            <div class="table-Conteiner table-responsive" id="divTablaSolicitudes">
+                            <div class="table-Conteiner table-responsive" id="divTablaSolicitudesA">
                                 <h3 class="mb-4">Solicitudes de Caja de Ahorro</h3>
                                 <div id="contenedorAzul"></div>
                                 <h4 class="mb-4">Mi Caja de Ahorro</h4>
@@ -376,6 +376,14 @@
             }
         });
     });
+
+    $('#tablaSolicitudes').DataTable( {
+        responsive: true
+        rowReorder: {
+            selector: 'td:nth-child(2)'
+        }
+    } );
+
 </script>
 
 </body>

@@ -526,6 +526,3 @@ function consultarNombreAval(nomina, campoNombre, idNominaInput) {
     });
 }
 
-$('#tablaSolicitudes').DataTable( {
-    responsive: true
-} );
