@@ -106,8 +106,7 @@
                                     <thead>
                                     <tr>
                                         <th class="centered" id="folio">FOLIO</th>
-                                        <th class="centered">MI NÓMINA</th>
-                                        <th class="centered">FECHA DE SOLICITUD</th>
+                                        <th class="centered">FECHA</th>
                                         <th class="centered">MONTO SOLICITADO </th>
                                         <th class="centered">ESTATUS </th>
                                         <th class="centered">ACCIONES</th>

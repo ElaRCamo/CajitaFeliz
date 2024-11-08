@@ -63,13 +63,12 @@ const TablaSolicitudesPrestamos = async () => {
             content += `
                 <tr>
                     <td>${item.idSolicitud}</td>
-                    <td>${item.nominaSolicitante}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${montoSolFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
                         <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
-                            <i class="las la-eye"></i><span>Ver respuesta</span>
+                            <i class="las la-eye"></i><span>Detalles</span>
                         </button>`;
 
             // Agrega el botón de avales si el estatus es 3
