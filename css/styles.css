@@ -1768,7 +1768,7 @@ blockquote::before {
   color: #dc3545;
 }
 #modalRespPresSol .etiqueta{
-  background: var(--custom-btn-bg-color);
+  background: var(--azul-claro);
 }
 
 .login-container{
