@@ -261,49 +261,49 @@
                 <div class="modal-body" id="divTablaModalRetiro">
                     <table class="table" id="tablaModalRetiroSol">
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong >Folio de retiro:</strong>
                             </td>
                             <td id="folioRetiroSol">[Folio de solicitud]</td>
                         </tr>
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong >Folio de caja:</strong>
                             </td>
                             <td id="folioRetiroCaja">[Folio de caja]</td>
                         </tr>
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong>Fecha solicitud:</strong>
                             </td>
                             <td id="fechaSolRetiro">[Fecha solicitud]</td>
                         </tr>
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong>Nómina:</strong>
                             </td>
                             <td id="nominaSolRetiro">[Nómina]</td>
                         </tr>
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong>Nombre:</strong>
                             </td>
                             <td id="nombreSolRetiro">[Nombre]</td>
                         </tr>
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong>Estatus del depósito:</strong>
                             </td>
                             <td id="estatusRetiroSol">[Estatus del depósito]</td>
                         </tr>
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong>Fecha depósito:</strong>
                             </td>
                             <td id="fechaDepRetiro">[Fecha solicitud]</td>
                         </tr>
                         <tr>
-                            <td class="etiqueta">
+                            <td class="etiquetaR">
                                 <strong>Monto depositado:</strong>
                             </td>
                             <td id="montoRetiroSol">[Monto depositado]</td>

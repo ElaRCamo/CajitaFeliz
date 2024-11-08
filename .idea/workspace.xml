@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="modal read retiro">
       <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,14 +90,6 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-    </task>
-    <task id="LOCAL-00380" summary="Precargar datos prestamo">
-      <option name="closed" value="true" />
-      <created>1730908521758</created>
-      <option name="number" value="00380" />
-      <option name="presentableId" value="LOCAL-00380" />
-      <option name="project" value="LOCAL" />
-      <updated>1730908521758</updated>
     </task>
     <task id="LOCAL-00381" summary="Precargar datos prestamo">
       <option name="closed" value="true" />
@@ -482,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731091356119</updated>
     </task>
-    <option name="localTasksCounter" value="429" />
+    <task id="LOCAL-00429" summary="modal read retiro">
+      <option name="closed" value="true" />
+      <created>1731091415044</created>
+      <option name="number" value="00429" />
+      <option name="presentableId" value="LOCAL-00429" />
+      <option name="project" value="LOCAL" />
+      <updated>1731091415044</updated>
+    </task>
+    <option name="localTasksCounter" value="430" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
