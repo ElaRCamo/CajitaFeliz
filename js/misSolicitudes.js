@@ -291,7 +291,7 @@ function consultarRetiro(idRetiro){
         estatusElement.text(data.estatusVisual);
 
         // Limpiar clases previas y agregar nuevas basadas en el estatus
-        estatusElement.removeClass("badge bg-warning text-dark bg-success");
+        //estatusElement.removeClass("badge bg-warning text-dark bg-success");
 
         if (data.estatusVisual === 'En proceso') {
             estatusElement.addClass("badge bg-warning text-dark").attr("title", "En proceso");
