@@ -1879,7 +1879,9 @@ blockquote::before {
   #navbarNav{
     padding-top: 2rem;
   }
-
+  .btnAvales{
+    margin-top: 1rem;
+  }
 }
 
 #section_1, #section_2, #section_3, #section_4{
@@ -1901,3 +1903,4 @@ blockquote::before {
 .etiquetaR{
   background-color: #ecf7ff !important;
 }
+
