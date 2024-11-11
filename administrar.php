@@ -98,7 +98,7 @@
                 <div class="container mt-5">
                     <h2 class="text-center">Solicitudes de Préstamos</h2>
                     <button class="btn btn-success text-right btnExcel" id="btnExcelPrestamos">Exportar a Excel</button>
-                    <button class="btn btn-info text-right btnExcel" id="btnInsertarPrestamosExcel"> Cargar Archivo</button>
+                    <button class="btn btn-secondary text-right btnExcel" id="btnInsertarPrestamosExcel"> Cargar Archivo</button>
                     <input type="file" id="fileInputPrestamos" accept=".xlsx, .xls" style="display: none;" />
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
                         <thead>
@@ -142,7 +142,7 @@
 
                     <h3 class="text-center"><br>Retiros</br></h3>
                     <button class="btn btn-success text-right btnExcel" id="btnRetirosExcel"> Exportar a Excel</button>
-                    <button class="btn btn-info text-right btnExcel" id="btnInsertarRetirosExcel"> Cargar Archivo</button>
+                    <button class="btn btn-secondary text-right btnExcel" id="btnInsertarRetirosExcel"> Cargar Archivo</button>
                     <input type="file" id="fileInputRetiros" accept=".xlsx, .xls" style="display: none;" />
                     <table class="table table-striped table-bordered mt-3" id="tablaRetirosAdmin">
                         <thead>

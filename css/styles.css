@@ -1911,3 +1911,7 @@ blockquote::before {
 .tittleAdmin{
   margin-left: 5rem;
 }
+
+#btnInsertarPrestamosExcel, #btnInsertarRetirosExcel{
+  background-color: #E10014 !important;
+}
