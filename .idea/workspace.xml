@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="datatable responsive">
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="datatable responsive" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,63 +87,7 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-      <workItem from="1731332222727" duration="3523000" />
-    </task>
-    <task id="LOCAL-00420" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731088998963</created>
-      <option name="number" value="00420" />
-      <option name="presentableId" value="LOCAL-00420" />
-      <option name="project" value="LOCAL" />
-      <updated>1731088998963</updated>
-    </task>
-    <task id="LOCAL-00421" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731089168416</created>
-      <option name="number" value="00421" />
-      <option name="presentableId" value="LOCAL-00421" />
-      <option name="project" value="LOCAL" />
-      <updated>1731089168416</updated>
-    </task>
-    <task id="LOCAL-00422" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731089240450</created>
-      <option name="number" value="00422" />
-      <option name="presentableId" value="LOCAL-00422" />
-      <option name="project" value="LOCAL" />
-      <updated>1731089240450</updated>
-    </task>
-    <task id="LOCAL-00423" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731089589334</created>
-      <option name="number" value="00423" />
-      <option name="presentableId" value="LOCAL-00423" />
-      <option name="project" value="LOCAL" />
-      <updated>1731089589334</updated>
-    </task>
-    <task id="LOCAL-00424" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731089658304</created>
-      <option name="number" value="00424" />
-      <option name="presentableId" value="LOCAL-00424" />
-      <option name="project" value="LOCAL" />
-      <updated>1731089658304</updated>
-    </task>
-    <task id="LOCAL-00425" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731089722149</created>
-      <option name="number" value="00425" />
-      <option name="presentableId" value="LOCAL-00425" />
-      <option name="project" value="LOCAL" />
-      <updated>1731089722149</updated>
-    </task>
-    <task id="LOCAL-00426" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731089971090</created>
-      <option name="number" value="00426" />
-      <option name="presentableId" value="LOCAL-00426" />
-      <option name="project" value="LOCAL" />
-      <updated>1731089971090</updated>
+      <workItem from="1731332222727" duration="3824000" />
     </task>
     <task id="LOCAL-00427" summary="modal read retiro">
       <option name="closed" value="true" />
@@ -484,7 +425,63 @@
       <option name="project" value="LOCAL" />
       <updated>1731335340422</updated>
     </task>
-    <option name="localTasksCounter" value="469" />
+    <task id="LOCAL-00469" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731335781073</created>
+      <option name="number" value="00469" />
+      <option name="presentableId" value="LOCAL-00469" />
+      <option name="project" value="LOCAL" />
+      <updated>1731335781073</updated>
+    </task>
+    <task id="LOCAL-00470" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731335811037</created>
+      <option name="number" value="00470" />
+      <option name="presentableId" value="LOCAL-00470" />
+      <option name="project" value="LOCAL" />
+      <updated>1731335811037</updated>
+    </task>
+    <task id="LOCAL-00471" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731335842913</created>
+      <option name="number" value="00471" />
+      <option name="presentableId" value="LOCAL-00471" />
+      <option name="project" value="LOCAL" />
+      <updated>1731335842913</updated>
+    </task>
+    <task id="LOCAL-00472" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731335878456</created>
+      <option name="number" value="00472" />
+      <option name="presentableId" value="LOCAL-00472" />
+      <option name="project" value="LOCAL" />
+      <updated>1731335878456</updated>
+    </task>
+    <task id="LOCAL-00473" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731335997637</created>
+      <option name="number" value="00473" />
+      <option name="presentableId" value="LOCAL-00473" />
+      <option name="project" value="LOCAL" />
+      <updated>1731335997638</updated>
+    </task>
+    <task id="LOCAL-00474" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731336031427</created>
+      <option name="number" value="00474" />
+      <option name="presentableId" value="LOCAL-00474" />
+      <option name="project" value="LOCAL" />
+      <updated>1731336031427</updated>
+    </task>
+    <task id="LOCAL-00475" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731336060446</created>
+      <option name="number" value="00475" />
+      <option name="presentableId" value="LOCAL-00475" />
+      <option name="project" value="LOCAL" />
+      <updated>1731336060446</updated>
+    </task>
+    <option name="localTasksCounter" value="476" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
