@@ -237,7 +237,7 @@ const TablaRetiroAhorro = async () => {
             if (item.estatusRetiro === '0') {
                 content += `<label class="badge bg-warning text-dark">En proceso</label>`;
             } else if (item.estatusRetiro === '1') {
-                content += `<label class="badge btn-primary">Concluido</label>`;
+                content += `<label class="badge btn-primary">Completado</label>`;
             }
 
             content += `</td>
