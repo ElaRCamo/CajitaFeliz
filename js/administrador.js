@@ -296,22 +296,12 @@ async function insertarExcelPrestamos(file) {
 
         // Función para convertir el número de fecha de Excel a una cadena de fecha
         function parseExcelDate(excelDate) {
-            // Verifica si excelDate es un número (formato de serie de Excel)
-            if (typeof excelDate === 'number') {
-                const jsDate = new Date(Math.round((excelDate - 25569) * 86400 * 1000));
-                const year = jsDate.getFullYear();
-                const month = String(jsDate.getMonth() + 1).padStart(2, '0');
-                const day = String(jsDate.getDate()).padStart(2, '0');
-                return `${year}-${month}-${day}`;
-            }
-
-            // Si excelDate es una cadena en formato DD/MM/YYYY
+            // Verifica si excelDate es una cadena en formato DD/MM/YYYY
             if (typeof excelDate === 'string') {
                 const [day, month, year] = excelDate.split('/');
-                return `${year}-${month}-${day}`;
+                return `${year}-${month}-${day}`; // Reorganiza a formato YYYY-MM-DD
             }
-
-            // Devuelve un valor por defecto o lanza un error si no es el formato esperado
+            // Si no está en el formato esperado, devuelve una cadena vacía o maneja el error
             return '';
         }
 
