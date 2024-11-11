@@ -85,8 +85,8 @@ const TablaSolicitudesPrestamos = async () => {
         });
         misSolicitudesBody.innerHTML = content;
 
-        $('#tablaSolicitudes thead th').css('background-color', '#ecf7ff')
-        $('#tablaSolicitudes thead th').css('color', '#005195')
+        $('#tablaSolicitudes thead th').css('background-color', '#005195')
+        $('#tablaSolicitudes thead th').css('color', '#ffffff')
 
     } catch (error) {
         console.error('Error:', error);
@@ -164,6 +164,9 @@ const TablaCajaAhorro= async () => {
         });
 
         cajaAhorroBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
+
+        $('#tablaCajaAhorro thead th').css('background-color', '#005195')
+        $('#tablaCajaAhorro thead th').css('color', '#ffffff')
     } catch (error) {
         console.error('Error:', error);
     }
@@ -259,6 +262,9 @@ const TablaRetiroAhorro = async () => {
         });
 
         retirosBody.innerHTML = content;
+
+        $('#tablaRetiros thead th').css('background-color', '#005195')
+        $('#tablaRetiros thead th').css('color', '#ffffff')
     } catch (error) {
         console.error('Error:', error);
     }
