@@ -67,7 +67,7 @@ h3{
 #tablaPrestamosAdmin td,
 #tablaRetirosAdmin td
 {
-    font-size: 1rem !important;
+    font-size: 1.1rem !important;
     color: var(--primary-color) !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
@@ -158,12 +158,14 @@ h3{
 .dataTables_paginate .paginate_button:hover {
     background-color:  var(--white-color);
 }
+
+/*
 .dataTables_filter input {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 5px;
     margin-left: 10px;
-}
+}*/
 .centered {
     text-align: center;
 }
