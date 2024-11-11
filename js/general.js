@@ -12,7 +12,6 @@ const formatearFecha = (fecha) => {
     }
 };
 
-
 // Función para convertir la fecha de Excel a formato 'YYYY-MM-DD'
 function excelDateToJSDate(excelDate) {
     if (typeof excelDate === 'number') {
@@ -20,8 +19,15 @@ function excelDateToJSDate(excelDate) {
         const jsDate = new Date((excelDate - 25569) * 86400 * 1000); // Ajuste por el "serial" de Excel
         return moment(jsDate).format('YYYY-MM-DD'); // Usamos moment.js para dar formato
     } else if (typeof excelDate === 'string') {
-        // Si la fecha está en formato 'DD/MM/YYYY', convertirla usando moment.js
-        return moment(excelDate, 'DD/MM/YYYY').format('YYYY-MM-DD');
+        // Si la fecha está en un formato de cadena, intentar analizarla usando moment.js
+        let date = moment(excelDate, ['DD/MM/YYYY', 'YYYY-MM-DD', 'MM/DD/YYYY'], true);
+
+        // Verificar si moment pudo analizar la fecha correctamente
+        if (date.isValid()) {
+            return date.format('YYYY-MM-DD');
+        } else {
+            return ''; // Retornar cadena vacía si no se puede interpretar la fecha
+        }
     }
     return ''; // Retornar cadena vacía si no es un número o string válido
 }
