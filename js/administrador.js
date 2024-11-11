@@ -296,12 +296,25 @@ async function insertarExcelPrestamos(file) {
 
         // Función para convertir el número de fecha de Excel a una cadena de fecha
         function excelDateToJSDate(excelDate) {
-            const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
-            const year = jsDate.getFullYear();
-            const month = String(jsDate.getMonth() + 1).padStart(2, '0');
-            const day = String(jsDate.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
+            // Si excelDate es un número, entonces procede con la conversión
+            if (typeof excelDate === 'number') {
+                const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
+                const year = jsDate.getFullYear();
+                const month = String(jsDate.getMonth() + 1).padStart(2, '0');
+                const day = String(jsDate.getDate()).padStart(2, '0');
+                return `${year}-${month}-${day}`;
+            }
+
+            // Si excelDate ya es una cadena, asume que está en formato DD/MM/YYYY y transforma a YYYY-MM-DD
+            if (typeof excelDate === 'string') {
+                const [day, month, year] = excelDate.split('/');
+                return `${year}-${month}-${day}`;
+            }
+
+            // Devuelve un valor por defecto o maneja el error en caso de que el formato no sea esperado
+            return '';
         }
+
 
         // Extraer y mapear los datos de las columnas
         const prestamosData = jsonData.slice(1).map((row) => {
