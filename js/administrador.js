@@ -81,7 +81,7 @@ const dataTablePrestamosAdmin = async (anio) => {
             if (item.idEstatus === '3') {
                 content += `
                     <button class="btn btn-secondary" onclick="consultarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
-                        <i class="las la-file-pdf"></i><span>Avales</span>
+                        <span>Avales</span>
                     </button>`;
             }
 

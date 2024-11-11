@@ -47,15 +47,15 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_1">Préstamo</a>
+                        <a class="nav-link click-scroll" href="#section_1" onclick="fCargarPrestamo()">Préstamo</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">Caja de Ahorro</a>
+                        <a class="nav-link click-scroll" href="#section_2" onclick="fCrearAhorro()">Caja de Ahorro</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Preguntas Frecuentes</a>
+                        <a class="nav-link click-scroll" href="#section_4" onclick="fCargarPreguntas()">Preguntas Frecuentes</a>
                     </li>
 
                     <li class="nav-item">
