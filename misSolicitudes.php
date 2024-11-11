@@ -61,32 +61,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="index.php#section_1">Préstamo</a>
+                    <a class="nav-link click-scroll" href="index.php">Inicio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="index.php#section_2">Mi Caja de Ahorro</a>
+                    <a class="nav-link click-scroll" href="#sectionMisPrestamos">Prestamos</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="index.php#section_4">Preguntas Frecuentes</a>
+                    <a class="nav-link click-scroll" href="#sectionMiCaja">Mi Caja de Ahorro</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link click-scroll" onclick="estatutosAhorro()">Estatutos</a>
                 </li>
-
-                <?php if($esAdmin == 0 ){ ?>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="misSolicitudes.php">Mis Solicitudes</a>
-                    </li>
-                <?php }?>
-
-                <?php if($esAdmin == 1 ){ ?>
-                    <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="administrar.php">Administrar</a>
-                    </li>
-                <?php }?>
 
                 <li class="nav-item ms-3">
                     <form id="logoutForm" action="dao/daoLogin.php" method="POST" style="display: none;">
@@ -100,7 +88,7 @@
 </nav>
 
 <main>
-    <section class="section-padding">
+    <section class="section-padding" id="sectionMisPrestamos">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12 p-0">
@@ -137,7 +125,7 @@
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding" id="sectionMiCaja">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12 p-0">
