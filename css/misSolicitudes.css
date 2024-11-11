@@ -235,10 +235,10 @@ label {
         font-size: 0.9rem;
     }
 
-    /* Ancho de los inputs en los filtros */
+    /* Ancho de los inputs en los filtros
     .dataTables_filter input {
         width: 150px !important;
-    }
+    }*/
 }
 
 /* Media Query para pantallas móviles (ancho máximo de 768px) */
@@ -270,11 +270,11 @@ label {
         font-size: 0.8rem;
     }
 
-    /* Reduce tamaño de input en los filtros */
+    /* Reduce tamaño de input en los filtros
     .dataTables_filter input {
         margin-left: 0;
         font-size: .7rem;
-    }
+    }*/
 
     /* Centrar elementos de paginación */
     .dataTables_paginate {
