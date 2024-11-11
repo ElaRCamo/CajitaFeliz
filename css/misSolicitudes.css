@@ -312,5 +312,5 @@ div.dt-container .dt-paging .dt-paging-button:hover {
     color: white !important;
     border: 1px solid #005195 !important;
     background-color: #005195 !important;
-    background: linear-gradient(to bottom, #fefefe 0%, #005195 100%);
+    background: linear-gradient(to bottom, #005195 0%, #005195 100%);
 }
