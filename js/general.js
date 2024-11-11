@@ -14,25 +14,45 @@ const formatearFecha = (fecha) => {
 
 // Función para convertir la fecha de Excel a formato 'YYYY-MM-DD'
 function excelDateToJSDate(excelDate) {
-    if (typeof excelDate === 'number') {
-        // Si es un número en formato Excel, convertirlo a fecha en JS
-        const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
-        return `${jsDate.getFullYear()}/${(jsDate.getMonth() + 1).toString().padStart(2, '0')}/${jsDate.getDate().toString().padStart(2, '0')}`;
-    } else if (typeof excelDate === 'string') {
-        // Si es una cadena, intentar analizar varios formatos comunes
-        const parsedDate = new Date(excelDate);
-
-        if (!isNaN(parsedDate)) {
-            // Si la fecha es válida, devolverla en formato YYYY/MM/DD
-            return `${parsedDate.getFullYear()}/${(parsedDate.getMonth() + 1).toString().padStart(2, '0')}/${parsedDate.getDate().toString().padStart(2, '0')}`;
-        } else {
-            // Si la fecha no es válida, devolver un mensaje de error
-            return "Error: Formato de fecha no válido";
-        }
-    } else {
-        // Si no es ni número ni cadena, devolver un mensaje de error
-        return "Error: Tipo de entrada no válido";
+    // Helper para formatear fechas en YYYY/MM/DD
+    function formatDateToYMD(date) {
+        return `${date.getUTCFullYear()}/${(date.getUTCMonth() + 1).toString().padStart(2, '0')}/${date.getUTCDate().toString().padStart(2, '0')}`;
     }
+
+    // Verificar si es una fecha en formato numérico de Excel
+    if (typeof excelDate === 'number') {
+        const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
+        return formatDateToYMD(jsDate);
+    }
+
+    // Verificar si es una cadena
+    else if (typeof excelDate === 'string') {
+        // Intentar varios formatos conocidos
+        const formats = [/^\d{2}\/\d{2}\/\d{4}$/, /^\d{4}-\d{2}-\d{2}$/, /^\d{2}-\d{2}-\d{4}$/];
+
+        for (let format of formats) {
+            if (format.test(excelDate)) {
+                // Si el formato es DD/MM/YYYY
+                if (format === formats[0]) {
+                    const [day, month, year] = excelDate.split('/');
+                    const parsedDate = new Date(Date.UTC(year, month - 1, day));
+                    return formatDateToYMD(parsedDate);
+                }
+                // Si el formato es YYYY-MM-DD o DD-MM-YYYY
+                else if (format === formats[1] || format === formats[2]) {
+                    const parts = excelDate.split(/[-\/]/);
+                    const year = parts[0].length === 4 ? parts[0] : parts[2];
+                    const month = parts[1] - 1;
+                    const day = parts[0].length === 4 ? parts[2] : parts[0];
+                    const parsedDate = new Date(Date.UTC(year, month, day));
+                    return formatDateToYMD(parsedDate);
+                }
+            }
+        }
+        return "Error: Formato de fecha no válido";
+    }
+
+    return "Error: Tipo de entrada no válido";
 }
 
 
