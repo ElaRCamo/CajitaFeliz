@@ -9,7 +9,7 @@ let datosPrestamosAdmin;
 let anioPrestamos;
 
 const dataTableOptPresAdmin = {
-    lengthMenu: [5, 10, 15, 20],
+    lengthMenu: [5, 15, 25, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4,5,6]},
         {orderable: false, targets: [0,1,2,3,5]},
@@ -326,10 +326,20 @@ async function insertarExcelPrestamos(file) {
         }
 
         const result = await response.json();
-        alert(result.message || 'Datos insertados exitosamente.');
+        Swal.fire({
+            icon: 'success',
+            title: 'Actualización éxitosa',
+            text: 'Datos insertados exitosamente'
+        });
+
+        initDataTablePresAdmin(anioActual);
     } catch (error) {
         console.error('Error:', error);
-        alert('Ocurrió un error al procesar el archivo.');
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Ocurrió un error al procesar el archivo. Intente nuevamente.'
+        });
     }
 }
 
@@ -345,7 +355,7 @@ let datosSolicitudesAhorro;
 let anioCajaAhorro;
 
 const dataTableOptAhorroAdmin = {
-    lengthMenu: [5, 10, 15, 20],
+    lengthMenu: [5, 15, 25, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3]},
         {orderable: false, targets: [0,1,2,3]},
@@ -471,7 +481,7 @@ let datosRetirosAhorro;
 let anioRetiroAhorro;
 
 const dataTableOptRetiroAdmin = {
-    lengthMenu: [5, 10, 15, 20],
+    lengthMenu: [5, 15, 25, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4,5]},
         {orderable: false, targets: [0,1,2,3,4,5]},

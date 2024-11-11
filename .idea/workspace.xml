@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="datatable responsive">
-      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="datatable responsive" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,31 +87,7 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-      <workItem from="1731332222727" duration="8839000" />
-    </task>
-    <task id="LOCAL-00448" summary="datatable responsive">
-      <option name="closed" value="true" />
-      <created>1731100842026</created>
-      <option name="number" value="00448" />
-      <option name="presentableId" value="LOCAL-00448" />
-      <option name="project" value="LOCAL" />
-      <updated>1731100842026</updated>
-    </task>
-    <task id="LOCAL-00449" summary="datatable responsive">
-      <option name="closed" value="true" />
-      <created>1731100880567</created>
-      <option name="number" value="00449" />
-      <option name="presentableId" value="LOCAL-00449" />
-      <option name="project" value="LOCAL" />
-      <updated>1731100880567</updated>
-    </task>
-    <task id="LOCAL-00450" summary="datatable responsive">
-      <option name="closed" value="true" />
-      <created>1731332777627</created>
-      <option name="number" value="00450" />
-      <option name="presentableId" value="LOCAL-00450" />
-      <option name="project" value="LOCAL" />
-      <updated>1731332777627</updated>
+      <workItem from="1731332222727" duration="9140000" />
     </task>
     <task id="LOCAL-00451" summary="datatable responsive">
       <option name="closed" value="true" />
@@ -483,7 +457,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731341354537</updated>
     </task>
-    <option name="localTasksCounter" value="497" />
+    <task id="LOCAL-00497" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731341406346</created>
+      <option name="number" value="00497" />
+      <option name="presentableId" value="LOCAL-00497" />
+      <option name="project" value="LOCAL" />
+      <updated>1731341406346</updated>
+    </task>
+    <task id="LOCAL-00498" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731341593155</created>
+      <option name="number" value="00498" />
+      <option name="presentableId" value="LOCAL-00498" />
+      <option name="project" value="LOCAL" />
+      <updated>1731341593156</updated>
+    </task>
+    <task id="LOCAL-00499" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731341660761</created>
+      <option name="number" value="00499" />
+      <option name="presentableId" value="LOCAL-00499" />
+      <option name="project" value="LOCAL" />
+      <updated>1731341660761</updated>
+    </task>
+    <option name="localTasksCounter" value="500" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
