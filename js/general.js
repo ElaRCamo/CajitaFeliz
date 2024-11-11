@@ -15,21 +15,24 @@ const formatearFecha = (fecha) => {
 // Función para convertir la fecha de Excel a formato 'YYYY-MM-DD'
 function excelDateToJSDate(excelDate) {
     if (typeof excelDate === 'number') {
-        // Fecha en formato numérico de Excel, convertirla a fecha JS
-        const jsDate = new Date((excelDate - 25569) * 86400 * 1000); // Ajuste por el "serial" de Excel
-        return moment(jsDate).format('YYYY-MM-DD'); // Usamos moment.js para dar formato
+        // Si es un número en formato Excel, convertirlo a fecha en JS
+        const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
+        return `${jsDate.getFullYear()}/${(jsDate.getMonth() + 1).toString().padStart(2, '0')}/${jsDate.getDate().toString().padStart(2, '0')}`;
     } else if (typeof excelDate === 'string') {
-        // Si la fecha está en un formato de cadena, intentar analizarla usando moment.js
-        let date = moment(excelDate, ['DD/MM/YYYY', 'YYYY-MM-DD', 'MM/DD/YYYY'], true);
+        // Si es una cadena, intentar analizar varios formatos comunes
+        const parsedDate = new Date(excelDate);
 
-        // Verificar si moment pudo analizar la fecha correctamente
-        if (date.isValid()) {
-            return date.format('YYYY-MM-DD');
+        if (!isNaN(parsedDate)) {
+            // Si la fecha es válida, devolverla en formato YYYY/MM/DD
+            return `${parsedDate.getFullYear()}/${(parsedDate.getMonth() + 1).toString().padStart(2, '0')}/${parsedDate.getDate().toString().padStart(2, '0')}`;
         } else {
-            return ''; // Retornar cadena vacía si no se puede interpretar la fecha
+            // Si la fecha no es válida, devolver un mensaje de error
+            return "Error: Formato de fecha no válido";
         }
+    } else {
+        // Si no es ni número ni cadena, devolver un mensaje de error
+        return "Error: Tipo de entrada no válido";
     }
-    return ''; // Retornar cadena vacía si no es un número o string válido
 }
 
 
