@@ -92,9 +92,8 @@
                     <form id="logoutForm" action="dao/daoLogin.php" method="POST" style="display: none;">
                         <input type="hidden" name="cerrarSesion" value="true">
                     </form>
-                    <a class="nav-link" id="cerrarSesionMisSs" href="#">Salir</a>
+                    <a class="nav-link" id="cerrarSesion" href="#">Salir</a>
                 </li>
-
             </ul>
         </div>
     </div>
@@ -379,6 +378,11 @@
                 e.preventDefault(); // Evitar el envío del formulario si es necesario
             }
         });
+    });
+
+    document.getElementById('cerrarSesion').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('logoutForm').submit();
     });
 
 
