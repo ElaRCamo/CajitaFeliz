@@ -1904,3 +1904,6 @@ blockquote::before {
   background-color: #ecf7ff !important;
 }
 
+.bgEstatusRet{
+  padding-top: 4px;
+}

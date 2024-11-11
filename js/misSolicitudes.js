@@ -178,7 +178,6 @@ const TablaCajaAhorro= async () => {
 let dataTableRetiro;
 let dataTableRetiroInit = false;
 
-
 const dataTableOptionsRetiro = {
     lengthMenu: [5, 15, 50, 100],
     columnDefs:[
@@ -244,9 +243,9 @@ const TablaRetiroAhorro = async () => {
                     <td>`;
 
             if (item.estatusRetiro === '0') {
-                content += `<label class="badge bg-warning text-dark">En proceso</label>`;
+                content += `<label class="badge bg-warning text-dark bgEstatusRet">En proceso</label>`;
             } else if (item.estatusRetiro === '1') {
-                content += `<label class="badge bg-primary">Completado</label>`;
+                content += `<label class="badge bg-primary bgEstatusRet">Completado</label>`;
             }
 
             content += `</td>
