@@ -329,11 +329,10 @@ async function insertarExcelPrestamos(file) {
         }
 
     } catch (error) {
-        console.error('Error:', error);
         Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: error.message || 'Ocurrió un error al procesar el archivo. Intente nuevamente.'
+            text: error.message || 'Ocurrió un error al procesar el archivo. Recargue la página e intente nuevamente.'
         });
     }
 }
@@ -646,11 +645,10 @@ async function insertarExcelRetiros(file) {
             throw new Error(result.message );
         }
     } catch (error) {
-        console.error('Error:', error);
         Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: 'Ocurrió un error al procesar el archivo. Intente nuevamente.'
+            text: 'Ocurrió un error al procesar el archivo. Recargue la página e intente nuevamente.'
         });
     }
 }
