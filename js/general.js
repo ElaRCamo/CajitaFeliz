@@ -1,16 +1,17 @@
 const formatearFecha = (fecha) => {
-    if (fecha !== '0000-00-00'){
-        let date = new Date(fecha);
+    if (fecha !== '0000-00-00') {
+        // Crear la fecha en UTC
+        let date = new Date(Date.UTC(...fecha.split('-').map((v, i) => i === 1 ? v - 1 : v))); // Ajusta el mes porque JavaScript comienza en 0
         let meses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
-        let dia = date.getDate();
-        let mes = meses[date.getMonth()];
-        let anio = date.getFullYear();
+        let dia = date.getUTCDate(); // Usamos getUTCDate para evitar desfases de zona horaria
+        let mes = meses[date.getUTCMonth()]; // Usamos getUTCMonth
+        let anio = date.getUTCFullYear(); // Usamos getUTCFullYear
         return `${dia}/${mes}/${anio}`;
-    }else{
-        //return '0000-00-00';
+    } else {
         return 'Sin registro';
     }
 };
+
 
 function formatearMonto(numero) {
     if (isNaN(numero)) {
