@@ -233,7 +233,6 @@ const TablaRetiroAhorro = async () => {
             content += `
                 <tr>
                     <td>${item.idRetiro}</td>
-                    <td>${item.idCaja}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>`;
 

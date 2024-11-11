@@ -165,8 +165,7 @@
                                 <table class="dataTable tableSearch table" id="tablaRetiros" >
                                     <thead class="thead-light">
                                     <tr>
-                                        <th class="centered" id="folioRetiro">RETIRO</th>
-                                        <th class="centered" id="folioCaja">FOLIO CAJA</th>
+                                        <th class="centered" id="folioRetiro">FOLIO RETIRO</th>
                                         <th class="centered">FECHA</th>
                                         <th class="centered">ESTATUS</th>
                                         <th class="centered">ACCIONES</th>
