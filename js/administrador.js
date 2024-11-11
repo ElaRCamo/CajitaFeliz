@@ -294,17 +294,6 @@ async function insertarExcelPrestamos(file) {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-        // Función para convertir el número de fecha de Excel a una cadena de fecha
-        function parseExcelDate(excelDate) {
-            // Verifica si excelDate es una cadena en formato DD/MM/YYYY
-            if (typeof excelDate === 'string') {
-                const [day, month, year] = excelDate.split('/');
-                return `${year}-${month}-${day}`; // Reorganiza a formato YYYY-MM-DD
-            }
-            // Si no está en el formato esperado, devuelve una cadena vacía o maneja el error
-            return '';
-        }
-
         function parseExcelDate(excelDate) {
             // Verifica si excelDate es un número (serie de fecha de Excel)
             if (typeof excelDate === 'number') {
@@ -667,10 +656,21 @@ async function insertarExcelRetiros(file) {
         }
 
         const result = await response.json();
-        alert(result.message || 'Datos insertados exitosamente.');
+        Swal.fire({
+            icon: 'success',
+            title: 'Actualización éxitosa',
+            text: 'Datos insertados exitosamente'
+        });
+
+
+        initDataTableRetiroAdmin(anioActual);
     } catch (error) {
         console.error('Error:', error);
-        alert('Ocurrió un error al procesar el archivo.');
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Ocurrió un error al procesar el archivo. Intente nuevamente.'
+        });
     }
 }
 
