@@ -67,7 +67,7 @@ h3{
 #tablaPrestamosAdmin td,
 #tablaRetirosAdmin td
 {
-    font-size: 0.9rem !important;
+    font-size: 1.5rem !important;
     color: var(--primary-color) !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important;
