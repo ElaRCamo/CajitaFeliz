@@ -51,7 +51,6 @@ function excelDateToJSDate(excelDate) {
         }
         return "Error: Formato de fecha no válido";
     }
-
     return "Error: Tipo de entrada no válido";
 }
 
