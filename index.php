@@ -93,7 +93,7 @@
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="images/slide/plantita3.jpg"
+                                    <img src="images/slide/slide1.jpg"
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Impulsa tus Metas</h1>
@@ -102,7 +102,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/plantita2.jpg"
+                                    <img src="images/slide/slide2.jpg"
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
@@ -111,7 +111,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/globos.png"
+                                    <img src="images/slide/slide3.jpg"
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Recuerda</h1>
