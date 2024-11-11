@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="datatable responsive">
-      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="dates excel">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/general.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,15 +90,7 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-      <workItem from="1731332222727" duration="14042000" />
-    </task>
-    <task id="LOCAL-00461" summary="datatable responsive">
-      <option name="closed" value="true" />
-      <created>1731334474812</created>
-      <option name="number" value="00461" />
-      <option name="presentableId" value="LOCAL-00461" />
-      <option name="project" value="LOCAL" />
-      <updated>1731334474812</updated>
+      <workItem from="1731332222727" duration="14822000" />
     </task>
     <task id="LOCAL-00462" summary="datatable responsive">
       <option name="closed" value="true" />
@@ -483,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731346956665</updated>
     </task>
-    <option name="localTasksCounter" value="510" />
+    <task id="LOCAL-00510" summary="dates excel">
+      <option name="closed" value="true" />
+      <created>1731347305883</created>
+      <option name="number" value="00510" />
+      <option name="presentableId" value="LOCAL-00510" />
+      <option name="project" value="LOCAL" />
+      <updated>1731347305883</updated>
+    </task>
+    <option name="localTasksCounter" value="511" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Back end apartado misSolicitudes" />
     <MESSAGE value="Apartado misSolicitudes caja de ahorro" />
     <MESSAGE value="Apartado misSolicitudes RETIROS" />
     <MESSAGE value="Apartado Solicitudes Prestamos Admin" />
@@ -526,7 +526,8 @@
     <MESSAGE value="misSolicitudes responsive" />
     <MESSAGE value="modal read retiro" />
     <MESSAGE value="datatable responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="datatable responsive" />
+    <MESSAGE value="dates excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="dates excel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

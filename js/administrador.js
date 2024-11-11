@@ -294,22 +294,29 @@ async function insertarExcelPrestamos(file) {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-        // Mapeo de los datos de la hoja de Excel
+        // Verificación de los datos leídos del Excel
+        console.log("Datos leídos del Excel:", jsonData);
+
+        // Mapear los datos, asegurándonos de convertir las fechas correctamente
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
                 idSolicitud: row[0],
                 montoDepositado: row[1],
-                fechaDeposito: parseExcelDate(row[2])  // Convertir la fecha con moment.js
+                // Convertir la fecha usando excelDateToJSDate
+                fechaDeposito: excelDateToJSDate(row[2])
             };
         });
 
-        // Enviar los datos al backend en un solo array
+        // Verificación de los datos procesados
+        console.log('Datos procesados para el backend:', prestamosData);
+
+        // Enviar los datos al backend
         const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ prestamos: prestamosData }) // Enviar como un array bajo la clave "prestamos"
+            body: JSON.stringify({ prestamos: prestamosData })
         });
 
         if (!response.ok) {
@@ -319,7 +326,7 @@ async function insertarExcelPrestamos(file) {
         const result = await response.json();
         Swal.fire({
             icon: 'success',
-            title: 'Actualización éxitosa',
+            title: 'Actualización exitosa',
             text: 'Datos insertados exitosamente'
         });
 

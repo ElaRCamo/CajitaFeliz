@@ -1,7 +1,7 @@
 const formatearFecha = (fecha) => {
     if (fecha !== '0000-00-00') {
         // Crear la fecha en UTC
-        let date = new Date(Date.UTC(...fecha.split('-').map((v, i) => i === 1 ? v - 1 : v))); // Ajusta el mes porque JavaScript comienza en 0
+        let date = new Date(Date.UTC(...fecha.split('-').map((v, i) => i === 1 ? v - 1 : v)));
         let meses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
         let dia = date.getUTCDate(); // Usamos getUTCDate para evitar desfases de zona horaria
         let mes = meses[date.getUTCMonth()]; // Usamos getUTCMonth
@@ -12,22 +12,18 @@ const formatearFecha = (fecha) => {
     }
 };
 
-function parseExcelDate(excelDate) {
-    // Verifica si el dato es un número (fecha en formato de Excel)
-    if (typeof excelDate === 'number') {
-        // Convierte el número de serie de Excel a una fecha de JavaScript
-        const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
-        return moment(jsDate).format('YYYY-MM-DD');  // Usamos moment.js para formatear
-    }
 
-    // Si es una cadena (probablemente en formato DD/MM/YYYY)
-    if (typeof excelDate === 'string' && excelDate.includes('/')) {
-        // Usamos moment.js para parsear y convertir la fecha a formato YYYY-MM-DD
+// Función para convertir la fecha de Excel a formato 'YYYY-MM-DD'
+function excelDateToJSDate(excelDate) {
+    if (typeof excelDate === 'number') {
+        // Fecha en formato numérico de Excel, convertirla a fecha JS
+        const jsDate = new Date((excelDate - 25569) * 86400 * 1000); // Ajuste por el "serial" de Excel
+        return moment(jsDate).format('YYYY-MM-DD'); // Usamos moment.js para dar formato
+    } else if (typeof excelDate === 'string') {
+        // Si la fecha está en formato 'DD/MM/YYYY', convertirla usando moment.js
         return moment(excelDate, 'DD/MM/YYYY').format('YYYY-MM-DD');
     }
-
-    // Si no es ni número ni cadena válida, devuelve una cadena vacía o maneja el error
-    return '';
+    return ''; // Retornar cadena vacía si no es un número o string válido
 }
 
 
