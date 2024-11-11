@@ -86,6 +86,7 @@ const TablaSolicitudesPrestamos = async () => {
         misSolicitudesBody.innerHTML = content;
 
         $('#tablaSolicitudes thead th').css('background-color', '#84b6f4')
+        $('#tablaSolicitudes thead th').css('color', '#005195')
         var table = $('#tablaSolicitudes').DataTable();
 
     } catch (error) {
