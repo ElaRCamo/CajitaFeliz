@@ -617,7 +617,7 @@ async function insertarExcelRetiros(file) {
             return {
                 idRetiro: row[0],
                 montoDepositado: row[1],
-                fechaDeposito: excelDateToJSDate(row[2]) // Convertir la fecha
+                fechaDeposito: row[2]// Convertir la fecha
             };
         });
 
