@@ -92,7 +92,7 @@
                     <form id="logoutForm" action="dao/daoLogin.php" method="POST" style="display: none;">
                         <input type="hidden" name="cerrarSesion" value="true">
                     </form>
-                    <a class="nav-link" id="cerrarSesion" href="#">Salir</a>
+                    <a class="nav-link" id="cerrarSesionMisSs" href="#">Salir</a>
                 </li>
 
             </ul>
