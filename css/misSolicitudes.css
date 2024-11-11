@@ -165,7 +165,14 @@ h3{
     border-radius: 4px;
     padding: 5px;
     margin-left: 10px;
-}*/
+}
+
+
+.dataTables_filter input {
+    width: 200px !important;
+}
+
+*/
 .centered {
     text-align: center;
 }
@@ -174,9 +181,6 @@ label {
     display: ruby-text !important;
 }
 
-.dataTables_filter input {
-    width: 200px !important;
-}
 
 .form-select-sm {
     width: 80px !important;
