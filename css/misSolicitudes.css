@@ -307,5 +307,13 @@ label {
         border-top-right-radius: 0 !important;
     }
 
+    #tablaRetiros td, #tablaRetiros th,
+    #tablaCajaAhorro td, #tablaCajaAhorro th,
+    #tablaSolicitudes td, #tablaSolicitudes th
+    {
+        text-align: center;
+    }
+
+
 
 }
