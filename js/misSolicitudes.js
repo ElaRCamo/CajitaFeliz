@@ -85,7 +85,7 @@ const TablaSolicitudesPrestamos = async () => {
         });
         misSolicitudesBody.innerHTML = content;
 
-        $('#tablaSolicitudes thead th').css('background-color', 'blue')
+        $('#tablaSolicitudes thead th').css('background-color', '#84b6f4')
         var table = $('#tablaSolicitudes').DataTable();
 
     } catch (error) {
