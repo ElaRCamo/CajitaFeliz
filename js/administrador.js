@@ -295,25 +295,26 @@ async function insertarExcelPrestamos(file) {
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
         // Función para convertir el número de fecha de Excel a una cadena de fecha
-        function excelDateToJSDate(excelDate) {
-            // Si excelDate es un número, entonces procede con la conversión
+        function parseExcelDate(excelDate) {
+            // Verifica si excelDate es un número (formato de serie de Excel)
             if (typeof excelDate === 'number') {
-                const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
+                const jsDate = new Date(Math.round((excelDate - 25569) * 86400 * 1000));
                 const year = jsDate.getFullYear();
                 const month = String(jsDate.getMonth() + 1).padStart(2, '0');
                 const day = String(jsDate.getDate()).padStart(2, '0');
                 return `${year}-${month}-${day}`;
             }
 
-            // Si excelDate ya es una cadena, asume que está en formato DD/MM/YYYY y transforma a YYYY-MM-DD
+            // Si excelDate es una cadena en formato DD/MM/YYYY
             if (typeof excelDate === 'string') {
                 const [day, month, year] = excelDate.split('/');
                 return `${year}-${month}-${day}`;
             }
 
-            // Devuelve un valor por defecto o maneja el error en caso de que el formato no sea esperado
+            // Devuelve un valor por defecto o lanza un error si no es el formato esperado
             return '';
         }
+
 
 
         // Extraer y mapear los datos de las columnas
@@ -321,9 +322,10 @@ async function insertarExcelPrestamos(file) {
             return {
                 idSolicitud: row[0],
                 montoDepositado: row[1],
-                fechaDeposito: excelDateToJSDate(row[2]) // Convertir la fecha
+                fechaDeposito: parseExcelDate(row[2]) // Usamos parseExcelDate para manejar distintos formatos
             };
         });
+
 
         // Enviar los datos al backend en un solo array
         const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {
