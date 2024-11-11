@@ -298,7 +298,7 @@ async function insertarExcelPrestamos(file) {
         function parseExcelDate(excelDate) {
             // Verifica si excelDate es un número (formato de serie de Excel)
             if (typeof excelDate === 'number') {
-                const jsDate = new Date(Math.round((excelDate ) * 86400 * 1000));
+                const jsDate = new Date(Math.round((excelDate - 25569) * 86400 * 1000));
                 const year = jsDate.getFullYear();
                 const month = String(jsDate.getMonth() + 1).padStart(2, '0');
                 const day = String(jsDate.getDate()).padStart(2, '0');
@@ -314,6 +314,7 @@ async function insertarExcelPrestamos(file) {
             // Devuelve un valor por defecto o lanza un error si no es el formato esperado
             return '';
         }
+
 
 
 
