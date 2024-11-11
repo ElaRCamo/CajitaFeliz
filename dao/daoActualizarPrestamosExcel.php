@@ -9,7 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $inputData = json_decode(file_get_contents("php://input"), true);
 
     if (isset($inputData['prestamos']) && is_array($inputData['prestamos'])) {
-        $respuesta = array();
+        $todosExitosos = true;
+        $errores = [];
 
         foreach ($inputData['prestamos'] as $prestamo) {
             // Validar y asignar valores
@@ -17,19 +18,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $montoDepositado = isset($prestamo['montoDepositado']) ? trim($prestamo['montoDepositado']) : null;
             $fechaDeposito = isset($prestamo['fechaDeposito']) ? trim($prestamo['fechaDeposito']) : null;
             $fechaFormateada = formatearFecha($fechaDeposito);
-            if ($fechaFormateada === false) {
-                $respuesta = array("status" => 'error', "message" => "La fecha es inválida. Asegúrese de usar un formato correcto.");
-            } else {
-                // Llamar a la función de actualización con la fecha en el formato correcto
-                $resultado = actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaFormateada);
-                $respuesta[] = $resultado;
-            }
 
             // Validar datos
             if (empty($idSolicitud) || empty($montoDepositado) || empty($fechaDeposito)) {
-                $respuesta[] = array("status" => 'error', "message" => "Campos requeridos vacíos en una fila.");
-                continue;
+                $errores[] = "Faltan datos para la solicitud ID: $idSolicitud.";
+                $todosExitosos = false;
+            } elseif ($fechaFormateada === false) {
+                $errores[] = "La fecha es inválida para la solicitud ID: $idSolicitud.";
+                $todosExitosos = false;
+            } else {
+                // Llamar a la función de actualización con la fecha en el formato correcto
+                $respuestaActualizacion = actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaFormateada);
+                if ($respuestaActualizacion['status'] !== 'success') {
+                    $errores[] = "Error al actualizar la solicitud ID: $idSolicitud. " . $respuestaActualizacion['message'];
+                    $todosExitosos = false;
+                }
             }
+        }
+
+        // Respuesta final si todos fueron exitosos
+        if ($todosExitosos) {
+            $respuesta = array("status" => 'success', "message" => "Todos los retiros se actualizaron exitosamente.");
+        } else {
+            $respuesta = array("status" => 'error', "message" => "Se encontraron errores en las actualizaciones.", "detalles" => $errores);
         }
     } else {
         $respuesta = array("status" => 'error', "message" => "Datos no válidos.");
