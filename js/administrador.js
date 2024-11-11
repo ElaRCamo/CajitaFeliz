@@ -293,9 +293,6 @@ async function insertarExcelPrestamos(file) {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-        // Verificación de los datos leídos del Excel
-        console.log("Datos leídos del Excel:", jsonData);
-
         // Mapear los datos, asegurándonos de convertir las fechas correctamente
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
@@ -305,9 +302,6 @@ async function insertarExcelPrestamos(file) {
                 fechaDeposito: excelDateToJSDate(row[2])
             };
         });
-
-        // Verificación de los datos procesados
-        console.log('Datos procesados para el backend:', prestamosData);
 
         // Enviar los datos al backend
         const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {
@@ -618,15 +612,6 @@ async function insertarExcelRetiros(file) {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-        // Función para convertir el número de fecha de Excel a una cadena de fecha
-        function excelDateToJSDate(excelDate) {
-            const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
-            const year = jsDate.getFullYear();
-            const month = String(jsDate.getMonth() + 1).padStart(2, '0');
-            const day = String(jsDate.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
-        }
-
         // Extraer y mapear los datos de las columnas
         const retirosData = jsonData.slice(1).map((row) => {
             return {
@@ -645,19 +630,21 @@ async function insertarExcelRetiros(file) {
             body: JSON.stringify({ retiros: retirosData }) // Enviar como un array bajo la clave "retiros"
         });
 
-        if (!response.ok) {
-            throw new Error(`Error en la inserción: ${response.status} ${response.statusText}`);
-        }
-
+        // Obtener la respuesta del backend
         const result = await response.json();
-        Swal.fire({
-            icon: 'success',
-            title: 'Actualización éxitosa',
-            text: 'Datos insertados exitosamente'
-        });
 
+        if (result.status === "success") {
+            Swal.fire({
+                icon: 'success',
+                title: 'Actualización exitosa',
+                text: result.message
+            });
 
-        initDataTableRetiroAdmin(anioActual);
+            initDataTableRetiroAdmin(anioActual);
+        } else {
+            // Mostrar el mensaje de error que viene del backend
+            throw new Error(result.message );
+        }
     } catch (error) {
         console.error('Error:', error);
         Swal.fire({
