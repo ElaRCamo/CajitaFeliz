@@ -87,6 +87,7 @@ const TablaSolicitudesPrestamos = async () => {
 
         $('#tablaSolicitudes thead th').css('background-color', '#005195')
         $('#tablaSolicitudes thead th').css('color', '#ffffff')
+        $('#tablaSolicitudes').find('tbody td, thead th').css('text-align', 'center');
 
     } catch (error) {
         console.error('Error:', error);
@@ -167,6 +168,7 @@ const TablaCajaAhorro= async () => {
 
         $('#tablaCajaAhorro thead th').css('background-color', '#005195')
         $('#tablaCajaAhorro thead th').css('color', '#ffffff')
+        $('#tablaCajaAhorro').find('tbody td, thead th').css('text-align', 'center');
     } catch (error) {
         console.error('Error:', error);
     }
@@ -265,6 +267,7 @@ const TablaRetiroAhorro = async () => {
 
         $('#tablaRetiros thead th').css('background-color', '#005195')
         $('#tablaRetiros thead th').css('color', '#ffffff')
+        $('#tablaRetiros').find('tbody td, thead th').css('text-align', 'center');
     } catch (error) {
         console.error('Error:', error);
     }
