@@ -381,10 +381,6 @@
         });
     });
 
-    $(document).ready( function () {
-        $('#tablaSolicitudes thead th').css('background-color', 'blue')
-        var table = $('#tablaSolicitudes').DataTable();
-    } );
 
 </script>
 </body>

@@ -84,6 +84,10 @@ const TablaSolicitudesPrestamos = async () => {
                 </tr>`;
         });
         misSolicitudesBody.innerHTML = content;
+
+        $('#tablaSolicitudes thead th').css('background-color', 'blue')
+        var table = $('#tablaSolicitudes').DataTable();
+
     } catch (error) {
         console.error('Error:', error);
     }
