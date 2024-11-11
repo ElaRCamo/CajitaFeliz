@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{dataTables.dataTables, dataTables.jqueryui, jquery-ui, responsive.dataTables, rowReorder.dataTables}" />
+    <file url="PROJECT" libraries="{@popperjs/core, apexcharts, bootstrap, chart.js, dataTables, dataTables.bootstrap5, dataTables.dataTables, dataTables.jqueryui, dataTables.responsive, dataTables.rowReorder, jquery-3.6.4, jquery-ui, jquery.dataTables, line-awesome, responsive.dataTables, rowReorder.dataTables, sweetalert2, xlsx}" />
   </component>
 </project>
