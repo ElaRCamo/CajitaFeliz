@@ -22,6 +22,10 @@
 
     <link href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.css" rel="stylesheet">
 
+    <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <link href="https://cdn.datatables.net/2.1.8/css/dataTables.jqueryui.css">
+
     <link href="css/styles.css" rel="stylesheet">
 
     <link href="css/misSolicitudes.css" rel="stylesheet">
@@ -162,7 +166,7 @@
                                 </table>
 
                                 <h4 class="mb-4"><br>Solicitudes de retiro</h4>
-                                <table class="dataTable tableSearch table" id="tablaRetiros" >
+                                <table class="dataTable tableSearch table display" id="tablaRetiros" >
                                     <thead class="thead-light">
                                     <tr>
                                         <th class="centered" id="folioRetiro">FOLIO RETIRO</th>
