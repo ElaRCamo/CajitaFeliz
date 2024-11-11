@@ -12,7 +12,7 @@ const dataTableOptPresAdmin = {
     lengthMenu: [5, 10, 15, 20],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4,5,6]},
-        {orderable: false, targets: [0,1,2]},
+        {orderable: false, targets: [0,1,2,3,5]},
         {width: "8%", targets: [0]},
         {searchable: true, targets: [0,1,2,3] }
     ],
@@ -348,7 +348,7 @@ const dataTableOptAhorroAdmin = {
     lengthMenu: [5, 10, 15, 20],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3]},
-        {orderable: false, targets: [0,1,2]},
+        {orderable: false, targets: [0,1,2,3]},
         {width: "8%", targets: [0]},
         {searchable: true, targets: [0,1,2] }
     ],
@@ -474,9 +474,9 @@ const dataTableOptRetiroAdmin = {
     lengthMenu: [5, 10, 15, 20],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4,5]},
-        {orderable: false, targets: [0,1,2,3,4]},
+        {orderable: false, targets: [0,1,2,3,4,5]},
         {width: "8%", targets: [0]},
-        {searchable: true, targets: [0,1,2,3,4] }
+        {searchable: true, targets: [0,1,2,3,4,5] }
     ],
     pageLength:5,
     destroy: true,
