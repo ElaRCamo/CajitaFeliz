@@ -177,11 +177,6 @@ h3{
     text-align: center;
 }
 
-label {
-    display: ruby-text !important;
-}
-
-
 .form-select-sm {
     width: 80px !important;
 }
