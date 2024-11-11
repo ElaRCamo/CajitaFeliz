@@ -173,11 +173,9 @@ let dataTableRetiroInit = false;
 const dataTableOptionsRetiro = {
     lengthMenu: [5, 15, 50, 100],
     columnDefs:[
-        {className: "centered", targets: [0,1,2,3,4]},
+        {className: "centered", targets: [0,1,2,3]},
         {orderable: false, targets: [0,1,2]},
-        {width: "8%", targets: [0]},
-        {width: "28%", targets: [4]},
-        {searchable: true, targets: [0,1,2] }
+        {searchable: true, targets: [0,1] }
     ],
     pageLength:5,
     destroy: true,
