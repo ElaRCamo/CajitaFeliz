@@ -321,16 +321,17 @@ async function insertarExcelPrestamos(file) {
 
         if (!response.ok) {
             throw new Error(`Error en la inserción: ${response.status} ${response.statusText}`);
+        }else{
+            const result = await response.json();
+            Swal.fire({
+                icon: 'success',
+                title: 'Actualización exitosa',
+                text: 'Datos insertados exitosamente'
+            });
+
+            initDataTablePresAdmin(anioActual);
         }
 
-        const result = await response.json();
-        Swal.fire({
-            icon: 'success',
-            title: 'Actualización exitosa',
-            text: 'Datos insertados exitosamente'
-        });
-
-        initDataTablePresAdmin(anioActual);
     } catch (error) {
         console.error('Error:', error);
         Swal.fire({
