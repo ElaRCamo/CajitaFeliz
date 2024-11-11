@@ -285,7 +285,6 @@ document.getElementById('fileInputPrestamos').addEventListener('change', (event)
         insertarExcelPrestamos(file);
     }
 });
-
 async function insertarExcelPrestamos(file) {
     try {
         // Leer el archivo Excel
@@ -319,17 +318,20 @@ async function insertarExcelPrestamos(file) {
             body: JSON.stringify({ prestamos: prestamosData })
         });
 
-        if (!response.ok) {
-            throw new Error(`Error en la inserción: ${response.status} ${response.statusText}`);
-        }else{
-            const result = await response.json();
+        // Obtener la respuesta del backend
+        const result = await response.json();
+
+        if (result.status === "success") {
             Swal.fire({
                 icon: 'success',
                 title: 'Actualización exitosa',
-                text: 'Datos insertados exitosamente'
+                text: result.message
             });
 
             initDataTablePresAdmin(anioActual);
+        } else {
+            // Mostrar el mensaje de error que viene del backend
+            throw new Error(result.message );
         }
 
     } catch (error) {
@@ -337,11 +339,10 @@ async function insertarExcelPrestamos(file) {
         Swal.fire({
             icon: 'error',
             title: 'Error',
-            text: 'Ocurrió un error al procesar el archivo. Intente nuevamente.'
+            text: error.message || 'Ocurrió un error al procesar el archivo. Intente nuevamente.'
         });
     }
 }
-
 
 /***********************************************************************************************************************
  *********************************************SOLICITUDES DE AHORRO ****************************************************
