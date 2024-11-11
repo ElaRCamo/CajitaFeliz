@@ -95,6 +95,10 @@ const dataTablePrestamosAdmin = async (anio) => {
         datosPrestamosAdmin = result.data;  // Pasa los datos directamente a la función
         anioPrestamos = anio;
 
+        $('#tablaPrestamosAdmin thead th').css('background-color', '#005195')
+        $('#tablaPrestamosAdmin thead th').css('color', '#ffffff')
+        $('#tablaPrestamosAdmin').find('tbody td, thead th').css('text-align', 'center');
+
     } catch (error) {
         console.error('Error:', error);
     }
@@ -405,7 +409,11 @@ const dataTableAhorroAdmin = async (anio) => {
 
 
         datosSolicitudesAhorro = result.data;
-        anioCajaAhorro = anio;
+        anioCajaAhorro = anio
+
+        $('#tablaAhorroAdmin thead th').css('background-color', '#005195')
+        $('#tablaAhorroAdmin thead th').css('color', '#ffffff')
+        $('#tablaAhorroAdmin').find('tbody td, thead th').css('text-align', 'center');
 
     } catch (error) {
         console.error('Error:', error);
@@ -530,6 +538,10 @@ const dataTableRetiroAdmin = async (anio) => {
 
         datosRetirosAhorro = result.data;
         anioRetiroAhorro = anio;
+
+        $('#tablaRetirosAdmin thead th').css('background-color', '#005195')
+        $('#tablaRetirosAdmin thead th').css('color', '#ffffff')
+        $('#tablaRetirosAdmin').find('tbody td, thead th').css('text-align', 'center');
 
     } catch (error) {
         console.error('Error:', error);
