@@ -87,31 +87,7 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-      <workItem from="1731332222727" duration="3824000" />
-    </task>
-    <task id="LOCAL-00427" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731090100661</created>
-      <option name="number" value="00427" />
-      <option name="presentableId" value="LOCAL-00427" />
-      <option name="project" value="LOCAL" />
-      <updated>1731090100661</updated>
-    </task>
-    <task id="LOCAL-00428" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731091356119</created>
-      <option name="number" value="00428" />
-      <option name="presentableId" value="LOCAL-00428" />
-      <option name="project" value="LOCAL" />
-      <updated>1731091356119</updated>
-    </task>
-    <task id="LOCAL-00429" summary="modal read retiro">
-      <option name="closed" value="true" />
-      <created>1731091415044</created>
-      <option name="number" value="00429" />
-      <option name="presentableId" value="LOCAL-00429" />
-      <option name="project" value="LOCAL" />
-      <updated>1731091415044</updated>
+      <workItem from="1731332222727" duration="4313000" />
     </task>
     <task id="LOCAL-00430" summary="modal read retiro">
       <option name="closed" value="true" />
@@ -481,7 +457,31 @@
       <option name="project" value="LOCAL" />
       <updated>1731336060446</updated>
     </task>
-    <option name="localTasksCounter" value="476" />
+    <task id="LOCAL-00476" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731336090434</created>
+      <option name="number" value="00476" />
+      <option name="presentableId" value="LOCAL-00476" />
+      <option name="project" value="LOCAL" />
+      <updated>1731336090434</updated>
+    </task>
+    <task id="LOCAL-00477" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731336519787</created>
+      <option name="number" value="00477" />
+      <option name="presentableId" value="LOCAL-00477" />
+      <option name="project" value="LOCAL" />
+      <updated>1731336519787</updated>
+    </task>
+    <task id="LOCAL-00478" summary="datatable responsive">
+      <option name="closed" value="true" />
+      <created>1731336550504</created>
+      <option name="number" value="00478" />
+      <option name="presentableId" value="LOCAL-00478" />
+      <option name="project" value="LOCAL" />
+      <updated>1731336550504</updated>
+    </task>
+    <option name="localTasksCounter" value="479" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
