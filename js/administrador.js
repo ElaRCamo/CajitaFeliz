@@ -294,29 +294,14 @@ async function insertarExcelPrestamos(file) {
         const worksheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-        function parseExcelDate(excelDate) {
-            // Verifica si excelDate es un número (serie de fecha de Excel)
-            if (typeof excelDate === 'number') {
-                const jsDate = new Date(Math.round((excelDate - 25569) * 86400 * 1000));
-                const year = jsDate.getFullYear();
-                const month = String(jsDate.getMonth() + 1).padStart(2, '0');
-                const day = String(jsDate.getDate()).padStart(2, '0');
-                return `${year}-${month}-${day}`;
-            }
-
-            // Si excelDate no es un número, devuelve una cadena vacía o lanza un error
-            return '';
-        }
-
-// Uso en el mapeo de datos de la hoja de Excel
+        // Mapeo de los datos de la hoja de Excel
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
                 idSolicitud: row[0],
                 montoDepositado: row[1],
-                fechaDeposito: parseExcelDate(row[2]) // Conversión de la fecha
+                fechaDeposito: parseExcelDate(row[2])  // Convertir la fecha con moment.js
             };
         });
-
 
         // Enviar los datos al backend en un solo array
         const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {

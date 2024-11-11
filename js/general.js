@@ -12,6 +12,24 @@ const formatearFecha = (fecha) => {
     }
 };
 
+function parseExcelDate(excelDate) {
+    // Verifica si el dato es un número (fecha en formato de Excel)
+    if (typeof excelDate === 'number') {
+        // Convierte el número de serie de Excel a una fecha de JavaScript
+        const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
+        return moment(jsDate).format('YYYY-MM-DD');  // Usamos moment.js para formatear
+    }
+
+    // Si es una cadena (probablemente en formato DD/MM/YYYY)
+    if (typeof excelDate === 'string' && excelDate.includes('/')) {
+        // Usamos moment.js para parsear y convertir la fecha a formato YYYY-MM-DD
+        return moment(excelDate, 'DD/MM/YYYY').format('YYYY-MM-DD');
+    }
+
+    // Si no es ni número ni cadena válida, devuelve una cadena vacía o maneja el error
+    return '';
+}
+
 
 function formatearMonto(numero) {
     if (isNaN(numero)) {

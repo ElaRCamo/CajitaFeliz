@@ -372,6 +372,10 @@
 <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.js"></script>
 <script src="https://cdn.datatables.net/responsive/3.0.3/js/responsive.dataTables.js"></script>
 
+<!-- moment.js para manejo de fechas-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+
 <script>
     const anioActual = new Date().getFullYear();
     document.addEventListener("DOMContentLoaded", function() {
