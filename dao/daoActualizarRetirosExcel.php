@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (isset($inputData['retiros']) && is_array($inputData['retiros'])) {
         $todosExitosos = true; // Indicador de éxito global
+        $errores = [];
 
         foreach ($inputData['retiros'] as $retiro) {
             $idRetiro = isset($retiro['idRetiro']) ? trim($retiro['idRetiro']) : null;
@@ -22,20 +23,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fechaFormateada = formatearFecha($fechaDeposito);
 
             // Validar datos
-            if (empty($idRetiro) || empty($montoDepositado) || empty($fechaDeposito) || $fechaFormateada === false) {
-                $respuesta = array("status" => 'error', "message" => "Error en los datos de entrada o en el formato de fecha.");
+            if (empty($idRetiro) || empty($montoDepositado) || empty($fechaDeposito)) {
+                $errores[] = "Faltan datos para la solicitud ID: $idRetiro.";
                 $todosExitosos = false;
-                break;
+            } elseif ($fechaFormateada === false) {
+                $errores[] = "La fecha es inválida para la solicitud ID: $idRetiro.";
+                $todosExitosos = false;
+            } else {
+                // Llamar a la función de actualización con la fecha en el formato correcto
+                $respuestaActualizacion = actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaFormateada);
+                if ($respuestaActualizacion['status'] !== 'success') {
+                    $errores[] = "Error al actualizar la solicitud ID: $idRetiro. " . $respuestaActualizacion['message'];
+                    $todosExitosos = false;
+                }
             }
-
-            // Llamar a la función de actualización con la fecha en el formato correcto
-            $resultado = actualizarRetirosAdminExcel($idRetiro, $montoDepositado, $fechaFormateada);
-
-            // Verificar el resultado y detener si hay un error
-            if ($resultado['status'] !== 'success') {
-                $respuesta = $resultado;
-                $todosExitosos = false;
-                break;
+            // Respuesta final si todos fueron exitosos
+            if ($todosExitosos) {
+                $respuesta = array("status" => 'success', "message" => "Todos los retiros se actualizaron exitosamente.");
+            } else {
+                $respuesta = array("status" => 'error', "message" => "Se encontraron errores en las actualizaciones.", "detalles" => $errores);
             }
         }
 

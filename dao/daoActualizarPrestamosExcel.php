@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Respuesta final si todos fueron exitosos
         if ($todosExitosos) {
-            $respuesta = array("status" => 'success', "message" => "Todos los retiros se actualizaron exitosamente.");
+            $respuesta = array("status" => 'success', "message" => "Todos los préstamos se actualizaron exitosamente.");
         } else {
             $respuesta = array("status" => 'error', "message" => "Se encontraron errores en las actualizaciones.", "detalles" => $errores);
         }
