@@ -853,18 +853,6 @@ section button{
   padding-bottom: 100px;
 }
 
-
-.login-section{
-  background-image: url('../images/slide/auto.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  height: 100%;
-}
-
 .tabla-section {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1883,7 +1871,7 @@ blockquote::before {
     margin-top: 0.5rem;
   }
   .tittleAdmin{
-    display: none;
+    display: none !important;
   }
 }
 
