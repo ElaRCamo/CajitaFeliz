@@ -212,10 +212,9 @@
                                     <ul class="list-group" id="sindUl">
                                         <li class="list-group-item d-flex justify-content-between align-items-center">Menos de 3 meses de antigüedad: $5,000</li>
                                         <li class="list-group-item d-flex justify-content-between align-items-center">Menos de 6 meses de antigüedad: $10,000</li>
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">Hasta $30,000</li>
                                     </ul>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center"><strong>Administrativos:</strong> Hasta 3 meses de salario</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center"><strong>Todo el personal:</strong> Hasta 3 meses de salario</li>
                             </ul>
                         </div>
                     </div>
