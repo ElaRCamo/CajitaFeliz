@@ -154,4 +154,8 @@ small{
     #divSiguenos {
         font-size: 0.7rem; /* Reduce el tamaño de fuente para redes sociales */
     }
+    #numNomina, #password, .login{
+        max-width: 290px;
+    }
+
 }

@@ -4,28 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="dates excel">
-      <change afterPath="$PROJECT_DIR$/images/slide/slide3.png" afterDir="false" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="slides">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/auto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/businessman-6636602_1920.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/computadora.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/escritorio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/escritorio2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/escritorio3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/globos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/globos.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/graficaMonedas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/grafico.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/monedas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/pigMoney.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/plantita2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/plantita3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/reloj.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/slide3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/success-6742364_1920.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/slide/tree-7788512.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,15 +91,7 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-      <workItem from="1731332222727" duration="25480000" />
-    </task>
-    <task id="LOCAL-00477" summary="datatable responsive">
-      <option name="closed" value="true" />
-      <created>1731336519787</created>
-      <option name="number" value="00477" />
-      <option name="presentableId" value="LOCAL-00477" />
-      <option name="project" value="LOCAL" />
-      <updated>1731336519787</updated>
+      <workItem from="1731332222727" duration="26409000" />
     </task>
     <task id="LOCAL-00478" summary="datatable responsive">
       <option name="closed" value="true" />
@@ -504,7 +477,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731360292366</updated>
     </task>
-    <option name="localTasksCounter" value="526" />
+    <task id="LOCAL-00526" summary="slides">
+      <option name="closed" value="true" />
+      <created>1731423878948</created>
+      <option name="number" value="00526" />
+      <option name="presentableId" value="LOCAL-00526" />
+      <option name="project" value="LOCAL" />
+      <updated>1731423878948</updated>
+    </task>
+    <option name="localTasksCounter" value="527" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Apartado misSolicitudes caja de ahorro" />
     <MESSAGE value="Apartado misSolicitudes RETIROS" />
     <MESSAGE value="Apartado Solicitudes Prestamos Admin" />
     <MESSAGE value="Apartado tipo de consulta" />
@@ -547,7 +527,8 @@
     <MESSAGE value="modal read retiro" />
     <MESSAGE value="datatable responsive" />
     <MESSAGE value="dates excel" />
-    <option name="LAST_COMMIT_MESSAGE" value="dates excel" />
+    <MESSAGE value="slides" />
+    <option name="LAST_COMMIT_MESSAGE" value="slides" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
