@@ -60,7 +60,7 @@
 
                     <div class="d-flex flex-column justify-content-end align-items-end" style="height: 100%;">
                         <div class="p-2">
-                            <small><strong>Préstamos y Caja de Ahorro Grammer</strong></small>
+                            <small><strong>Caja de Ahorro</strong></small>
                         </div>
                     </div>
 

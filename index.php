@@ -36,7 +36,7 @@
             <a class="navbar-brand" href="index.php">
                 <img src="images/icons/GrammerAzul.png" class="m-lg-3 logo img-fluid" alt="Logo Grammer">
                 <img src="images/icons/croc_logo.png" class="m-lg-3 logo img-fluid" alt="Logo CROC">
-                <span id="titCajita">Cajita Grammer</span>
+                <span id="titCajita">Caja de Ahorro</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
