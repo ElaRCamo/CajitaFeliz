@@ -52,10 +52,7 @@
             <a class="navbar-brand" href="index.php">
                 <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
                 <img src="images/icons/GrammerAzul.png" class="logo img-fluid" alt="Logo Grammer">
-                <span id="tittleAdmin">
-                    Cajita Feliz Grammer
-                    <small>Grammer Automotive Puebla S.A. de C.V</small>
-                </span>
+                <span id="tittleAdmin">Cajita Grammer</span>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
