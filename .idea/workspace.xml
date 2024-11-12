@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="dates excel">
+      <change afterPath="$PROJECT_DIR$/images/slide/slide3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/auto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/businessman-6636602_1920.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/computadora.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/escritorio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/escritorio2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/escritorio3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/globos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/globos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/graficaMonedas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/grafico.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/monedas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/pigMoney.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/plantita2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/plantita3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/reloj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/slide3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/success-6742364_1920.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/slide/tree-7788512.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,25 +57,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/CajitaFelizGrammer/css&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/CajitaFelizGrammer/images/slide",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\CajitaFelizGrammer\images\slide" />
       <recent name="C:\CajitaFelizGrammer\css" />
       <recent name="C:\CajitaFelizGrammer\dao" />
       <recent name="C:\CajitaFelizGrammer\images\icons" />
@@ -89,15 +110,7 @@
       <workItem from="1729877604619" duration="6231000" />
       <workItem from="1730122291976" duration="6277000" />
       <workItem from="1730319660375" duration="86254000" />
-      <workItem from="1731332222727" duration="23952000" />
-    </task>
-    <task id="LOCAL-00476" summary="datatable responsive">
-      <option name="closed" value="true" />
-      <created>1731336090434</created>
-      <option name="number" value="00476" />
-      <option name="presentableId" value="LOCAL-00476" />
-      <option name="project" value="LOCAL" />
-      <updated>1731336090434</updated>
+      <workItem from="1731332222727" duration="25480000" />
     </task>
     <task id="LOCAL-00477" summary="datatable responsive">
       <option name="closed" value="true" />
@@ -483,7 +496,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731358820554</updated>
     </task>
-    <option name="localTasksCounter" value="525" />
+    <task id="LOCAL-00525" summary="dates excel">
+      <option name="closed" value="true" />
+      <created>1731360292366</created>
+      <option name="number" value="00525" />
+      <option name="presentableId" value="LOCAL-00525" />
+      <option name="project" value="LOCAL" />
+      <updated>1731360292366</updated>
+    </task>
+    <option name="localTasksCounter" value="526" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

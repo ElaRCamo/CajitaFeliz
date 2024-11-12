@@ -111,7 +111,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/slide3.jpg"
+                                    <img src="images/slide/slide3.png"
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Recuerda</h1>
@@ -145,7 +145,7 @@
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="#section_1" class="d-block" onclick="fCargarPrestamo()">
-                                <img src="images/icons/prestamo.png" class="imgIcon featured-block-image img-fluid" alt="">
+                                <img src="images/icons/receipt.png" class="imgIcon featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text"> <strong>Solicitar  préstamo</strong></p>
                             </a>
@@ -155,7 +155,7 @@
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="#section_2" class="d-block" onclick="fCrearAhorro()">
-                                <img src="images/icons/ahorro.png" class="imgIcon featured-block-image img-fluid" alt="">
+                                <img src="images/icons/piggy-bank.png" class="imgIcon featured-block-image img-fluid" alt="">
                                 <p class="featured-block-text"><strong>Caja de ahorro</strong></p>
                             </a>
                         </div>
@@ -164,7 +164,7 @@
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="#section_3" class="d-block" onclick="fSolicitarRetiro()">
-                                <img src="images/icons/salario.png" class="imgIcon featured-block-image img-fluid" alt="">
+                                <img src="images/icons/money.png" class="imgIcon featured-block-image img-fluid" alt="">
                                 <p class="featured-block-text"> <strong>Retirar ahorro</strong></p>
                             </a>
                         </div>
@@ -173,7 +173,7 @@
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="#section_4" class="d-block" onclick="fCargarPreguntas()">
-                                <img src="images/icons/contrato.png" class="imgIcon featured-block-image img-fluid" alt="">
+                                <img src="images/icons/search.png" class="imgIcon featured-block-image img-fluid" alt="">
                                 <p class="featured-block-text"><strong>Preguntas frecuentes</strong></p>
                             </a>
                         </div>
