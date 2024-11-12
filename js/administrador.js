@@ -62,14 +62,14 @@ const dataTablePrestamosAdmin = async (anio) => {
         let content = '';
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
-            //const montoSolFormateado = formatearMonto(item.montoSolicitado);
+            const montoSolFormateado = formatearMonto(item.montoSolicitado);
 
             content += `
                 <tr>
                     <td>${item.idSolicitud}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${item.nominaSolicitante}</td>
-                    <td>${item.montoSolicitado}</td>
+                    <td>${montoSolFormateado}</td>
                     <td>${item.telefono}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
