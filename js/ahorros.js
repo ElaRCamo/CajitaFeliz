@@ -193,7 +193,7 @@ function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios) {
     for (let pair of formData.entries()) {
         formDataContents += `${pair[0]}: ${pair[1]}\n`;
     }
-    alert(formDataContents);
+    //alert(formDataContents);
 
     // Enviar los datos utilizando fetch
     fetch('dao/daoGuardarAhorro.php', {
@@ -223,7 +223,7 @@ function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios) {
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Ocurrió un error al procesar la solicitud.');
+            //alert('Ocurrió un error al procesar la solicitud.');
         });
 }
 

@@ -471,7 +471,7 @@ function guardarAvales(){
     let nomina1 = document.getElementById("nominaAval1").value;
     let nomina2 = document.getElementById("nominaAval2").value;
 
-    alert("solicitud: "+solicitud)
+    //alert("solicitud: "+solicitud)
 
     let formData = new FormData();
 
@@ -532,7 +532,7 @@ function consultarNombreAval(nomina, campoNombre, idNominaInput) {
             $(campoNombre).val('Ingresa un número de nómina válido.');
         }
     }).fail(function() {
-        alert('Error al consultar el nombre del aval.');
+        console.log('Error al consultar el nombre del aval.');
     });
 }
 

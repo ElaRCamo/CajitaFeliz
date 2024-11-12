@@ -1882,6 +1882,9 @@ blockquote::before {
   .btnAvales{
     margin-top: 0.5rem;
   }
+  .tittleAdmin{
+    display: none;
+  }
 }
 
 #section_1, #section_2, #section_3, #section_4{
