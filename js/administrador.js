@@ -64,13 +64,17 @@ const dataTablePrestamosAdmin = async (anio) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
             const montoSolFormateado = formatearMonto(item.montoSolicitado);
 
+            const fechaDepFormateada = formatearFecha(item.fechaDeposito);
+            const montoDepFormateado = formatearMonto(item.montoDepositado);
+
             content += `
                 <tr>
                     <td>${item.idSolicitud}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${item.nominaSolicitante}</td>
-                    <td>${montoSolFormateado}</td>
                     <td>${item.telefono}</td>
+                    <td>${fechaDepFormateada}</td>
+                    <td>${montoDepFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
                         <button class="btn btn-primary" onclick="responderPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">

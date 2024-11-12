@@ -103,8 +103,9 @@
                             <th>Folio</th>
                             <th>Fecha Solicitud</th>
                             <th>Nómina</th>
-                            <th>Monto</th>
                             <th>Teléfono</th>
+                            <th>Fecha Deposito</th>
+                            <th>Monto Depositado</th>
                             <th>Estatus</th>
                             <th>Acciones</th>
                         </tr>
