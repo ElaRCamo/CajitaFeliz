@@ -314,8 +314,10 @@ function mostrarRespuestaPrestamo(idSolicitud){
         data = response.data[0];
 
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
+        let fechaDepFormateada = formatearFecha(data.fechaDeposito);
         let montoForSol = formatearMonto(data.montoSolicitado);
         let montoForAut = formatearMonto(data.montoAprobado);
+        let montoForDep = formatearMonto(data.montoDepositado);
 
         $("#folioSolicitudMS").text(data.idSolicitud);
 
@@ -330,6 +332,12 @@ function mostrarRespuestaPrestamo(idSolicitud){
         $("#comentariosMS").text(data.comentariosAdmin);
 
         $("#montoAprobadoMS").text(montoForAut);
+
+        $("#montoDepP").text(montoForDep);
+
+        $("#FechaDepP").text(fechaDepFormateada);
+
+
 
         /*alert(
             "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +

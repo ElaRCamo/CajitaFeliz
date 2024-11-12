@@ -228,6 +228,18 @@
                         </tr>
                         <tr>
                             <td class="etiqueta">
+                                <strong>Monto depositado:</strong>
+                            </td>
+                            <td id="montoDepP">[Monto depositado]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
+                                <strong>Fecha depósito:</strong>
+                            </td>
+                            <td id="FechaDepP">[Fecha depósito]</td>
+                        </tr>
+                        <tr>
+                            <td class="etiqueta">
                                 <strong>Comentarios:</strong>
                             </td>
                             <td id="comentariosMS">[Comentarios]</td>

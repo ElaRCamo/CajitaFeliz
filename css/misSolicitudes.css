@@ -196,7 +196,7 @@ h3{
 /* Media Query para pantallas de tamaño tablet (ancho máximo de 1024px) */
 @media (max-width: 1400px) {
 
-    #tituloCajita {
+    #tituloCajita, #tittleAdmin {
         display: none;
     }
 }
@@ -310,6 +310,10 @@ h3{
     #tablaRetirosAdmin_filter
     {
         border-top-right-radius: 0 !important;
+    }
+
+    .titCajita{
+       display: none;
     }
 }
 

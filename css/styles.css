@@ -1786,7 +1786,6 @@ blockquote::before {
   align-items: center;
 }
 
-
 .answer {
   display: none;
   padding-top: 5px;
@@ -1831,7 +1830,6 @@ blockquote::before {
   position: relative;
 }
 
-
 /* Estilos específicos para pantallas móviles en #section_3 */
 @media (max-width: 768px) {
   #section_3 .container {
@@ -1855,7 +1853,7 @@ blockquote::before {
     margin-top: 100px !important;
   }
 
-  #titCajita{
+  #titCajita, #tittleAdmin{
     display: none;
   }
 
@@ -1873,9 +1871,6 @@ blockquote::before {
   }
   .btnAvales{
     margin-top: 0.5rem;
-  }
-  .tittleAdmin{
-    display: none !important;
   }
 }
 
@@ -1902,8 +1897,6 @@ blockquote::before {
 .bgEstatusRet{
   margin-top: 4px;
 }
-
-
 
 #btnInsertarPrestamosExcel, #btnInsertarRetirosExcel{
   background-color: #005195 !important;
