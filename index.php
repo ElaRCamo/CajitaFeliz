@@ -199,7 +199,7 @@
                                     <input type="text" name="montoPrestamo" id="montoPrestamo" class="form-control" placeholder="$1,000.00" required>
                                 </div>
                             </div>
-                            <button type="button"  class="form-control" onclick="autorizarSolicitud()">Solicitar</button>
+                            <button type="button"  class="form-control" onclick="registrarPrestamo()">Solicitar</button>
                         </form>
                     </div>
                     <div class="col-lg-6 col-12" id="divMontos">
