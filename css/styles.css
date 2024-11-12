@@ -1726,6 +1726,10 @@ blockquote::before {
 
 }
 
+.tittleAdmin{
+  margin-left: 5rem;
+}
+
 #cerrarSesion {
   border: none;
   background-color: transparent;
@@ -1899,9 +1903,7 @@ blockquote::before {
   margin-top: 4px;
 }
 
-.tittleAdmin{
-  margin-left: 5rem;
-}
+
 
 #btnInsertarPrestamosExcel, #btnInsertarRetirosExcel{
   background-color: #005195 !important;
