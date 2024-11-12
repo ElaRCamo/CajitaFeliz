@@ -47,6 +47,9 @@ function todosLosPrestamos($anio)
             s.idSolicitud,
             s.nominaSolicitante,
             s.fechaSolicitud,
+            s.montoSolicitado,
+            s.fechaDeposito,
+            s.montoDepositado,
             s.idEstatus,
             s.telefono,
             CASE
