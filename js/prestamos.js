@@ -97,7 +97,7 @@ function registrarPrestamo() {
             const data = new FormData();
 
             data.append('telefono', telefono.trim());
-            data.append('montoSolicitado', montoValidado.trim());
+            data.append('montoSolicitado', montoValidado);
 
             fetch('dao/daoSolicitudPrestamo.php', {
                 method: 'POST',
