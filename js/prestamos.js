@@ -72,15 +72,15 @@ function validarTelefono(telefono) {
 
 function validarMonto(montoInput) {
     const montoSinSimbolo = montoInput.replace(/[$\s]/g, '');
-
     const monto = parseFloat(montoSinSimbolo);
 
     if (isNaN(monto) || monto <= 0) {
-        return false;
+        return null; // Devuelve null si el monto es inválido o no es positivo
     } else {
-        return true;
+        return monto; // Devuelve el monto positivo
     }
 }
+
 
 
 function registrarPrestamo() {
@@ -90,12 +90,14 @@ function registrarPrestamo() {
 
     if (validarTelefono(telefono)) {
 
-        if(validarMonto(montoSolicitado)) {
+        let montoValidado = validarMonto(montoSolicitado);
+
+        if(montoValidado !== null) {
 
             const data = new FormData();
 
             data.append('telefono', telefono.trim());
-            data.append('montoSolicitado', montoSolicitado.trim());
+            data.append('montoSolicitado', montoValidado.trim());
 
             fetch('dao/daoSolicitudPrestamo.php', {
                 method: 'POST',
@@ -151,7 +153,7 @@ function registrarPrestamo() {
     } else {
         Swal.fire({
             title: "Datos incorrectos",
-            text: "Número de teléfono inválido. Asegúrate de usar el formato: 555-1234567.",
+            text: "Número de teléfono inválido. Debe ingresar 10 dígitos.",
             icon: "error"
         });
     }
