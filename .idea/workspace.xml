@@ -90,14 +90,6 @@
       <workItem from="1730319660375" duration="86254000" />
       <workItem from="1731332222727" duration="30514000" />
     </task>
-    <task id="LOCAL-00485" summary="datatable responsive">
-      <option name="closed" value="true" />
-      <created>1731338457187</created>
-      <option name="number" value="00485" />
-      <option name="presentableId" value="LOCAL-00485" />
-      <option name="project" value="LOCAL" />
-      <updated>1731338457187</updated>
-    </task>
     <task id="LOCAL-00486" summary="datatable responsive">
       <option name="closed" value="true" />
       <created>1731338615633</created>
@@ -482,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731432989267</updated>
     </task>
-    <option name="localTasksCounter" value="534" />
+    <task id="LOCAL-00534" summary="responsivity">
+      <option name="closed" value="true" />
+      <created>1731433263327</created>
+      <option name="number" value="00534" />
+      <option name="presentableId" value="LOCAL-00534" />
+      <option name="project" value="LOCAL" />
+      <updated>1731433263327</updated>
+    </task>
+    <option name="localTasksCounter" value="535" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
