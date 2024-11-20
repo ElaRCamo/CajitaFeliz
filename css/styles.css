@@ -167,7 +167,7 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 input::placeholder {
-  color: rgba(255, 0, 0, 0.5) !important;
+  color: rgba(0, 0, 0, 0.2) !important;
 }
 
 /*---------------------------------------
