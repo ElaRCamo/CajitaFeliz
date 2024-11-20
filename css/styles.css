@@ -166,7 +166,9 @@ b,
 strong {
   font-weight: var(--font-weight-bold);
 }
-
+input::placeholder {
+  color: rgba(255, 0, 0, 0.5);  /* Negro con 50% de transparencia */
+}
 
 /*---------------------------------------
   SECTION
