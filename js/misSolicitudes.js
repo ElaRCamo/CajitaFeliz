@@ -425,6 +425,11 @@ function fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud) {
     const titulo = "Avales para la Solicitud " + idSolicitud;
     actualizarTitulo('#modalTitAvales', titulo);
 
+    let telAval1 = document.getElementById("telAval1");
+    let telAval2 = document.getElementById("telAval2");
+    telAval1.value = tel1;
+    telAval2.value = tel2;
+
     let formData = new FormData();
 
     formData.append('nom1', aval1);
@@ -455,12 +460,6 @@ function fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud) {
 
                 nombre1.value = valNombre1;
                 nombre2.value = valNombre2;
-
-                let telAval1 = document.getElementById("telAval1");
-                let telAval2 = document.getElementById("telAval2");
-
-                telAval1.value = tel1;
-                telAval2.value = tel2;
 
             } else {
                 Swal.fire({
