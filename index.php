@@ -28,21 +28,13 @@
     // Verificar si se pasó el parámetro `user` en la URL
     $user = isset($_GET['user']) ? $_GET['user'] : null;
 
-    // Si la sesión no está iniciada, o no se ha pasado el `user` en la URL, pedir autorización con el TAG
-    if ($nombreUser == null && $user != null) {
-        // Aquí llamamos a la función JavaScript que muestra el SweetAlert y pasamos el `user` a la función
-        echo "<script>autorizarSolicitud('$user');</script>";
-    } else {
-        // Si ya está logueado, proceder con lo que sea necesario en la página
-        echo "Bienvenido, " . htmlspecialchars($nombreUser);
+    if ($nombreUser == null && $user != null){
+        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
     }
     ?>
-
-
-
 </head>
 
-<body>
+<body onload="validarUser()">
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">

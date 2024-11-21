@@ -1,3 +1,13 @@
+function validarUser(){
+    // Obtiene el valor del parámetro 'user' en la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const userValue = urlParams.get('user');
+
+    // Si el valor de 'user' no está presente o es inválido, muestra un mensaje o redirige
+    if (userValue !== null) {
+        autorizarSolicitud(userValue);
+    }
+}
 function autorizarSolicitud(user) {
     Swal.fire({
         title: 'Autorización requerida',
