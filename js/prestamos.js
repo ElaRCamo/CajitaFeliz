@@ -42,6 +42,7 @@ function validarUser(user) {
                                 title: 'Error',
                                 text: 'TAG incorrecto.'
                             });
+                            validarUser(user);
                         }
                     })
                     .catch(error => {
@@ -50,7 +51,7 @@ function validarUser(user) {
                             title: 'Error',
                             text: 'Hubo un problema con la conexión.'
                         });
-                        validarUser(user);
+
                     });
             }
         }
