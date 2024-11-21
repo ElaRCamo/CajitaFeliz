@@ -410,7 +410,6 @@ function consultarAvales(idSolicitud){
         aval2 = data.nominaAval2;
         tel1 = data.telAval1;
         tel2 = data.telAval2;
-        console.log("consultarAvales tel1 "+tel1+" tel2 "+tel2)
 
     }).then(function(){
         fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud);
@@ -426,8 +425,6 @@ function fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud) {
     const titulo = "Avales para la Solicitud " + idSolicitud;
     actualizarTitulo('#modalTitAvales', titulo);
 
-    alert("fCargarAvales tel1 "+tel1+" tel2 "+tel2)
-    console.log("tel1 "+tel1+" tel2 "+tel2)
     let telAval1 = document.getElementById("telAval1");
     let telAval2 = document.getElementById("telAval2");
     telAval1.value = tel1;
