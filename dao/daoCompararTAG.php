@@ -1,6 +1,7 @@
 <?php
 include_once('connection.php');
 include_once('daoUsuario.php');
+include_once('daoVerificarAdmin.php');
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['password'], $_POST['user'])){
