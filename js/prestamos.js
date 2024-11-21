@@ -50,6 +50,7 @@ function validarUser(user) {
                             title: 'Error',
                             text: 'Hubo un problema con la conexión.'
                         });
+                        validarUser(user);
                     });
             }
         }
