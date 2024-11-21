@@ -21,9 +21,13 @@
                                 <label for="nominaAval1">Nómina: </label>
                                 <input type="text" name="nominaAval1" id="nominaAval1" class="form-control" placeholder="Nómina" required>
                             </div>
-                            <div class="col-lg-9 col-12">
+                            <div class="col-lg-6 col-12">
                                 <label for="nombreAval1">Nombre: </label>
                                 <input type="text" name="nombreAval1" id="nombreAval1" class="form-control" placeholder="Nombre aval 1" required>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <label for="telAval1">Teléfono: </label>
+                                <input type="tel" name="telAval1" id="telAval1" class="form-control" placeholder="Teléfono aval 1" required>
                             </div>
                         </div>
                         <div class="col-lg-12 col-12 row">
@@ -32,9 +36,13 @@
                                 <label for="nominaAval2">Nómina: </label>
                                 <input type="text" name="nominaAval2" id="nominaAval2" class="form-control" placeholder="Nómina" required>
                             </div>
-                            <div class="col-lg-9 col-12">
+                            <div class="col-lg-6 col-12">
                                 <label for="nombreAval2">Nombre: </label>
                                 <input type="text" name="nombreAval2" id="nombreAval2" class="form-control" placeholder="Nombre aval 2" required>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <label for="telAval2">Teléfono: </label>
+                                <input type="tel" name="telAval2" id="telAval2" class="form-control" placeholder="Teléfono aval 2" required>
                             </div>
                         </div>
                     </div>
