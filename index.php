@@ -19,6 +19,7 @@
    <link href="css/styles.css" rel="stylesheet">
 
     <script src="js/prestamos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?php
     session_start();
