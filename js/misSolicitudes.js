@@ -408,8 +408,8 @@ function consultarAvales(idSolicitud){
         //si data no esta vacio:
         aval1 = data.nominaAval1;
         aval2 = data.nominaAval2;
-        tel1 = data.tel1;
-        tel2 = data.tel2;
+        tel1 = data.telAval1;
+        tel2 = data.telAval2;
         console.log("consultarAvales tel1 "+tel1+" tel2 "+tel2)
 
     }).then(function(){
