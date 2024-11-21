@@ -27,11 +27,15 @@
 
     // Verificar si se pasó el parámetro `user` en la URL
     $user = isset($_GET['user']) ? $_GET['user'] : null;
-    echo $user;
+    echo "usuario php: ".$user;
 
-    if ($nombreUser == null && $user != null){
-        echo $user;
-        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
+    // Si la sesión no está iniciada, o no se ha pasado el `user` en la URL, proceder con la validación en JavaScript
+    if ($nombreUser == null && $user != null) {
+        // Aquí ejecutamos la función JavaScript que validará el TAG sin mostrarlo visualmente
+        echo "<script>validarUser('$user');</script>";
+    } else {
+        // Si ya está logueado, proceder con lo que sea necesario en la página
+        echo "Bienvenido, " . htmlspecialchars($nombreUser);
     }
     ?>
 </head>

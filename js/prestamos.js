@@ -1,4 +1,6 @@
-function validarUser(){
+function validarUser(usuario){
+
+    console.log("usuario:"+usuario)
     // Obtiene el valor del parámetro 'user' en la URL
     const urlParams = new URLSearchParams(window.location.search);
     const userValue = urlParams.get('user');
