@@ -49,6 +49,7 @@
     </script>
     <?php endif; ?>
 
+    <?php if ($nombreUser != null): ?>
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">
@@ -577,5 +578,5 @@
     <script src="js/general.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-
+<?php endif; ?>
 </html>
