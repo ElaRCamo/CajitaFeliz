@@ -27,6 +27,7 @@
 
     // Verificar si se pasó el parámetro `user` en la URL
     $user = isset($_GET['user']) ? $_GET['user'] : null;
+    echo $user;
 
     if ($nombreUser == null && $user != null){
         header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
