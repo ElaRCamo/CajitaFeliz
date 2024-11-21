@@ -410,13 +410,15 @@ function consultarAvales(idSolicitud){
         //si data no esta vacio:
         aval1 = data.nominaAval1;
         aval2 = data.nominaAval2;
+        let tel1 = data.tel1;
+        let tel2 = data.tel2;
 
     }).then(function(){
-        fCargarAvales(aval1,aval2,idSolicitud);
+        fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud);
     });
 }
 
-function fCargarAvales(aval1, aval2, idSolicitud) {
+function fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud) {
 
     if(aval1 === '00000000' && aval2 === '00000000'){
         return;
@@ -443,6 +445,12 @@ function fCargarAvales(aval1, aval2, idSolicitud) {
 
                 let nombre1 = document.getElementById("nombreAval1");
                 let nombre2 = document.getElementById("nombreAval2");
+
+                let telAval1 = document.getElementById("telAval1");
+                let telAval2 = document.getElementById("telAval2");
+
+                telAval1.value = tel1;
+                telAval2.value = tel2;
 
                 let valNomina1 = data.data[0]?.IdUser || '';
                 let valNomina2 = data.data[1]?.IdUser || '';
@@ -480,8 +488,6 @@ function guardarAvales(){
     let nomina2 = document.getElementById("nominaAval2").value;
     let tel1 = document.getElementById("telAval1").value;
     let tel2 = document.getElementById("telAval2").value;
-
-    alert ("tel1: "+tel1+" tel2: "+tel2);
 
     if(validarTelefono(tel1) && validarTelefono(tel2)){
         //alert("solicitud: "+solicitud)
