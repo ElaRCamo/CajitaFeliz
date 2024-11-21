@@ -162,3 +162,15 @@ function fCargarPreguntas(){
         sectionPreguntas.style.display = "block";
     }
 }
+
+
+function validarTelefono(telefono) {
+    // Expresión regular para validar un número de teléfono de 10 dígitos
+    const regex = /^\d{10}$/; // Formato: 5551234567
+
+    if (regex.test(telefono)) {
+        return true; // Teléfono válido
+    } else {
+        return false; // Teléfono inválido
+    }
+}

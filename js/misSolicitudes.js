@@ -478,45 +478,56 @@ function guardarAvales(){
     let solicitud = document.getElementById("folioSolPres").textContent;
     let nomina1 = document.getElementById("nominaAval1").value;
     let nomina2 = document.getElementById("nominaAval2").value;
+    let tel1 = document.getElementById("telAval1").value;
+    let tel2 = document.getElementById("telAval2").value;
 
-    //alert("solicitud: "+solicitud)
+    if(validarTelefono(tel1) && validarTelefono(tel2)){
+        //alert("solicitud: "+solicitud)
 
-    let formData = new FormData();
+        let formData = new FormData();
 
-    formData.append('idSolicitud', solicitud.trim());
-    formData.append('nom1', nomina1.trim());
-    formData.append('nom2', nomina2.trim());
+        formData.append('idSolicitud', solicitud.trim());
+        formData.append('nom1', nomina1.trim());
+        formData.append('nom2', nomina2.trim());
+        formData.append('tel1', tel1.trim());
+        formData.append('tel2', tel2.trim());
 
-    fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarAvales.php', {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === "success") {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Actualización exitosa',
-                    text: data.message
-                });
+        fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarAvales.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Actualización exitosa',
+                        text: data.message
+                    });
 
-            } else {
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: data.message
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: data.message
+                    text: 'Ocurrió un error al consultar la información. Intente nuevamente.'
                 });
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Ocurrió un error al consultar la información. Intente nuevamente.'
             });
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Número de teléfono no válido, verifique e intente nuevamente.'
         });
-
+    }
 }
 function generarNomina(nomina) {
 

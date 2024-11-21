@@ -65,16 +65,6 @@ function validarUser(user) {
     });
 }
 
-function validarTelefono(telefono) {
-    // Expresión regular para validar un número de teléfono de 10 dígitos
-    const regex = /^\d{10}$/; // Formato: 5551234567
-
-    if (regex.test(telefono)) {
-        return true; // Teléfono válido
-    } else {
-        return false; // Teléfono inválido
-    }
-}
 
 function validarMonto(montoInput) {
     const montoSinSimbolo = montoInput.replace(/[$\s]/g, '');
