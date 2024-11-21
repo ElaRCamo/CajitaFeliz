@@ -32,7 +32,7 @@
     $user = isset($_GET['user']) ? $_GET['user'] : null;
 
     // Si el nombre de usuario no está definido (sesión no válida), redirige a login
-    if ($nombreUser == null) {
+    if ($nombreUser == null && $user == null) {
         header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
         exit;
     }
@@ -41,7 +41,7 @@
 
 <body>
 
-    <?php if ($user != null): ?>
+    <?php if ($nombreUser == null && $user != null): ?>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             validarUser('<?php echo $user; ?>');
