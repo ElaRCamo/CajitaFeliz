@@ -22,25 +22,27 @@
     session_start();
 
     // Verificar si el usuario está logueado
-    $nombreUser = $_SESSION['nombreUsuario'];
-    $esAdmin = $_SESSION['admin'];
+    $nombreUser = isset($_SESSION['nombreUsuario']) ? $_SESSION['nombreUsuario'] : null;
+    $esAdmin = isset($_SESSION['admin']) ? $_SESSION['admin'] : null;
 
     // Verificar si se pasó el parámetro `user` en la URL
     $user = isset($_GET['user']) ? $_GET['user'] : null;
-    echo "usuario php: ".$user;
 
-    // Si la sesión no está iniciada, o no se ha pasado el `user` en la URL, proceder con la validación en JavaScript
-    if ($nombreUser == null && $user != null) {
-        // Aquí ejecutamos la función JavaScript que validará el TAG sin mostrarlo visualmente
+    // Si el usuario está logueado, se deja entrar directamente
+    if ($nombreUser !== null) {
+        echo "Bienvenido, " . htmlspecialchars($nombreUser);
+    } elseif ($user !== null) {
+        // Si el parámetro `user` está presente en la URL, ejecutar el paso de validación de TAG
         echo "<script>validarUser('$user');</script>";
     } else {
-        // Si ya está logueado, proceder con lo que sea necesario en la página
-        echo "Bienvenido, " . htmlspecialchars($nombreUser);
+        // Si no hay sesión y no hay `user` en la URL, redirigir a la página de login
+        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
+        exit;
     }
     ?>
 </head>
 
-<body onload="validarUser()">
+<body>
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">

@@ -1,16 +1,4 @@
-function validarUser(usuario){
-
-    console.log("usuario:"+usuario)
-    // Obtiene el valor del parámetro 'user' en la URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const userValue = urlParams.get('user');
-
-    // Si el valor de 'user' no está presente o es inválido, muestra un mensaje o redirige
-    if (userValue !== null) {
-        autorizarSolicitud(userValue);
-    }
-}
-function autorizarSolicitud(user) {
+function validarUser(user) {
     Swal.fire({
         title: 'Autorización requerida',
         input: 'password',
@@ -67,7 +55,6 @@ function autorizarSolicitud(user) {
         }
     });
 }
-
 
 function validarTelefono(telefono) {
     // Expresión regular para validar un número de teléfono de 10 dígitos
