@@ -27,7 +27,7 @@ function validarUser(user) {
                 formData.append('user', user);  // Pasar el `user` a la solicitud también
 
                 // Enviar los datos al servidor mediante fetch
-                fetch('dao/daoValidarTAG.php', {
+                fetch('dao/daoCompararTAG.php', {
                     method: 'POST',
                     body: formData
                 })
