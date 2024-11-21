@@ -13,8 +13,6 @@ if (isset($_POST['iniciarSesionBtn'])) {
     $resultado = Usuario($Nomina);
 
     if ($resultado['success']) {
-        $_SESSION['numNomina'] = $Nomina;
-
         $_SESSION['nombreUsuario'] = $resultado['nombreUsuario'];
         $_SESSION['nomina'] = $resultado['idUser'];
         $_SESSION['passTag'] = $resultado['password_bd'];

@@ -15,13 +15,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         if($resultado['success'] && $_POST['password'] == $resultado['password_bd']){
             session_start();
 
-            $_SESSION['numNomina'] = $Nomina;
             $_SESSION['nombreUsuario'] = $resultado['nombreUsuario'];
             $_SESSION['nomina'] = $resultado['idUser'];
             $_SESSION['passTag'] = $resultado['password_bd'];
-
-            $password_bd = $resultado['password_bd'];
-            $passwordS = $_POST['password'];
 
             $consultarEstatus = getAdmin($Nomina);
             if ($consultarEstatus['success']) {
