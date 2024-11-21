@@ -31,14 +31,8 @@
     // Verificar si se pasó el parámetro `user` en la URL
     $user = isset($_GET['user']) ? $_GET['user'] : null;
 
-    // Si el usuario está logueado, se deja entrar directamente
-    if ($nombreUser !== null) {
-        echo "Bienvenido, " . htmlspecialchars($nombreUser);
-    } elseif ($user !== null) {
-        // Si el parámetro `user` está presente en la URL, ejecutar el paso de validación de TAG
-        echo "<script>validarUser('$user');</script>";
-    } else {
-        // Si no hay sesión y no hay `user` en la URL, redirigir a la página de login
+    // Si el nombre de usuario no está definido (sesión no válida), redirige a login
+    if ($nombreUser == null) {
         header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
         exit;
     }
@@ -46,6 +40,15 @@
 </head>
 
 <body>
+
+    <?php if ($user != null): ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            validarUser('<?php echo $user; ?>');
+        });
+    </script>
+    <?php endif; ?>
+
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container" id="top">
             <a class="navbar-brand" href="index.php">
