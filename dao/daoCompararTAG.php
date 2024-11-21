@@ -17,20 +17,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION['numNomina'] = $Nomina;
             $_SESSION['nombreUsuario'] = $resultado['nombreUsuario'];
-            $_SESSION['nomina'] = $resultado['idUser'];
-            $_SESSION['passTag'] = $resultado['password_bd'];
-
-            $password_bd = $resultado['password_bd'];
-            $passwordS = $_POST['password'];
 
             $consultarEstatus = getAdmin($Nomina);
-            if ($consultarEstatus['success']) {
-                $_SESSION['admin'] = $consultarEstatus['estatus'];
-            } else {
-                $_SESSION['admin'] = 0;
-            }
+            $_SESSION['admin'] = $consultarEstatus['estatus'];
 
-            $respuesta = array("success" => true, "message" => "Inicio de sesión correcto.");
+            $respuesta = array("success" => true, "message" => "Inicio de sesión correcto. admin: ".$_SESSION['admin']);
         } else {
             $respuesta = array("success" => false, "message" => "TAG incorrecto.");
         }
