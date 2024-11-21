@@ -1,7 +1,7 @@
 <?php
 include_once('connectionCajita.php');
 
-if (!empty($_POST["idSolicitud"]) && !empty($_POST["nom1"]) && !empty($_POST["nom2"])){
+if (!empty($_POST["idSolicitud"]) && !empty($_POST["nom1"]) && !empty($_POST["nom2"]) && !empty($_POST["tel1"]) && !empty($_POST["tel2"])){
     $solicitud = $_POST["idSolicitud"];
     $nomina1 = $_POST["nom1"];
     $nomina2 = $_POST["nom2"];

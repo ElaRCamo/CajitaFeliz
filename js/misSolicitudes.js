@@ -481,6 +481,8 @@ function guardarAvales(){
     let tel1 = document.getElementById("telAval1").value;
     let tel2 = document.getElementById("telAval2").value;
 
+    alert ("tel1: "+tel1+" tel2: "+tel2);
+
     if(validarTelefono(tel1) && validarTelefono(tel2)){
         //alert("solicitud: "+solicitud)
 
