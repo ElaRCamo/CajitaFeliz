@@ -19,15 +19,27 @@
    <link href="css/styles.css" rel="stylesheet">
 
     <?php
-        session_start();
-        $nombreUser = $_SESSION['nombreUsuario'];
-        $esAdmin = $_SESSION['admin'];
+    session_start();
 
-    if ($nombreUser == null){
-        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
+    // Verificar si el usuario está logueado
+    $nombreUser = $_SESSION['nombreUsuario'];
+    $esAdmin = $_SESSION['admin'];
+
+    // Verificar si se pasó el parámetro `user` en la URL
+    $user = isset($_GET['user']) ? $_GET['user'] : null;
+
+    // Si la sesión no está iniciada, o no se ha pasado el `user` en la URL, pedir autorización con el TAG
+    if ($nombreUser == null && $user != null) {
+        // Aquí llamamos a la función JavaScript que muestra el SweetAlert y pasamos el `user` a la función
+        echo "<script>autorizarSolicitud('$user');</script>";
+    } else {
+        // Si ya está logueado, proceder con lo que sea necesario en la página
+        echo "Bienvenido, " . htmlspecialchars($nombreUser);
     }
-
     ?>
+
+
+
 </head>
 
 <body>

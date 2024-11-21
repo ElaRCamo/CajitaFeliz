@@ -1,4 +1,4 @@
-function autorizarSolicitud(){
+function autorizarSolicitud(user) {
     Swal.fire({
         title: 'Autorización requerida',
         input: 'password',
@@ -12,7 +12,6 @@ function autorizarSolicitud(){
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.isConfirmed) {
-
             const password = result.value;
 
             if (password === "") {
@@ -22,42 +21,41 @@ function autorizarSolicitud(){
                     text: 'Debe ingresar un TAG válido.'
                 });
             } else {
-
-                const formData = new FormData(document.getElementById('formSolicitarPrestamo'));
-
+                // Crea un objeto FormData para enviar los datos al servidor
+                const formData = new FormData();
                 formData.append('password', password);
+                formData.append('user', user);  // Pasar el `user` a la solicitud también
 
-                // Enviar los datos al servidor
+                // Enviar los datos al servidor mediante fetch
                 fetch('dao/daoValidarTAG.php', {
                     method: 'POST',
                     body: formData
                 })
-                    .then(response => response.json())
+                    .then(response => response.json())  // Se espera una respuesta en formato JSON
                     .then(data => {
                         if (data.success) {
-
-                            registrarPrestamo();
-
+                            // Acción después de una validación exitosa
+                            window.location.href = 'index.php'; // Redirige o actualiza la página
                         } else {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Error',
-                                text: data.message // Mostrar el mensaje de error devuelto por el servidor
+                                text: 'TAG incorrecto.'
                             });
                         }
                     })
                     .catch(error => {
-                        console.error('Error:', error);
                         Swal.fire({
                             icon: 'error',
                             title: 'Error',
-                            text: 'Ocurrió un error al validar la contraseña. Intente nuevamente.'
+                            text: 'Hubo un problema con la conexión.'
                         });
                     });
             }
         }
     });
 }
+
 
 function validarTelefono(telefono) {
     // Expresión regular para validar un número de teléfono de 10 dígitos
