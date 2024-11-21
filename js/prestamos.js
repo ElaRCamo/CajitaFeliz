@@ -40,8 +40,12 @@ function validarUser(user) {
                                 icon: 'error',
                                 title: 'Error',
                                 text: 'TAG incorrecto.'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    // Llamar a la función validarUser(user) cuando se confirme el Swal
+                                    validarUser(user);
+                                }
                             });
-                            validarUser(user);
                         }
                     })
                     .catch(error => {
@@ -49,8 +53,11 @@ function validarUser(user) {
                             icon: 'error',
                             title: 'Error',
                             text: 'Hubo un problema con la conexión.'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                validarUser(user);
+                            }
                         });
-                        validarUser(user);
                     });
             }
         }
