@@ -1,8 +1,9 @@
 function validarUser(user) {
     Swal.fire({
         title: 'Autorización requerida',
+        text: 'Para acceder a la Caja de Ahorro, es necesario confirmar tu identidad mediante el TAG, lo que permitirá procesar tus solicitudes.',
         input: 'password',
-        inputLabel: 'Para acceder a la Caja de Ahorro, es necesario confirmar tu identidad mediante el TAG, lo que permitirá procesar tus solicitudes.',
+        inputLabel: 'TAG',
         inputPlaceholder: 'TAG',
         inputAttributes: {
             'aria-label': 'Contraseña'
