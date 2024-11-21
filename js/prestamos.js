@@ -24,18 +24,17 @@ function validarUser(user) {
                 // Crea un objeto FormData para enviar los datos al servidor
                 const formData = new FormData();
                 formData.append('password', password);
-                formData.append('user', user);  // Pasar el `user` a la solicitud también
+                formData.append('user', user);
 
                 // Enviar los datos al servidor mediante fetch
                 fetch('dao/daoCompararTAG.php', {
                     method: 'POST',
                     body: formData
                 })
-                    .then(response => response.json())  // Se espera una respuesta en formato JSON
+                    .then(response => response.json())
                     .then(data => {
                         if (data.success) {
-                            // Acción después de una validación exitosa
-                            window.location.href = 'index.php'; // Redirige o actualiza la página
+                            window.location.href = 'index.php';
                         } else {
                             Swal.fire({
                                 icon: 'error',
