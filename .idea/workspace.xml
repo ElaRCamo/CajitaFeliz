@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add tel endorsement">
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add comments in excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/daoActualizarPrestamosExcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoActualizarPrestamosExcel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,15 +95,7 @@
       <workItem from="1732036405251" duration="139000" />
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
-      <workItem from="1732305781835" duration="304000" />
-    </task>
-    <task id="LOCAL-00531" summary="responsivity">
-      <option name="closed" value="true" />
-      <created>1731429284392</created>
-      <option name="number" value="00531" />
-      <option name="presentableId" value="LOCAL-00531" />
-      <option name="project" value="LOCAL" />
-      <updated>1731429284392</updated>
+      <workItem from="1732305781835" duration="1235000" />
     </task>
     <task id="LOCAL-00532" summary="responsivity">
       <option name="closed" value="true" />
@@ -491,7 +481,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732216818542</updated>
     </task>
-    <option name="localTasksCounter" value="580" />
+    <task id="LOCAL-00580" summary="add comments in excel">
+      <option name="closed" value="true" />
+      <created>1732306252964</created>
+      <option name="number" value="00580" />
+      <option name="presentableId" value="LOCAL-00580" />
+      <option name="project" value="LOCAL" />
+      <updated>1732306252964</updated>
+    </task>
+    <option name="localTasksCounter" value="581" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Se carga estatus prestamo" />
     <MESSAGE value="Loan: Update by admin" />
     <MESSAGE value="Loan: Read by applicant" />
     <MESSAGE value="Loan: add endorsements" />
@@ -534,7 +531,8 @@
     <MESSAGE value="Change page" />
     <MESSAGE value="Comparar TAG" />
     <MESSAGE value="add tel endorsement" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tel endorsement" />
+    <MESSAGE value="add comments in excel" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comments in excel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

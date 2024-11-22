@@ -66,10 +66,11 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
         $fechaResp = date("Y-m-d");
 
         $updateSol = $conex->prepare("UPDATE Prestamo 
-                                      SET fechaDeposito = ?, 
-                                          montoDepositado = ?,
-                                          comentariosAdmin = ?
-                                      WHERE idSolicitud = ?");
+                                              SET fechaDeposito = ?, 
+                                                  montoDepositado = ?,
+                                                  idEstatus = 4,
+                                                  comentariosAdmin = ?
+                                              WHERE idSolicitud = ?");
         $updateSol->bind_param("sssi", $fechaDeposito, $montoDepositado,$comentarios, $idSolicitud);
         $resultado = $updateSol->execute();
 
