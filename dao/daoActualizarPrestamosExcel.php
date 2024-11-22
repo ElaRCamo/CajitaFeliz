@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $montoDepositado = isset($prestamo['montoDepositado']) ? trim($prestamo['montoDepositado']) : null;
             $fechaDeposito = isset($prestamo['fechaDeposito']) ? trim($prestamo['fechaDeposito']) : null;
             $fechaFormateada = formatearFecha($fechaDeposito);
+            $comentarios = isset($prestamo['comentarios']) ? trim($prestamo['comentarios']) : null;
 
             // Validar datos
             if (empty($idSolicitud) || empty($montoDepositado) || empty($fechaDeposito)) {
@@ -28,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $todosExitosos = false;
             } else {
                 // Llamar a la función de actualización con la fecha en el formato correcto
-                $respuestaActualizacion = actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaFormateada);
+                $respuestaActualizacion = actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaFormateada, $comentarios);
                 if ($respuestaActualizacion['status'] !== 'success') {
                     $errores[] = "Error al actualizar la solicitud ID: $idSolicitud. " . $respuestaActualizacion['message'];
                     $todosExitosos = false;
@@ -51,20 +52,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo json_encode($respuesta);
 
-function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito) {
+function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito, $comentarios) {
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
     $conex->begin_transaction();
+
+    if ($comentarios === null){
+        $comentarios = 'Sin comentarios.';
+    }
 
     try {
         $fechaResp = date("Y-m-d");
 
         $updateSol = $conex->prepare("UPDATE Prestamo 
                                       SET fechaDeposito = ?, 
-                                          montoDepositado = ?
+                                          montoDepositado = ?,
+                                          comentariosAdmin = ?
                                       WHERE idSolicitud = ?");
-        $updateSol->bind_param("ssi", $fechaDeposito, $montoDepositado, $idSolicitud);
+        $updateSol->bind_param("sssi", $fechaDeposito, $montoDepositado,$comentarios, $idSolicitud);
         $resultado = $updateSol->execute();
 
         if (!$resultado) {

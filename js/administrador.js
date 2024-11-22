@@ -299,7 +299,8 @@ async function insertarExcelPrestamos(file) {
                 idSolicitud: row[0],
                 montoDepositado: row[1],
                 // Convertir la fecha usando excelDateToJSDate
-                fechaDeposito: excelDateToJSDate(row[2])
+                fechaDeposito: excelDateToJSDate(row[2]),
+                comentarios: row[3]
             };
         });
 
