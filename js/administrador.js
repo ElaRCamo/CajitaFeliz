@@ -5,6 +5,7 @@
 document.getElementById("ejemploExcelP").addEventListener("click", function() {
     mostrarImagenTooltip(
         "ejemploExcelP",
+        "Ejemplo de excel para actualizar solicitudes",
         "https://grammermx.com/RH/CajitaGrammer/images/others/excelPrestamos.png",
         320,
         140

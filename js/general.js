@@ -179,7 +179,7 @@ function validarTelefono(telefono) {
 /********************************************************TOOLTIPS******************************************************/
 /**********************************************************************************************************************/
 
-function mostrarImagenTooltip(idTooltip, imageUrl, width, height) {
+function mostrarImagenTooltip(idTooltip, message, imageUrl, width, height) {
     const tooltip = document.getElementById(idTooltip);
 
     // Configuración de Tippy.js
@@ -202,6 +202,14 @@ function mostrarImagenTooltip(idTooltip, imageUrl, width, height) {
             container.style.width = `${width}px`;
             container.style.height = `${height}px`;
 
+            // Crear el elemento de texto para el mensaje
+            const text = document.createElement('p');
+            text.textContent = message; // Mensaje dinámico
+            text.style.margin = '0 0 10px'; // Margen inferior para separar del contenido siguiente
+            text.style.fontSize = '14px';
+            text.style.textAlign = 'center';
+            text.style.color = '#4d5154';
+
             // Crear el elemento de imagen
             const image = new Image();
             image.src = imageUrl;
@@ -212,6 +220,7 @@ function mostrarImagenTooltip(idTooltip, imageUrl, width, height) {
 
             // Agregar la imagen al contenedor
             container.appendChild(image);
+            container.appendChild(text);
 
             // Asignar el contenedor al contenido del tooltip
             instance.setContent(container);
