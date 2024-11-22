@@ -10,6 +10,9 @@
 
     <title>Administrar</title>
 
+    <!-- Tippy.js core styles -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,6 +29,8 @@
     <link href="css/styles.css" rel="stylesheet">
 
     <link href="css/misSolicitudes.css" rel="stylesheet">
+
+    <link href="css/admin.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -373,6 +378,8 @@
 <!-- moment.js para manejo de fechas-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
+<script src="https://unpkg.com/tippy.js@6"></script>
+
 
 <script>
     const anioActual = new Date().getFullYear();
@@ -400,6 +407,7 @@
         document.getElementById('logoutForm').submit();
     });
 </script>
+
 
 </body>
 
