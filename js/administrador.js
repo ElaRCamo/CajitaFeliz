@@ -5,7 +5,7 @@
 document.getElementById("ejemploExcelP").addEventListener("click", function() {
     mostrarImagenTooltip(
         "ejemploExcelP",
-        "https://grammermx.com/excelInventario/imgs/excelPrestamos.png",
+        "https://grammermx.com/RH/CajitaGrammer/images/others/excelPrestamos.png",
         320,
         140
     );

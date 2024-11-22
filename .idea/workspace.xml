@@ -6,23 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add comments in excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatar/portrait-young-beautiful-woman-gesticulating.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatar/portrait-young-redhead-bearded-male.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatar/studio-portrait-emotional-happy-funny.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/causes/african-woman-pouring-water-recipient-outdoors.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/causes/group-african-kids-paying-attention-class.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/causes/poor-child-landfill-looks-forward-with-hope.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/news/africa-humanitarian-aid-doctor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/news/close-up-happy-people-working-together.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/news/close-up-volunteer-oganizing-stuff-donation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/news/medium-shot-people-collecting-foodstuff.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/news/medium-shot-volunteers-with-clothing-donations.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/general.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,23 +97,7 @@
       <workItem from="1732036405251" duration="139000" />
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
-      <workItem from="1732305781835" duration="2459000" />
-    </task>
-    <task id="LOCAL-00533" summary="responsivity">
-      <option name="closed" value="true" />
-      <created>1731432989267</created>
-      <option name="number" value="00533" />
-      <option name="presentableId" value="LOCAL-00533" />
-      <option name="project" value="LOCAL" />
-      <updated>1731432989267</updated>
-    </task>
-    <task id="LOCAL-00534" summary="responsivity">
-      <option name="closed" value="true" />
-      <created>1731433263327</created>
-      <option name="number" value="00534" />
-      <option name="presentableId" value="LOCAL-00534" />
-      <option name="project" value="LOCAL" />
-      <updated>1731433263327</updated>
+      <workItem from="1732305781835" duration="2827000" />
     </task>
     <task id="LOCAL-00535" summary="responsivity">
       <option name="closed" value="true" />
@@ -506,7 +475,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732307341828</updated>
     </task>
-    <option name="localTasksCounter" value="582" />
+    <task id="LOCAL-00582" summary="add comments in excel">
+      <option name="closed" value="true" />
+      <created>1732308331885</created>
+      <option name="number" value="00582" />
+      <option name="presentableId" value="LOCAL-00582" />
+      <option name="project" value="LOCAL" />
+      <updated>1732308331885</updated>
+    </task>
+    <task id="LOCAL-00583" summary="add comments in excel">
+      <option name="closed" value="true" />
+      <created>1732308481065</created>
+      <option name="number" value="00583" />
+      <option name="presentableId" value="LOCAL-00583" />
+      <option name="project" value="LOCAL" />
+      <updated>1732308481066</updated>
+    </task>
+    <option name="localTasksCounter" value="584" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
