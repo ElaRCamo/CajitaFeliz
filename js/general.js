@@ -174,3 +174,48 @@ function validarTelefono(telefono) {
         return false; // Teléfono inválido
     }
 }
+
+/**********************************************************************************************************************/
+/********************************************************TOOLTIPS******************************************************/
+/**********************************************************************************************************************/
+
+function mostrarImagenTooltip(idTooltip, imageUrl, width, height) {
+    const tooltip = document.getElementById(idTooltip);
+
+    // Configuración de Tippy.js
+    tippy(tooltip, {
+        trigger: 'click', // Mostrar el tooltip al hacer clic
+        animation: 'shift-away',
+        theme: 'light',
+        arrow: true, // Mostrar flecha en el tooltip
+        allowHTML: true, // Permitir contenido HTML dentro del tooltip
+        onShow(instance) {
+            // Crear una estructura HTML personalizada
+            const container = document.createElement('div');
+            container.style.display = 'flex';
+            container.style.flexDirection = 'column';
+            container.style.alignItems = 'center';
+            container.style.padding = '10px';
+            container.style.backgroundColor = '#fff';
+            container.style.borderRadius = '8px';
+            container.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            container.style.width = `${width}px`;
+            container.style.height = `${height}px`;
+
+            // Crear el elemento de imagen
+            const image = new Image();
+            image.src = imageUrl;
+            image.style.width = '100%'; // Ajustar al ancho del contenedor
+            image.style.height = '100%'; // Ajustar al alto del contenedor
+            image.style.objectFit = 'contain'; // Escalar la imagen para que no se deforme
+            image.style.borderRadius = '5px';
+
+            // Agregar la imagen al contenedor
+            container.appendChild(image);
+
+            // Asignar el contenedor al contenido del tooltip
+            instance.setContent(container);
+        },
+    });
+}
+

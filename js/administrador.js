@@ -2,6 +2,15 @@
  *********************************************SOLICITUDES DE PRESTAMOS *************************************************
  * *********************************************************************************************************************/
 
+document.getElementById("ejemploExcelP").addEventListener("click", function() {
+    mostrarImagenTooltip(
+        "ejemploExcelP",
+        "https://grammermx.com/excelInventario/imgs/excelPrestamos.png",
+        320,
+        140
+    );
+});
+
 // DataTables
 let dataTableAdminPrestamos;
 let dataTableInitPrestamosAdmin = false;

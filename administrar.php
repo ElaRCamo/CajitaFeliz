@@ -96,6 +96,7 @@
                     <h2 class="text-center">Solicitudes de Préstamos</h2>
                     <button class="btn btn-success text-right btnExcel" id="btnExcelPrestamos">Exportar a Excel</button>
                     <button class="btn btn-secondary text-right btnExcel" id="btnInsertarPrestamosExcel"> Cargar Archivo</button>
+                    <button class="circular-btn" id="ejemploExcelP"><span>?</span></button>
                     <input type="file" id="fileInputPrestamos" accept=".xlsx, .xls" style="display: none;" />
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
                         <thead>
