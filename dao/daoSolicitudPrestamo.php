@@ -79,10 +79,18 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             // Responder con éxito
             $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
         } else {
-            // Si la fecha o la hora de solicitud no son válidas, devolver un mensaje de error
+            // Convertir la fecha de inicio a un formato legible con el nombre del mes
+            $fechaInicioFormatted = DateTime::createFromFormat("Y-m-d", $fechaInicioDB)->format("d \d\e F");
+            setlocale(LC_TIME, 'es_ES.UTF-8'); // Asegurar la localización en español
+            $fechaInicioFormatted = strftime("%d de %B", strtotime($fechaInicioDB));
+
+            // Formatear la hora para mostrar solo horas y minutos
+            $horaInicioFormatted = DateTime::createFromFormat("H:i:s", $horaInicioDB)->format("H:i");
+
+            // Construir el mensaje de error
             $respuesta = array(
                 "status" => 'error',
-                "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $fechaInicioDB a las $horaInicioDB."
+                "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $fechaInicioFormatted a las $horaInicioFormatted."
             );
         }
 
