@@ -96,9 +96,6 @@ const consultarFechas = async () => {
             const fechaInicio = formatearFecha(result.data[0].fechaInicio);  // Acceder a la primera fecha
             const fechaCierre = formatearFecha(result.data[0].fechaFin);     // Acceder a la fecha de cierre
 
-            // Mostrar las fechas formateadas
-            alert("fechaInicio: " + fechaInicio + " fechaCierre: " + fechaCierre);
-
             // Asignar los valores al formulario
             $("#fechaInicio").val(fechaInicio);
             $("#fechaCierre").val(fechaCierre);
