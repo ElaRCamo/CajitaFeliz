@@ -11,7 +11,7 @@ const consultarFechaConvocatoria = async () => {
 
         // Verificar que 'data' tenga elementos
         if (result.data && result.data.length > 0) {
-            const fechaInicio = (result.data[0].fechaInicio);  // Acceder a la primera fecha
+            const fechaInicio = formatearFecha(result.data[0].fechaInicio);  // Acceder a la primera fecha
             const horaInicio = (result.data[0].horaInicio);
 
             // Asignar los valores al formulario
