@@ -17,7 +17,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     // Obtener los años de las fechas
     const anioInicio = new Date(fechaInicio).getFullYear();
     const anioCierre = new Date(fechaCierre).getFullYear();
-    const anioActual = new Date().getFullYear();
+    const anio = new Date().getFullYear();
 
     if (anioInicio !== anioCierre) {
         Swal.fire({
@@ -27,10 +27,10 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         return;
     }
     // Validar que el año de las fechas sea el actual
-    if (anioInicio !== anioActual) {
+    if (anioInicio !== anio) {
         Swal.fire({
             icon: 'error',
-            title: `Las fechas deben corresponder al año actual (${anioActual}).`
+            title: `Las fechas deben corresponder al año actual (${anio}).`
         })
         return;
     }
@@ -41,7 +41,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         const data = {
             fechaInicio,
             fechaCierre,
-            anio: anioActual
+            anio
         };
 
         const response = await fetch(url, {
