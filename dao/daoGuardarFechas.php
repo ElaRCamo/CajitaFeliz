@@ -6,6 +6,7 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
     $fechaCierre = $_POST["fechaCierre"];
     $horaInicio = $_POST["horaInicio"];
     $horaCierre = $_POST["horaCierre"];
+
     $anio = intval($_POST["anio"]);
 
     // Validar que las fechas sean válidas

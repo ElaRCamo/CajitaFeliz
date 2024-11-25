@@ -21,6 +21,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 echo json_encode($respuesta);
 
 function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
+    // Configurar la zona horaria
+    date_default_timezone_set('America/Mexico_City');
+
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
@@ -91,4 +94,5 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
     return $respuesta;
 }
+
 ?>
