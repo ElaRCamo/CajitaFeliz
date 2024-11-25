@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add comments in excel">
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add date block">
+      <change afterPath="$PROJECT_DIR$/images/icons/intercambiar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/prestamos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/prestamos.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +66,9 @@
       <recent name="C:\CajitaFelizGrammer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CajitaFelizGrammer\images\icons" />
       <recent name="C:\CajitaFelizGrammer\images\slide" />
       <recent name="C:\CajitaFelizGrammer\docs" />
-      <recent name="C:\CajitaFelizGrammer\images\icons" />
       <recent name="C:\CajitaFelizGrammer\images" />
     </key>
   </component>
@@ -99,15 +99,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="1627000" />
-    </task>
-    <task id="LOCAL-00537" summary="Fixes">
-      <option name="closed" value="true" />
-      <created>1731436403238</created>
-      <option name="number" value="00537" />
-      <option name="presentableId" value="LOCAL-00537" />
-      <option name="project" value="LOCAL" />
-      <updated>1731436403238</updated>
+      <workItem from="1732542389155" duration="2373000" />
     </task>
     <task id="LOCAL-00538" summary="Fixes">
       <option name="closed" value="true" />
@@ -493,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732308960944</updated>
     </task>
-    <option name="localTasksCounter" value="586" />
+    <task id="LOCAL-00586" summary="add date block">
+      <option name="closed" value="true" />
+      <created>1732546976666</created>
+      <option name="number" value="00586" />
+      <option name="presentableId" value="LOCAL-00586" />
+      <option name="project" value="LOCAL" />
+      <updated>1732546976667</updated>
+    </task>
+    <option name="localTasksCounter" value="587" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Loan: Update by admin" />
     <MESSAGE value="Loan: Read by applicant" />
     <MESSAGE value="Loan: add endorsements" />
     <MESSAGE value="Styles login" />
@@ -536,7 +535,8 @@
     <MESSAGE value="Comparar TAG" />
     <MESSAGE value="add tel endorsement" />
     <MESSAGE value="add comments in excel" />
-    <option name="LAST_COMMIT_MESSAGE" value="add comments in excel" />
+    <MESSAGE value="add date block" />
+    <option name="LAST_COMMIT_MESSAGE" value="add date block" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

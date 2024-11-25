@@ -93,9 +93,12 @@
         </div>
     </nav>
 
-    <body>
-        <button class="top-right-button">Fechas</button>
-    </body>
+    <div class="position-relative">
+        <button class="btn btn-primary position-absolute top-0 end-0 m-3 d-flex align-items-center" id="btnFechas">
+            <img src="images/icons/intercambiar.png" alt="Ícono Intercambiar" class="me-2" style="width: 20px; height: 20px;">
+            Fechas
+        </button>
+    </div>
 
     <section class="tabla-section" id="adminPrestamosSeccion">
         <div class=""></div>
