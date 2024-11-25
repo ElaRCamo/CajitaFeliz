@@ -23,20 +23,10 @@ const consultarFechaConvocatoria = async () => {
             $("#horaPermitidaP").text(horaInicio);
         }
         // Comparar con la fecha y hora actuales
-        const fechaHoy = new Date();
-
-        // Convertir las cadenas de fecha y hora a objetos Date
-        const [year, month, day] = fechaInicio.split('-'); // Asumiendo formato yyyy-mm-dd
-        const fechaConvocatoria = new Date(year, month - 1, day); // Crear el objeto Date solo con la fecha
-
-        // Si 'horaInicio' tiene un valor, también debemos agregar la hora al objeto `Date`
-        if (horaInicio) {
-            const [hora, minutos] = horaInicio.split(':');
-            fechaConvocatoria.setHours(hora, minutos, 0, 0); // Establecer hora, minutos, segundos y milisegundos
-        }
+        const fechaHoy = formatearFecha(new Date());
 
         // Comparar las fechas
-        if (fechaHoy <= fechaConvocatoria) {
+        if (fechaHoy >= fechaInicio) {
             let avisoFecha = document.getElementById("avisoPrestamo");
             avisoFecha.style.display = "none";
         }
