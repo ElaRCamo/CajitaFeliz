@@ -46,7 +46,7 @@ function guardarFechas($fechaInicio, $fechaCierre, $anio){
 
     // Si ya hay un registro con ese año, se actualiza
     if ($selectFechas->num_rows > 0) {
-        $updateFechas = $conexion->prepare("UPDATE Convocatoria SET fechaInicio = ?, fechaCierre = ? WHERE anio = ?");
+        $updateFechas = $conexion->prepare("UPDATE Convocatoria SET fechaInicio = ?, fechaFin = ? WHERE anio = ?");
         $updateFechas->bind_param("ssi", $fechaInicio, $fechaCierre, $anio);
         $resultado = $updateFechas->execute();
     } else {
