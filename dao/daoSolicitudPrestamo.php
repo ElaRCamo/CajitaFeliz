@@ -28,26 +28,33 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
     $conex->begin_transaction();
 
     try {
-        // Obtener fecha actual de la solicitud
+        // Obtener fecha y hora actuales
         $fechaSolicitud = date("Y-m-d");
+        $horaSolicitud = date("H:i:s");
         $anioActual = date('Y'); // Año actual
 
-        // Obtener la fecha de inicio desde la base de datos
-        $selectFechaAut = $conex->prepare("SELECT fechaInicio FROM Convocatoria WHERE anio = ?");
+        // Obtener la fecha y hora de inicio desde la base de datos
+        $selectFechaAut = $conex->prepare("SELECT fechaInicio, horaInicio FROM Convocatoria WHERE anio = ?");
         $selectFechaAut->bind_param("i", $anioActual);
         $selectFechaAut->execute();
         $resultado = $selectFechaAut->get_result();
 
         if ($resultado->num_rows > 0) {
             // Si se encuentra la fecha, obtenerla
-            $fechaInicioDB = $resultado->fetch_assoc()['fechaInicio'];
+            $row = $resultado->fetch_assoc();
+            $fechaInicioDB = $row['fechaInicio'];
+            $horaInicioDB = $row['horaInicio'];
         } else {
             throw new Exception("No se encontró la fecha de inicio para el año actual.");
         }
 
-        // Comparar la fecha de solicitud con la fecha de inicio de la base de datos
-        if (new DateTime($fechaSolicitud) > new DateTime($fechaInicioDB)) {
-            // Si la fecha de solicitud es posterior a la fecha de inicio, hacer el INSERT
+        // Construir datetime para comparar fecha y hora
+        $fechaHoraInicioDB = new DateTime("$fechaInicioDB $horaInicioDB");
+        $fechaHoraSolicitud = new DateTime("$fechaSolicitud $horaSolicitud");
+
+        // Comparar fecha y hora actuales con las de la base de datos
+        if ($fechaHoraSolicitud >= $fechaHoraInicioDB) {
+            // Si la fecha y hora actuales son posteriores, hacer el INSERT
 
             // Preparar la consulta de inserción
             $insertPrestamo = $conex->prepare("INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) VALUES (?, ?, ?, ?)");
@@ -69,8 +76,11 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             // Responder con éxito
             $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
         } else {
-            // Si la fecha de solicitud no es posterior a la fecha de inicio, devolver un mensaje de error
-            $respuesta = array("status" => 'error', "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $fechaInicioDB.");
+            // Si la fecha o la hora de solicitud no son válidas, devolver un mensaje de error
+            $respuesta = array(
+                "status" => 'error',
+                "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $fechaInicioDB a las $horaInicioDB."
+            );
         }
 
     } catch (Exception $e) {
@@ -81,5 +91,4 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
     return $respuesta;
 }
-
 ?>
