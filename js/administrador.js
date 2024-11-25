@@ -109,7 +109,7 @@ const consultarFechas = async () => {
             const fechaInicio = (result.data[0].fechaInicio);  // Acceder a la primera fecha
             const fechaCierre = (result.data[0].fechaFin);     // Acceder a la fecha de cierre
             const horaInicio = (result.data[0].horaInicio);
-            const horaCierre = (result.data[0].horaCierre);
+            const horaCierre = (result.data[0].horaFin);
 
             // Asignar los valores al formulario
             $("#fechaInicio").val(fechaInicio);
