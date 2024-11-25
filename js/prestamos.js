@@ -23,7 +23,7 @@ const consultarFechaConvocatoria = async () => {
             $("#horaPermitidaP").text(horaInicio);
         }
         // Comparar con la fecha y hora actuales
-        const fechaHoy = formatearFecha(new Date());
+        const fechaHoy = formatearFecha(new Date().toISOString().split('T')[0]);
 
         alert("fechaHoy: "+fechaHoy +" fechaInicio:"+fechaInicio+ " \n fechaHoy > fechaInicio:"+(fechaHoy > fechaInicio))
 
