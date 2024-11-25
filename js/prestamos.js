@@ -27,11 +27,16 @@ const consultarFechaConvocatoria = async () => {
 
         // Convertir las cadenas de fecha y hora a objetos Date
         const [year, month, day] = fechaInicio.split('-'); // Asumiendo formato yyyy-mm-dd
-        const fechaConvocatoria = new Date(year, month - 1, day);
-        const [hora, minutos] = horaInicio.split(':');
-        fechaConvocatoria.setHours(hora, minutos);
+        const fechaConvocatoria = new Date(year, month - 1, day); // Crear el objeto Date solo con la fecha
 
-        if (fechaHoy > fechaConvocatoria) {
+        // Si 'horaInicio' tiene un valor, también debemos agregar la hora al objeto `Date`
+        if (horaInicio) {
+            const [hora, minutos] = horaInicio.split(':');
+            fechaConvocatoria.setHours(hora, minutos, 0, 0); // Establecer hora, minutos, segundos y milisegundos
+        }
+
+        // Comparar las fechas
+        if (fechaHoy >= fechaConvocatoria) {
             let avisoFecha = document.getElementById("avisoPrestamo");
             avisoFecha.style.display = "none";
         }
