@@ -1,4 +1,86 @@
 /***********************************************************************************************************************
+ *********************************************CONFIGURAR FECHAS*********************************************************
+ * *********************************************************************************************************************/
+
+document.getElementById('guardarFechas').addEventListener('click', async function() {
+    const fechaInicio = document.getElementById('fechaInicio').value;
+    const fechaCierre = document.getElementById('fechaCierre').value;
+
+    if (!fechaInicio || !fechaCierre) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Por favor, complete ambas fechas.'
+        })
+        return;
+    }
+
+    // Obtener los años de las fechas
+    const anioInicio = new Date(fechaInicio).getFullYear();
+    const anioCierre = new Date(fechaCierre).getFullYear();
+    const anioActual = new Date().getFullYear();
+
+    if (anioInicio !== anioCierre) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Ambas fechas deben pertenecer al mismo año.'
+        })
+        return;
+    }
+    // Validar que el año de las fechas sea el actual
+    if (anioInicio !== anioActual) {
+        Swal.fire({
+            icon: 'error',
+            title: `Las fechas deben corresponder al año actual (${anioActual}).`
+        })
+        return;
+    }
+
+    try {
+        // URL del DAO (ajusta según la ruta de tu servidor)
+        const url = '/dao/daoGuardarFechas';
+
+        // Crear el cuerpo de la solicitud
+        const data = {
+            fechaInicio,
+            fechaCierre,
+            anio: anioActual // Incluir el año actual en los datos enviados
+        };
+
+        // Realizar la solicitud con fetch
+        const response = await fetch(url, {
+            method: 'POST', // Método HTTP
+            headers: {
+                'Content-Type': 'application/json', // Tipo de contenido
+            },
+            body: JSON.stringify(data) // Convertir datos a JSON
+        });
+
+        const result = await response.json(); // Procesar la respuesta del servidor
+
+        if (response.ok) {  // Verifica si la respuesta es exitosa
+            Swal.fire({
+                icon: 'success',
+                title: `${result.message}`
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: `${result.message}`
+            })
+        }
+    } catch (error) {
+        console.error('Error al enviar las fechas:', error);
+        Swal.fire({
+            title: "Error",
+            text: error.message,
+            icon: "error",
+            confirmButtonText: "OK"
+        });
+    }
+});
+
+
+/***********************************************************************************************************************
  *********************************************SOLICITUDES DE PRESTAMOS *************************************************
  * *********************************************************************************************************************/
 

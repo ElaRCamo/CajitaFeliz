@@ -103,7 +103,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="fechasModalLabel">Ingresar Fechas</h5>
+                    <h5 class="modal-title" id="fechasModalLabel">Configurar Fechas</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -117,7 +117,7 @@
                             <input type="date" class="form-control" id="fechaCierre" name="fechaCierre" required>
                         </div>
                     </form>
-                    <p class="text-muted mt-2">
+                    <p class="text-muted mt-2"><br>
                         <strong>Nota:</strong> La fecha de inicio indica el día a partir del cual los solicitantes podrán comenzar a realizar solicitudes de préstamos. La fecha de cierre marca el último día en el que podrán enviar dichas solicitudes.
                     </p>
                 </div>
