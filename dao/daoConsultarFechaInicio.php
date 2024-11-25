@@ -8,7 +8,7 @@ function consultarFechas(){
 
     $anioActual = intval(date('Y'));
 
-    $consP="SELECT fechaInicio, fechaFin FROM Convocatoria WHERE anio = '$anioActual'";
+    $consP="SELECT fechaInicio, fechaFin, horaInicio, horaFin FROM Convocatoria WHERE anio = '$anioActual'";
     $rsconsPro=mysqli_query($conexion,$consP);
 
     mysqli_close($conexion);

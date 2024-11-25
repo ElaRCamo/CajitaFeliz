@@ -1,9 +1,11 @@
 <?php
 include_once('connectionCajita.php');
 
-if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_POST["anio"])) {
+if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_POST["anio"]) && !empty($_POST["horaInicio"]) && !empty($_POST["horaCierre"]) ) {
     $fechaInicio = $_POST["fechaInicio"];
     $fechaCierre = $_POST["fechaCierre"];
+    $horaInicio = $_POST["horaInicio"];
+    $horaCierre = $_POST["horaCierre"];
     $anio = intval($_POST["anio"]);
 
     // Validar que las fechas sean válidas
@@ -29,7 +31,7 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
     }
     // Guardar las fechas si todas las validaciones son correctas
     else {
-        $response = guardarFechas($fechaInicio, $fechaCierre, $anio);
+        $response = guardarFechas($fechaInicio, $fechaCierre, $anio, $horaInicio, $horaCierre);
     }
 } else {
     $response = array("status" => 'error', "message" => "Faltan datos en el formulario.");
@@ -38,7 +40,7 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
 echo json_encode($response);
 
 
-function guardarFechas($fechaInicio, $fechaCierre, $anio){
+function guardarFechas($fechaInicio, $fechaCierre, $anio, $horaInicio, $horaCierre){
     $con = new LocalConectorCajita();
     $conexion = $con->conectar();
 
@@ -50,12 +52,12 @@ function guardarFechas($fechaInicio, $fechaCierre, $anio){
 
     // Si ya hay un registro con ese año, se actualiza
     if ($selectFechas->num_rows > 0) {
-        $updateFechas = $conexion->prepare("UPDATE Convocatoria SET fechaInicio = ?, fechaFin = ? WHERE anio = ?");
-        $updateFechas->bind_param("ssi", $fechaInicio, $fechaCierre, $anio);
+        $updateFechas = $conexion->prepare("UPDATE Convocatoria SET fechaInicio = ?, fechaFin = ?, horaInicio = ?, horaFin = ? WHERE anio = ?");
+        $updateFechas->bind_param("ssssi", $fechaInicio, $fechaCierre, $horaInicio, $horaCierre, $anio);
         $resultado = $updateFechas->execute();
     } else {
-        $insertFechas = $conexion->prepare("INSERT INTO Convocatoria (anio, fechaInicio, fechaFin) VALUES (?, ?, ?)");
-        $insertFechas->bind_param("iss", $anio, $fechaInicio, $fechaCierre);
+        $insertFechas = $conexion->prepare("INSERT INTO Convocatoria (anio, fechaInicio, fechaFin, horaInicio, horaFin) VALUES (?, ?, ?)");
+        $insertFechas->bind_param("issss", $anio, $fechaInicio, $fechaCierre, $horaInicio, $horaCierre);
         $resultado = $insertFechas->execute();
     }
     $conexion->close();

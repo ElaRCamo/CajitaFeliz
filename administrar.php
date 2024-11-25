@@ -296,22 +296,34 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="fechasModalLabel">Configurar Fechas</h5>
+                    <h5 class="modal-title" id="fechasModalLabel">Configurar Fechas y Horas</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form id="fechasForm">
+                        <!-- Fecha de Inicio -->
                         <div class="mb-3">
                             <label for="fechaInicio" class="form-label">Fecha de Inicio</label>
                             <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" required>
                         </div>
+                        <!-- Hora de Inicio -->
+                        <div class="mb-3">
+                            <label for="horaInicio" class="form-label">Hora de Inicio</label>
+                            <input type="time" class="form-control" id="horaInicio" name="horaInicio" required>
+                        </div>
+                        <!-- Fecha de Cierre -->
                         <div class="mb-3">
                             <label for="fechaCierre" class="form-label">Fecha de Cierre</label>
                             <input type="date" class="form-control" id="fechaCierre" name="fechaCierre" required>
                         </div>
+                        <!-- Hora de Cierre -->
+                        <div class="mb-3">
+                            <label for="horaCierre" class="form-label">Hora de Cierre</label>
+                            <input type="time" class="form-control" id="horaCierre" name="horaCierre" required>
+                        </div>
                     </form>
                     <p class="text-muted mt-2"><br>
-                        <strong>Nota:</strong> La fecha de inicio indica el día a partir del cual los solicitantes podrán comenzar a realizar solicitudes de préstamos. La fecha de cierre marca el último día en el que podrán enviar dichas solicitudes.
+                        <strong>Nota:</strong> La fecha y hora de inicio indican el momento a partir del cual los solicitantes podrán comenzar a realizar solicitudes de préstamos. La fecha y hora de cierre marcan el último momento en el que podrán enviar dichas solicitudes.
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -321,6 +333,7 @@
             </div>
         </div>
     </div>
+
 
     <?php require_once('modalAvales.php'); ?>
 

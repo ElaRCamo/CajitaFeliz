@@ -5,6 +5,8 @@
 document.getElementById('guardarFechas').addEventListener('click', async function() {
     const fechaInicio = document.getElementById('fechaInicio').value;
     const fechaCierre = document.getElementById('fechaCierre').value;
+    const horaInicio = document.getElementById('horaInicio').value;
+    const horaCierre = document.getElementById('horaCierre').value;
 
     if (!fechaInicio || !fechaCierre) {
         Swal.fire({
@@ -51,6 +53,8 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         const data = new URLSearchParams();
         data.append('fechaInicio', fechaInicio);
         data.append('fechaCierre', fechaCierre);
+        data.append('horaInicio', horaInicio);
+        data.append('horaCierre', horaCierre);
         data.append('anio', anioActual);
 
         // Realizar la solicitud con fetch
@@ -104,10 +108,14 @@ const consultarFechas = async () => {
         if (result.data && result.data.length > 0) {
             const fechaInicio = (result.data[0].fechaInicio);  // Acceder a la primera fecha
             const fechaCierre = (result.data[0].fechaFin);     // Acceder a la fecha de cierre
+            const horaInicio = (result.data[0].horaInicio);
+            const horaCierre = (result.data[0].horaCierre);
 
             // Asignar los valores al formulario
             $("#fechaInicio").val(fechaInicio);
             $("#fechaCierre").val(fechaCierre);
+            $("#horaInicio").val(horaInicio);
+            $("#horaCierre").val(horaCierre);
         }
     } catch (error) {
         console.error('Error:', error);
