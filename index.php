@@ -116,7 +116,7 @@
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>¡Aviso importante!</h1>
-                                        <p class="msjVaner">Las recepción de solicitudes de préstamo estarán disponibles a partir del día <span id="fechaPermitida"></span> a las <span id="horaPermitida"></span> horas.</p>
+                                        <p class="msjVaner">Recepción de préstamos a partir del día <span id="fechaPermitida"></span> a las <span id="horaPermitida"></span> horas.</p>
                                     </div>
                                 </div>
 
