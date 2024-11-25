@@ -25,8 +25,6 @@ const consultarFechaConvocatoria = async () => {
         // Comparar con la fecha y hora actuales
         const fechaHoy = formatearFecha(new Date().toISOString().split('T')[0]);
 
-        alert("fechaHoy: "+fechaHoy +" fechaInicio:"+fechaInicio+ " \n fechaHoy > fechaInicio:"+(fechaHoy > fechaInicio))
-
         // Comparar las fechas
         if (fechaHoy > fechaInicio) {
             let avisoFecha = document.getElementById("avisoPrestamo");
