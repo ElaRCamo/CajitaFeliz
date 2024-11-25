@@ -87,7 +87,7 @@ const consultarFechas = async () => {
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
-        alert("fechaInicio:"+result.data.fechaInicio +" fechaCierre:"+response.data.fechaInicio)
+        alert("fechaInicio:"+data.fechaInicio +" fechaCierre:"+response.data.fechaInicio)
         const result = await response.json();
         const fechaInicio = formatearFecha(result.data.fechaInicio);
         const fechaCierre = formatearFecha(result.data.fechaCierre);

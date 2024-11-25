@@ -94,23 +94,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="10015000" />
-    </task>
-    <task id="LOCAL-00555" summary="Change page">
-      <option name="closed" value="true" />
-      <created>1732209929931</created>
-      <option name="number" value="00555" />
-      <option name="presentableId" value="LOCAL-00555" />
-      <option name="project" value="LOCAL" />
-      <updated>1732209929931</updated>
-    </task>
-    <task id="LOCAL-00556" summary="Change page">
-      <option name="closed" value="true" />
-      <created>1732210171750</created>
-      <option name="number" value="00556" />
-      <option name="presentableId" value="LOCAL-00556" />
-      <option name="project" value="LOCAL" />
-      <updated>1732210171750</updated>
+      <workItem from="1732542389155" duration="10352000" />
     </task>
     <task id="LOCAL-00557" summary="Change page">
       <option name="closed" value="true" />
@@ -488,7 +472,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732555346547</updated>
     </task>
-    <option name="localTasksCounter" value="604" />
+    <task id="LOCAL-00604" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732555603275</created>
+      <option name="number" value="00604" />
+      <option name="presentableId" value="LOCAL-00604" />
+      <option name="project" value="LOCAL" />
+      <updated>1732555603275</updated>
+    </task>
+    <task id="LOCAL-00605" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732555682398</created>
+      <option name="number" value="00605" />
+      <option name="presentableId" value="LOCAL-00605" />
+      <option name="project" value="LOCAL" />
+      <updated>1732555682398</updated>
+    </task>
+    <option name="localTasksCounter" value="606" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
