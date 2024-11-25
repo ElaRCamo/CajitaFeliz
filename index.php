@@ -39,7 +39,7 @@
     ?>
 </head>
 
-<body>
+<body onload="consultarFechaConvocatoria()">
 
     <?php if ($nombreUser == null && $user != null): ?>
     <script>
@@ -521,7 +521,7 @@
 
                 section.appendChild(circle);
             }
-            consultarFechaConvocatoria();
+
         });
 
         document.addEventListener("DOMContentLoaded", function() {
