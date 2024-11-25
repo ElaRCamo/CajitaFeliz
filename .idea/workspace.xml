@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add date lock">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/prestamos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/prestamos.js" afterDir="false" />
     </list>
@@ -97,47 +98,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="16215000" />
-    </task>
-    <task id="LOCAL-00575" summary="add tel endorsement">
-      <option name="closed" value="true" />
-      <created>1732216598360</created>
-      <option name="number" value="00575" />
-      <option name="presentableId" value="LOCAL-00575" />
-      <option name="project" value="LOCAL" />
-      <updated>1732216598360</updated>
-    </task>
-    <task id="LOCAL-00576" summary="add tel endorsement">
-      <option name="closed" value="true" />
-      <created>1732216695770</created>
-      <option name="number" value="00576" />
-      <option name="presentableId" value="LOCAL-00576" />
-      <option name="project" value="LOCAL" />
-      <updated>1732216695770</updated>
-    </task>
-    <task id="LOCAL-00577" summary="add tel endorsement">
-      <option name="closed" value="true" />
-      <created>1732216730860</created>
-      <option name="number" value="00577" />
-      <option name="presentableId" value="LOCAL-00577" />
-      <option name="project" value="LOCAL" />
-      <updated>1732216730860</updated>
-    </task>
-    <task id="LOCAL-00578" summary="add tel endorsement">
-      <option name="closed" value="true" />
-      <created>1732216783528</created>
-      <option name="number" value="00578" />
-      <option name="presentableId" value="LOCAL-00578" />
-      <option name="project" value="LOCAL" />
-      <updated>1732216783528</updated>
-    </task>
-    <task id="LOCAL-00579" summary="add tel endorsement">
-      <option name="closed" value="true" />
-      <created>1732216818542</created>
-      <option name="number" value="00579" />
-      <option name="presentableId" value="LOCAL-00579" />
-      <option name="project" value="LOCAL" />
-      <updated>1732216818542</updated>
+      <workItem from="1732542389155" duration="17254000" />
     </task>
     <task id="LOCAL-00580" summary="add comments in excel">
       <option name="closed" value="true" />
@@ -491,7 +452,47 @@
       <option name="project" value="LOCAL" />
       <updated>1732561379379</updated>
     </task>
-    <option name="localTasksCounter" value="624" />
+    <task id="LOCAL-00624" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732561568849</created>
+      <option name="number" value="00624" />
+      <option name="presentableId" value="LOCAL-00624" />
+      <option name="project" value="LOCAL" />
+      <updated>1732561568849</updated>
+    </task>
+    <task id="LOCAL-00625" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732561669655</created>
+      <option name="number" value="00625" />
+      <option name="presentableId" value="LOCAL-00625" />
+      <option name="project" value="LOCAL" />
+      <updated>1732561669655</updated>
+    </task>
+    <task id="LOCAL-00626" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732561729755</created>
+      <option name="number" value="00626" />
+      <option name="presentableId" value="LOCAL-00626" />
+      <option name="project" value="LOCAL" />
+      <updated>1732561729755</updated>
+    </task>
+    <task id="LOCAL-00627" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732561834994</created>
+      <option name="number" value="00627" />
+      <option name="presentableId" value="LOCAL-00627" />
+      <option name="project" value="LOCAL" />
+      <updated>1732561834994</updated>
+    </task>
+    <task id="LOCAL-00628" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732561946437</created>
+      <option name="number" value="00628" />
+      <option name="presentableId" value="LOCAL-00628" />
+      <option name="project" value="LOCAL" />
+      <updated>1732561946437</updated>
+    </task>
+    <option name="localTasksCounter" value="629" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

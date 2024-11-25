@@ -8,11 +8,13 @@ const consultarFechaConvocatoria = async () => {
 
         // Parsear la respuesta JSON
         const result = await response.json();
+        let fechaInicio = "";
+        let horaInicio = "";
 
         // Verificar que 'data' tenga elementos
         if (result.data && result.data.length > 0) {
-            const fechaInicio = formatearFecha(result.data[0].fechaInicio);  // Acceder a la primera fecha
-            const horaInicio = formatearHora(result.data[0].horaInicio);
+            fechaInicio = formatearFecha(result.data[0].fechaInicio);  // Acceder a la primera fecha
+            horaInicio = formatearHora(result.data[0].horaInicio);
 
             // Asignar los valores al formulario
             $("#fechaPermitida").text(fechaInicio);
@@ -20,6 +22,20 @@ const consultarFechaConvocatoria = async () => {
             $("#fechaPermitidaP").text(fechaInicio);
             $("#horaPermitidaP").text(horaInicio);
         }
+        // Comparar con la fecha y hora actuales
+        const fechaHoy = new Date();
+
+        // Convertir las cadenas de fecha y hora a objetos Date
+        const [year, month, day] = fechaInicio.split('-'); // Asumiendo formato yyyy-mm-dd
+        const fechaConvocatoria = new Date(year, month - 1, day);
+        const [hora, minutos] = horaInicio.split(':');
+        fechaConvocatoria.setHours(hora, minutos);
+
+        if (fechaHoy > fechaConvocatoria) {
+            let avisoFecha = document.getElementById("avisoPrestamo");
+            avisoFecha.style.display = "none";
+        }
+
     } catch (error) {
         console.error('Error:', error);
     }
