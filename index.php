@@ -521,6 +521,7 @@
 
                 section.appendChild(circle);
             }
+            consultarFechaConvocatoria();
         });
 
         document.addEventListener("DOMContentLoaded", function() {
