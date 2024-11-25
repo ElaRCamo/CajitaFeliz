@@ -1,4 +1,4 @@
-const allowedDate = new Date('2024-11-26'); // Fecha permitida
+/*const allowedDate = new Date('2024-11-26'); // Fecha permitida
 const today = new Date();
 const submitButton = document.getElementById('submitButton');
 const message = document.getElementById('message');
@@ -8,7 +8,7 @@ if (today >= allowedDate) {
     message.textContent = "Puede solicitar el préstamo.";
 } else {
     message.textContent = `No puede solicitar un préstamo hasta el ${allowedDate.toLocaleDateString()}.`;
-}
+}*/
 
 function validarUser(user) {
     Swal.fire({
