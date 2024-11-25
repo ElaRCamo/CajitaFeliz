@@ -1,16 +1,17 @@
 const formatearFecha = (fecha) => {
-    if (fecha !== '0000-00-00') {
+    if (fecha && fecha !== '0000-00-00' && typeof fecha === 'string') {
         // Crear la fecha en UTC
         let date = new Date(Date.UTC(...fecha.split('-').map((v, i) => i === 1 ? v - 1 : v)));
         let meses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
         let dia = date.getUTCDate(); // Usamos getUTCDate para evitar desfases de zona horaria
-        let mes = meses[date.getUTCMonth()]; // Usamos getUTCMonth
-        let anio = date.getUTCFullYear(); // Usamos getUTCFullYear
+        let mes = meses[date.getUTCMonth()];
+        let anio = date.getUTCFullYear();
         return `${dia}/${mes}/${anio}`;
     } else {
-        return 'Sin registro';
+        return 'Sin registro'; // En caso de que la fecha no sea válida
     }
 };
+
 
 // Función para convertir la fecha de Excel a formato 'YYYY-MM-DD'
 function excelDateToJSDate(excelDate) {
