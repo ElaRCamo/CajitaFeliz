@@ -1,10 +1,13 @@
 <?php
 include_once('connectionCajita.php');
 
-if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_POST["anio"])) {
-    $fechaInicio = $_POST["fechaInicio"];
-    $fechaCierre = $_POST["fechaCierre"];
-    $anio = intval($_POST["anio"]);
+// Leer el cuerpo de la solicitud como JSON
+$data = json_decode(file_get_contents('php://input'), true);
+
+if (!empty($data["fechaInicio"]) && !empty($data["fechaCierre"]) && !empty($data["anio"])) {
+    $fechaInicio = $data["fechaInicio"];
+    $fechaCierre = $data["fechaCierre"];
+    $anio = intval($data["anio"]);
 
     // Validar que las fechas sean válidas
     $anioInicio = intval(date('Y', strtotime($fechaInicio)));
@@ -13,55 +16,52 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
 
     // Validar que ambas fechas pertenezcan al mismo año
     if ($anioInicio !== $anioCierre) {
-        $response = array("status" => 'error',"message" => "Ambas fechas deben pertenecer al mismo año.");
+        $response = array("status" => 'error', "message" => "Ambas fechas deben pertenecer al mismo año.");
     }
     // Validar que el año coincida con el año actual
     elseif ($anioInicio !== $anioActual) {
-        $response = array("status" => 'error',"message" => "Las fechas deben corresponder al año actual ($anioActual).");
+        $response = array("status" => 'error', "message" => "Las fechas deben corresponder al año actual ($anioActual).");
     }
     // Validar que el año proporcionado coincida con el año de las fechas
     elseif ($anioInicio !== $anio) {
-        $response = array("status" => 'error',"message" => "El año ingresado no coincide con las fechas seleccionadas.");
+        $response = array("status" => 'error', "message" => "El año ingresado no coincide con las fechas seleccionadas.");
     }
     // Guardar las fechas si todas las validaciones son correctas
     else {
         $response = guardarFechas($fechaInicio, $fechaCierre, $anio);
     }
 } else {
-    $response = array("status" => 'error',"message" => "Faltan datos en el formulario.");
+    $response = array("status" => 'error', "message" => "Faltan datos en el formulario.");
 }
 
 echo json_encode($response);
 
 function guardarFechas($fechaInicio, $fechaCierre, $anio){
     $con = new LocalConectorCajita();
-    $conexion=$con->conectar();
+    $conexion = $con->conectar();
 
-    //Buscar en la base de datos si ya existe el registro
+    // Buscar en la base de datos si ya existe el registro
     $selectFechas = $conexion->prepare("SELECT id FROM Convocatoria WHERE anio = ?");
     $selectFechas->bind_param("i", $anio);
-    $selectFechas ->execute();
+    $selectFechas->execute();
     $selectFechas->store_result(); // Almacena el resultado
 
-    //Si ya hay un registro con ese año, se actualiza
-    if($selectFechas -> num_rows > 0){
-        $updateFechas = $conexion->prepare("UPDATE Convocatoria 
-                                                     SET fechaInicio = ?, fechaCierre = ?
-                                                   WHERE id = ?");
-        $updateFechas->bind_param("ssi", $fechaInicio, $fechaCierre);
+    // Si ya hay un registro con ese año, se actualiza
+    if ($selectFechas->num_rows > 0) {
+        $updateFechas = $conexion->prepare("UPDATE Convocatoria SET fechaInicio = ?, fechaCierre = ? WHERE anio = ?");
+        $updateFechas->bind_param("ssi", $fechaInicio, $fechaCierre, $anio);
         $resultado = $updateFechas->execute();
-    }else{
-        $insertFechas = $conexion->prepare("INSERT INTO Convocatoria (anio, fechaInicio, fechaFin)
-                                                       VALUES (?, ?, ?)");
-        $insertFechas->bind_param("iss", $anio,$fechaInicio, $fechaCierre);
+    } else {
+        $insertFechas = $conexion->prepare("INSERT INTO Convocatoria (anio, fechaInicio, fechaFin) VALUES (?, ?, ?)");
+        $insertFechas->bind_param("iss", $anio, $fechaInicio, $fechaCierre);
         $resultado = $insertFechas->execute();
     }
     $conexion->close();
 
-    if(!$resultado){
-        $response = array("status"=>"error", "message"=>"Error al actualizar las fechas.");
-    }else{
-        $response = array ("status"=>"success", "message"=>"Fechas actualizadas exitosamente");
+    if (!$resultado) {
+        $response = array("status" => "error", "message" => "Error al actualizar las fechas.");
+    } else {
+        $response = array("status" => "success", "message" => "Fechas actualizadas exitosamente");
     }
 
     return $response;

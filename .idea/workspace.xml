@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add date block">
-      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add date block" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,23 +94,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="7311000" />
-    </task>
-    <task id="LOCAL-00545" summary="Fixes: placeholder">
-      <option name="closed" value="true" />
-      <created>1732136922760</created>
-      <option name="number" value="00545" />
-      <option name="presentableId" value="LOCAL-00545" />
-      <option name="project" value="LOCAL" />
-      <updated>1732136922760</updated>
-    </task>
-    <task id="LOCAL-00546" summary="Fixes: placeholder">
-      <option name="closed" value="true" />
-      <created>1732137241114</created>
-      <option name="number" value="00546" />
-      <option name="presentableId" value="LOCAL-00546" />
-      <option name="project" value="LOCAL" />
-      <updated>1732137241114</updated>
+      <workItem from="1732542389155" duration="7625000" />
     </task>
     <task id="LOCAL-00547" summary="Change page">
       <option name="closed" value="true" />
@@ -490,7 +472,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732552421800</updated>
     </task>
-    <option name="localTasksCounter" value="594" />
+    <task id="LOCAL-00594" summary="add date block">
+      <option name="closed" value="true" />
+      <created>1732552760045</created>
+      <option name="number" value="00594" />
+      <option name="presentableId" value="LOCAL-00594" />
+      <option name="project" value="LOCAL" />
+      <updated>1732552760045</updated>
+    </task>
+    <task id="LOCAL-00595" summary="add date block">
+      <option name="closed" value="true" />
+      <created>1732552833756</created>
+      <option name="number" value="00595" />
+      <option name="presentableId" value="LOCAL-00595" />
+      <option name="project" value="LOCAL" />
+      <updated>1732552833756</updated>
+    </task>
+    <option name="localTasksCounter" value="596" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

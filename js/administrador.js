@@ -17,7 +17,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     // Obtener los años de las fechas
     const anioInicio = new Date(fechaInicio).getFullYear();
     const anioCierre = new Date(fechaCierre).getFullYear();
-    const anio = new Date().getFullYear();
+    const anioActual = new Date().getFullYear();
 
     if (anioInicio !== anioCierre) {
         Swal.fire({
@@ -27,10 +27,10 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         return;
     }
     // Validar que el año de las fechas sea el actual
-    if (anioInicio !== anio) {
+    if (anioInicio !== anioActual) {
         Swal.fire({
             icon: 'error',
-            title: `Las fechas deben corresponder al año actual (${anio}).`
+            title: `Las fechas deben corresponder al año actual (${anioActual}).`
         })
         return;
     }
@@ -38,33 +38,34 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     try {
         const url = 'dao/daoGuardarFechas.php';
 
-        const data = {
-            fechaInicio,
-            fechaCierre,
-            anio
-        };
+        // Crear el cuerpo de la solicitud en formato x-www-form-urlencoded
+        const data = new URLSearchParams();
+        data.append('fechaInicio', fechaInicio);
+        data.append('fechaCierre', fechaCierre);
+        data.append('anio', anioActual);
 
+        // Realizar la solicitud con fetch
         const response = await fetch(url, {
             method: 'POST', // Método HTTP
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded', // Tipo de contenido
             },
-            body: JSON.stringify(data)
+            body: data.toString() // Convertir a string de parámetros
         });
 
         // Obtener la respuesta en formato JSON
         const result = await response.json();
 
-        if (result.status === 'success') {
+        if (result.status === 'success') {  // Verifica el status de la respuesta
             Swal.fire({
                 icon: 'success',
-                title: `${result.message}`
+                title: result.message || 'Fechas guardadas exitosamente'
             });
         } else {
             Swal.fire({
                 icon: 'error',
-                title: `${result.message}`
-            })
+                title: result.message || 'Ocurrió un error al guardar las fechas.'
+            });
         }
     } catch (error) {
         console.error('Error al enviar las fechas:', error);
