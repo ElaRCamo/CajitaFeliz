@@ -87,19 +87,27 @@ const consultarFechas = async () => {
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
         }
-        alert("fechaInicio:"+response.data.fechaInicio +" fechaCierre:"+response.data.fechaInicio)
+
+        // Parsear la respuesta JSON
         const result = await response.json();
-        const fechaInicio = formatearFecha(result.data.fechaInicio);
-        const fechaCierre = formatearFecha(result.data.fechaCierre);
-        alert("fechaInicio:"+fechaInicio +" fechaCierre:"+fechaCierre)
 
-        $("#fechaInicio").val(fechaInicio);
-        $("#fechaCierre").val(fechaCierre);
+        // Verificar que 'data' tenga elementos
+        if (result.data && result.data.length > 0) {
+            const fechaInicio = formatearFecha(result.data[0].fechaInicio);  // Acceder a la primera fecha
+            const fechaCierre = formatearFecha(result.data[0].fechaFin);     // Acceder a la fecha de cierre
 
+            // Mostrar las fechas formateadas
+            alert("fechaInicio: " + fechaInicio + " fechaCierre: " + fechaCierre);
+
+            // Asignar los valores al formulario
+            $("#fechaInicio").val(fechaInicio);
+            $("#fechaCierre").val(fechaCierre);
+        }
     } catch (error) {
         console.error('Error:', error);
     }
 };
+
 
 
 /***********************************************************************************************************************
