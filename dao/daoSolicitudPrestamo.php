@@ -79,11 +79,14 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             // Responder con éxito
             $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
         } else {
-            // Convertir la fecha de inicio a un formato legible con el nombre del mes
-            $fechaInicioFormatted = strftime("%d de %B", strtotime($fechaInicioDB));
+            // Crear objetos DateTime para fecha y hora
+            $fechaInicioDateTime = DateTime::createFromFormat("Y-m-d", $fechaInicioDB);
+            $horaInicioDateTime = DateTime::createFromFormat("H:i:s", $horaInicioDB);
 
-            // Formatear la hora para mostrar solo horas y minutos
-            $horaInicioFormatted = DateTime::createFromFormat("H:i:s", $horaInicioDB)->format("H:i");
+            // Convertir la fecha y hora al formato deseado
+            $nombreMes = strftime("%B", $fechaInicioDateTime->getTimestamp()); // Obtenemos el mes traducido manualmente
+            $fechaInicioFormatted = $fechaInicioDateTime->format("d") . " de " . ucfirst($nombreMes);
+            $horaInicioFormatted = $horaInicioDateTime->format("H:i");
 
             // Construir el mensaje de error
             $respuesta = array(
