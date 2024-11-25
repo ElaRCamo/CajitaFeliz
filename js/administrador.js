@@ -36,28 +36,25 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     }
 
     try {
-        // URL del DAO (ajusta según la ruta de tu servidor)
-        const url = '/dao/daoGuardarFechas';
+        const url = 'dao/daoGuardarFechas';
 
-        // Crear el cuerpo de la solicitud
         const data = {
             fechaInicio,
             fechaCierre,
-            anio: anioActual // Incluir el año actual en los datos enviados
+            anio: anioActual
         };
 
-        // Realizar la solicitud con fetch
         const response = await fetch(url, {
             method: 'POST', // Método HTTP
             headers: {
-                'Content-Type': 'application/json', // Tipo de contenido
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data) // Convertir datos a JSON
+            body: JSON.stringify(data)
         });
 
-        const result = await response.json(); // Procesar la respuesta del servidor
+        const result = await response.json();
 
-        if (response.ok) {  // Verifica si la respuesta es exitosa
+        if (response.ok) {
             Swal.fire({
                 icon: 'success',
                 title: `${result.message}`
