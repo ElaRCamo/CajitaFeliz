@@ -80,6 +80,27 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
 });
 
 
+const consultarFechas = async () => {
+    try {
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarFechaInicio.php`);
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        const fechaInicio = formatearFecha(result.data.fechaSolicitud);
+        const fechaCierre = formatearMonto(result.data.fechaSolicitud);
+
+        $("#fechaInicio").val(fechaInicio);
+        $("#fechaCierre").val(fechaCierre);
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+
 /***********************************************************************************************************************
  *********************************************SOLICITUDES DE PRESTAMOS *************************************************
  * *********************************************************************************************************************/

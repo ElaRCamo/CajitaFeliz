@@ -80,7 +80,7 @@
 
                     <li class="nav-item">
                         <!-- Botón para abrir el modal -->
-                        <a class="nav-link click-scroll" href="#" data-bs-toggle="modal" data-bs-target="#fechasModal">Fechas</a>
+                        <a class="nav-link click-scroll" href="#" data-bs-toggle="modal" data-bs-target="#fechasModal" onclick="consultarFechas()">Fechas</a>
                     </li>
 
                     <li class="nav-item">
@@ -97,37 +97,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- Modal Fechas-->
-    <div class="modal fade" id="fechasModal" tabindex="-1" aria-labelledby="fechasModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="fechasModalLabel">Configurar Fechas</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="fechasForm">
-                        <div class="mb-3">
-                            <label for="fechaInicio" class="form-label">Fecha de Inicio</label>
-                            <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="fechaCierre" class="form-label">Fecha de Cierre</label>
-                            <input type="date" class="form-control" id="fechaCierre" name="fechaCierre" required>
-                        </div>
-                    </form>
-                    <p class="text-muted mt-2"><br>
-                        <strong>Nota:</strong> La fecha de inicio indica el día a partir del cual los solicitantes podrán comenzar a realizar solicitudes de préstamos. La fecha de cierre marca el último día en el que podrán enviar dichas solicitudes.
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" id="guardarFechas">Guardar</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <section class="tabla-section" id="adminPrestamosSeccion">
@@ -316,6 +285,38 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="actualizarSolicitud()">Enviar Respuesta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Fechas-->
+    <div class="modal fade" id="fechasModal" tabindex="-1" aria-labelledby="fechasModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="fechasModalLabel">Configurar Fechas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="fechasForm">
+                        <div class="mb-3">
+                            <label for="fechaInicio" class="form-label">Fecha de Inicio</label>
+                            <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaCierre" class="form-label">Fecha de Cierre</label>
+                            <input type="date" class="form-control" id="fechaCierre" name="fechaCierre" required>
+                        </div>
+                    </form>
+                    <p class="text-muted mt-2"><br>
+                        <strong>Nota:</strong> La fecha de inicio indica el día a partir del cual los solicitantes podrán comenzar a realizar solicitudes de préstamos. La fecha de cierre marca el último día en el que podrán enviar dichas solicitudes.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="guardarFechas">Guardar</button>
                 </div>
             </div>
         </div>
