@@ -23,6 +23,10 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
     elseif ($anioInicio !== $anio) {
         $response = array("status" => 'error', "message" => "El año ingresado no coincide con las fechas seleccionadas.");
     }
+    // Validar que la fecha de inicio sea anterior a la fecha de cierre
+    elseif ($fechaInicio >= $fechaCierre) {
+        $response = array("status" => 'error', "message" => "La fecha de inicio debe ser anterior a la fecha de cierre.");
+    }
     // Guardar las fechas si todas las validaciones son correctas
     else {
         $response = guardarFechas($fechaInicio, $fechaCierre, $anio);

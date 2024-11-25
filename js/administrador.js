@@ -35,6 +35,15 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         return;
     }
 
+    // Validar que la fecha de inicio sea anterior a la fecha de cierre
+    if (new Date(fechaInicio) >= new Date(fechaCierre)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'La fecha de inicio debe ser anterior a la fecha de cierre.'
+        });
+        return;
+    }
+
     try {
         const url = 'dao/daoGuardarFechas.php'; // URL del archivo PHP que manejará la solicitud
 
