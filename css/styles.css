@@ -1908,3 +1908,13 @@ blockquote::before {
 #btnInsertarPrestamosExcel, #btnInsertarRetirosExcel{
   background-color: #005195 !important;
 }
+
+#line_1 {
+  position: relative;
+}
+
+.line_1 {
+  position: absolute;
+  background-color: var(--lila);;
+  border-radius: 2px;
+}

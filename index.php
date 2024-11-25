@@ -529,6 +529,31 @@
         });
 
         document.addEventListener("DOMContentLoaded", function() {
+            const section = document.getElementById('section_1');
+            const numberOfLines = 20; // Número de líneas a generar
+
+            for (let i = 0; i < numberOfLines; i++) {
+                const line = document.createElement('div');
+                line.classList.add('line_1');
+
+                // Generar un ancho fijo y una altura aleatoria para la línea
+                const height = Math.random() * 10 + 2; // Entre 2px y 12px
+                const width = Math.random() * 200 + 50; // Entre 50px y 250px
+                line.style.height = `${height}px`;
+                line.style.width = `${width}px`;
+
+                // Posición aleatoria dentro de la sección
+                const top = Math.random() * (window.innerHeight - height); // Asegura que no se salga del viewport
+                const left = Math.random() * (window.innerWidth - width); // Asegura que no se salga del viewport
+                line.style.top = `${top}px`;
+                line.style.left = `${left}px`;
+
+                section.appendChild(line);
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
             const section = document.getElementById('section_2');
             const numberOfCircles = 20; // Número de círculos a generar
 
