@@ -80,8 +80,6 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
         } else {
             // Convertir la fecha de inicio a un formato legible con el nombre del mes
-            $fechaInicioFormatted = DateTime::createFromFormat("Y-m-d", $fechaInicioDB)->format("d \d\e F");
-            setlocale(LC_TIME, 'es_ES.UTF-8'); // Asegurar la localización en español
             $fechaInicioFormatted = strftime("%d de %B", strtotime($fechaInicioDB));
 
             // Formatear la hora para mostrar solo horas y minutos
