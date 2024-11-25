@@ -115,8 +115,8 @@
                                     <img src="images/slide/slide1.jpg"
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1>Impulsa tus Metas</h1>
-                                        <p class="msjVaner">Cada centavo ahorrado es un paso más hacia tus objetivos.</p>
+                                        <h1>¡Aviso importante!</h1>
+                                        <p class="msjVaner">Las recepción de solicitudes de préstamo estarán disponibles a partir del día <span id="fechaPermitida"></span> a las <span id="horaPermitida"></span> horas.</p>
                                     </div>
                                 </div>
 
@@ -235,6 +235,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center"><strong>Todo el personal:</strong> Hasta 3 meses de salario</li>
                             </ul>
+                            <p class="text-white">Las recepción de solicitudes de préstamo estarán disponibles a partir del día <span id="fechaPermitidaP"></span> a las <span id="horaPermitidaP"></span> horas.</p>
                         </div>
                     </div>
                 </div>

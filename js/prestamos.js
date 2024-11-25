@@ -1,3 +1,31 @@
+const consultarFechaConvocatoria = async () => {
+    try {
+        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarFechaInicio.php`);
+
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
+        }
+
+        // Parsear la respuesta JSON
+        const result = await response.json();
+
+        // Verificar que 'data' tenga elementos
+        if (result.data && result.data.length > 0) {
+            const fechaInicio = (result.data[0].fechaInicio);  // Acceder a la primera fecha
+            const horaInicio = (result.data[0].horaInicio);
+
+            // Asignar los valores al formulario
+            $("#fechaPermitida").val(fechaInicio);
+            $("#horaPermitida").val(horaInicio);
+            $("#fechaPermitidaP").val(fechaInicio);
+            $("#horaPermitidaP").val(horaInicio);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+
 /*const allowedDate = new Date('2024-11-26'); // Fecha permitida
 const today = new Date();
 const submitButton = document.getElementById('submitButton');
