@@ -15,10 +15,10 @@ const consultarFechaConvocatoria = async () => {
             const horaInicio = (result.data[0].horaInicio);
 
             // Asignar los valores al formulario
-            $("#fechaPermitida").val(fechaInicio);
-            $("#horaPermitida").val(horaInicio);
-            $("#fechaPermitidaP").val(fechaInicio);
-            $("#horaPermitidaP").val(horaInicio);
+            $("#fechaPermitida").text(fechaInicio);
+            $("#horaPermitida").text(horaInicio);
+            $("#fechaPermitidaP").text(fechaInicio);
+            $("#horaPermitidaP").text(horaInicio);
         }
     } catch (error) {
         console.error('Error:', error);
