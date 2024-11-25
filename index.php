@@ -236,7 +236,7 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center"><strong>Todo el personal:</strong> Hasta 3 meses de salario</li>
                             </ul>
                             <div id="avisoPrestamo">
-                                <p class="text-white" ><br><strong>¡IMPORTANTE!</strong><br> Las recepción de solicitudes de préstamo estarán disponibles a partir del día
+                                <p class="text-white" ><br><strong>¡IMPORTANTE!</strong><br> Las recepción de solicitudes de préstamo será a partir del día
                                     <span id="fechaPermitidaP"></span> a las <span id="horaPermitidaP"></span> horas.
                                 </p>
                             </div>
