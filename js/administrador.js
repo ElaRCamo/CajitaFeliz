@@ -10,7 +10,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         Swal.fire({
             icon: 'error',
             title: 'Por favor, complete ambas fechas.'
-        })
+        });
         return;
     }
 
@@ -23,7 +23,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         Swal.fire({
             icon: 'error',
             title: 'Ambas fechas deben pertenecer al mismo año.'
-        })
+        });
         return;
     }
     // Validar que el año de las fechas sea el actual
@@ -31,12 +31,12 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         Swal.fire({
             icon: 'error',
             title: `Las fechas deben corresponder al año actual (${anioActual}).`
-        })
+        });
         return;
     }
 
     try {
-        const url = 'dao/daoGuardarFechas.php';
+        const url = 'dao/daoGuardarFechas.php'; // URL del archivo PHP que manejará la solicitud
 
         // Crear el cuerpo de la solicitud en formato x-www-form-urlencoded
         const data = new URLSearchParams();
@@ -46,17 +46,18 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
 
         // Realizar la solicitud con fetch
         const response = await fetch(url, {
-            method: 'POST', // Método HTTP
+            method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded', // Tipo de contenido
+                'Content-Type': 'application/x-www-form-urlencoded', // Especificamos el tipo de contenido
             },
-            body: data.toString() // Convertir a string de parámetros
+            body: data.toString() // Convertimos los parámetros a string
         });
 
         // Obtener la respuesta en formato JSON
         const result = await response.json();
 
-        if (result.status === 'success') {  // Verifica el status de la respuesta
+        // Manejar la respuesta
+        if (result.status === 'success') {
             Swal.fire({
                 icon: 'success',
                 title: result.message || 'Fechas guardadas exitosamente'

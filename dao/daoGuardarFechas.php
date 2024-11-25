@@ -1,13 +1,10 @@
 <?php
 include_once('connectionCajita.php');
 
-// Leer el cuerpo de la solicitud como JSON
-$data = json_decode(file_get_contents('php://input'), true);
-
-if (!empty($data["fechaInicio"]) && !empty($data["fechaCierre"]) && !empty($data["anio"])) {
-    $fechaInicio = $data["fechaInicio"];
-    $fechaCierre = $data["fechaCierre"];
-    $anio = intval($data["anio"]);
+if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_POST["anio"])) {
+    $fechaInicio = $_POST["fechaInicio"];
+    $fechaCierre = $_POST["fechaCierre"];
+    $anio = intval($_POST["anio"]);
 
     // Validar que las fechas sean válidas
     $anioInicio = intval(date('Y', strtotime($fechaInicio)));
@@ -35,6 +32,7 @@ if (!empty($data["fechaInicio"]) && !empty($data["fechaCierre"]) && !empty($data
 }
 
 echo json_encode($response);
+
 
 function guardarFechas($fechaInicio, $fechaCierre, $anio){
     $con = new LocalConectorCajita();
