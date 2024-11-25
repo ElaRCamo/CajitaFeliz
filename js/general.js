@@ -11,7 +11,22 @@ const formatearFecha = (fecha) => {
         return 'Sin registro'; // En caso de que la fecha no sea válida
     }
 };
+function formatearHora(hora) {
+    if (!hora || typeof hora !== "string") {
+        throw new Error("La hora proporcionada no es válida.");
+    }
 
+    // Dividir la hora en partes utilizando ':' como separador
+    const partes = hora.split(":");
+
+    // Verificar que haya al menos horas y minutos
+    if (partes.length < 2) {
+        throw new Error("La hora proporcionada no tiene el formato esperado 'HH:mm:ss'.");
+    }
+
+    // Devolver solo las primeras dos partes (HH:mm)
+    return `${partes[0]}:${partes[1]}`;
+}
 
 // Función para convertir la fecha de Excel a formato 'YYYY-MM-DD'
 function excelDateToJSDate(excelDate) {
