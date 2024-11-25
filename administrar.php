@@ -93,6 +93,10 @@
         </div>
     </nav>
 
+    <body>
+        <button class="top-right-button">Fechas</button>
+    </body>
+
     <section class="tabla-section" id="adminPrestamosSeccion">
         <div class=""></div>
         <div class="container">

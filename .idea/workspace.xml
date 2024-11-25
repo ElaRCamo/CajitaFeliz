@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add comments in excel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/administrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/administrar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/prestamos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/prestamos.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,23 +98,8 @@
       <workItem from="1732036405251" duration="139000" />
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
-      <workItem from="1732305781835" duration="2827000" />
-    </task>
-    <task id="LOCAL-00535" summary="responsivity">
-      <option name="closed" value="true" />
-      <created>1731433519970</created>
-      <option name="number" value="00535" />
-      <option name="presentableId" value="LOCAL-00535" />
-      <option name="project" value="LOCAL" />
-      <updated>1731433519970</updated>
-    </task>
-    <task id="LOCAL-00536" summary="Fixes">
-      <option name="closed" value="true" />
-      <created>1731436156507</created>
-      <option name="number" value="00536" />
-      <option name="presentableId" value="LOCAL-00536" />
-      <option name="project" value="LOCAL" />
-      <updated>1731436156507</updated>
+      <workItem from="1732305781835" duration="4447000" />
+      <workItem from="1732542389155" duration="1627000" />
     </task>
     <task id="LOCAL-00537" summary="Fixes">
       <option name="closed" value="true" />
@@ -491,7 +477,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732308481066</updated>
     </task>
-    <option name="localTasksCounter" value="584" />
+    <task id="LOCAL-00584" summary="add comments in excel">
+      <option name="closed" value="true" />
+      <created>1732308735000</created>
+      <option name="number" value="00584" />
+      <option name="presentableId" value="LOCAL-00584" />
+      <option name="project" value="LOCAL" />
+      <updated>1732308735001</updated>
+    </task>
+    <task id="LOCAL-00585" summary="add comments in excel">
+      <option name="closed" value="true" />
+      <created>1732308960944</created>
+      <option name="number" value="00585" />
+      <option name="presentableId" value="LOCAL-00585" />
+      <option name="project" value="LOCAL" />
+      <updated>1732308960944</updated>
+    </task>
+    <option name="localTasksCounter" value="586" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
