@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add date block">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add date lock" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,23 +94,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="8369000" />
-    </task>
-    <task id="LOCAL-00548" summary="Change page">
-      <option name="closed" value="true" />
-      <created>1732208465180</created>
-      <option name="number" value="00548" />
-      <option name="presentableId" value="LOCAL-00548" />
-      <option name="project" value="LOCAL" />
-      <updated>1732208465180</updated>
-    </task>
-    <task id="LOCAL-00549" summary="Change page">
-      <option name="closed" value="true" />
-      <created>1732208545400</created>
-      <option name="number" value="00549" />
-      <option name="presentableId" value="LOCAL-00549" />
-      <option name="project" value="LOCAL" />
-      <updated>1732208545400</updated>
+      <workItem from="1732542389155" duration="9365000" />
     </task>
     <task id="LOCAL-00550" summary="Change page">
       <option name="closed" value="true" />
@@ -491,7 +472,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732553214218</updated>
     </task>
-    <option name="localTasksCounter" value="597" />
+    <task id="LOCAL-00597" summary="add date block">
+      <option name="closed" value="true" />
+      <created>1732553733879</created>
+      <option name="number" value="00597" />
+      <option name="presentableId" value="LOCAL-00597" />
+      <option name="project" value="LOCAL" />
+      <updated>1732553733879</updated>
+    </task>
+    <task id="LOCAL-00598" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732554682882</created>
+      <option name="number" value="00598" />
+      <option name="presentableId" value="LOCAL-00598" />
+      <option name="project" value="LOCAL" />
+      <updated>1732554682882</updated>
+    </task>
+    <option name="localTasksCounter" value="599" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Loan: Read by applicant" />
     <MESSAGE value="Loan: add endorsements" />
     <MESSAGE value="Styles login" />
     <MESSAGE value="Responsive login" />
@@ -534,7 +530,8 @@
     <MESSAGE value="add tel endorsement" />
     <MESSAGE value="add comments in excel" />
     <MESSAGE value="add date block" />
-    <option name="LAST_COMMIT_MESSAGE" value="add date block" />
+    <MESSAGE value="add date lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="add date lock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

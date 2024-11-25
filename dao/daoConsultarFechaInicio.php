@@ -1,9 +1,9 @@
 <?php
-include_once('connection.php');
+include_once('connectionCajita.php');
 
 consultarFechas();
 function consultarFechas(){
-    $con = new LocalConector();
+    $con = new LocalConectorCajita();
     $conexion=$con->conectar();
 
     $anioActual = intval(date('Y'));
