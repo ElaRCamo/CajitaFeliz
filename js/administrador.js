@@ -89,8 +89,8 @@ const consultarFechas = async () => {
         }
 
         const result = await response.json();
-        const fechaInicio = formatearFecha(result.fechaInicio);
-        const fechaCierre = formatearMonto(result.fechaCierre);
+        const fechaInicio = formatearFecha(result.data.fechaInicio);
+        const fechaCierre = formatearMonto(result.data.fechaCierre);
 
         $("#fechaInicio").val(fechaInicio);
         $("#fechaCierre").val(fechaCierre);
