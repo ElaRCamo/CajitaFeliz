@@ -1,5 +1,6 @@
 <?php
 include_once('connectionCajita.php');
+include_once('funcionesGenerales.php');
 
 session_start();
 
@@ -79,21 +80,14 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             // Responder con éxito
             $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
         } else {
-            setlocale(LC_TIME, 'es_ES.UTF-8');
-            // Crear objetos DateTime para fecha y hora
-            $fechaInicioDateTime = DateTime::createFromFormat("Y-m-d", $fechaInicioDB);
-            $horaInicioDateTime = DateTime::createFromFormat("H:i:s", $horaInicioDB);
+            // Construir el mensaje de error utilizando la función formatearFechaHora
+            $mensajeFechaHora = formatearFechaHora($fechaInicioDB, $horaInicioDB);
 
-            // Convertir la fecha y hora al formato deseado
-            $nombreMes = strftime("%B", $fechaInicioDateTime->getTimestamp()); // Obtenemos el mes traducido manualmente
-            $fechaInicioFormatted = $fechaInicioDateTime->format("d") . " de " . ucfirst($nombreMes);
-            $horaInicioFormatted = $horaInicioDateTime->format("H:i");
-
-            // Construir el mensaje de error
             $respuesta = array(
                 "status" => 'error',
-                "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $fechaInicioFormatted a las $horaInicioFormatted."
+                "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $mensajeFechaHora."
             );
+
         }
 
     } catch (Exception $e) {

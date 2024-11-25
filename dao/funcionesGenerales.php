@@ -52,5 +52,45 @@ function formatearFecha($fecha) {
     }
 }
 
+/**
+ * Formatea una fecha y hora para mostrarla en español.
+ *
+ * @param string $fecha Fecha en formato "Y-m-d".
+ * @param string $hora Hora en formato "H:i:s".
+ * @return string Fecha y hora formateada (e.g., "25 de noviembre a las 13:00").
+ */
+function formatearFechaHora($fecha, $hora) {
+    // Crear objetos DateTime para la fecha y hora
+    $fechaDateTime = DateTime::createFromFormat("Y-m-d", $fecha);
+    $horaDateTime = DateTime::createFromFormat("H:i:s", $hora);
+
+    // Diccionario para traducir los meses manualmente
+    $meses = [
+        'January' => 'enero',
+        'February' => 'febrero',
+        'March' => 'marzo',
+        'April' => 'abril',
+        'May' => 'mayo',
+        'June' => 'junio',
+        'July' => 'julio',
+        'August' => 'agosto',
+        'September' => 'septiembre',
+        'October' => 'octubre',
+        'November' => 'noviembre',
+        'December' => 'diciembre'
+    ];
+
+    // Obtener el nombre del mes en español
+    $nombreMes = $meses[$fechaDateTime->format('F')];
+
+    // Formatear la fecha y la hora
+    $fechaFormateada = $fechaDateTime->format("d") . " de " . $nombreMes;
+    $horaFormateada = $horaDateTime->format("H:i");
+
+    return "$fechaFormateada a las $horaFormateada";
+}
+
+
+
 
 ?>
