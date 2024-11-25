@@ -94,39 +94,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="18332000" />
-    </task>
-    <task id="LOCAL-00582" summary="add comments in excel">
-      <option name="closed" value="true" />
-      <created>1732308331885</created>
-      <option name="number" value="00582" />
-      <option name="presentableId" value="LOCAL-00582" />
-      <option name="project" value="LOCAL" />
-      <updated>1732308331885</updated>
-    </task>
-    <task id="LOCAL-00583" summary="add comments in excel">
-      <option name="closed" value="true" />
-      <created>1732308481065</created>
-      <option name="number" value="00583" />
-      <option name="presentableId" value="LOCAL-00583" />
-      <option name="project" value="LOCAL" />
-      <updated>1732308481066</updated>
-    </task>
-    <task id="LOCAL-00584" summary="add comments in excel">
-      <option name="closed" value="true" />
-      <created>1732308735000</created>
-      <option name="number" value="00584" />
-      <option name="presentableId" value="LOCAL-00584" />
-      <option name="project" value="LOCAL" />
-      <updated>1732308735001</updated>
-    </task>
-    <task id="LOCAL-00585" summary="add comments in excel">
-      <option name="closed" value="true" />
-      <created>1732308960944</created>
-      <option name="number" value="00585" />
-      <option name="presentableId" value="LOCAL-00585" />
-      <option name="project" value="LOCAL" />
-      <updated>1732308960944</updated>
+      <workItem from="1732542389155" duration="18650000" />
     </task>
     <task id="LOCAL-00586" summary="add date block">
       <option name="closed" value="true" />
@@ -488,7 +456,39 @@
       <option name="project" value="LOCAL" />
       <updated>1732567271605</updated>
     </task>
-    <option name="localTasksCounter" value="631" />
+    <task id="LOCAL-00631" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732567502372</created>
+      <option name="number" value="00631" />
+      <option name="presentableId" value="LOCAL-00631" />
+      <option name="project" value="LOCAL" />
+      <updated>1732567502372</updated>
+    </task>
+    <task id="LOCAL-00632" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732567628264</created>
+      <option name="number" value="00632" />
+      <option name="presentableId" value="LOCAL-00632" />
+      <option name="project" value="LOCAL" />
+      <updated>1732567628265</updated>
+    </task>
+    <task id="LOCAL-00633" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732567664996</created>
+      <option name="number" value="00633" />
+      <option name="presentableId" value="LOCAL-00633" />
+      <option name="project" value="LOCAL" />
+      <updated>1732567664996</updated>
+    </task>
+    <task id="LOCAL-00634" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732567756839</created>
+      <option name="number" value="00634" />
+      <option name="presentableId" value="LOCAL-00634" />
+      <option name="project" value="LOCAL" />
+      <updated>1732567756839</updated>
+    </task>
+    <option name="localTasksCounter" value="635" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

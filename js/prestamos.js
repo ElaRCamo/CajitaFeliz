@@ -26,7 +26,7 @@ const consultarFechaConvocatoria = async () => {
         const fechaHoy = formatearFecha(new Date());
 
         // Comparar las fechas
-        if (fechaHoy >= fechaInicio) {
+        if (fechaHoy > fechaInicio) {
             let avisoFecha = document.getElementById("avisoPrestamo");
             avisoFecha.style.display = "none";
         }
