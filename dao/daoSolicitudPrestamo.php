@@ -85,7 +85,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
             $respuesta = array(
                 "status" => 'error',
-                "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $mensajeFechaHora."
+                "message" => "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $mensajeFechaHora horas."
             );
 
         }
