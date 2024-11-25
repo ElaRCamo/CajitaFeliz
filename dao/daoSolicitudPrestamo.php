@@ -79,6 +79,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             // Responder con éxito
             $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
         } else {
+            setlocale(LC_TIME, 'es_ES.UTF-8');
             // Crear objetos DateTime para fecha y hora
             $fechaInicioDateTime = DateTime::createFromFormat("Y-m-d", $fechaInicioDB);
             $horaInicioDateTime = DateTime::createFromFormat("H:i:s", $horaInicioDB);
