@@ -52,9 +52,10 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
             body: JSON.stringify(data)
         });
 
+        // Obtener la respuesta en formato JSON
         const result = await response.json();
 
-        if (response.ok) {
+        if (result.status === 'success') {
             Swal.fire({
                 icon: 'success',
                 title: `${result.message}`
