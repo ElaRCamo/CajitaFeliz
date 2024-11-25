@@ -36,7 +36,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     }
 
     try {
-        const url = 'dao/daoGuardarFechas';
+        const url = 'dao/daoGuardarFechas.php';
 
         const data = {
             fechaInicio,
