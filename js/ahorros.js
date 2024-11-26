@@ -45,7 +45,7 @@ function validarFormAhorro() {
                 const telefonoBen2 = document.getElementById('telefonoBen2').value;
                 const domicilioBen2 = document.getElementById('domicilioBen2').value;
 
-                //console.log("ben2: " + nombreBen2 + " " + porcentajeBen2 + " " + telefonoBen2 + " " + domicilioBen2);
+                console.log("ben2: " + nombreBen2 + " " + porcentajeBen2 + " " + telefonoBen2 + " " + domicilioBen2);
 
                 const nombreBen2Valido = validarInput('nombreBen2');
                 const porcentajeBen2Valido = validarInput('porcentajeBen2');
@@ -70,7 +70,17 @@ function validarFormAhorro() {
                             });
                             return;  // Detener si los porcentajes no suman 100
                         }
+                    }else{
+                        mostrarMsjError(valporcentajeBen2,valtelefonoBen2);
+                        return;
                     }
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: "Ingrese los datos faltantes"
+                    });
+                    return;  // Detener si los porcentajes no suman 100
                 }
             }else{
                 porcentajeBen1 = 100;  // Si no hay beneficiario 2, el porcentaje es 100 para el 1
@@ -84,16 +94,24 @@ function validarFormAhorro() {
             // Si todo está validado, llamar a registrarAhorro
             registrarAhorro(montoAhorroValidado,nombres,porcentajes,telefonos,domicilios);
         } else {
-
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: mensaje
-            });
+            mostrarMsjError(valporcentajeBen1,valtelefonoBen1);
         }
     }
 }
 
+
+function mostrarMsjError(valporcentaje,valtelefono){
+    let mensaje = "";
+    if (!valporcentaje) mensaje = "Ingrese un porcentaje válido";
+    if (!valtelefono) mensaje = "Ingrese un teléfono válido";
+    if (!valtelefono && !valporcentaje) mensaje = "Ingrese un porcentaje y un teléfono válidos";
+
+    Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: mensaje
+    });
+}
 //Funcion que elimina signo "$" de la cantidad y valida que sea un numero válido
 function validarMonto(montoAhorro) {
     // Elimina el signo de pesos si está al principio
