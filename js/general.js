@@ -160,7 +160,7 @@ function fExisteAhorro(){
             $("#domicilioBen2").val(data2.direccion);
         }
     });
-    alert("idCaja:"+idCaja)
+    //alert("idCaja:"+idCaja)
     if (idCaja !== ""){
         let btnSolAhorro = document.getElementById("btnSolAhorro");
         btnSolAhorro.style.display = "none";
