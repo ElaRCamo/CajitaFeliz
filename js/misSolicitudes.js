@@ -161,8 +161,15 @@ const TablaCajaAhorro= async () => {
                     <td>${item.nomina}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${montoSolFormateado}</td>
+                    
                 </tr>`;
         });
+
+        /*<td>
+                        <button class="btn btn-primary" onclick="consultarAhorro('${item.idCaja}')" data-bs-toggle="modal" data-bs-target="#modalConsultaAhorro">
+                            </i><span>Detalles</span>
+                        </button>
+                    </td>*/
 
         cajaAhorroBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
 
@@ -173,6 +180,37 @@ const TablaCajaAhorro= async () => {
         console.error('Error:', error);
     }
 };
+
+function consultarAhorro(idCaja){
+    const titulo = "Mi Caja de Ahorro Folio " + idCaja;
+    actualizarTitulo('#titModalMiAhorro', titulo);
+    let data = "";
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoRetiroPorId.php?ret='+idCaja, function (response) {
+
+        data = response.data[0];
+
+        let fechaSolicitudFormateada = formatearFecha(data.fechaSol);
+        let fechaDepFormateada = formatearFecha(data.fechaDep);
+        let montoDep = formatearMonto(data.montoDep);
+
+        $("#folioCaja").text(data.folioRetiro);
+
+        $("#montoAhorro").text(montoDep);
+
+        $("#fechaAhorro").text(data.folioCaja);
+
+        $("#nominaSolAho").text(fechaSolicitudFormateada);
+
+        $("#nombreAho").text(fechaDepFormateada);
+
+        $('#beneficiarioUno').text(data.usuario);
+
+        $("#beneficiarioDos").text(data.estatusVisual);
+
+    }).then(function(){
+        fCargarSolicitanteMS(data.usuario, '#nombreSolRetiro');
+    });
+}
 
 
 let dataTableRetiro;

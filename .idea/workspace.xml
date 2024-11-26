@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="fixes for savings module">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/daoCargarUltimoAhorro.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoCargarUltimoAhorro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ahorros.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ahorros.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/general.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/misSolicitudes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/misSolicitudes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,15 +98,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="25857000" />
-    </task>
-    <task id="LOCAL-00599" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732554828075</created>
-      <option name="number" value="00599" />
-      <option name="presentableId" value="LOCAL-00599" />
-      <option name="project" value="LOCAL" />
-      <updated>1732554828075</updated>
+      <workItem from="1732542389155" duration="27389000" />
     </task>
     <task id="LOCAL-00600" summary="add date lock">
       <option name="closed" value="true" />
@@ -494,7 +484,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732631726043</updated>
     </task>
-    <option name="localTasksCounter" value="648" />
+    <task id="LOCAL-00648" summary="fixes for savings module">
+      <option name="closed" value="true" />
+      <created>1732636260528</created>
+      <option name="number" value="00648" />
+      <option name="presentableId" value="LOCAL-00648" />
+      <option name="project" value="LOCAL" />
+      <updated>1732636260528</updated>
+    </task>
+    <option name="localTasksCounter" value="649" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
