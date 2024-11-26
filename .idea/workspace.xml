@@ -98,14 +98,6 @@
       <workItem from="1732305781835" duration="4447000" />
       <workItem from="1732542389155" duration="20615000" />
     </task>
-    <task id="LOCAL-00594" summary="add date block">
-      <option name="closed" value="true" />
-      <created>1732552760045</created>
-      <option name="number" value="00594" />
-      <option name="presentableId" value="LOCAL-00594" />
-      <option name="project" value="LOCAL" />
-      <updated>1732552760045</updated>
-    </task>
     <task id="LOCAL-00595" summary="add date block">
       <option name="closed" value="true" />
       <created>1732552833756</created>
@@ -490,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732569546055</updated>
     </task>
-    <option name="localTasksCounter" value="643" />
+    <task id="LOCAL-00643" summary="add date lock">
+      <option name="closed" value="true" />
+      <created>1732629063830</created>
+      <option name="number" value="00643" />
+      <option name="presentableId" value="LOCAL-00643" />
+      <option name="project" value="LOCAL" />
+      <updated>1732629063830</updated>
+    </task>
+    <option name="localTasksCounter" value="644" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

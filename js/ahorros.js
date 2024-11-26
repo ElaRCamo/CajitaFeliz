@@ -37,15 +37,7 @@ function validarFormAhorro() {
         let valtelefonoBen1 = validarTelefono(telefonoBen1);
 
         if (valporcentajeBen1 && valtelefonoBen1) {
-            if (!existeBen2) {
-                porcentajeBen1 = 100;  // Si no hay beneficiario 2, el porcentaje es 100 para el 1
-            }
-
-            nombres.push(nombreBen1.trim());
-            porcentajes.push(porcentajeBen1);
-            telefonos.push(telefonoBen1.trim());
-            domicilios.push(domicilioBen1.trim());
-
+            alert("existeBen2:"+existeBen2);
             // Verificar si los campos del Beneficiario 2 no están vacíos antes de añadirlos
             if (existeBen2) {
                 const nombreBen2 = document.getElementById('nombreBen2').value;
@@ -80,7 +72,14 @@ function validarFormAhorro() {
                         }
                     }
                 }
+            }else{
+                porcentajeBen1 = 100;  // Si no hay beneficiario 2, el porcentaje es 100 para el 1
             }
+
+            nombres.push(nombreBen1.trim());
+            porcentajes.push(porcentajeBen1);
+            telefonos.push(telefonoBen1.trim());
+            domicilios.push(domicilioBen1.trim());
 
             // Si todo está validado, llamar a registrarAhorro
             registrarAhorro(montoAhorroValidado,nombres,porcentajes,telefonos,domicilios);
