@@ -211,7 +211,7 @@
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <label for="telefono">Teléfono: </label>
-                                    <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="555-1234567" required>
+                                    <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="5551234567" required>
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <label for="montoPrestamo">Monto solicitado: </label>
