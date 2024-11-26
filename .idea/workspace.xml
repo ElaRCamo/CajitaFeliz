@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="add date lock" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="fixes for savings module">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoCargarUltimoAhorro.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoCargarUltimoAhorro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ahorros.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ahorros.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/general.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,15 +100,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="22110000" />
-    </task>
-    <task id="LOCAL-00598" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732554682882</created>
-      <option name="number" value="00598" />
-      <option name="presentableId" value="LOCAL-00598" />
-      <option name="project" value="LOCAL" />
-      <updated>1732554682882</updated>
+      <workItem from="1732542389155" duration="25857000" />
     </task>
     <task id="LOCAL-00599" summary="add date lock">
       <option name="closed" value="true" />
@@ -488,7 +486,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732631129122</updated>
     </task>
-    <option name="localTasksCounter" value="647" />
+    <task id="LOCAL-00647" summary="fixes for savings module">
+      <option name="closed" value="true" />
+      <created>1732631726043</created>
+      <option name="number" value="00647" />
+      <option name="presentableId" value="LOCAL-00647" />
+      <option name="project" value="LOCAL" />
+      <updated>1732631726043</updated>
+    </task>
+    <option name="localTasksCounter" value="648" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Loan: add endorsements" />
     <MESSAGE value="Styles login" />
     <MESSAGE value="Responsive login" />
     <MESSAGE value="styles index" />
@@ -531,7 +536,8 @@
     <MESSAGE value="add comments in excel" />
     <MESSAGE value="add date block" />
     <MESSAGE value="add date lock" />
-    <option name="LAST_COMMIT_MESSAGE" value="add date lock" />
+    <MESSAGE value="fixes for savings module" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes for savings module" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

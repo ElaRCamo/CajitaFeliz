@@ -1,4 +1,4 @@
-function validarFormAhorro() {
+function validarFormAhorro(esActualizacion) {
     const montoAhorro = document.getElementById('montoAhorro').value;
     const nombreBen1 = document.getElementById('nombreBen1').value;
     let porcentajeBen1 = document.getElementById('porcentajeBen1').value;
@@ -89,7 +89,13 @@ function validarFormAhorro() {
             domicilios.push(domicilioBen1.trim());
 
             // Si todo está validado, llamar a registrarAhorro
-            registrarAhorro(montoAhorroValidado,nombres,porcentajes,telefonos,domicilios);
+            let dao = "";
+            if(esActualizacion){
+                dao = "dao/daoGuardarAhorro.php";
+            }else{
+                dao = "dao/daoGuardarAhorro.php";
+            }
+            registrarAhorro(montoAhorroValidado,nombres,porcentajes,telefonos,domicilios, dao);
         } else {
             mostrarMsjError(valporcentajeBen1,valtelefonoBen1);
         }
@@ -191,7 +197,7 @@ function autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domi
 }
 
 
-function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios) {
+function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios, dao) {
 
     const formData = new FormData();
     formData.append('montoAhorro', montoAhorro);
@@ -207,7 +213,7 @@ function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios) {
     //alert(formDataContents);
 
     // Enviar los datos utilizando fetch
-    fetch('dao/daoGuardarAhorro.php', {
+    fetch(dao, {
         method: 'POST',
         body: formData
     })
@@ -215,7 +221,7 @@ function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios) {
         .then(data => {
             if (data.status === "success"){
                 Swal.fire({
-                    title: "¡Solicitud realizada exitosamente!",
+                    title: "¡Solicitud exitosa!",
                     icon: "success",
                     text: data.message,
                     confirmButtonText: "OK"

@@ -11,7 +11,7 @@ function cargarUltimoAhorro()
 
     $nomina = $_SESSION["nomina"];
 
-    $consultaAhorro = "SELECT ca.montoAhorro, b.nombre, b.direccion, b.telefono, b.porcentaje
+    $consultaAhorro = "SELECT ca.idCaja, ca.montoAhorro, b.nombre, b.direccion, b.telefono, b.porcentaje
                         FROM CajaAhorro ca
                         JOIN Beneficiarios b ON ca.idCaja = b.idCaja
                        WHERE ca.nomina = ?

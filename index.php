@@ -166,7 +166,7 @@
                             <a href="#section_1" class="d-block" onclick="fCargarPrestamo()">
                                 <img src="images/icons/receipt.png" class="imgIcon featured-block-image img-fluid" alt="">
 
-                                <p class="featured-block-text"> <strong>Solicitar  préstamo</strong></p>
+                                <p class="featured-block-text"> <strong>Solicitar préstamo</strong></p>
                             </a>
                         </div>
                     </div>
@@ -325,7 +325,8 @@
                                         <div class="invalid-feedback"></div>
                                     </div>
                                 </div>
-                                <button type="button" class="form-control" onclick="validarFormAhorro()">Solicitar</button>
+                                <button type="button" class="form-control" onclick="validarFormAhorro(false)" id="btnSolAhorro">Solicitar</button>
+                                <button type="button" class="form-control" id="btnActAhorro">Actualizar</button>
                         </form>
                     </div>
                 </div>

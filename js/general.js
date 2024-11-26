@@ -130,12 +130,17 @@ function fCrearAhorro(){
 
 function fExisteAhorro(){
 
+    let idCaja = "";
+
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoCargarUltimoAhorro.php', function (response) {
 
         let data = response.data[0];
         let data2 = response.data[2];
 
         let montoSolicitado = formatearMonto(data.montoAhorro);
+        idCaja = data.idCaja;
+
+        //Caja de ahorro
 
         $("#montoAhorro").val(montoSolicitado);
 
@@ -154,8 +159,23 @@ function fExisteAhorro(){
             $("#telefonoBen2").val(data2.telefono);
             $("#domicilioBen2").val(data2.direccion);
         }
-
     });
+    alert("idCaja:"+idCaja)
+    if (idCaja !== ""){
+        let btnSolAhorro = document.getElementById("btnSolAhorro");
+        btnSolAhorro.style.display = "none";
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnActualizar = document.getElementById('btnActAhorro');
+
+            btnActualizar.addEventListener('click', function() {
+                validarFormAhorro(true); // Llama a la función con el argumento `true`
+            });
+            }
+        )
+    }else{
+
+    }
 }
 
 
