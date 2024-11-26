@@ -326,7 +326,7 @@
                                     </div>
                                 </div>
                                 <button type="button" class="form-control" onclick="validarFormAhorro(false)" id="btnSolAhorro">Solicitar</button>
-                                <button type="button" class="form-control" id="btnActAhorro">Actualizar</button>
+                                <!--<button type="button" class="form-control" id="btnActAhorro">Actualizar</button>-->
                         </form>
                     </div>
                 </div>
