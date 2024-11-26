@@ -21,9 +21,7 @@ function validarFormAhorro() {
     if (montoValido && nombreBen1Valido && porcentajeBen1Valido && telefonoBen1Valido && domicilioBen1Valido) {
         let montoAhorroValidado = validarMonto(montoAhorro);
 
-
         if(montoAhorroValidado === null){
-
             Swal.fire({
                 icon: 'error',
                 title: 'Monto inválido',
@@ -37,7 +35,6 @@ function validarFormAhorro() {
         let valtelefonoBen1 = validarTelefono(telefonoBen1);
 
         if (valporcentajeBen1 && valtelefonoBen1) {
-            alert("existeBen2:"+existeBen2);
             // Verificar si los campos del Beneficiario 2 no están vacíos antes de añadirlos
             if (existeBen2) {
                 const nombreBen2 = document.getElementById('nombreBen2').value;
