@@ -84,10 +84,6 @@ function validarFormAhorro() {
             // Si todo está validado, llamar a registrarAhorro
             registrarAhorro(montoAhorroValidado,nombres,porcentajes,telefonos,domicilios);
         } else {
-            let mensaje = "";
-            if (!valporcentajeBen1) mensaje = "Ingrese un porcentaje válido";
-            if (!valtelefonoBen1) mensaje = "Ingrese un teléfono válido";
-            if (!valtelefonoBen1 && !valporcentajeBen1) mensaje = "Ingrese un porcentaje y un teléfono válidos";
 
             Swal.fire({
                 icon: 'error',
