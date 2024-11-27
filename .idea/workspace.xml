@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="fixes for savings module" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="fixes for savings module">
+      <change afterPath="$PROJECT_DIR$/images/slide/banderas.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importante.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importante.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,8 +66,8 @@
       <recent name="C:\CajitaFelizGrammer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\CajitaFelizGrammer\images\icons" />
       <recent name="C:\CajitaFelizGrammer\images\slide" />
+      <recent name="C:\CajitaFelizGrammer\images\icons" />
       <recent name="C:\CajitaFelizGrammer\docs" />
       <recent name="C:\CajitaFelizGrammer\images" />
     </key>
@@ -94,23 +99,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="27997000" />
-    </task>
-    <task id="LOCAL-00603" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732555346547</created>
-      <option name="number" value="00603" />
-      <option name="presentableId" value="LOCAL-00603" />
-      <option name="project" value="LOCAL" />
-      <updated>1732555346547</updated>
-    </task>
-    <task id="LOCAL-00604" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732555603275</created>
-      <option name="number" value="00604" />
-      <option name="presentableId" value="LOCAL-00604" />
-      <option name="project" value="LOCAL" />
-      <updated>1732555603275</updated>
+      <workItem from="1732542389155" duration="32505000" />
     </task>
     <task id="LOCAL-00605" summary="add date lock">
       <option name="closed" value="true" />
@@ -488,7 +477,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732639216759</updated>
     </task>
-    <option name="localTasksCounter" value="652" />
+    <task id="LOCAL-00652" summary="fixes for savings module">
+      <option name="closed" value="true" />
+      <created>1732639264259</created>
+      <option name="number" value="00652" />
+      <option name="presentableId" value="LOCAL-00652" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639264259</updated>
+    </task>
+    <task id="LOCAL-00653" summary="fixes for savings module">
+      <option name="closed" value="true" />
+      <created>1732639656339</created>
+      <option name="number" value="00653" />
+      <option name="presentableId" value="LOCAL-00653" />
+      <option name="project" value="LOCAL" />
+      <updated>1732639656339</updated>
+    </task>
+    <option name="localTasksCounter" value="654" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

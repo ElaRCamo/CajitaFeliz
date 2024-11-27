@@ -7,3 +7,27 @@ RRHHGrammer2024#
 0011834154
 
 30313
+0006453040
+
+
+tengo la tabla que se llama Storage_Unit su con las columnas:
+Id_StorageUnit(int y PK), Numero_Parte(varchar),Cantidad(float), Storage_Bin(varchar), Storage_Type(varchar), Estatus(int), FolioMarbete(varchar),Conteo(int)
+
+tambien tengo la tabla InventarioSap is, con las columnas:
+STLocation(int y PK), STBin(varchar y PK), STType(varchar y PK), GrammerNo(varchar y PK), Cantidad(float), y  AreaCve(varchar)
+
+Considerando que su.Numero_Parte = is.GrammerNo, su.Storage_Bin = is.STBin, su.Storage_Type = is.STType, quiero agrupar los valores de Storage_Unit por el valor de las 
+llaves primarias de InventarioSap, tomar los valores de su.Cantidad y sumarlos, obtener el total y actualizar el valor de is.Cantidad, todo esto con php, 
+tomando en cuenta que la conexion a la BD se establece con: <?php
+include_once('connection.php'); , la conexion se establece asi:
+    $con = new LocalConector();
+    $conex = $con->conectar();
+
+    // Iniciar transacción
+    $conex->begin_transaction();
+
+la idea es:
+1. si existe $id_StorageUnit entonces siempre se llama a  insertarRegistrosStorage($id_StorageUnit, $GrammerNo, $Cantidad, $StBin, $StType);
+2. cuando no existe $id_StorageUnit se llama directamente a insertarRegistrosInventario($GrammerNo, $STLocation, $StBin, $StType, $Cantidad, $AreaCve)
+3. cauando existe $id_StorageUnit se deben agrupar los valores por: $GrammerNo,$StBin, $StType (que son las llaves primarias de Inventario), se suma la cantidad 
+y se llama a insertarRegistrosInventario($GrammerNo, $STLocation, $StBin, $StType, $Cantidad, $AreaCve)

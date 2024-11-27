@@ -65,7 +65,7 @@ form{
 /* Estilo de la parte derecha con la imagen de fondo */
 .right-side {
     flex: 1;
-    background-image: url('../images/slide/pigCorona.jpg');
+    background-image: url('../images/slide/banderas.jpg');
     background-size: cover;
     background-position: center;
 }
