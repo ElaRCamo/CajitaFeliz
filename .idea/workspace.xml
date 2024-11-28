@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update images">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="lock for load request" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,15 +94,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="38025000" />
-    </task>
-    <task id="LOCAL-00610" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732556268438</created>
-      <option name="number" value="00610" />
-      <option name="presentableId" value="LOCAL-00610" />
-      <option name="project" value="LOCAL" />
-      <updated>1732556268438</updated>
+      <workItem from="1732542389155" duration="38374000" />
     </task>
     <task id="LOCAL-00611" summary="add date lock">
       <option name="closed" value="true" />
@@ -491,7 +480,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732728147487</updated>
     </task>
-    <option name="localTasksCounter" value="659" />
+    <task id="LOCAL-00659" summary="lock for load request">
+      <option name="closed" value="true" />
+      <created>1732809206129</created>
+      <option name="number" value="00659" />
+      <option name="presentableId" value="LOCAL-00659" />
+      <option name="project" value="LOCAL" />
+      <updated>1732809206129</updated>
+    </task>
+    <option name="localTasksCounter" value="660" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Responsive login" />
     <MESSAGE value="styles index" />
     <MESSAGE value="styles misSolicitudes" />
     <MESSAGE value="data to excel" />
@@ -534,7 +530,8 @@
     <MESSAGE value="add date lock" />
     <MESSAGE value="fixes for savings module" />
     <MESSAGE value="update images" />
-    <option name="LAST_COMMIT_MESSAGE" value="update images" />
+    <MESSAGE value="lock for load request" />
+    <option name="LAST_COMMIT_MESSAGE" value="lock for load request" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

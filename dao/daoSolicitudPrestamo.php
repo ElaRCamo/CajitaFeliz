@@ -107,34 +107,36 @@ function validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono,
 
         if ($row['total'] > 0) {
             // Ya existe una solicitud en proceso
-            return array(
+            $respuesta = array(
                 "status" => 'error',
                 "message" => "Ya existe una solicitud en proceso para el periodo actual."
             );
-        }
-
-        // Si no hay solicitudes en proceso, proceder con el INSERT
-        $insertPrestamo = $conex->prepare(
-            "INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
+        }else{
+            // Si no hay solicitudes en proceso, proceder con el INSERT
+            $insertPrestamo = $conex->prepare(
+                "INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
              VALUES (?, ?, ?, ?)"
-        );
-        $fechaSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y-m-d');
-        $insertPrestamo->bind_param("ssss", $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
-        $resultadoInsert = $insertPrestamo->execute();
+            );
+            $fechaSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y-m-d');
+            $insertPrestamo->bind_param("ssss", $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
+            $resultadoInsert = $insertPrestamo->execute();
 
-        if (!$resultadoInsert) {
-            throw new Exception("Error al la solicitud de préstamo. Intente más tarde.");
+            if (!$resultadoInsert) {
+                throw new Exception("Error al la solicitud de préstamo. Intente más tarde.");
+            }
+
+            // Obtener el ID generado automáticamente
+            $idSolicitud = $conex->insert_id;
+
+            // Responder con éxito
+            $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
         }
-
-        // Obtener el ID generado automáticamente
-        $idSolicitud = $conex->insert_id;
-
-        // Responder con éxito
-        return array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
 
     } catch (Exception $e) {
-        return array("status" => 'error', "message" => $e->getMessage());
+        $respuesta = array("status" => 'error', "message" => $e->getMessage());
     }
+
+    return $respuesta;
 }
 
 /*
