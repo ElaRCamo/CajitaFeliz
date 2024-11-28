@@ -63,7 +63,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             // Validar si ya existe una solicitud en proceso en el periodo actual
             $existeSolActiva = validarYInsertarSolicitud($conex, $nomina, "$fechaSolicitud $horaSolicitud");
 
-            if ($existeSolActiva === '0') {
+            if ($existeSolActiva === 0) {
                 // Si no hay solicitudes en proceso, proceder con el INSERT
                 $insertPrestamo = $conex->prepare(
                     "INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
@@ -83,10 +83,8 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
                 $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
 
 
-            }else if($existeSolActiva > 0){
-                $respuesta = array("status" => 'error',"message" => "Ya existe una solicitud activa para el periodo actual.");
-            }else{
-                $respuesta = array("status" => 'error', "message" => $existeSolActiva);
+            }else {
+                $respuesta = $existeSolActiva;
             }
 
         } else {
@@ -123,7 +121,8 @@ function validarYInsertarSolicitud($conex, $nomina, $fechaHoraSolicitud) {
         $queryValidacion->bind_param("si", $nomina, $anioSolicitud);
         $queryValidacion->execute();
         $resultadoValidacion = $queryValidacion->get_result();
-        $respuesta = $resultadoValidacion->fetch_assoc();
+        $row = $resultadoValidacion->fetch_assoc();
+        $respuesta = $row["total"];
 
     } catch (Exception $e) {
         $respuesta = array("status" => 'error', "message" => $e->getMessage());
