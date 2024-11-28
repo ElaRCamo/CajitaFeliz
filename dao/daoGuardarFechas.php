@@ -57,7 +57,7 @@ function guardarFechas($fechaInicio, $fechaCierre, $anio, $horaInicio, $horaCier
         $updateFechas->bind_param("ssssi", $fechaInicio, $fechaCierre, $horaInicio, $horaCierre, $anio);
         $resultado = $updateFechas->execute();
     } else {
-        $insertFechas = $conexion->prepare("INSERT INTO Convocatoria (anio, fechaInicio, fechaFin, horaInicio, horaFin) VALUES (?, ?, ?)");
+        $insertFechas = $conexion->prepare("INSERT INTO Convocatoria (anio, fechaInicio, fechaFin, horaInicio, horaFin) VALUES (?, ?, ?, ?, ?)");
         $insertFechas->bind_param("issss", $anio, $fechaInicio, $fechaCierre, $horaInicio, $horaCierre);
         $resultado = $insertFechas->execute();
     }

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="lock for load request">
-      <change beforePath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="lock for load request" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,31 +94,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="42751000" />
-    </task>
-    <task id="LOCAL-00623" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732561379379</created>
-      <option name="number" value="00623" />
-      <option name="presentableId" value="LOCAL-00623" />
-      <option name="project" value="LOCAL" />
-      <updated>1732561379379</updated>
-    </task>
-    <task id="LOCAL-00624" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732561568849</created>
-      <option name="number" value="00624" />
-      <option name="presentableId" value="LOCAL-00624" />
-      <option name="project" value="LOCAL" />
-      <updated>1732561568849</updated>
-    </task>
-    <task id="LOCAL-00625" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732561669655</created>
-      <option name="number" value="00625" />
-      <option name="presentableId" value="LOCAL-00625" />
-      <option name="project" value="LOCAL" />
-      <updated>1732561669655</updated>
+      <workItem from="1732542389155" duration="43553000" />
     </task>
     <task id="LOCAL-00626" summary="add date lock">
       <option name="closed" value="true" />
@@ -490,7 +464,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732814316623</updated>
     </task>
-    <option name="localTasksCounter" value="672" />
+    <task id="LOCAL-00672" summary="lock for load request">
+      <option name="closed" value="true" />
+      <created>1732814430760</created>
+      <option name="number" value="00672" />
+      <option name="presentableId" value="LOCAL-00672" />
+      <option name="project" value="LOCAL" />
+      <updated>1732814430760</updated>
+    </task>
+    <task id="LOCAL-00673" summary="lock for load request">
+      <option name="closed" value="true" />
+      <created>1732814510041</created>
+      <option name="number" value="00673" />
+      <option name="presentableId" value="LOCAL-00673" />
+      <option name="project" value="LOCAL" />
+      <updated>1732814510041</updated>
+    </task>
+    <task id="LOCAL-00674" summary="lock for load request">
+      <option name="closed" value="true" />
+      <created>1732815156163</created>
+      <option name="number" value="00674" />
+      <option name="presentableId" value="LOCAL-00674" />
+      <option name="project" value="LOCAL" />
+      <updated>1732815156163</updated>
+    </task>
+    <option name="localTasksCounter" value="675" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
