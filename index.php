@@ -525,10 +525,12 @@
         });
 
         document.getElementById("reacAhorro").addEventListener("click", function(e) {
-            e.preventDefault(); // Evita el comportamiento predeterminado del enlace
-            const section = document.querySelector("#section_2");
-            section.style.display = "block"; // Asegúrate de que sea visible
-            section.scrollIntoView({ behavior: "smooth" });
+            e.preventDefault(); // Evita el comportamiento predeterminado
+            const section2 = document.querySelector("#section_2");
+            const section4 = document.querySelector("#section_4");
+            section2.style.display = "block";
+            section4.style.display = "none";
+            section2.scrollIntoView({ behavior: "smooth" });
         });
 
 
