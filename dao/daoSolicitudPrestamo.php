@@ -97,8 +97,10 @@ function validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono,
         $queryValidacion->execute();
         $resultadoValidacion = $queryValidacion->get_result();
         $row = $resultadoValidacion->fetch_assoc();
-
+        echo "total:".$row['total'];
+        echo "...row:".$row;
         if ($row['total'] > 0) {
+
             // Ya existe una solicitud en proceso
             $respuesta = array(
                 "status" => 'error',
