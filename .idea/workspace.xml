@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="lock for load request" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="lock for load request">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/prestamos.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/prestamos.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,23 +97,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="50792000" />
-    </task>
-    <task id="LOCAL-00634" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732567756839</created>
-      <option name="number" value="00634" />
-      <option name="presentableId" value="LOCAL-00634" />
-      <option name="project" value="LOCAL" />
-      <updated>1732567756839</updated>
-    </task>
-    <task id="LOCAL-00635" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732567805544</created>
-      <option name="number" value="00635" />
-      <option name="presentableId" value="LOCAL-00635" />
-      <option name="project" value="LOCAL" />
-      <updated>1732567805544</updated>
+      <workItem from="1732542389155" duration="51681000" />
     </task>
     <task id="LOCAL-00636" summary="add date lock">
       <option name="closed" value="true" />
@@ -488,7 +475,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732821848095</updated>
     </task>
-    <option name="localTasksCounter" value="683" />
+    <task id="LOCAL-00683" summary="lock for load request">
+      <option name="closed" value="true" />
+      <created>1732826146610</created>
+      <option name="number" value="00683" />
+      <option name="presentableId" value="LOCAL-00683" />
+      <option name="project" value="LOCAL" />
+      <updated>1732826146610</updated>
+    </task>
+    <task id="LOCAL-00684" summary="lock for load request">
+      <option name="closed" value="true" />
+      <created>1732826333087</created>
+      <option name="number" value="00684" />
+      <option name="presentableId" value="LOCAL-00684" />
+      <option name="project" value="LOCAL" />
+      <updated>1732826333087</updated>
+    </task>
+    <option name="localTasksCounter" value="685" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

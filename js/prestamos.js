@@ -17,11 +17,10 @@ const consultarFechaConvocatoria = async () => {
             fechaInicio = formatearFecha(result.data[0].fechaInicio);  // Acceder a la primera fecha
             horaInicio = formatearHora(result.data[0].horaInicio);
 
-            avisoFechas = "Recepción de préstamos a partir del día " + fechaInicio + "a las " + horaInicio + "horas.";
+            avisoFechas = "Recepción de préstamos a partir del día " + fechaInicio + " a las " + horaInicio + " horas.";
 
         }else {
             avisoFechas = "Las fechas para la recepción de solicitudes de préstamos aún no están definidas.<br>Te invitamos a estar pendiente de futuras actualizaciones.";
-
         }
 
         // Asignar los valores al formulario
