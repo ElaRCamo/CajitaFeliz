@@ -86,10 +86,10 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
         } else {
             $mensaje = "";
-            if ($fechaHoraSolicitud >= $fechaHoraInicioDB) {
+            if ($fechaHoraSolicitud <= $fechaHoraInicioDB) {
                 $inicioConvocatoria = formatearFechaHora($fechaInicio, $horaInicio);
                 $mensaje = "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $inicioConvocatoria horas.";
-            } else if ($fechaHoraSolicitud <= $fechaHoraCierreDB) {
+            } else if ($fechaHoraSolicitud >= $fechaHoraCierreDB) {
                 $finConvocatoria = formatearFechaHora($fechaFin, $horaFin);
                 $mensaje = "No es posible atender tu solicitud. La recepción de solicitudes terminó el día $finConvocatoria horas.";
             }
