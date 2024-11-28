@@ -76,23 +76,20 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
                 if (!$resultadoInsert) {
                     throw new Exception("Error al la solicitud de préstamo. Intente más tarde.");
                 }
+                $conex->commit();
 
                 // Obtener el ID generado automáticamente
                 $idSolicitud = $conex->insert_id;
-
-                // Responder con éxito
                 $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
 
 
             }else if($existeSolActiva > 0){
-                // Ya existe una solicitud en proceso
                 $respuesta = array("status" => 'error',"message" => "Ya existe una solicitud activa para el periodo actual.");
             }else{
                 $respuesta = array("status" => 'error', "message" => $existeSolActiva);
             }
 
         } else {
-            // Construir el mensaje de error utilizando la función formatearFechaHora
             $mensajeFechaHora = formatearFechaHora($fechaInicioDB, $horaInicioDB);
 
             $respuesta = array(
@@ -105,6 +102,8 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
         // Si ocurre un error, hacer rollback y mostrar el mensaje de error
         $conex->rollback();
         $respuesta = array("status" => 'error', "message" => $e->getMessage());
+    }finally {
+        $conex->close();
     }
 
     return $respuesta;
