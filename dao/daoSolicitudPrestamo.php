@@ -64,24 +64,21 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             $existeSolActiva = validarYInsertarSolicitud($conex, $nomina, "$fechaSolicitud $horaSolicitud");
 
             if ($existeSolActiva === 0) {
-                // Si no hay solicitudes en proceso, proceder con el INSERT
-                $insertPrestamo = $conex->prepare(
-                    "INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
-                            VALUES (?, ?, ?, ?)"
-                );
-                $fechaSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y-m-d');
-                $insertPrestamo->bind_param("ssss", $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
-                $resultadoInsert = $insertPrestamo->execute();
 
-                if (!$resultadoInsert) {
-                    throw new Exception("Error al la solicitud de préstamo. Intente más tarde.");
+                $insertPrestamo = $conex->prepare("INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) VALUES (?, ?, ?, ?)");
+                $insertPrestamo->bind_param("ssss", $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
+                $resultado = $insertPrestamo->execute();
+
+                // Verificar si la inserción fue exitosa
+                if (!$resultado) {
+                    throw new Exception("Error al guardar el préstamo.");
                 }
-                $conex->commit();
 
                 // Obtener el ID generado automáticamente
                 $idSolicitud = $conex->insert_id;
-                $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
+                $conex->commit();
 
+                $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
 
             }else {
                 $respuesta = $existeSolActiva;
