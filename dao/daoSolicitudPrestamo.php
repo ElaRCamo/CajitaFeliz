@@ -76,7 +76,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
                 // Obtener el ID generado automáticamente
                 $idSolicitud = $conex->insert_id;
-                $conex->commit();
+                //$conex->commit();
 
                 $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
 
