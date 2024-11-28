@@ -393,7 +393,7 @@
                         </div>
                         <div class="custom-text-box">
                             <h5 class="mb-3 question"><span class="toggle-icon">+</span> Me fui de incapacidad, ¿Por qué me dejaron de descontar mi caja de ahorro?</h5>
-                            <p class="mb-0 answer">Recuerda que al no tener ingresos o tenerlos reducidos se vuelve imposible descontar ahorro y es tu responsabilidad solicitar la reactivación de este. <a class="custom-btn custom-border-btn btn" id="reacAhorro" href="#section_2">Solicítalo aquí</a></p>
+                            <p class="mb-0 answer">Recuerda que al no tener ingresos o tenerlos reducidos se vuelve imposible descontar ahorro y es tu responsabilidad solicitar la reactivación de este. <a class="custom-btn btn" id="reacAhorro" href="#section_2">Solicítalo aquí</a></p>
                         </div>
                         <div class="custom-text-box">
                             <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué días puedo retirar mi ahorro para que quede en la misma semana?</h5>
@@ -524,10 +524,13 @@
             document.getElementById('logoutForm').submit(); // Envía el formulario
         });
 
-        document.getElementById('reacAhorro').addEventListener('click', function(e) {
-            e.preventDefault(); // Evita el comportamiento predeterminado
-            document.querySelector('#section_2').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById("reacAhorro").addEventListener("click", function(e) {
+            e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            const section = document.querySelector("#section_2");
+            section.style.display = "block"; // Asegúrate de que sea visible
+            section.scrollIntoView({ behavior: "smooth" });
         });
+
 
         /*
 
