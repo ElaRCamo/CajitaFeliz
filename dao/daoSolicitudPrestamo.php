@@ -61,7 +61,35 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
         // Comparar fecha y hora actuales con las de la base de datos
         if ($fechaHoraSolicitud >= $fechaHoraInicioDB) {
             // Validar si ya existe una solicitud en proceso en el periodo actual
-            $respuesta = validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono, "$fechaSolicitud $horaSolicitud");
+            $existeSolActiva = validarYInsertarSolicitud($conex, $nomina, "$fechaSolicitud $horaSolicitud");
+
+            if ($existeSolActiva === 0) {
+                // Si no hay solicitudes en proceso, proceder con el INSERT
+                $insertPrestamo = $conex->prepare(
+                    "INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
+                            VALUES (?, ?, ?, ?)"
+                );
+                $fechaSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y-m-d');
+                $insertPrestamo->bind_param("ssss", $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
+                $resultadoInsert = $insertPrestamo->execute();
+
+                if (!$resultadoInsert) {
+                    throw new Exception("Error al la solicitud de préstamo. Intente más tarde.");
+                }
+
+                // Obtener el ID generado automáticamente
+                $idSolicitud = $conex->insert_id;
+
+                // Responder con éxito
+                $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
+
+
+            }else if($existeSolActiva > 0){
+                // Ya existe una solicitud en proceso
+                $respuesta = array("status" => 'error',"message" => "Ya existe una solicitud activa para el periodo actual.");
+            }else{
+                $respuesta = array("status" => 'error', "message" => $existeSolActiva);
+            }
 
         } else {
             // Construir el mensaje de error utilizando la función formatearFechaHora
@@ -82,7 +110,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
     return $respuesta;
 }
 
-function validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono, $fechaHoraSolicitud) {
+function validarYInsertarSolicitud($conex, $nomina, $fechaHoraSolicitud) {
     try {
         $anioSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y');
 
@@ -96,36 +124,7 @@ function validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono,
         $queryValidacion->bind_param("si", $nomina, $anioSolicitud);
         $queryValidacion->execute();
         $resultadoValidacion = $queryValidacion->get_result();
-        $row = $resultadoValidacion->fetch_assoc();
-        echo "total:".$row['total'];
-        echo "...row:".$row;
-        if ($row['total'] > 0) {
-
-            // Ya existe una solicitud en proceso
-            $respuesta = array(
-                "status" => 'error',
-                "message" => "Ya existe una solicitud activa para el periodo actual."
-            );
-        }else{
-            // Si no hay solicitudes en proceso, proceder con el INSERT
-            $insertPrestamo = $conex->prepare(
-                "INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
-             VALUES (?, ?, ?, ?)"
-            );
-            $fechaSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y-m-d');
-            $insertPrestamo->bind_param("ssss", $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
-            $resultadoInsert = $insertPrestamo->execute();
-
-            if (!$resultadoInsert) {
-                throw new Exception("Error al la solicitud de préstamo. Intente más tarde.");
-            }
-
-            // Obtener el ID generado automáticamente
-            $idSolicitud = $conex->insert_id;
-
-            // Responder con éxito
-            $respuesta = array("status" => 'success', "message" => "Folio de solicitud: " . $idSolicitud);
-        }
+        $respuesta = $resultadoValidacion->fetch_assoc();
 
     } catch (Exception $e) {
         $respuesta = array("status" => 'error', "message" => $e->getMessage());
