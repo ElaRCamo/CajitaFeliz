@@ -25,8 +25,8 @@ const consultarFechaConvocatoria = async () => {
         }
 
         // Asignar los valores al formulario
-        $("#avisoFechas").text(avisoFechas);
-        $("#avisoFechasP").text(avisoFechas);
+        $("#avisoFechas").html(avisoFechas);
+        $("#avisoFechasP").html(avisoFechas);
 
         // Comparar con la fecha y hora actuales
         const fechaHoy = formatearFecha(new Date().toISOString().split('T')[0]);
