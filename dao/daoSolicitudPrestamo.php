@@ -44,10 +44,15 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
         if($convocatoria["status"] === 'error'){
             throw new Exception($convocatoria["message"]);
         }
+        // Obtener los datos de la convocatoria
+        $fechaInicio = $convocatoria["data"]["fechaInicio"];
+        $horaInicio = $convocatoria["data"]["horaInicio"];
+        $fechaFin = $convocatoria["data"]["fechaFin"];
+        $horaFin = $convocatoria["data"]["horaFin"];
 
         // Construir datetime para comparar fecha y hora
-        $fechaHoraInicioDB = new DateTime($convocatoria["fechaInicio"] . ' ' . $convocatoria["horaInicio"]);
-        $fechaHoraCierreDB = new DateTime($convocatoria["fechaFin"] . ' ' . $convocatoria["horaFin"]);
+        $fechaHoraInicioDB = new DateTime($fechaInicio . ' ' . $horaInicio);
+        $fechaHoraCierreDB = new DateTime($fechaFin . ' ' . $horaFin);
         $fechaHoraSolicitud = new DateTime("$fechaSolicitud $horaSolicitud");
 
         // Comparar fecha y hora actuales con las de la base de datos
@@ -81,12 +86,12 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
         } else {
             $mensaje = "";
-            if ($fechaHoraSolicitud >= $fechaHoraInicioDB){
-                $inicioConvocatoria = formatearFechaHora($convocatoria["fechaInicio"], $convocatoria["horaInicio"]);
+            if ($fechaHoraSolicitud >= $fechaHoraInicioDB) {
+                $inicioConvocatoria = formatearFechaHora($fechaInicio, $horaInicio);
                 $mensaje = "Por el momento no es posible atender tu solicitud. Las solicitudes se estarán recibiendo a partir del día $inicioConvocatoria horas.";
-            }else if($fechaHoraSolicitud <= $fechaHoraCierreDB) {
-                $inicioConvocatoria = formatearFechaHora($convocatoria["fechaFin"], $convocatoria["horaFin"]);
-                $mensaje = "No es posible atender tu solicitud. La recepción de solicitudes terminó el día $inicioConvocatoria horas.";
+            } else if ($fechaHoraSolicitud <= $fechaHoraCierreDB) {
+                $finConvocatoria = formatearFechaHora($fechaFin, $horaFin);
+                $mensaje = "No es posible atender tu solicitud. La recepción de solicitudes terminó el día $finConvocatoria horas.";
             }
             $respuesta = array("status" => 'error', "message" => $mensaje);
         }
@@ -104,20 +109,27 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
 function validarConvocatoria($conex, $anio)
 {
-    // Obtener la fecha y hora de inicio desde la base de datos
     $selectFechaAut = $conex->prepare("SELECT fechaInicio, horaInicio, fechaFin, horaFin FROM Convocatoria WHERE anio = ?");
     $selectFechaAut->bind_param("i", $anio);
     $selectFechaAut->execute();
     $resultado = $selectFechaAut->get_result();
 
     if ($resultado->num_rows > 0) {
-        // Si se encuentra la fecha, obtenerla
-        $respuesta = $resultado->fetch_assoc();
+        $row = $resultado->fetch_assoc();
+        $respuesta = array(
+            "status" => 'success',
+            "data" => $row
+        );
     } else {
-        $respuesta = array("status" => 'error', "message" => "No se encontró la fecha de inicio para el año actual.");
+        $respuesta = array(
+            "status" => 'error',
+            "message" => "No se encontraron fechas registradas para el año actual."
+        );
     }
+
     return $respuesta;
 }
+
 
 function validarSolicitud($conex, $nomina, $fechaHoraSolicitud) {
     try {
