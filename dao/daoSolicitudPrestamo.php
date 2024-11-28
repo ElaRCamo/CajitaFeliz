@@ -102,7 +102,7 @@ function validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono,
             // Ya existe una solicitud en proceso
             $respuesta = array(
                 "status" => 'error',
-                "message" => "Ya existe una solicitud en proceso para el periodo actual."
+                "message" => "Ya existe una solicitud activa para el periodo actual."
             );
         }else{
             // Si no hay solicitudes en proceso, proceder con el INSERT
