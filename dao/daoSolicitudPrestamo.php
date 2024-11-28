@@ -63,7 +63,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             // Validar si ya existe una solicitud en proceso en el periodo actual
             $existeSolActiva = validarYInsertarSolicitud($conex, $nomina, "$fechaSolicitud $horaSolicitud");
 
-            if ($existeSolActiva === 0) {
+            if ($existeSolActiva === '0') {
                 // Si no hay solicitudes en proceso, proceder con el INSERT
                 $insertPrestamo = $conex->prepare(
                     "INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
