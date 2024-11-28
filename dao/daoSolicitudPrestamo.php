@@ -83,7 +83,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
             }else if($existeSolActiva > 0){
                 $respuesta = array("status" => 'error',"message" => "Ya existe una solicitud activa para el periodo actual.");
             }else {
-                $respuesta = array("status" => 'error', "message" => $existeSolActiva);
+                $respuesta = $existeSolActiva;
             }
 
         } else {
