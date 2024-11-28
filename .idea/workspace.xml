@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="questions update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,15 +96,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="52729000" />
-    </task>
-    <task id="LOCAL-00638" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732568520189</created>
-      <option name="number" value="00638" />
-      <option name="presentableId" value="LOCAL-00638" />
-      <option name="project" value="LOCAL" />
-      <updated>1732568520189</updated>
+      <workItem from="1732542389155" duration="53030000" />
     </task>
     <task id="LOCAL-00639" summary="add date lock">
       <option name="closed" value="true" />
@@ -491,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732827674241</updated>
     </task>
-    <option name="localTasksCounter" value="687" />
+    <task id="LOCAL-00687" summary="questions update">
+      <option name="closed" value="true" />
+      <created>1732828097944</created>
+      <option name="number" value="00687" />
+      <option name="presentableId" value="LOCAL-00687" />
+      <option name="project" value="LOCAL" />
+      <updated>1732828097945</updated>
+    </task>
+    <option name="localTasksCounter" value="688" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
