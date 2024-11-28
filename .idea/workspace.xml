@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="lock for load request" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="lock for load request">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,15 +97,7 @@
       <workItem from="1732136457712" duration="12990000" />
       <workItem from="1732220516955" duration="293000" />
       <workItem from="1732305781835" duration="4447000" />
-      <workItem from="1732542389155" duration="43553000" />
-    </task>
-    <task id="LOCAL-00626" summary="add date lock">
-      <option name="closed" value="true" />
-      <created>1732561729755</created>
-      <option name="number" value="00626" />
-      <option name="presentableId" value="LOCAL-00626" />
-      <option name="project" value="LOCAL" />
-      <updated>1732561729755</updated>
+      <workItem from="1732542389155" duration="47001000" />
     </task>
     <task id="LOCAL-00627" summary="add date lock">
       <option name="closed" value="true" />
@@ -488,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732815156163</updated>
     </task>
-    <option name="localTasksCounter" value="675" />
+    <task id="LOCAL-00675" summary="lock for load request">
+      <option name="closed" value="true" />
+      <created>1732815515801</created>
+      <option name="number" value="00675" />
+      <option name="presentableId" value="LOCAL-00675" />
+      <option name="project" value="LOCAL" />
+      <updated>1732815515802</updated>
+    </task>
+    <option name="localTasksCounter" value="676" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
