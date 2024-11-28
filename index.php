@@ -393,7 +393,7 @@
                         </div>
                         <div class="custom-text-box">
                             <h5 class="mb-3 question"><span class="toggle-icon">+</span> Me fui de incapacidad, ¿Por qué me dejaron de descontar mi caja de ahorro?</h5>
-                            <p class="mb-0 answer">Recuerda que al no tener ingresos o tenerlos reducidos se vuelve imposible descontar ahorro y es tu responsabilidad solicitar la reactivación de este.</p>
+                            <p class="mb-0 answer">Recuerda que al no tener ingresos o tenerlos reducidos se vuelve imposible descontar ahorro y es tu responsabilidad solicitar la reactivación de este. <a href="#section_2">Solicítalo aquí</a></p>
                         </div>
                         <div class="custom-text-box">
                             <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué días puedo retirar mi ahorro para que quede en la misma semana?</h5>
