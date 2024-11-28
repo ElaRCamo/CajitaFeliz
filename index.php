@@ -116,7 +116,7 @@
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>¡Aviso importante!</h1>
-                                        <p class="msjVaner">Recepción de préstamos a partir del día <span id="fechaPermitida"></span> a las <span id="horaPermitida"></span> horas.</p>
+                                        <p class="msjVaner"><span id="avisoFechas"></span></p>
                                     </div>
                                 </div>
 
@@ -236,7 +236,7 @@
                                 <li class="list-group-item d-flex justify-content-between align-items-center"><strong>Todo el personal:</strong> Hasta 3 meses de salario</li>
                             </ul>
                             <div id="avisoPrestamo">
-                                <p class="text-white" ><br><strong>¡IMPORTANTE!</strong><br> Las recepción de solicitudes de préstamo será a partir del día
+                                <p class="text-white" ><br><strong>¡IMPORTANTE!</strong><br> <span id="avisoFechasP"></span>
                                     <span id="fechaPermitidaP"></span> a las <span id="horaPermitidaP"></span> horas.
                                 </p>
                             </div>

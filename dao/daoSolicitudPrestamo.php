@@ -123,7 +123,7 @@ function validarConvocatoria($conex, $anio)
     } else {
         $respuesta = array(
             "status" => 'error',
-            "message" => "No se encontraron fechas registradas para el año actual."
+            "message" => "No se encontraron fechas registradas para el año actual.",
         );
     }
 

@@ -10,18 +10,23 @@ const consultarFechaConvocatoria = async () => {
         const result = await response.json();
         let fechaInicio = "";
         let horaInicio = "";
+        let avisoFechas = "";
 
         // Verificar que 'data' tenga elementos
         if (result.data && result.data.length > 0) {
             fechaInicio = formatearFecha(result.data[0].fechaInicio);  // Acceder a la primera fecha
             horaInicio = formatearHora(result.data[0].horaInicio);
 
-            // Asignar los valores al formulario
-            $("#fechaPermitida").text(fechaInicio);
-            $("#horaPermitida").text(horaInicio);
-            $("#fechaPermitidaP").text(fechaInicio);
-            $("#horaPermitidaP").text(horaInicio);
+            avisoFechas = "Recepción de préstamos a partir del día " + fechaInicio + "a las " + horaInicio + "horas.";
+
+        }else if(result.data.message === "No se encontraron fechas registradas para el año actual."){
+            avisoFechas = "Las fechas para la recepción de solicitudes de préstamos aún no están definidas. Te invitamos a estar pendiente de futuras actualizaciones.";
         }
+
+        // Asignar los valores al formulario
+        $("#avisoFechas").text(avisoFechas);
+        $("#avisoFechasP").text(avisoFechas);
+
         // Comparar con la fecha y hora actuales
         const fechaHoy = formatearFecha(new Date().toISOString().split('T')[0]);
 
