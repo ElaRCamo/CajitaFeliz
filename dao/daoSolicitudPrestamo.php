@@ -61,15 +61,8 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
         // Comparar fecha y hora actuales con las de la base de datos
         if ($fechaHoraSolicitud >= $fechaHoraInicioDB) {
             // Validar si ya existe una solicitud en proceso en el periodo actual
-            $respuestaValidacion = validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono, "$fechaSolicitud $horaSolicitud");
+            $respuesta = validarYInsertarSolicitud($conex, $nomina, $montoSolicitado, $telefono, "$fechaSolicitud $horaSolicitud");
 
-            // Verificar si la validación indica que ya existe una solicitud
-            if ($respuestaValidacion['status'] === 'error') {
-                throw new Exception($respuestaValidacion['message']);
-            }
-
-            // Si no hubo error, tomar el mensaje de éxito
-            $respuesta = $respuestaValidacion;
         } else {
             // Construir el mensaje de error utilizando la función formatearFechaHora
             $mensajeFechaHora = formatearFechaHora($fechaInicioDB, $horaInicioDB);
