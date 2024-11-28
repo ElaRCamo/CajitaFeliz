@@ -61,7 +61,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
         // Comparar fecha y hora actuales con las de la base de datos
         if ($fechaHoraSolicitud >= $fechaHoraInicioDB) {
             // Validar si ya existe una solicitud en proceso en el periodo actual
-            $existeSolActiva = validarYInsertarSolicitud($conex, $nomina, "$fechaSolicitud $horaSolicitud");
+            $existeSolActiva = validarSolicitud($conex, $nomina, "$fechaSolicitud $horaSolicitud");
 
             if ($existeSolActiva === 0) {
 
@@ -106,7 +106,7 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
     return $respuesta;
 }
 
-function validarYInsertarSolicitud($conex, $nomina, $fechaHoraSolicitud) {
+function validarSolicitud($conex, $nomina, $fechaHoraSolicitud) {
     try {
         $anioSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y');
 
