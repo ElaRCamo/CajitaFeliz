@@ -19,7 +19,7 @@ const consultarFechaConvocatoria = async () => {
 
             avisoFechas = "Recepción de préstamos a partir del día " + fechaInicio + "a las " + horaInicio + "horas.";
 
-        }else if(result.data.message === "No se encontraron fechas registradas para el año actual."){
+        }else {
             avisoFechas = "Las fechas para la recepción de solicitudes de préstamos aún no están definidas. Te invitamos a estar pendiente de futuras actualizaciones.";
         }
 
