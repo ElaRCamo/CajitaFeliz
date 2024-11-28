@@ -351,59 +351,78 @@
                 </div>
             </div>
         </section>
-    </main>
 
-    <section class="section-padding section-bg text-gray" id="section_4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Preguntas frecuentes</h2>
-                </div>
-                <div class="col-lg-10 col-12 mx-auto">
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Cuál es el monto mínimo que puedo ahorrar?</h5>
-                        <p class="mb-0 answer">Puedes ahorrar un mínimo de $100 pesos.</p>
+        <section class="section-padding section-bg text-gray" id="section_4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-12 text-center mx-auto">
+                        <h2 class="mb-5">Preguntas frecuentes</h2>
                     </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Cuál es el monto máximo que puedo ahorrar?</h5>
-                        <p class="mb-0 answer">Si eres personal sindicalizado, puedes ahorrar hasta $1,000 pesos.</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué días puedo retirar mi ahorro para que se refleje en la misma semana?</h5>
-                        <p class="mb-0 answer">Debes solicitar tu ahorro el lunes o martes para que el depósito se realice el viernes de esa misma semana. Si lo solicitas a partir del miércoles, se procesará hasta la siguiente semana.</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> Si tengo un préstamo, ¿puedo retirar mi ahorro?</h5>
-                        <p class="mb-0 answer">Sí, puedes retirar tu ahorro siempre que el monto ahorrado sea mayor que la deuda restante. En este caso, se liquidará la deuda y se te entregará la diferencia.</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> Si soy aval, ¿puedo retirar mi ahorro?</h5>
-                        <p class="mb-0 answer">Puedes retirar tu ahorro siempre y cuando el préstamo de tu aval esté en la mitad de su plazo.</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> Me fui de incapacidad, ¿por qué dejaron de descontar mi caja de ahorro?</h5>
-                        <p class="mb-0 answer">Recuerda que si no tienes ingresos o tus ingresos son reducidos, es imposible realizar el descuento de tu ahorro. Es tu responsabilidad solicitar la reactivación del mismo. </p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué criterios se consideran para otorgar un préstamo?</h5>
-                        <p class="mb-0 answer">Se evalúa el historial de los últimos seis meses, incluyendo faltas, amonestaciones, descuentos de Fonacot e Infonavit, así como pensiones y juicios mercantiles.</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué requisitos debo cumplir para ser aval?</h5>
-                        <p class="mb-0 answer">Debes estar ahorrando (cualquier cantidad) y tener un contrato de planta</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿A qué hora se refleja el depósito de mi caja de ahorro o préstamo?</h5>
-                        <p class="mb-0 answer">Los depósitos se realizan el viernes después de las 2:00 p.m. directamente en la cuenta de HSBC del solicitante.</p>
-                    </div>
-                    <div class="custom-text-box">
-                        <h5 class="mb-3 question"><span class="toggle-icon">+</span>Quiero liquidar mi préstamo, ¿qué debo hacer?</h5>
-                        <p class="mb-0 answer">Acércate al departamento de nóminas para que te informen el monto a pagar y el número de cuenta para realizar el depósito. Solo necesitarás entregar el comprobante para registrarlo y eliminar el descuento.</p>
+                    <div class="col-lg-10 col-12 mx-auto">
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué es un aval?</h5>
+                            <p class="mb-0 answer">Es una persona solidaria que avala un préstamo, esto significa que te estás comprometiendo legalmente a asumir la responsabilidad de pagar el préstamo si el deudor no lo hace.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué se necesita para ser aval?</h5>
+                            <p class="mb-0 answer">Debe estar ahorrando (cualquier cantidad) y tener contrato de planta.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> Si quiero ser aval, ¿A cuántas personas les puedo firmar?</h5>
+                            <p class="mb-0 answer">Puedes ser aval de máximo dos personas.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué se considera para otorgar un préstamo?</h5>
+                            <p class="mb-0 answer">Se toma en cuenta el historial de los últimos 6 meses, se consideran faltas, amonestaciones, descuentos de Fonacot e Infonavit, así como pensiones y/o juicio mercantil.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Cuánto es lo mínimo que puedo ahorrar?</h5>
+                            <p class="mb-0 answer">Puedes ahorrar mínimo $100 pesos.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Cuánto es lo máximo que puedo ahorrar?</h5>
+                            <p class="mb-0 answer">Puedes ahorrar hasta $1000 pesos si eres personal sindicalizado.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Dónde puedo consultar mi ahorro?</h5>
+                            <p class="mb-0 answer">Puedes consultar el monto acumulado en la Grammer APP, recuerda que se actualiza una semana después del cierre de nómina.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué pasa si retiro mi ahorro?</h5>
+                            <p class="mb-0 answer">Cuando ingreses tu solicitud de retiro de ahorro se te estará entregando el total del monto acumulado al cierre de nómina y no podrás volver a ahorrar, debes esperar al siguiente año para volver a ingresar una solicitud de ahorro.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> Me fui de incapacidad, ¿Por qué me dejaron de descontar mi caja de ahorro?</h5>
+                            <p class="mb-0 answer">Recuerda que al no tener ingresos o tenerlos reducidos se vuelve imposible descontar ahorro y es tu responsabilidad solicitar la reactivación de este.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿Qué días puedo retirar mi ahorro para que quede en la misma semana?</h5>
+                            <p class="mb-0 answer">Debes solicitar tu ahorro lunes o martes para que el depósito pueda quedar el viernes de la misma semana, a partir del miércoles entra hasta la siguiente semana.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> Tengo préstamo, ¿Puedo retirar mi ahorro?</h5>
+                            <p class="mb-0 answer">Puedes retirar tu ahorro siempre y cuando el monto ahorrado sea mayor a la deuda restante, en este caso se liquida la deuda y se entrega la diferencia a favor.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> Soy aval, ¿Puedo retirar mi ahorro?</h5>
+                            <p class="mb-0 answer">Puedes retirar tu ahorro siempre que el último préstamo al que firmaste vaya a la mitad de vida.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> ¿A qué hora veo reflejado mi depósito de caja de ahorro o préstamo?</h5>
+                            <p class="mb-0 answer">Los depósitos se realizan el viernes posterior a las 2:00 pm directamente a la cuenta de HSBC de cada trabajador solicitante.</p>
+                        </div>
+                        <div class="custom-text-box">
+                            <h5 class="mb-3 question"><span class="toggle-icon">+</span> Quiero liquidar mi préstamo, ¿Qué puedo hacer?</h5>
+                            <p class="mb-0 answer">Acércate con nóminas para darte el monto a pagar, así como el número de cuenta para realizar el depósito, solo debes entregar el váucher o comprobante para registrarlo y quitar el descuento.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
+
+
 
     <script>
         document.querySelectorAll('.question').forEach(question => {
