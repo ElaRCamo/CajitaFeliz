@@ -265,7 +265,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="col-lg-6 col-12 mx-auto">
+                    <div class="col-12 mx-auto">
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="" method="post" role="form" id="editarPrestamoForm">
                             <h3 class="mb-4">Editar Préstamo Folio <span></span></h3>
                             <div class="row">
