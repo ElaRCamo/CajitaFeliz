@@ -110,25 +110,6 @@ function mostrarMsjError(valporcentaje,valtelefono){
     });
 }
 
-//Funcion que elimina signo "$" de la cantidad y valida que sea un numero válido
-function validarMonto(montoAhorro) {
-    // Elimina el signo de pesos si está al principio
-    let valor = montoAhorro.trim();
-    if (valor.startsWith('$')) {
-        valor = valor.slice(1); // Elimina el primer carácter '$'
-    }
-
-    // Convierte el valor en número
-    const numero = parseFloat(valor);
-
-    // Verifica si el valor es un número válido
-    if (isNaN(numero)) {
-        return null;
-    }else{
-        return numero; // Retorna el número
-    }
-}
-
 function autorizarSolicitudAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios){
 
     Swal.fire({
