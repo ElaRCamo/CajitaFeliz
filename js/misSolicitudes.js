@@ -117,11 +117,11 @@ function editarPrestamo(idSolicitud) {
             monto = formatearMonto(data.montoSolicitado);
             telefono = data.telefono;
 
-            alert("telefono: "+telefono+" montoSolicitado: "+monto);
-
             // Establece los valores en los campos del formulario
+            $("#idSolicitudE").val(data.idSolicitud);
             $("#telefonoE").val(telefono);
             $("#montoSolicitadoE").val(monto);
+
         } else {
             console.error("No se encontraron datos para la solicitud: " + idSolicitud);
         }
@@ -129,6 +129,89 @@ function editarPrestamo(idSolicitud) {
         console.error("Error al obtener los datos de la solicitud.");
     });
 }
+
+
+function actualizarPrestamo() {
+    const id = document.getElementById("idSolicitudE").value;
+    const telefono = document.getElementById("telefonoE").value;
+    const montoSolicitado = document.getElementById('montoSolicitadoE').value;
+
+
+    if (validarTelefono(telefono)) {
+
+        let montoValidado = validarMonto(montoSolicitado);
+
+        if(montoValidado !== null) {
+
+            const data = new FormData();
+
+            data.append('idPrestamo', id.trim());
+            data.append('telefono', telefono.trim());
+            data.append('montoSolicitado', montoValidado);
+
+            alert("idPrestamo: "+id+" telefono: "+telefono+" montoValidado: "+montoValidado)
+
+            fetch('dao/daoActualizarPrestamo.php', {
+                method: 'POST',
+                body: data
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        return response.json().then(error => {
+                            throw new Error(error.message);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'success') {
+                        Swal.fire({
+                            title: data.message,
+                            icon: "success",
+                            text: "¡Actualización exitosa!",
+                            confirmButtonText: "OK"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                initDataTable();
+                            }
+                        });
+                    }else if (data.status === 'error') {
+                        console.log(data.message);
+                        Swal.fire({
+                            title: "Error",
+                            text: data.message,
+                            icon: "error",
+                            confirmButtonText: "OK"
+                        });
+                    }
+                }).catch(error => {
+                Swal.fire({
+                    title: "Error",
+                    text: error.message,
+                    icon: "error",
+                    confirmButtonText: "OK"
+                });
+            });
+
+
+        }else {
+            Swal.fire({
+                title: "Datos incorrectos",
+                text: "Por favor, ingresa un monto válido.",
+                icon: "error"
+            });
+        }
+
+    } else {
+        Swal.fire({
+            title: "Datos incorrectos",
+            text: "Número de teléfono inválido. Debe ingresar 10 dígitos.",
+            icon: "error"
+        });
+    }
+}
+
+
 
 let dataTableCaja;
 let dataTableCajaInit = false;

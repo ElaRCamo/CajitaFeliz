@@ -267,6 +267,7 @@
                 <div class="modal-body">
                     <div class="col-12 mx-auto">
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="" method="post" role="form" id="editarPrestamoForm">
+                            <input type="hidden" id="idSolicitudE" name="idSolicitudE">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <label for="telefonoE">Teléfono: </label>
@@ -277,7 +278,7 @@
                                     <input type="text" name="montoSolicitadoE" id="montoSolicitadoE" class="form-control" placeholder="$1,000" required>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary mt-3 w-100">Guardar cambios</button>
+                            <button type="button" class="btn btn-primary mt-3 w-100" data-bs-dismiss="modal" onclick="actualizarPrestamo()">Guardar cambios</button>
                         </form>
                     </div>
                 </div>
