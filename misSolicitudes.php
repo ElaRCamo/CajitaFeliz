@@ -256,6 +256,37 @@
 
     <?php require_once('modalAvales.php'); ?>
 
+    <!-- Modal para Editar Prestamo (solicitante)-->
+    <div class="modal fade" id="editarPrestamoModal" tabindex="-1" aria-labelledby="editarPrestamoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarPrestamoModalLabel">Editar Préstamo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-lg-6 col-12 mx-auto">
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="" method="post" role="form" id="editarPrestamoForm">
+                            <h3 class="mb-4">Editar Préstamo Folio <span></span></h3>
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <label for="telefonoE">Teléfono: </label>
+                                    <input type="tel" name="telefonoE" id="telefonoE" class="form-control" placeholder="5551234567" required>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <label for="montoSolicitadoE">Monto solicitado: </label>
+                                    <input type="text" name="montoSolicitadoE" id="montoSolicitadoE" class="form-control" placeholder="$1,000" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary mt-3 w-100">Guardar cambios</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Modal para ver solicitud de retiro -->
     <div class="modal fade" id="modalConsultaRetiro" tabindex="-1" aria-labelledby="responderModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">

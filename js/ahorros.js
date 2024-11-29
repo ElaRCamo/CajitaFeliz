@@ -1,4 +1,4 @@
-function validarFormAhorro(esActualizacion) {
+function validarFormAhorro() {
     const montoAhorro = document.getElementById('montoAhorro').value;
     const nombreBen1 = document.getElementById('nombreBen1').value;
     let porcentajeBen1 = document.getElementById('porcentajeBen1').value;
@@ -89,19 +89,13 @@ function validarFormAhorro(esActualizacion) {
             domicilios.push(domicilioBen1.trim());
 
             // Si todo está validado, llamar a registrarAhorro
-            let dao = "";
-            if(esActualizacion){
-                dao = "dao/daoGuardarAhorro.php";
-            }else{
-                dao = "dao/daoGuardarAhorro.php";
-            }
+            let dao = "dao/daoGuardarAhorro.php";
             registrarAhorro(montoAhorroValidado,nombres,porcentajes,telefonos,domicilios, dao);
         } else {
             mostrarMsjError(valporcentajeBen1,valtelefonoBen1);
         }
     }
 }
-
 
 function mostrarMsjError(valporcentaje,valtelefono){
     let mensaje = "";
@@ -115,6 +109,7 @@ function mostrarMsjError(valporcentaje,valtelefono){
         text: mensaje
     });
 }
+
 //Funcion que elimina signo "$" de la cantidad y valida que sea un numero válido
 function validarMonto(montoAhorro) {
     // Elimina el signo de pesos si está al principio

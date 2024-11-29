@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/icons/Grammer_Logo.ico" type="image/x-icon">
-
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -13,10 +12,8 @@
 
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-   <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <script src="js/prestamos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -252,24 +249,19 @@
                 <div class="row">
                     <div class="col-lg-6 col-12" >
                         <div id="divCrearAhorroImg" class="custom-block-body">
-                            <img src="images/slide/plantita.jpg"
-                                 class="volunteer-image img-fluid" alt="">
+                            <img src="images/slide/plantita.jpg" class="volunteer-image img-fluid" alt="">
                         </div>
-
                         <div class="custom-block-body text-center">
                             <h4 class="text-white mt-lg-3 mb-lg-3">Recuerda:</h4>
-
                             <p class="text-white">
                                 Es importante establecer un objetivo claro: Define una meta específica para tu ahorro, como un viaje, un fondo de emergencia o una compra importante. Tener un objetivo tangible te motivará a ahorrar más.
                             </p>
                         </div>
                     </div>
 
-
                     <div class="col-lg-6 col-12 mx-auto">
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" id="formRegistrarAhorro" method="post" role="form">
                             <h3 class="mb-4">Crear Ahorro</h3>
-
                             <div class="row">
                                 <div class="col-lg-12 col-12">
                                     <label for="montoAhorro">Monto para ahorrar: </label>
@@ -325,8 +317,7 @@
                                         <div class="invalid-feedback"></div>
                                     </div>
                                 </div>
-                                <button type="button" class="form-control" onclick="validarFormAhorro(false)" id="btnSolAhorro">Solicitar</button>
-                                <!--<button type="button" class="form-control" id="btnActAhorro">Actualizar</button>-->
+                                <button type="button" class="form-control" onclick="validarFormAhorro()" id="btnSolAhorro">Solicitar</button>
                         </form>
                     </div>
                 </div>
@@ -532,82 +523,6 @@
             section4.style.display = "none";
             section2.scrollIntoView({ behavior: "smooth" });
         });
-
-
-        /*
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const section = document.getElementById('section_1');
-            const numberOfCircles = 20; // Número de círculos a generar
-
-            for (let i = 0; i < numberOfCircles; i++) {
-                const circle = document.createElement('div');
-                circle.classList.add('circle_1');
-
-                // Generar un tamaño aleatorio para el círculo
-                const size = Math.random() * 100 + 20; // Entre 20px y 120px
-                circle.style.width = `${size}px`;
-                circle.style.height = `${size}px`;
-
-                // Posición aleatoria dentro de la sección
-                const top = Math.random() * (window.innerHeight - size); // Asegura que no se salga del viewport
-                const left = Math.random() * (window.innerWidth - size); // Asegura que no se salga del viewport
-                circle.style.top = `${top}px`;
-                circle.style.left = `${left}px`;
-
-                section.appendChild(circle);
-            }
-
-        });
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const section = document.getElementById('section_2');
-            const numberOfCircles = 20; // Número de círculos a generar
-
-            for (let i = 0; i < numberOfCircles; i++) {
-                const circle = document.createElement('div');
-                circle.classList.add('circle_2');
-
-                // Generar un tamaño aleatorio para el círculo
-                const size = Math.random() * 100 + 20; // Entre 20px y 120px
-                circle.style.width = `${size}px`;
-                circle.style.height = `${size}px`;
-
-                // Posición aleatoria dentro de la sección
-                const top = Math.random() * (window.innerHeight - size); // Asegura que no se salga del viewport
-                const left = Math.random() * (window.innerWidth - size); // Asegura que no se salga del viewport
-                circle.style.top = `${top}px`;
-                circle.style.left = `${left}px`;
-
-                section.appendChild(circle);
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const section = document.getElementById('section_3');
-            const numberOfCircles = 20; // Número de círculos a generar
-
-            for (let i = 0; i < numberOfCircles; i++) {
-                const circle = document.createElement('div');
-                circle.classList.add('circle_3');
-
-                // Generar un tamaño aleatorio para el círculo
-                const size = Math.random() * 100 + 20; // Entre 20px y 120px
-                circle.style.width = `${size}px`;
-                circle.style.height = `${size}px`;
-
-                // Posición aleatoria dentro de la sección
-                const top = Math.random() * (window.innerHeight - size); // Asegura que no se salga del viewport
-                const left = Math.random() * (window.innerWidth - size); // Asegura que no se salga del viewport
-                circle.style.top = `${top}px`;
-                circle.style.left = `${left}px`;
-
-                section.appendChild(circle);
-            }
-        });
-
-        */
 
     </script>
     <script src="js/jquery.min.js"></script>

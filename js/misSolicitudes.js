@@ -77,6 +77,11 @@ const TablaSolicitudesPrestamos = async () => {
                     <button class="btn btn-secondary btnAvales" onclick="consultarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
                         </i><span>Avales</span>
                     </button>`;
+            }else if(item.idEstatus === '1'){
+                content += `
+                    <button class="btn btn-warning" onclick="editarPrestamo('${item.idSolicitud}')"  data-bs-toggle="modal" data-bs-target="#editarPrestamoModal">
+                        </i><span>Editar</span>
+                    </button>`;
             }
 
             content += `
@@ -94,9 +99,16 @@ const TablaSolicitudesPrestamos = async () => {
     }
 };
 
+function editarPrestamo(idSolicitud){
+
+    let titulo = "Ediar solicitud de Préstamo Folio " + idSolicitud;
+    let idTitulo = "editarPrestamoModalLabel";
+    actualizarTitulo(idTitulo, titulo);
+
+}
+
 let dataTableCaja;
 let dataTableCajaInit = false;
-
 
 const dataTableOptionsCaja = {
     lengthMenu: [5, 15, 50, 100],
