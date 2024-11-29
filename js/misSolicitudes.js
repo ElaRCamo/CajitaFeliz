@@ -149,7 +149,7 @@ function actualizarPrestamo() {
             data.append('telefono', telefono.trim());
             data.append('montoSolicitado', montoValidado);
 
-            alert("idPrestamo: "+id+" telefono: "+telefono+" montoValidado: "+montoValidado)
+            //alert("idPrestamo: "+id+" telefono: "+telefono+" montoValidado: "+montoValidado)
 
             fetch('dao/daoActualizarPrestamo.php', {
                 method: 'POST',

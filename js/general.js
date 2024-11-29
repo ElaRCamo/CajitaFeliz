@@ -89,7 +89,6 @@ function actualizarTitulo(idTitulo, titulo) {
 }
 
 
-
 //Funcion que elimina signo "$" de la cantidad y valida que sea un numero válido
 function validarMonto(montoAhorro) {
     // Elimina el signo de pesos si está al principio
