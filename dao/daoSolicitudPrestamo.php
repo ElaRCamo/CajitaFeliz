@@ -165,8 +165,7 @@ function validarSolicitudRechazada($conex, $nomina, $fechaHoraSolicitud) {
         $queryValidacion = $conex->prepare(
             "SELECT COUNT(*) AS total FROM Prestamo 
              WHERE nominaSolicitante = ? 
-             AND YEAR(fechaSolicitud) = ? 
-             AND idEstatus IN (2)"
+             AND YEAR(fechaSolicitud) = ?"
         );
         $queryValidacion->bind_param("si", $nomina, $anioSolicitud);
         $queryValidacion->execute();
