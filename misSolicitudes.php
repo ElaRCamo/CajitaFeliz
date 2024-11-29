@@ -255,8 +255,6 @@
         </div>
     </div>
 
-    <?php require_once('modalAvales.php'); ?>
-
     <!-- Modal para Editar Prestamo (solicitante)-->
     <div class="modal fade" id="editarPrestamoModal" tabindex="-1" aria-labelledby="editarPrestamoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -357,6 +355,7 @@
     </div>
 
     <?php require_once ("modalAhorro.php"); ?>
+    <?php require_once('modalAvales.php'); ?>
 </main>
 
 <script src="js/jquery.min.js"></script>

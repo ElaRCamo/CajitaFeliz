@@ -328,7 +328,9 @@
             </div>
         </div>
     </div>
+
     <?php require_once('modalAvales.php'); ?>
+    <?php require_once ("modalAhorro.php"); ?>
 
 </main>
 
