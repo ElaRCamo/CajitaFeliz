@@ -112,8 +112,8 @@ function editarPrestamo(idSolicitud){
         monto = formatearMonto(data.montoSolicitado);
         telefono = data.telefono;
 
-        $("#telefonoE").value(telefono);
-        $("#montoSolicitadoE").value(monto);
+        $("#telefonoE").text(telefono);
+        $("#montoSolicitadoE").text(monto);
 
     })
 }
@@ -397,8 +397,6 @@ function mostrarRespuestaPrestamo(idSolicitud){
         $("#montoDepP").text(montoForDep);
 
         $("#FechaDepP").text(fechaDepFormateada);
-
-
 
         /*alert(
             "Folio Solicitud: " + $('#folioSolicitud').val() + "\n" +
