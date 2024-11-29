@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['idPrestamo'],$_POST['telefono'],$_POST['montoSolicitado'])){
         $solicitud = $_POST['idPrestamo'];
         $telefono = $_POST['telefono'];
-        $montoSolicitado = $_SESSION['montoSolicitado'];
+        $montoSolicitado = $_POST['montoSolicitado'];
 
         $respuesta = actualizarPrestamo($solicitud,$montoSolicitado,$telefono);
     }
