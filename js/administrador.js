@@ -543,6 +543,12 @@ const dataTableAhorroAdmin = async (anio) => {
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${item.nomina}</td>
                     <td>${montoSolFormateado}</td>
+                    <td>
+                        <button class="btn btn-primary" onclick="consultarAhorro('${item.idCaja}')" 
+                                data-bs-toggle="modal" data-bs-target="#modalConsultaAhorro">
+                            <i class="fas fa-info-circle"></i> <span>Detalles</span>
+                        </button>
+                    </td>
                 </tr>`;
         });
         bodyAhorroAdmin.innerHTML = content;
