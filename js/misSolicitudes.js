@@ -102,8 +102,20 @@ const TablaSolicitudesPrestamos = async () => {
 function editarPrestamo(idSolicitud){
 
     let titulo = "Editar solicitud de Préstamo Folio " + idSolicitud;
-    let idTitulo = "editarPrestamoModalLabel";
-    actualizarTitulo(idTitulo, titulo);
+    actualizarTitulo("#editarPrestamoModalLabel", titulo);
+
+    let telefono, monto = "";
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+
+        let data = response.data[0];
+        //si data no esta vacio:
+        monto = data.montoSolicitado;
+        telefono = data.telefono;
+
+
+    }).then(function(){
+        fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud);
+    });
 
 }
 

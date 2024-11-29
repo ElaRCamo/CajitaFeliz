@@ -82,7 +82,6 @@ function formatearMonto(numero) {
 }
 
 function actualizarTitulo(idTitulo, titulo) {
-    alert("titulo:"+titulo+" idTitulo: "+idTitulo)
     let titulo5 = document.querySelector(idTitulo);
     if (titulo5) {
         titulo5.textContent = titulo;
