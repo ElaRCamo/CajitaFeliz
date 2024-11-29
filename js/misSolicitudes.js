@@ -120,8 +120,8 @@ function editarPrestamo(idSolicitud) {
             alert("telefono: "+telefono+" montoSolicitado: "+monto);
 
             // Establece los valores en los campos del formulario
-            $("#telefono").val(telefono);
-            $("#montoSolicitado").val(monto);
+            $("#telefonoE").val(telefono);
+            $("#montoSolicitadoE").val(monto);
         } else {
             console.error("No se encontraron datos para la solicitud: " + idSolicitud);
         }
