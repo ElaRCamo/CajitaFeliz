@@ -58,8 +58,9 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
             // Validar si ya existe una solicitud en proceso en el periodo actual
             $existeSolActiva = validarSolicitud($conex, $nomina, "$fechaSolicitud $horaSolicitud");
+            $existeSolRechazada = validarSolicitudRechazada($conex, $nomina, "$fechaSolicitud $horaSolicitud");
 
-            if ($existeSolActiva === 0) {
+            if ($existeSolActiva === 0 && $existeSolRechazada <= 1) {
 
                 $insertPrestamo = $conex->prepare("INSERT INTO Prestamo (nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) VALUES (?, ?, ?, ?)");
                 $insertPrestamo->bind_param("ssss", $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
@@ -78,6 +79,8 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
             }else if($existeSolActiva > 0){
                 $respuesta = array("status" => 'error',"message" => "Ya existe una solicitud activa en el periodo actual ".$anioActual);
+            }else if($existeSolRechazada > 1) {
+                $respuesta = array("status" => 'error', "message" => "Se ha solicitado el máximo de préstamos en el periodo actual " . $anioActual);
             }else {
                 $respuesta = $existeSolActiva;
             }
@@ -153,6 +156,30 @@ function validarSolicitud($conex, $nomina, $fechaHoraSolicitud) {
     return $respuesta;
 }
 
+/*Valida cuantos prestamos rechazados existen en el mismo año*/
+function validarSolicitudRechazada($conex, $nomina, $fechaHoraSolicitud) {
+    try {
+        $anioSolicitud = (new DateTime($fechaHoraSolicitud))->format('Y');
+
+        // Verificar si ya existe una solicitud en proceso para este año
+        $queryValidacion = $conex->prepare(
+            "SELECT COUNT(*) AS total FROM Prestamo 
+             WHERE nominaSolicitante = ? 
+             AND YEAR(fechaSolicitud) = ? 
+             AND idEstatus IN (2)"
+        );
+        $queryValidacion->bind_param("si", $nomina, $anioSolicitud);
+        $queryValidacion->execute();
+        $resultadoValidacion = $queryValidacion->get_result();
+        $row = $resultadoValidacion->fetch_assoc();
+        $respuesta = $row["total"];
+
+    } catch (Exception $e) {
+        $respuesta = array("status" => 'error', "message" => $e->getMessage());
+    }
+
+    return $respuesta;
+}
 /*
 function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
     // Configurar la zona horaria
