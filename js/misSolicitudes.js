@@ -101,7 +101,7 @@ const TablaSolicitudesPrestamos = async () => {
 
 function editarPrestamo(idSolicitud){
 
-    let titulo = "Ediar solicitud de Préstamo Folio " + idSolicitud;
+    let titulo = "Editar solicitud de Préstamo Folio " + idSolicitud;
     let idTitulo = "editarPrestamoModalLabel";
     actualizarTitulo(idTitulo, titulo);
 
