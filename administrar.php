@@ -132,7 +132,6 @@
         <div class="section-overlay"></div>
         <div class="container">
             <div class="row">
-
                 <div class="container mt-5" id="divAhorroAdmin">
                     <h2 class="text-center">Solicitudes de Caja de Ahorro</h2>
                     <h3 class="text-center"><br>Iniciar ahorro</br></h3>
@@ -194,7 +193,6 @@
                                     <option value="">Seleccione el año*</option>
                                 </select>
                             </div>
-
                             <button type="submit" class="btn btn-primary w-100" onclick="cargarSolicitudes()">Ver solicitudes</button>
                             <input type="file" id="fileInputRetiros" accept=".xlsx, .xls" style="display: none;" />
                         </form>
@@ -260,13 +258,10 @@
                     <form>
                         <div class="container col-md-12">
                             <div class="row">
-                                <!-- Primer div: Monto Aprobado -->
                                 <div class="col-sm-5 col-md-6 mb-3">
                                     <label for="inMontoAprobado" class="form-label">Monto Aprobado</label>
                                     <input type="text" class="form-control" id="inMontoAprobado" placeholder="$5,000">
                                 </div>
-
-                                <!-- Segundo div: Estatus del préstamo -->
                                 <div class="col-sm-5 col-md-6 mb-3">
                                     <label for="solEstatus" class="form-label">Estatus del préstamo</label>
                                     <select class="form-control" id="solEstatus">
