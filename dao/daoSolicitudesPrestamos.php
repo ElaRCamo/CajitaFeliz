@@ -61,6 +61,8 @@ function todosLosPrestamos($anio)
                     THEN CONCAT('<span class=\"badge bg-success\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
                 WHEN s.idEstatus = 4 
                     THEN CONCAT('<span class=\"badge bg-dark\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
+                WHEN s.idEstatus = 5
+                    THEN CONCAT('<span class=\"badge bg-danger\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
             END AS estatusVisual,
             e.descripcion,
             nominaAval1,
