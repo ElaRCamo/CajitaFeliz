@@ -143,6 +143,7 @@
                             <th>Fecha Solicitud</th>
                             <th>Nómina</th>
                             <th>Monto</th>
+                            <th>ACCIONES</th>
                         </tr>
                         </thead>
                         <tbody id="bodyAhorroAdmin"></tbody>
