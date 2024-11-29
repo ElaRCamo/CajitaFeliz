@@ -109,14 +109,13 @@ function editarPrestamo(idSolicitud){
 
         let data = response.data[0];
         //si data no esta vacio:
-        monto = data.montoSolicitado;
+        monto = formatearMonto(data.montoSolicitado);
         telefono = data.telefono;
 
+        $("#telefonoE").value(telefono);
+        $("#montoSolicitadoE").value(monto);
 
-    }).then(function(){
-        fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud);
-    });
-
+    })
 }
 
 let dataTableCaja;
