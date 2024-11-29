@@ -143,6 +143,7 @@
                                         <th class="centered">MI NÓMINA</th>
                                         <th class="centered">FECHA DE SOLICITUD</th>
                                         <th class="centered">MONTO AHORRO </th>
+                                        <th class="centered">ACCIONES </th>
                                     </tr>
                                     </thead>
                                     <tbody id="cajaAhorroBody"></tbody>

@@ -279,15 +279,14 @@ const TablaCajaAhorro= async () => {
                     <td>${item.nomina}</td>
                     <td>${fechaSolicitudFormateada}</td>
                     <td>${montoSolFormateado}</td>
-                    
+                    <td>
+                        <button class="btn btn-primary" onclick="consultarAhorro('${item.idCaja}')" 
+                                data-bs-toggle="modal" data-bs-target="#modalConsultaAhorro">
+                            <i class="fas fa-info-circle"></i> <span>Detalles</span>
+                        </button>
+                    </td>
                 </tr>`;
         });
-
-        /*<td>
-                        <button class="btn btn-primary" onclick="consultarAhorro('${item.idCaja}')" data-bs-toggle="modal" data-bs-target="#modalConsultaAhorro">
-                            </i><span>Detalles</span>
-                        </button>
-                    </td>*/
 
         cajaAhorroBody.innerHTML = content; // Asegúrate de que misSolicitudesBody esté definido
 
