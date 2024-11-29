@@ -112,13 +112,13 @@
                     <table class="table table-striped table-bordered mt-3" id="tablaPrestamosAdmin">
                         <thead>
                         <tr>
-                            <th>Folio</th>
-                            <th>Fecha Solicitud</th>
-                            <th>Nómina</th>
-                            <th>Monto</th>
-                            <th>Teléfono</th>
-                            <th>Estatus</th>
-                            <th>Acciones</th>
+                            <th>FOLIO</th>
+                            <th>FECHA SOLICITUD</th>
+                            <th>NÓMINA</th>
+                            <th>MONTO</th>
+                            <th>TELÉFONO</th>
+                            <th>ESTATUS</th>
+                            <th>ACCIONES</th>
                         </tr>
                         </thead>
                         <tbody id="bodyPrestamosAdmin"></tbody>
@@ -139,10 +139,10 @@
                     <table class="table table-striped table-bordered mt-3" id="tablaAhorroAdmin">
                         <thead>
                         <tr>
-                            <th>Folio</th>
-                            <th>Fecha Solicitud</th>
-                            <th>Nómina</th>
-                            <th>Monto</th>
+                            <th>FOLIO</th>
+                            <th>FECHA SOLICITUD</th>
+                            <th>NÓMINA</th>
+                            <th>MONTO</th>
                             <th>ACCIONES</th>
                         </tr>
                         </thead>
@@ -156,12 +156,12 @@
                     <table class="table table-striped table-bordered mt-3" id="tablaRetirosAdmin">
                         <thead>
                         <tr>
-                            <th>Folio</th>
-                            <th>Fecha Solicitud</th>
-                            <th>Id caja</th>
-                            <th>Nómina</th>
-                            <th>Fecha de depósito</th>
-                            <th>Monto depositado</th>
+                            <th>FOLIO</th>
+                            <th>FECHA SOLICITUD</th>
+                            <th>ID CAJA</th>
+                            <th>NÓMINA</th>
+                            <th>FECHA DE DEPÓSITO</th>
+                            <th>MONTO DEPOSITADO</th>
                         </tr>
                         </thead>
                         <tbody id="bodyRetirosAdmin"></tbody>
