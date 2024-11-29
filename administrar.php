@@ -290,7 +290,6 @@
         </div>
     </div>
 
-
     <!-- Modal Fechas-->
     <div class="modal fade" id="fechasModal" tabindex="-1" aria-labelledby="fechasModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -333,8 +332,6 @@
             </div>
         </div>
     </div>
-
-
     <?php require_once('modalAvales.php'); ?>
 
 </main>

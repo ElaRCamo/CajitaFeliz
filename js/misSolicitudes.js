@@ -99,24 +99,35 @@ const TablaSolicitudesPrestamos = async () => {
     }
 };
 
-function editarPrestamo(idSolicitud){
-
+function editarPrestamo(idSolicitud) {
+    // Actualiza el título del modal
     let titulo = "Editar solicitud de Préstamo Folio " + idSolicitud;
     actualizarTitulo("#editarPrestamoModalLabel", titulo);
 
-    let telefono, monto = "";
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+    // Inicializa variables
+    let telefono = "";
+    let monto = "";
 
-        let data = response.data[0];
-        //si data no esta vacio:
-        monto = formatearMonto(data.montoSolicitado);
-        telefono = data.telefono;
+    // Obtén los datos del servidor
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud=' + idSolicitud, function (response) {
+        if (response && response.data && response.data.length > 0) {
+            let data = response.data[0];
 
-        $("#telefonoE").text(telefono);
-        $("#montoSolicitadoE").text(monto);
+            // Formatea los datos recibidos
+            monto = formatearMonto(data.montoSolicitado);
+            telefono = data.telefono;
 
-    })
+            // Establece los valores en los campos del formulario
+            $("#telefono").val(telefono);
+            $("#montoSolicitado").val(monto);
+        } else {
+            console.error("No se encontraron datos para la solicitud: " + idSolicitud);
+        }
+    }).fail(function () {
+        console.error("Error al obtener los datos de la solicitud.");
+    });
 }
+
 
 let dataTableCaja;
 let dataTableCajaInit = false;
