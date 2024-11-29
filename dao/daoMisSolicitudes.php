@@ -25,6 +25,8 @@ function resumenPrueba($id_solicitante){
                             THEN CONCAT('<span class=\"badge bg-success\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
                         WHEN s.idEstatus = 4 
                             THEN CONCAT('<span class=\"badge bg-primary\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
+                        WHEN s.idEstatus = 5
+                            THEN CONCAT('<span class=\"badge bg-secondary\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
                     END AS estatusVisual
                 FROM
                     Prestamo s
