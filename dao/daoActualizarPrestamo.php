@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo json_encode($respuesta);
 
-function  actualizarPrestamo($solicitud,$montoSolicitado,$telefono)
+function actualizarPrestamo($solicitud, $montoSolicitado, $telefono)
 {
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
@@ -27,22 +27,39 @@ function  actualizarPrestamo($solicitud,$montoSolicitado,$telefono)
     $conex->begin_transaction();
 
     try {
+        // Preparar la consulta de actualización
         $updateSol = $conex->prepare("UPDATE Prestamo 
-                                              SET montoSolicitado = ?,
-                                                  telefono = ?
-                                              WHERE idSolicitud = ?");
-        $updateSol->bind_param("ssi", $montoSolicitado, $telefono, $solicitud);
-        $resultado = $updateSol->execute();
+                                      SET montoSolicitado = ?, 
+                                          telefono = ? 
+                                      WHERE idSolicitud = ?");
+        if (!$updateSol) {
+            throw new Exception("Error al preparar la consulta: " . $conex->error);
+        }
 
+        // Vincular parámetros
+        $updateSol->bind_param("ssi", $montoSolicitado, $telefono, $solicitud);
+
+        // Ejecutar la consulta
+        if (!$updateSol->execute()) {
+            throw new Exception("Error al ejecutar la consulta: " . $updateSol->error);
+        }
+
+        // Confirmar la transacción
+        $conex->commit();
         $respuesta = array("status" => 'success', "message" => "Actualización exitosa");
 
     } catch (Exception $e) {
-        // Si ocurre un error, hacer rollback y mostrar el mensaje de error
+        // Si ocurre un error, hacer rollback
         $conex->rollback();
         $respuesta = array("status" => 'error', "message" => $e->getMessage());
-    }finally {
+    } finally {
+        // Cerrar el statement y la conexión
+        if (isset($updateSol)) {
+            $updateSol->close();
+        }
         $conex->close();
     }
 
     return $respuesta;
 }
+?>
