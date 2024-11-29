@@ -117,6 +117,8 @@ function editarPrestamo(idSolicitud) {
             monto = formatearMonto(data.montoSolicitado);
             telefono = data.telefono;
 
+            alert("telefono: "+telefono+" montoSolicitado: "+monto);
+
             // Establece los valores en los campos del formulario
             $("#telefono").val(telefono);
             $("#montoSolicitado").val(monto);
@@ -127,7 +129,6 @@ function editarPrestamo(idSolicitud) {
         console.error("Error al obtener los datos de la solicitud.");
     });
 }
-
 
 let dataTableCaja;
 let dataTableCajaInit = false;
