@@ -22,7 +22,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     const anioActual = new Date().getFullYear();
     const anioAnterior = anioActual - 1;
 
-    if (anioInicio !== anioCierre && anioInicio !== anioAnterior) {
+    if (anioInicio !== anioCierre) {
         Swal.fire({
             icon: 'error',
             title: 'Ambas fechas deben pertenecer al mismo año.'
@@ -30,7 +30,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
         return;
     }
     // Validar que el año de las fechas sea el actual
-    if (anioInicio !== anioActual) {
+    if (anioInicio !== anioActual && anioInicio !== anioAnterior) {
         Swal.fire({
             icon: 'error',
             title: `Las fechas deben corresponder al año actual (${anioActual}).`
