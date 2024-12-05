@@ -268,7 +268,7 @@ function validarInput(idInput) {
 }
 
 function estatutosAhorro() {
-    var url = "https://grammermx.com/RH/CajitaGrammer/docs/Estatutos-caja-de-ahorro-2024-v2.pdf";
+    var url = "https://grammermx.com/RH/CajitaGrammer/docs/ESTATUTOS_CAJA_AHORRO_2025.pdf";
     window.open(url, '_blank');
 }
 
