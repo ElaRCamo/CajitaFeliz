@@ -31,3 +31,65 @@ la idea es:
 2. cuando no existe $id_StorageUnit se llama directamente a insertarRegistrosInventario($GrammerNo, $STLocation, $StBin, $StType, $Cantidad, $AreaCve)
 3. cauando existe $id_StorageUnit se deben agrupar los valores por: $GrammerNo,$StBin, $StType (que son las llaves primarias de Inventario), se suma la cantidad 
 y se llama a insertarRegistrosInventario($GrammerNo, $STLocation, $StBin, $StType, $Cantidad, $AreaCve)
+
+
+Para la tabla Bin, genera en insert para la columnas StBin(varchar 250) y StType(varchar 250) , considerando la siguiente estructura:
+<?php
+include_once('db/db_Inventario.php');
+
+$AreaCve=$_POST['AreaCve'];
+$AreaNombre=$_POST['AreaNombre'];
+$AreaProduccion=$_POST['AreaProduccion'];
+$StLocation=$_POST['StLocation'];
+$StBin=$_POST['StBin'];
+
+registroUsu($AreaCve,$AreaNombre,$AreaProduccion,$StLocation,$StBin);
+
+
+function registroUsu($AreaCve,$AreaNombre,$AreaProduccion,$StLocation,$StBin){
+    $con = new LocalConector();
+    $conex=$con->conectar();
+    $insertRegistro= "INSERT INTO user(AreaCve,AreaNombre,AreaProduccion,StLocation,StBin) VALUES ('$AreaCve','$AreaNombre','$AreaProduccion','$StLocation','$StBin');";
+    $rsinsertUsu=mysqli_query($conex,$insertRegistro);
+    mysqli_close($conex);
+
+    if(!$rsinsertUsu){
+        echo "0";
+    }
+    else{
+        echo "1";
+    }
+
+}
+?>
+
+
+lo mismo para la tabla Bitacora_Inventario con las columnas: Id_Bitacora(int), NumeroParte(varchar),FolioMarbete(varchar), Fecha(datetime), Usuario(varchar),
+UsuarioVerificacion(varchar),Estatus(int),PrimerConteo(float),SegundoConteo(float),TercerConteo(float),SegFolio(varchar),
+UserSeg(varchar), Comentario(varchar), StorageBin(varchar), StorageType(varchar), Area(varchar)
+
+
+lo mismo para la tabla InventarioSap con las columnas: STLocation(int), STBin(varchar),STType(varchar),GrammerNo(varchar),Cantidad(float),AreaCve(varchar)
+
+
+lo mismo para la tabla Marbete_Inventario
+Id_Marbete (int), Numero_Parte(varchar), Estatus(int), StorageBin(varchar), Fecha(datetime), Area(int)
+
+lo mismo para la tabla Parte
+columnas: 
+GrammerNo Primary	varchar(250),Descripcion	varchar(250),UM	varchar(250),ProfitCtr	varchar(250),
+Costo	float, Por	int(11)
+
+
+lo mismo para la tabla Storage_Unit columnas:
+Id_StorageUnit Primary	int(11), Numero_Parte	varchar(250), Cantidad	float, Storage_Bin	varchar(250)	,
+Storage_Type	varchar(250), Estatus	int(11), FolioMarbete	varchar(250),Conteo	int(11)
+
+lo mismo para la tabla Ubicaciones columnas:
+GrammerNo Primary	varchar(250), PVB	varchar(250)
+
+
+lo mismo  tabla Usuarios:
+Id_Usuario  int(11),Nomina	int(11),Nombre	varchar(250),User	varchar(250),
+Password	varchar(250),Rol	int(11), Estatus	int(11), Area	int(11)
+
