@@ -17,7 +17,10 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
     $anioSiguiente = $anioActual + 1;
 
 // Validar que el año de inicio sea el actual, el anterior o el siguiente
-    if ($anioInicio !== $anioActual && $anioInicio !== $anioAnterior && $anioInicio !== $anioSiguiente) {
+    if ($anioInicio !== $anioCierre) {
+        $response = array("status" => 'error', "message" => "Ambas fechas deben pertenecer al mismo año.");
+    }
+        elseif($anioInicio !== $anioActual && $anioInicio !== $anioAnterior && $anioInicio !== $anioSiguiente) {
         $response = array("status" => 'error', "message" => "El año de inicio debe ser el actual ($anioActual), el anterior ($anioAnterior) o el siguiente ($anioSiguiente).");
     }
 // Validar que el año de cierre sea el mismo que el de inicio o el siguiente
