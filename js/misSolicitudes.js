@@ -303,6 +303,7 @@ function consultarAhorro(idCaja){
     actualizarTitulo('#titModalMiAhorro', titulo);
     let data = "";
     let data2 = "";
+    let benDos = "";
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoMiCajaPorId.php?ret='+idCaja, function (response) {
 
         data = response.data[0];
@@ -311,7 +312,7 @@ function consultarAhorro(idCaja){
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
         let montoAhorro = formatearMonto(data.montoAhorro);
         let benUno = data.nombre + ', con domicilio en ' + data.direccion + ', telefono: ' + data.telefono + ', porcentaje: ' + data.porcentaje + ' %';
-        let benDos = data2.nombre + ', con domicilio en ' + data2.direccion + ', telefono: ' + data2.telefono + ', porcentaje: ' + data2.porcentaje + ' %';
+
 
         $("#folioCaja").text(data.idCaja);
 
@@ -323,7 +324,8 @@ function consultarAhorro(idCaja){
 
         $('#beneficiarioUno').text(benUno);
 
-        if(benDos !== ""){
+        if(benDos !== "" && data2 !== ""){
+            benDos = data2.nombre + ', con domicilio en ' + data2.direccion + ', telefono: ' + data2.telefono + ', porcentaje: ' + data2.porcentaje + ' %';
             $("#beneficiarioDos").text(benDos);
         }
 
