@@ -13,14 +13,16 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
     $anioInicio = intval(date('Y', strtotime($fechaInicio)));
     $anioCierre = intval(date('Y', strtotime($fechaCierre)));
     $anioActual = intval(date('Y'));
+    $anioAnterior = $anioActual - 1;
+
 
     // Validar que ambas fechas pertenezcan al mismo año
     if ($anioInicio !== $anioCierre) {
         $response = array("status" => 'error', "message" => "Ambas fechas deben pertenecer al mismo año.");
     }
     // Validar que el año coincida con el año actual
-    elseif ($anioInicio !== $anioActual) {
-        $response = array("status" => 'error', "message" => "Las fechas deben corresponder al año actual ($anioActual).");
+    elseif ($anioInicio !== $anioActual && $anioInicio !== $anioAnterior) {
+        $response = array("status" => 'error', "message" => "Las fechas deben corresponder al año actual ($anioActual) o al próximo año");
     }
     // Validar que el año proporcionado coincida con el año de las fechas
     elseif ($anioInicio !== $anio) {
