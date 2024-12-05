@@ -13,7 +13,7 @@ if (!empty($_POST["fechaInicio"]) && !empty($_POST["fechaCierre"]) && !empty($_P
     $anioInicio = intval(date('Y', strtotime($fechaInicio)));
     $anioCierre = intval(date('Y', strtotime($fechaCierre)));
     $anioActual = intval(date('Y'));
-    $anioAnterior = $anioActual - 1;
+    $anioAnterior = $anioInicio - 1;
 
 
     // Validar que ambas fechas pertenezcan al mismo año
