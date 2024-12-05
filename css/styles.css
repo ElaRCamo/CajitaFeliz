@@ -1917,3 +1917,7 @@ blockquote::before {
   background-color: var(--lila);;
   border-radius: 2px;
 }
+#folioSolPres {
+  display: none;
+}
+
