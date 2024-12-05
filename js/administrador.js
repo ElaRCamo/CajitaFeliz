@@ -20,7 +20,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     const anioInicio = new Date(fechaInicio).getFullYear();
     const anioCierre = new Date(fechaCierre).getFullYear();
     const anioActual = new Date().getFullYear();
-    const anioAnterior = anioActual - 1;
+    const anioAnterior = anioInicio - 1;
     // Validar que el año de las fechas sea el actual
     if ((anioInicio !== anioActual && anioInicio !== anioAnterior) || (anioCierre !== anioActual && anioCierre !== anioAnterior)) {
         Swal.fire({
