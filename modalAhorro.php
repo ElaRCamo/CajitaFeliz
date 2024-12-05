@@ -44,7 +44,7 @@
                         </td>
                         <td id="beneficiarioUno"></td>
                     </tr>
-                    <tr>
+                    <tr id="rowBenDos">
                         <td class="etiquetaR">
                             <strong>Beneficiario 2:</strong>
                         </td>
