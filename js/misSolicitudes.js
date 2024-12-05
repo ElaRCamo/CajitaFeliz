@@ -326,7 +326,7 @@ function consultarAhorro(idCaja){
 
         $('#beneficiarioUno').text(benUno);
 
-        if(benDos !== "" && data2 !== ""){
+        if(data2){
             benDos = data2.nombre + ', con domicilio en ' + data2.direccion + ', telefono: ' + data2.telefono + ', porcentaje: ' + data2.porcentaje + ' %';
             $("#beneficiarioDos").text(benDos);
         }else{
