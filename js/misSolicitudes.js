@@ -302,7 +302,7 @@ function consultarAhorro(idCaja){
     const titulo = "Mi Caja de Ahorro Folio " + idCaja;
     actualizarTitulo('#titModalMiAhorro', titulo);
     let data = "";
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoRetiroPorId.php?ret='+idCaja, function (response) {
+    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoMiCajaPorId.php?ret='+idCaja, function (response) {
 
         data = response.data[0];
 
