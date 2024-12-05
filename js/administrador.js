@@ -20,8 +20,9 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     const anioInicio = new Date(fechaInicio).getFullYear();
     const anioCierre = new Date(fechaCierre).getFullYear();
     const anioActual = new Date().getFullYear();
+    const anioAnterior = anioActual - 1;
 
-    if (anioInicio !== anioCierre) {
+    if (anioInicio !== anioCierre && anioInicio !== anioAnterior) {
         Swal.fire({
             icon: 'error',
             title: 'Ambas fechas deben pertenecer al mismo año.'
