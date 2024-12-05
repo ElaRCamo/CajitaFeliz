@@ -554,12 +554,8 @@ function deshabilitarInputsMS() {
 }
 
 function consultarAvales(idSolicitud){
-    const folioSpan = document.getElementById("folioSolPres");
-    if (folioSpan) {
-        folioSpan.textContent = idSolicitud;
-    } else {
-        console.error("Elemento con ID 'folioSolPres' no encontrado.");
-    }
+    const titulo = "Registrar avales para la Solicitud " + idSolicitud;
+    actualizarTitulo("modalTitAvales", titulo);
 
     let data, aval1, aval2, tel1, tel2 = "";
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
