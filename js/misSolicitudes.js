@@ -556,6 +556,7 @@ function deshabilitarInputsMS() {
 function consultarAvales(idSolicitud){
     const titulo = "Registrar avales para la Solicitud " + idSolicitud;
     actualizarTitulo("#modalTitAvales", titulo);
+    $("#folioSolPres").val(idSolicitud);
 
     let data, aval1, aval2, tel1, tel2 = "";
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
