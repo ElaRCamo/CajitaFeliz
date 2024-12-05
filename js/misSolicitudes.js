@@ -302,30 +302,33 @@ function consultarAhorro(idCaja){
     const titulo = "Mi Caja de Ahorro Folio " + idCaja;
     actualizarTitulo('#titModalMiAhorro', titulo);
     let data = "";
+    let data2 = "";
     $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoMiCajaPorId.php?ret='+idCaja, function (response) {
 
         data = response.data[0];
+        data2 = response.data[1];
 
-        let fechaSolicitudFormateada = formatearFecha(data.fechaSol);
-        let fechaDepFormateada = formatearFecha(data.fechaDep);
-        let montoDep = formatearMonto(data.montoDep);
+        let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
+        let montoAhorro = formatearMonto(data.montoAhorro);
+        let benUno = data.nombre + ', con domicilio en ' + data.direccion + ', telefono: ' + data.telefono + ', porcentaje: ' + data.porcentaje + ' %';
+        let benDos = data2.nombre + ', con domicilio en ' + data2.direccion + ', telefono: ' + data2.telefono + ', porcentaje: ' + data2.porcentaje + ' %';
 
-        $("#folioCaja").text(data.folioRetiro);
+        $("#folioCaja").text(data.idCaja);
 
-        $("#montoAhorro").text(montoDep);
+        $("#montoAhorro").text(montoAhorro);
 
-        $("#fechaAhorro").text(data.folioCaja);
+        $("#fechaAhorro").text(fechaSolicitudFormateada);
 
-        $("#nominaSolAho").text(fechaSolicitudFormateada);
+        $("#nominaSolAho").text(data.nomina);
 
-        $("#nombreAho").text(fechaDepFormateada);
+        $('#beneficiarioUno').text(benUno);
 
-        $('#beneficiarioUno').text(data.usuario);
-
-        $("#beneficiarioDos").text(data.estatusVisual);
+        if(benDos !== ""){
+            $("#beneficiarioDos").text(benDos);
+        }
 
     }).then(function(){
-        fCargarSolicitanteMS(data.usuario, '#nombreSolRetiro');
+        fCargarSolicitanteMS(data.nomina, '#nombreAho');
     });
 }
 
