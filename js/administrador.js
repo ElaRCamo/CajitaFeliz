@@ -20,32 +20,20 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
     const anioInicio = new Date(fechaInicio).getFullYear();
     const anioCierre = new Date(fechaCierre).getFullYear();
     const anioActual = new Date().getFullYear();
-    const anioAnterior = anioActual - 1;
-    const anioSiguiente = anioActual + 1;
-
-// Validar que el año de inicio sea el actual, el anterior o el siguiente
-    if (anioInicio !== anioActual && anioInicio !== anioAnterior && anioInicio !== anioSiguiente) {
-        Swal.fire({
-            icon: 'error',
-            title: `El año de inicio debe ser el actual (${anioActual}), el anterior (${anioAnterior}) o el siguiente (${anioSiguiente}).`
-        });
-        return;
-    }
-
-// Validar que el año de cierre sea el año de inicio o el siguiente
-    if (anioCierre !== anioInicio && anioCierre !== anioSiguiente) {
-        Swal.fire({
-            icon: 'error',
-            title: `El año de cierre debe ser el mismo que el año de inicio o el siguiente.`
-        });
-        return;
-    }
 
 
     if (anioInicio !== anioCierre) {
         Swal.fire({
             icon: 'error',
             title: 'Ambas fechas deben pertenecer al mismo año.'
+        });
+        return;
+    }
+    // Validar que el año de las fechas sea el actual
+    if (anioInicio !== anioActual) {
+        Swal.fire({
+            icon: 'error',
+            title: `Las fechas deben corresponder al año actual (${anioActual}).`
         });
         return;
     }

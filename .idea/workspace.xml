@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update load modal" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update endorsements modal">
+      <change beforePath="$PROJECT_DIR$/dao/daoGuardarFechas.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoGuardarFechas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,23 +38,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/CajitaFelizGrammer/images/slide&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Reverting in main",
+    "last_opened_file_path": "C:/CajitaFelizGrammer/images/slide",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\CajitaFelizGrammer\images\slide" />
@@ -96,190 +99,7 @@
       <workItem from="1732305781835" duration="4447000" />
       <workItem from="1732542389155" duration="67458000" />
       <workItem from="1733147066506" duration="806000" />
-    </task>
-    <task id="LOCAL-00669" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732814203015</created>
-      <option name="number" value="00669" />
-      <option name="presentableId" value="LOCAL-00669" />
-      <option name="project" value="LOCAL" />
-      <updated>1732814203015</updated>
-    </task>
-    <task id="LOCAL-00670" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732814225875</created>
-      <option name="number" value="00670" />
-      <option name="presentableId" value="LOCAL-00670" />
-      <option name="project" value="LOCAL" />
-      <updated>1732814225875</updated>
-    </task>
-    <task id="LOCAL-00671" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732814316623</created>
-      <option name="number" value="00671" />
-      <option name="presentableId" value="LOCAL-00671" />
-      <option name="project" value="LOCAL" />
-      <updated>1732814316623</updated>
-    </task>
-    <task id="LOCAL-00672" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732814430760</created>
-      <option name="number" value="00672" />
-      <option name="presentableId" value="LOCAL-00672" />
-      <option name="project" value="LOCAL" />
-      <updated>1732814430760</updated>
-    </task>
-    <task id="LOCAL-00673" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732814510041</created>
-      <option name="number" value="00673" />
-      <option name="presentableId" value="LOCAL-00673" />
-      <option name="project" value="LOCAL" />
-      <updated>1732814510041</updated>
-    </task>
-    <task id="LOCAL-00674" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732815156163</created>
-      <option name="number" value="00674" />
-      <option name="presentableId" value="LOCAL-00674" />
-      <option name="project" value="LOCAL" />
-      <updated>1732815156163</updated>
-    </task>
-    <task id="LOCAL-00675" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732815515801</created>
-      <option name="number" value="00675" />
-      <option name="presentableId" value="LOCAL-00675" />
-      <option name="project" value="LOCAL" />
-      <updated>1732815515802</updated>
-    </task>
-    <task id="LOCAL-00676" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732819074996</created>
-      <option name="number" value="00676" />
-      <option name="presentableId" value="LOCAL-00676" />
-      <option name="project" value="LOCAL" />
-      <updated>1732819074996</updated>
-    </task>
-    <task id="LOCAL-00677" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732819469206</created>
-      <option name="number" value="00677" />
-      <option name="presentableId" value="LOCAL-00677" />
-      <option name="project" value="LOCAL" />
-      <updated>1732819469207</updated>
-    </task>
-    <task id="LOCAL-00678" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732819624301</created>
-      <option name="number" value="00678" />
-      <option name="presentableId" value="LOCAL-00678" />
-      <option name="project" value="LOCAL" />
-      <updated>1732819624301</updated>
-    </task>
-    <task id="LOCAL-00679" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732821448456</created>
-      <option name="number" value="00679" />
-      <option name="presentableId" value="LOCAL-00679" />
-      <option name="project" value="LOCAL" />
-      <updated>1732821448456</updated>
-    </task>
-    <task id="LOCAL-00680" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732821631168</created>
-      <option name="number" value="00680" />
-      <option name="presentableId" value="LOCAL-00680" />
-      <option name="project" value="LOCAL" />
-      <updated>1732821631168</updated>
-    </task>
-    <task id="LOCAL-00681" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732821665261</created>
-      <option name="number" value="00681" />
-      <option name="presentableId" value="LOCAL-00681" />
-      <option name="project" value="LOCAL" />
-      <updated>1732821665261</updated>
-    </task>
-    <task id="LOCAL-00682" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732821848095</created>
-      <option name="number" value="00682" />
-      <option name="presentableId" value="LOCAL-00682" />
-      <option name="project" value="LOCAL" />
-      <updated>1732821848095</updated>
-    </task>
-    <task id="LOCAL-00683" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732826146610</created>
-      <option name="number" value="00683" />
-      <option name="presentableId" value="LOCAL-00683" />
-      <option name="project" value="LOCAL" />
-      <updated>1732826146610</updated>
-    </task>
-    <task id="LOCAL-00684" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732826333087</created>
-      <option name="number" value="00684" />
-      <option name="presentableId" value="LOCAL-00684" />
-      <option name="project" value="LOCAL" />
-      <updated>1732826333087</updated>
-    </task>
-    <task id="LOCAL-00685" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732827205597</created>
-      <option name="number" value="00685" />
-      <option name="presentableId" value="LOCAL-00685" />
-      <option name="project" value="LOCAL" />
-      <updated>1732827205597</updated>
-    </task>
-    <task id="LOCAL-00686" summary="questions update">
-      <option name="closed" value="true" />
-      <created>1732827674241</created>
-      <option name="number" value="00686" />
-      <option name="presentableId" value="LOCAL-00686" />
-      <option name="project" value="LOCAL" />
-      <updated>1732827674241</updated>
-    </task>
-    <task id="LOCAL-00687" summary="questions update">
-      <option name="closed" value="true" />
-      <created>1732828097944</created>
-      <option name="number" value="00687" />
-      <option name="presentableId" value="LOCAL-00687" />
-      <option name="project" value="LOCAL" />
-      <updated>1732828097945</updated>
-    </task>
-    <task id="LOCAL-00688" summary="questions update">
-      <option name="closed" value="true" />
-      <created>1732828409537</created>
-      <option name="number" value="00688" />
-      <option name="presentableId" value="LOCAL-00688" />
-      <option name="project" value="LOCAL" />
-      <updated>1732828409537</updated>
-    </task>
-    <task id="LOCAL-00689" summary="questions update">
-      <option name="closed" value="true" />
-      <created>1732828721649</created>
-      <option name="number" value="00689" />
-      <option name="presentableId" value="LOCAL-00689" />
-      <option name="project" value="LOCAL" />
-      <updated>1732828721649</updated>
-    </task>
-    <task id="LOCAL-00690" summary="questions update">
-      <option name="closed" value="true" />
-      <created>1732828852481</created>
-      <option name="number" value="00690" />
-      <option name="presentableId" value="LOCAL-00690" />
-      <option name="project" value="LOCAL" />
-      <updated>1732828852481</updated>
-    </task>
-    <task id="LOCAL-00691" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732889234208</created>
-      <option name="number" value="00691" />
-      <option name="presentableId" value="LOCAL-00691" />
-      <option name="project" value="LOCAL" />
-      <updated>1732889234208</updated>
+      <workItem from="1733417824400" duration="6433000" />
     </task>
     <task id="LOCAL-00692" summary="update load modal">
       <option name="closed" value="true" />
@@ -489,7 +309,191 @@
       <option name="project" value="LOCAL" />
       <updated>1733407023229</updated>
     </task>
-    <option name="localTasksCounter" value="718" />
+    <task id="LOCAL-00718" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733418677165</created>
+      <option name="number" value="00718" />
+      <option name="presentableId" value="LOCAL-00718" />
+      <option name="project" value="LOCAL" />
+      <updated>1733418677165</updated>
+    </task>
+    <task id="LOCAL-00719" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733418917037</created>
+      <option name="number" value="00719" />
+      <option name="presentableId" value="LOCAL-00719" />
+      <option name="project" value="LOCAL" />
+      <updated>1733418917037</updated>
+    </task>
+    <task id="LOCAL-00720" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733419524370</created>
+      <option name="number" value="00720" />
+      <option name="presentableId" value="LOCAL-00720" />
+      <option name="project" value="LOCAL" />
+      <updated>1733419524370</updated>
+    </task>
+    <task id="LOCAL-00721" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733419636161</created>
+      <option name="number" value="00721" />
+      <option name="presentableId" value="LOCAL-00721" />
+      <option name="project" value="LOCAL" />
+      <updated>1733419636161</updated>
+    </task>
+    <task id="LOCAL-00722" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733419751866</created>
+      <option name="number" value="00722" />
+      <option name="presentableId" value="LOCAL-00722" />
+      <option name="project" value="LOCAL" />
+      <updated>1733419751866</updated>
+    </task>
+    <task id="LOCAL-00723" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733419808867</created>
+      <option name="number" value="00723" />
+      <option name="presentableId" value="LOCAL-00723" />
+      <option name="project" value="LOCAL" />
+      <updated>1733419808867</updated>
+    </task>
+    <task id="LOCAL-00724" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733419858110</created>
+      <option name="number" value="00724" />
+      <option name="presentableId" value="LOCAL-00724" />
+      <option name="project" value="LOCAL" />
+      <updated>1733419858110</updated>
+    </task>
+    <task id="LOCAL-00725" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733420079051</created>
+      <option name="number" value="00725" />
+      <option name="presentableId" value="LOCAL-00725" />
+      <option name="project" value="LOCAL" />
+      <updated>1733420079051</updated>
+    </task>
+    <task id="LOCAL-00726" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733420227127</created>
+      <option name="number" value="00726" />
+      <option name="presentableId" value="LOCAL-00726" />
+      <option name="project" value="LOCAL" />
+      <updated>1733420227127</updated>
+    </task>
+    <task id="LOCAL-00727" summary="update savings modal">
+      <option name="closed" value="true" />
+      <created>1733420306757</created>
+      <option name="number" value="00727" />
+      <option name="presentableId" value="LOCAL-00727" />
+      <option name="project" value="LOCAL" />
+      <updated>1733420306757</updated>
+    </task>
+    <task id="LOCAL-00728" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733421257081</created>
+      <option name="number" value="00728" />
+      <option name="presentableId" value="LOCAL-00728" />
+      <option name="project" value="LOCAL" />
+      <updated>1733421257081</updated>
+    </task>
+    <task id="LOCAL-00729" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733421415784</created>
+      <option name="number" value="00729" />
+      <option name="presentableId" value="LOCAL-00729" />
+      <option name="project" value="LOCAL" />
+      <updated>1733421415784</updated>
+    </task>
+    <task id="LOCAL-00730" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733421769200</created>
+      <option name="number" value="00730" />
+      <option name="presentableId" value="LOCAL-00730" />
+      <option name="project" value="LOCAL" />
+      <updated>1733421769200</updated>
+    </task>
+    <task id="LOCAL-00731" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733421835822</created>
+      <option name="number" value="00731" />
+      <option name="presentableId" value="LOCAL-00731" />
+      <option name="project" value="LOCAL" />
+      <updated>1733421835822</updated>
+    </task>
+    <task id="LOCAL-00732" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733422032193</created>
+      <option name="number" value="00732" />
+      <option name="presentableId" value="LOCAL-00732" />
+      <option name="project" value="LOCAL" />
+      <updated>1733422032193</updated>
+    </task>
+    <task id="LOCAL-00733" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733422611361</created>
+      <option name="number" value="00733" />
+      <option name="presentableId" value="LOCAL-00733" />
+      <option name="project" value="LOCAL" />
+      <updated>1733422611361</updated>
+    </task>
+    <task id="LOCAL-00734" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733422947094</created>
+      <option name="number" value="00734" />
+      <option name="presentableId" value="LOCAL-00734" />
+      <option name="project" value="LOCAL" />
+      <updated>1733422947094</updated>
+    </task>
+    <task id="LOCAL-00735" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733423079788</created>
+      <option name="number" value="00735" />
+      <option name="presentableId" value="LOCAL-00735" />
+      <option name="project" value="LOCAL" />
+      <updated>1733423079788</updated>
+    </task>
+    <task id="LOCAL-00736" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733423335157</created>
+      <option name="number" value="00736" />
+      <option name="presentableId" value="LOCAL-00736" />
+      <option name="project" value="LOCAL" />
+      <updated>1733423335157</updated>
+    </task>
+    <task id="LOCAL-00737" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733423417819</created>
+      <option name="number" value="00737" />
+      <option name="presentableId" value="LOCAL-00737" />
+      <option name="project" value="LOCAL" />
+      <updated>1733423417819</updated>
+    </task>
+    <task id="LOCAL-00738" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733423462710</created>
+      <option name="number" value="00738" />
+      <option name="presentableId" value="LOCAL-00738" />
+      <option name="project" value="LOCAL" />
+      <updated>1733423462710</updated>
+    </task>
+    <task id="LOCAL-00739" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733423774646</created>
+      <option name="number" value="00739" />
+      <option name="presentableId" value="LOCAL-00739" />
+      <option name="project" value="LOCAL" />
+      <updated>1733423774646</updated>
+    </task>
+    <task id="LOCAL-00740" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733423839269</created>
+      <option name="number" value="00740" />
+      <option name="presentableId" value="LOCAL-00740" />
+      <option name="project" value="LOCAL" />
+      <updated>1733423839269</updated>
+    </task>
+    <option name="localTasksCounter" value="741" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,8 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="data to excel" />
-    <MESSAGE value="excel for db" />
     <MESSAGE value="Precargar datos" />
     <MESSAGE value="Precargar datos prestamo" />
     <MESSAGE value="Precargar datos ahorro" />
@@ -532,7 +534,9 @@
     <MESSAGE value="lock for load request" />
     <MESSAGE value="questions update" />
     <MESSAGE value="update load modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="update load modal" />
+    <MESSAGE value="update savings modal" />
+    <MESSAGE value="update endorsements modal" />
+    <option name="LAST_COMMIT_MESSAGE" value="update endorsements modal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -541,6 +545,15 @@
           <url>file://$PROJECT_DIR$/dao/daoActualizarSolPresAdmin.php</url>
           <line>51</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/dao/daoMiCajaPorId.php</url>
+          <line>7</line>
+          <properties>
+            <option name="className" value="" />
+            <option name="methodName" value="\resumenCajaPorId" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
