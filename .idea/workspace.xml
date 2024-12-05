@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update load modal">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/importante.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importante.txt" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update load modal" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,14 +96,6 @@
       <workItem from="1732305781835" duration="4447000" />
       <workItem from="1732542389155" duration="67458000" />
       <workItem from="1733147066506" duration="806000" />
-    </task>
-    <task id="LOCAL-00668" summary="lock for load request">
-      <option name="closed" value="true" />
-      <created>1732812275405</created>
-      <option name="number" value="00668" />
-      <option name="presentableId" value="LOCAL-00668" />
-      <option name="project" value="LOCAL" />
-      <updated>1732812275405</updated>
     </task>
     <task id="LOCAL-00669" summary="lock for load request">
       <option name="closed" value="true" />
@@ -492,7 +481,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732915425211</updated>
     </task>
-    <option name="localTasksCounter" value="717" />
+    <task id="LOCAL-00717" summary="update load modal">
+      <option name="closed" value="true" />
+      <created>1733407023229</created>
+      <option name="number" value="00717" />
+      <option name="presentableId" value="LOCAL-00717" />
+      <option name="project" value="LOCAL" />
+      <updated>1733407023229</updated>
+    </task>
+    <option name="localTasksCounter" value="718" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
