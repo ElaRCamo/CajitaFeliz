@@ -309,6 +309,8 @@ function consultarAhorro(idCaja){
         data = response.data[0];
         data2 = response.data[1];
 
+        console.log("data 2:" +data2);
+
         let fechaSolicitudFormateada = formatearFecha(data.fechaSolicitud);
         let montoAhorro = formatearMonto(data.montoAhorro);
         let benUno = data.nombre + ', con domicilio en ' + data.direccion + ', telefono: ' + data.telefono + ', porcentaje: ' + data.porcentaje + ' %';
