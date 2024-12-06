@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update endorsements modal">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update anioConvocatoria" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,23 +97,7 @@
       <workItem from="1732542389155" duration="67458000" />
       <workItem from="1733147066506" duration="806000" />
       <workItem from="1733417824400" duration="6433000" />
-      <workItem from="1733424669396" duration="6358000" />
-    </task>
-    <task id="LOCAL-00695" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732889723309</created>
-      <option name="number" value="00695" />
-      <option name="presentableId" value="LOCAL-00695" />
-      <option name="project" value="LOCAL" />
-      <updated>1732889723309</updated>
-    </task>
-    <task id="LOCAL-00696" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732890711793</created>
-      <option name="number" value="00696" />
-      <option name="presentableId" value="LOCAL-00696" />
-      <option name="project" value="LOCAL" />
-      <updated>1732890711793</updated>
+      <workItem from="1733424669396" duration="7313000" />
     </task>
     <task id="LOCAL-00697" summary="update load modal">
       <option name="closed" value="true" />
@@ -493,7 +475,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733498788668</updated>
     </task>
-    <option name="localTasksCounter" value="744" />
+    <task id="LOCAL-00744" summary="update anioConvocatoria">
+      <option name="closed" value="true" />
+      <created>1733499235355</created>
+      <option name="number" value="00744" />
+      <option name="presentableId" value="LOCAL-00744" />
+      <option name="project" value="LOCAL" />
+      <updated>1733499235355</updated>
+    </task>
+    <task id="LOCAL-00745" summary="update anioConvocatoria">
+      <option name="closed" value="true" />
+      <created>1733500084547</created>
+      <option name="number" value="00745" />
+      <option name="presentableId" value="LOCAL-00745" />
+      <option name="project" value="LOCAL" />
+      <updated>1733500084547</updated>
+    </task>
+    <option name="localTasksCounter" value="746" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Precargar datos" />
     <MESSAGE value="Precargar datos prestamo" />
     <MESSAGE value="Precargar datos ahorro" />
     <MESSAGE value="Index responsive" />
@@ -536,7 +533,8 @@
     <MESSAGE value="update load modal" />
     <MESSAGE value="update savings modal" />
     <MESSAGE value="update endorsements modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="update endorsements modal" />
+    <MESSAGE value="update anioConvocatoria" />
+    <option name="LAST_COMMIT_MESSAGE" value="update anioConvocatoria" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

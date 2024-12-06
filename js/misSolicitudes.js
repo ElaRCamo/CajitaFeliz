@@ -67,19 +67,19 @@ const TablaSolicitudesPrestamos = async () => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}, ${item.anioConvocatoria}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
+                        <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo(${item.idSolicitud}, ${item.anioConvocatoria})" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
                             <span>Detalles</span>
                         </button>`;
 
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
-                    <button class="btn btn-secondary btnAvales" onclick="consultarAvales('${item.idSolicitud}, ${item.anioConvocatoria}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
+                    <button class="btn btn-secondary btnAvales" onclick="consultarAvales(${item.idSolicitud}, ${item.anioConvocatoria})" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
                         </i><span>Avales</span>
                     </button>`;
             }else if(item.idEstatus === '1'){
                 content += `
-                    <button class="btn btn-warning" onclick="editarPrestamo('${item.idSolicitud}, ${item.anioConvocatoria}')"  data-bs-toggle="modal" data-bs-target="#editarPrestamoModal">
+                    <button class="btn btn-warning" onclick="editarPrestamo(${item.idSolicitud}, ${item.anioConvocatoria})"  data-bs-toggle="modal" data-bs-target="#editarPrestamoModal">
                         </i><span>Editar</span>
                     </button>`;
             }
