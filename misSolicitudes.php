@@ -267,6 +267,7 @@
                     <div class="col-12 mx-auto">
                         <form class="custom-form volunteer-form mb-5 mb-lg-0" action="" method="post" role="form" id="editarPrestamoForm">
                             <input type="hidden" id="idSolicitudE" name="idSolicitudE">
+                            <input type="hidden" id="anioConvE" name="anioConvE">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <label for="telefonoE">Teléfono: </label>

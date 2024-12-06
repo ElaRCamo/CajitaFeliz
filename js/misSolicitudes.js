@@ -123,6 +123,7 @@ function editarPrestamo(idSolicitud, anio) {
 
             // Establece los valores en los campos del formulario
             $("#idSolicitudE").val(data.idSolicitud);
+            $("#anioConvE").val(data.anioConvocatoria);
             $("#telefonoE").val(telefono);
             $("#montoSolicitadoE").val(monto);
 
