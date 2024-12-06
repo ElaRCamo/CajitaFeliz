@@ -26,7 +26,7 @@ function guardarAvalesDB($solicitud, $anio, $Nomina1, $tel1, $Nomina2, $tel2){
     $result = $checkStatus->get_result();
     $status = $result->fetch_assoc();
 
-    if (!$status || $status['idEstatus'] != 1) {
+    if (!$status || $status['idEstatus'] != 3) {
         $conexion->close();
         return array("status" => "error", "message" => "No se puede actualizar los avales porque el estatus no es válido.");
     }
