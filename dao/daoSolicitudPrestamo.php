@@ -62,8 +62,9 @@ function guardarPrestamo($nomina, $montoSolicitado, $telefono) {
 
             if ($existeSolActiva === 0 && $existeSolRechazada <= 1) {
 
-                $insertPrestamo = $conex->prepare("INSERT INTO Prestamo (anioConvocatoria,nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) VALUES (?, ?, ?, ?)");
-                $insertPrestamo->bind_param("issss", $anioActual,$nomina, $montoSolicitado, $telefono, $fechaSolicitud);
+                $insertPrestamo = $conex->prepare("INSERT INTO Prestamo (anioConvocatoria, nominaSolicitante, montoSolicitado, telefono, fechaSolicitud) 
+                                                                VALUES (?, ?, ?, ?, ?)");
+                $insertPrestamo->bind_param("issss", $anioActual, $nomina, $montoSolicitado, $telefono, $fechaSolicitud);
                 $resultado = $insertPrestamo->execute();
 
                 // Verificar si la inserción fue exitosa
