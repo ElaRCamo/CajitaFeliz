@@ -2,7 +2,7 @@
 let dataTable;
 let dataTableIsInitialized = false;
 
-const dataTableOptions = {
+const dataTableOptionsPresSol = {
     lengthMenu: [5, 15, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4]},
@@ -37,7 +37,7 @@ const initDataTable = async () => {
 
     await TablaSolicitudesPrestamos();
 
-    dataTable = $("#tablaSolicitudes").DataTable(dataTableOptions);
+    dataTable = $("#tablaSolicitudes").DataTable(dataTableOptionsPresSol);
 
     dataTableIsInitialized = true;
 
