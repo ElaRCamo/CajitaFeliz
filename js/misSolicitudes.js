@@ -562,6 +562,8 @@ function consultarAvales(idSolicitud,anio){
     const titulo = "Registrar avales para la Solicitud " + idSolicitud;
     actualizarTitulo("#modalTitAvales", titulo);
     $("#folioSolPres").val(idSolicitud);
+    $("#anioConvA").val(anio);
+
 
     let data, aval1, aval2, tel1, tel2 = "";
     const url = `https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?sol=${idSolicitud}&a=${anio}`;
@@ -644,6 +646,7 @@ function fCargarAvales(aval1,tel1,aval2,tel2,idSolicitud) {
 
 function guardarAvales(){
     let solicitud = document.getElementById("folioSolPres").value;
+    let anio = document.getElementById("anioConvA").value;
     let nomina1 = document.getElementById("nominaAval1").value;
     let nomina2 = document.getElementById("nominaAval2").value;
     let tel1 = document.getElementById("telAval1").value;
@@ -655,6 +658,7 @@ function guardarAvales(){
         let formData = new FormData();
 
         formData.append('idSolicitud', solicitud.trim());
+        formData.append('anio', anio.trim());
         formData.append('nom1', nomina1.trim());
         formData.append('nom2', nomina2.trim());
         formData.append('tel1', tel1.trim());
