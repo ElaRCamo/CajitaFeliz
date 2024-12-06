@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo json_encode($respuesta);
 
-function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito, $comentarios) {
+function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito, $comentarios, $anio) {
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
@@ -70,8 +70,9 @@ function actualizarPresAdminExcel($idSolicitud, $montoDepositado, $fechaDeposito
                                                   montoDepositado = ?,
                                                   idEstatus = 4,
                                                   comentariosAdmin = ?
-                                              WHERE idSolicitud = ?");
-        $updateSol->bind_param("sssi", $fechaDeposito, $montoDepositado,$comentarios, $idSolicitud);
+                                              WHERE idSolicitud = ?
+                                                AND anioConvocatoria = ?");
+        $updateSol->bind_param("sssii", $fechaDeposito, $montoDepositado,$comentarios, $idSolicitud, $anio);
         $resultado = $updateSol->execute();
 
         if (!$resultado) {

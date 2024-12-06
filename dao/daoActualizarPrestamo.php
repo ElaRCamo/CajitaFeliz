@@ -26,18 +26,21 @@ function actualizarPrestamo($solicitud, $montoSolicitado, $telefono)
     // Iniciar transacción
     $conex->begin_transaction();
 
+    $anioActual = date('Y'); // Año actual
+
     try {
         // Preparar la consulta de actualización
         $updateSol = $conex->prepare("UPDATE Prestamo 
                                       SET montoSolicitado = ?, 
                                           telefono = ? 
-                                      WHERE idSolicitud = ?");
+                                      WHERE idSolicitud = ?
+                                        AND anioConvoatoria = ?");
         if (!$updateSol) {
             throw new Exception("Error al preparar la consulta: " . $conex->error);
         }
 
         // Vincular parámetros
-        $updateSol->bind_param("ssi", $montoSolicitado, $telefono, $solicitud);
+        $updateSol->bind_param("ssii", $montoSolicitado, $telefono, $solicitud, $anioActual);
 
         // Ejecutar la consulta
         if (!$updateSol->execute()) {

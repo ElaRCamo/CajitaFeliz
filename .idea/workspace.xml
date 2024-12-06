@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update endorsements modal">
-      <change afterPath="$PROJECT_DIR$/docs/ESTATUTOS_CAJA_AHORRO_2025.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ahorros.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ahorros.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoActualizarPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoActualizarPrestamo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoActualizarPrestamosExcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoActualizarPrestamosExcel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoActualizarSolPresAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoActualizarSolPresAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoMisSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoMisSolicitudes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoSolicitudPrestamo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoSolicitudPrestamoPorId.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoSolicitudPrestamoPorId.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoSolicitudesPrestamos.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoSolicitudesPrestamos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/administrador.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/administrador.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,15 +107,7 @@
       <workItem from="1732542389155" duration="67458000" />
       <workItem from="1733147066506" duration="806000" />
       <workItem from="1733417824400" duration="6433000" />
-      <workItem from="1733424669396" duration="452000" />
-    </task>
-    <task id="LOCAL-00693" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732889505703</created>
-      <option name="number" value="00693" />
-      <option name="presentableId" value="LOCAL-00693" />
-      <option name="project" value="LOCAL" />
-      <updated>1732889505703</updated>
+      <workItem from="1733424669396" duration="5458000" />
     </task>
     <task id="LOCAL-00694" summary="update load modal">
       <option name="closed" value="true" />
@@ -495,7 +493,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733424730586</updated>
     </task>
-    <option name="localTasksCounter" value="742" />
+    <task id="LOCAL-00742" summary="update endorsements modal">
+      <option name="closed" value="true" />
+      <created>1733431052716</created>
+      <option name="number" value="00742" />
+      <option name="presentableId" value="LOCAL-00742" />
+      <option name="project" value="LOCAL" />
+      <updated>1733431052716</updated>
+    </task>
+    <option name="localTasksCounter" value="743" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,11 +549,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/dao/daoActualizarSolPresAdmin.php</url>
-          <line>51</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/dao/daoMiCajaPorId.php</url>
           <line>7</line>

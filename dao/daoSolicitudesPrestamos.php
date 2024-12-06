@@ -45,6 +45,7 @@ function todosLosPrestamos($anio)
     $datosPrueba = mysqli_query($conex, "
         SELECT
             s.idSolicitud,
+            s.anioConvocatoria,
             s.nominaSolicitante,
             s.fechaSolicitud,
             s.montoSolicitado,

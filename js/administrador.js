@@ -210,14 +210,14 @@ const dataTablePrestamosAdmin = async (anio) => {
                     <td>${item.telefono}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-primary" onclick="responderPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
+                        <button class="btn btn-primary" onclick="responderPrestamo('${item.idSolicitud}, anio')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
                             <span>Responder</span>
                         </button>`;
 
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
-                    <button class="btn btn-secondary" onclick="consultarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
+                    <button class="btn btn-secondary" onclick="consultarAvales('${item.idSolicitud}, anio')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
                         <span>Avales</span>
                     </button>`;
             }
@@ -242,12 +242,14 @@ const dataTablePrestamosAdmin = async (anio) => {
 };
 
 
-function responderPrestamo(idSolicitud){
+function responderPrestamo(idSolicitud, anio){
     const titulo = "Responder Solicitud de Préstamo Folio " + idSolicitud;
     actualizarTitulo('#respModalTit', titulo);
     let data = "";
 
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+    const url = `https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?sol=${idSolicitud}&a=${anio}`;
+
+    $.getJSON(url, function (response) {
 
         data = response.data[0];
 

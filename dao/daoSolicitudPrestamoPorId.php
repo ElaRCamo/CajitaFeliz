@@ -1,16 +1,18 @@
 <?php
 
 include_once('connectionCajita.php');
-$idSolicitud = $_GET["id_solicitud"];
-obtenerPrestamoPorId($idSolicitud);
+$idSolicitud = $_GET["sol"];
+$anioConv = $_GET["a"];
+obtenerPrestamoPorId($idSolicitud, $anioConv);
 
-function obtenerPrestamoPorId($idSolicitud){
+function obtenerPrestamoPorId($idSolicitud, $anioConv){
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
     $datosPrueba =  mysqli_query($conex,
         "SELECT
                     s.idSolicitud,
+                    s.anioConvocatoria,
                     s.nominaSolicitante,
                     s.fechaSolicitud,
                     s.montoSolicitado,
@@ -27,6 +29,7 @@ function obtenerPrestamoPorId($idSolicitud){
                 FROM
                     Prestamo s
                 WHERE idSolicitud = '$idSolicitud'
+                  AND anioConvocatoria = '$anioConv'
                 ");
 
     $resultado= mysqli_fetch_all($datosPrueba, MYSQLI_ASSOC);

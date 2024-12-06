@@ -30,6 +30,7 @@ function actualizarSolicitudPresAdmin($idSolicitud, $montoAprobado, $estatus, $c
     $conex = $con->conectar();
 
     $conex->begin_transaction();
+    $anioActual = date('Y'); // Año actual
 
     try {
         $fechaResp = date("Y-m-d");
@@ -39,8 +40,9 @@ function actualizarSolicitudPresAdmin($idSolicitud, $montoAprobado, $estatus, $c
                                           idEstatus = ?, 
                                           montoAprobado = ?, 
                                           comentariosAdmin = ? 
-                                      WHERE idSolicitud = ?");
-        $updateSol->bind_param("sissi", $fechaResp, $estatus, $montoAprobado, $comentarios, $idSolicitud);
+                                      WHERE idSolicitud = ?
+                                        AND anioConvocatoria = ?");
+        $updateSol->bind_param("sissii", $fechaResp, $estatus, $montoAprobado, $comentarios, $idSolicitud, $anioActual);
         $resultado = $updateSol->execute();
 
         if (!$resultado) {
