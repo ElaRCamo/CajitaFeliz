@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update anioConvocatoria">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/daoMisSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/dao/daoMisSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,31 +99,7 @@
       <workItem from="1732542389155" duration="67458000" />
       <workItem from="1733147066506" duration="806000" />
       <workItem from="1733417824400" duration="6433000" />
-      <workItem from="1733424669396" duration="13533000" />
-    </task>
-    <task id="LOCAL-00705" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732904739422</created>
-      <option name="number" value="00705" />
-      <option name="presentableId" value="LOCAL-00705" />
-      <option name="project" value="LOCAL" />
-      <updated>1732904739422</updated>
-    </task>
-    <task id="LOCAL-00706" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732904823345</created>
-      <option name="number" value="00706" />
-      <option name="presentableId" value="LOCAL-00706" />
-      <option name="project" value="LOCAL" />
-      <updated>1732904823345</updated>
-    </task>
-    <task id="LOCAL-00707" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732905756187</created>
-      <option name="number" value="00707" />
-      <option name="presentableId" value="LOCAL-00707" />
-      <option name="project" value="LOCAL" />
-      <updated>1732905756187</updated>
+      <workItem from="1733424669396" duration="14144000" />
     </task>
     <task id="LOCAL-00708" summary="update load modal">
       <option name="closed" value="true" />
@@ -493,7 +469,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733506060676</updated>
     </task>
-    <option name="localTasksCounter" value="754" />
+    <task id="LOCAL-00754" summary="update anioConvocatoria">
+      <option name="closed" value="true" />
+      <created>1733506824599</created>
+      <option name="number" value="00754" />
+      <option name="presentableId" value="LOCAL-00754" />
+      <option name="project" value="LOCAL" />
+      <updated>1733506824599</updated>
+    </task>
+    <task id="LOCAL-00755" summary="update anioConvocatoria">
+      <option name="closed" value="true" />
+      <created>1733507336678</created>
+      <option name="number" value="00755" />
+      <option name="presentableId" value="LOCAL-00755" />
+      <option name="project" value="LOCAL" />
+      <updated>1733507336678</updated>
+    </task>
+    <task id="LOCAL-00756" summary="update anioConvocatoria">
+      <option name="closed" value="true" />
+      <created>1733507365050</created>
+      <option name="number" value="00756" />
+      <option name="presentableId" value="LOCAL-00756" />
+      <option name="project" value="LOCAL" />
+      <updated>1733507365050</updated>
+    </task>
+    <option name="localTasksCounter" value="757" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -6,14 +6,14 @@ const dataTableOptions = {
     lengthMenu: [5, 15, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4]},
-        {orderable: false, targets: [0,1,2]},
+        {orderable: true, targets: [0,1,2,3]},
         {width: "8%", targets: [0]},
         {width: "28%", targets: [4]},
         {searchable: true, targets: [0,1,2,3] }
     ],
     pageLength:5,
     destroy: true,
-    order: [[0, 'desc']], // Ordenar por la columna 0
+    order: [[1, 'desc']], // Ordenar por la columna 0
     language:{
         lengthMenu: "Mostrar _MENU_ registros pór página",
         sZeroRecords: "Ninguna solicitud encontrada",
