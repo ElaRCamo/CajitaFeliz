@@ -59,6 +59,9 @@ const TablaSolicitudesPrestamos = async () => {
         result.data.forEach((item) => {
             const fechaSolicitudFormateada = formatearFecha(item.fechaSolicitud);
             const montoSolFormateado = formatearMonto(item.montoSolicitado);
+            const solicitud =  item.idSolicitud;
+            const anioConv = item.anioConvocatoria;
+
 
             content += `
                 <tr>
@@ -67,7 +70,7 @@ const TablaSolicitudesPrestamos = async () => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo(${item.idSolicitud}, ${item.anioConvocatoria})" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
+                        <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo(solicitud, anioConv)" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
                             <span>Detalles</span>
                         </button>`;
 
