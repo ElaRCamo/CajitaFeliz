@@ -6,7 +6,7 @@ const dataTableOptionsPresSol = {
     lengthMenu: [5, 15, 50, 100],
     columnDefs:[
         {className: "centered", targets: [0,1,2,3,4]},
-        {orderable: true, targets: [0,1,2]},
+        {orderable: true, targets: [0,1,2,3]},
         {width: "8%", targets: [0]},
         {width: "28%", targets: [4]},
         {searchable: true, targets: [0,1,2,3] }
