@@ -67,19 +67,19 @@ const TablaSolicitudesPrestamos = async () => {
                     <td>${montoSolFormateado}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
+                        <button class="btn btn-primary" onclick="mostrarRespuestaPrestamo('${item.idSolicitud}, ${item.anioConvocatoria}')" data-bs-toggle="modal" data-bs-target="#modalRespPresSol">
                             <span>Detalles</span>
                         </button>`;
 
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
-                    <button class="btn btn-secondary btnAvales" onclick="consultarAvales('${item.idSolicitud}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
+                    <button class="btn btn-secondary btnAvales" onclick="consultarAvales('${item.idSolicitud}, ${item.anioConvocatoria}')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
                         </i><span>Avales</span>
                     </button>`;
             }else if(item.idEstatus === '1'){
                 content += `
-                    <button class="btn btn-warning" onclick="editarPrestamo('${item.idSolicitud}')"  data-bs-toggle="modal" data-bs-target="#editarPrestamoModal">
+                    <button class="btn btn-warning" onclick="editarPrestamo('${item.idSolicitud}, ${item.anioConvocatoria}')"  data-bs-toggle="modal" data-bs-target="#editarPrestamoModal">
                         </i><span>Editar</span>
                     </button>`;
             }
@@ -99,7 +99,7 @@ const TablaSolicitudesPrestamos = async () => {
     }
 };
 
-function editarPrestamo(idSolicitud) {
+function editarPrestamo(idSolicitud, anio) {
     // Actualiza el título del modal
     let titulo = "Editar solicitud de Préstamo Folio " + idSolicitud;
     actualizarTitulo("#editarPrestamoModalLabel", titulo);
@@ -108,8 +108,9 @@ function editarPrestamo(idSolicitud) {
     let telefono = "";
     let monto = "";
 
-    // Obtén los datos del servidor
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud=' + idSolicitud, function (response) {
+    const url = `https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?sol=${idSolicitud}&a=${anio}`;
+
+    $.getJSON(url, function (response) {
         if (response && response.data && response.data.length > 0) {
             let data = response.data[0];
 
@@ -467,11 +468,13 @@ function consultarRetiro(idRetiro){
 
 }
 
-function mostrarRespuestaPrestamo(idSolicitud){
+function mostrarRespuestaPrestamo(idSolicitud, anio){
     const titulo = "Solicitud de Préstamo Folio " + idSolicitud;
     actualizarTitulo('#respModalTitSol', titulo);
     let data = "";
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+    const url = `https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?sol=${idSolicitud}&a=${anio}`;
+
+    $.getJSON(url, function (response) {
 
         data = response.data[0];
 
@@ -553,14 +556,15 @@ function deshabilitarInputsMS() {
     document.getElementById('comentariosMS').disabled = true;
 }
 
-function consultarAvales(idSolicitud){
+function consultarAvales(idSolicitud,anio){
     const titulo = "Registrar avales para la Solicitud " + idSolicitud;
     actualizarTitulo("#modalTitAvales", titulo);
     $("#folioSolPres").val(idSolicitud);
 
     let data, aval1, aval2, tel1, tel2 = "";
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?id_solicitud='+idSolicitud, function (response) {
+    const url = `https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?sol=${idSolicitud}&a=${anio}`;
 
+    $.getJSON(url, function (response) {
         data = response.data[0];
         //si data no esta vacio:
         aval1 = data.nominaAval1;
