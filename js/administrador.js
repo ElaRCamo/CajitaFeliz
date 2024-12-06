@@ -210,14 +210,14 @@ const dataTablePrestamosAdmin = async (anio) => {
                     <td>${item.telefono}</td>
                     <td>${item.estatusVisual}</td>
                     <td>
-                        <button class="btn btn-primary" onclick="responderPrestamo('${item.idSolicitud}, anio')" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
+                        <button class="btn btn-primary" onclick="responderPrestamo(${item.idSolicitud}, ${item.anioConvocatoria})" data-bs-toggle="modal" data-bs-target="#modalRespPrestamo">
                             <span>Responder</span>
                         </button>`;
 
             // Agrega el botón de avales si el estatus es 3
             if (item.idEstatus === '3') {
                 content += `
-                    <button class="btn btn-secondary" onclick="consultarAvales('${item.idSolicitud}, anio')" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
+                    <button class="btn btn-secondary" onclick="consultarAvales(${item.idSolicitud}, ${item.anioConvocatoria})" data-bs-toggle="modal" data-bs-target="#modalAgregarAvales">
                         <span>Avales</span>
                     </button>`;
             }
