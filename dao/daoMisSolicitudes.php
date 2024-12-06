@@ -35,7 +35,7 @@ function resumenPrueba($id_solicitante){
                 WHERE
                     s.nominaSolicitante = '$id_solicitante'
                 ORDER BY
-                    s.idSolicitud ASC;
+                    s.fechaSolicitud DESC;
                 ");
 
     $resultado= mysqli_fetch_all($datosPrueba, MYSQLI_ASSOC);
