@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update anioConvocatoria">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update anioConvocatoria" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,15 +97,7 @@
       <workItem from="1732542389155" duration="67458000" />
       <workItem from="1733147066506" duration="806000" />
       <workItem from="1733417824400" duration="6433000" />
-      <workItem from="1733424669396" duration="10453000" />
-    </task>
-    <task id="LOCAL-00700" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732896773719</created>
-      <option name="number" value="00700" />
-      <option name="presentableId" value="LOCAL-00700" />
-      <option name="project" value="LOCAL" />
-      <updated>1732896773720</updated>
+      <workItem from="1733424669396" duration="10736000" />
     </task>
     <task id="LOCAL-00701" summary="update load modal">
       <option name="closed" value="true" />
@@ -493,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733502157555</updated>
     </task>
-    <option name="localTasksCounter" value="749" />
+    <task id="LOCAL-00749" summary="update anioConvocatoria">
+      <option name="closed" value="true" />
+      <created>1733503927182</created>
+      <option name="number" value="00749" />
+      <option name="presentableId" value="LOCAL-00749" />
+      <option name="project" value="LOCAL" />
+      <updated>1733503927182</updated>
+    </task>
+    <option name="localTasksCounter" value="750" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

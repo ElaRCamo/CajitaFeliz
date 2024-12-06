@@ -34,7 +34,7 @@ function actualizarPrestamo($solicitud, $montoSolicitado, $telefono)
                                       SET montoSolicitado = ?, 
                                           telefono = ? 
                                       WHERE idSolicitud = ?
-                                        AND anioConvoatoria = ?");
+                                        AND anioConvocatoria = ?");
         if (!$updateSol) {
             throw new Exception("Error al preparar la consulta: " . $conex->error);
         }
