@@ -34,7 +34,6 @@ function resumenPrueba($id_solicitante){
                     LEFT JOIN EstatusPrestamo e ON s.idEstatus = e.idEstatus
                 WHERE
                     s.nominaSolicitante = '$id_solicitante'
-                    AND s.idEstatus <> 4
                 ORDER BY
                     s.idSolicitud DESC;
                 ");
