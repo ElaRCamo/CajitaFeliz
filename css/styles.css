@@ -44,12 +44,12 @@
   --secondary-color:              #5a6f80;
   --section-bg-color:             #f0f8ff;
   --site-footer-bg-color:         #44525d;
-  --custom-btn-bg-color:          #84b6f4;
-  --custom-btn-bg-hover-color:    #ffe6ef;
+  --custom-btn-bg-color:          #a6e3ee;
+  --custom-btn-bg-hover-color:    #fdc477;
   --dark-color:                   #000000;
   --p-color:                      #717275;
   --border-color:                 #e9eaeb;
-  --rosa-pastel:                  #FFCBDB;
+  --rosa-pastel:                  #fc9d1d;
   --azul-claro:                   #ecf7ff;
   --gris-pastel:                  #97989a;
   --lila:                         #f3e1ff;
@@ -661,9 +661,10 @@ input::placeholder {
   text-align: right;
   min-width: 350px;
   min-height: 350px;
-  background-color: rgba(253,196,119,255);
+  background-color: var(--white-color);
 }
-/*rgba(166,227,238,100)*/
+/*rgba(166,227,238,100)
+rgba(253,196,119,255)*/
 #hero-slide .carousel-indicators-wrap {
   position: absolute;
   bottom: 0;
