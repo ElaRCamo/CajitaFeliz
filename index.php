@@ -118,7 +118,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/tractor.JPG"
+                                    <img src="images/slide/qro.png"
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
