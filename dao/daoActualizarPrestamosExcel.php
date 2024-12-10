@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fechaDepositoFormateada = formatearFecha($fechaDeposito);
 
             // Validar datos
-            if (empty($idSolicitud) || empty($anioConvocatoria) || empty($fechaRespuesta)) {
+            if (empty($idSolicitud) || empty($anioConvocatoria)) {
                 $errores[] = "Faltan datos para la solicitud ID: $idSolicitud.";
                 $todosExitosos = false;
             } elseif ($fechaDepositoFormateada === false ) {
@@ -113,10 +113,11 @@ function actualizarPresAdminExcel($idSolicitud, $anioConvocatoria, $idEstatus, $
                                               SET fechaDeposito = ?, 
                                                   montoDepositado = ?,
                                                   idEstatus = ?,
-                                                  comentariosAdmin = ?
+                                                  comentariosAdmin = ?,
+                                                  fechaRespuesta = ?
                                               WHERE idSolicitud = ?
                                                 AND anioConvocatoria = ?");
-        $updateSol->bind_param("sssii", $fechaDeposito, $montoDepositado,$comentarios, $idSolicitud, $anio);
+        $updateSol->bind_param("ssssii", $fechaDeposito, $montoDepositado,$comentarios, $idSolicitud, $fechaResp, $anio);
         $resultado = $updateSol->execute();
 
         if (!$resultado) {
@@ -144,6 +145,68 @@ function actualizarPresAdminExcel($idSolicitud, $anioConvocatoria, $idEstatus, $
     }
     return $respuesta;
 }
+
+function actualizarPresEstatusCompletado($idSolicitud, $anioConvocatoria, $nominaAval1, $telAval1, $nominaAval2, $telAval2, $montoAprobado, $fechaDeposito, $montoDeposito, $comentarios) {
+    $con = new LocalConectorCajita();
+    $conex = $con->conectar();
+
+    $conex->begin_transaction();
+
+    if ($comentarios === null){
+        $comentarios = 'Sin comentarios.';
+    }
+
+    try {
+        $fechaResp = date("Y-m-d");
+
+        // Preparar la consulta SQL
+        $updateSol = $conex->prepare("UPDATE Prestamo 
+                                      SET fechaDeposito = ?, 
+                                          montoDepositado = ?,
+                                          idEstatus = 4,
+                                          nominaAval1 = ?,
+                                          telAval1 = ?,
+                                          nominaAval2 = ?,
+                                          telAval2 = ?,
+                                          montoAprobado = ?,
+                                          comentariosAdmin = ?,
+                                          fechaRespuesta = ?
+                                      WHERE idSolicitud = ?
+                                        AND anioConvocatoria = ?");
+
+        // Los tipos de los parámetros a ser vinculados:
+        // s = string, i = int
+        $updateSol->bind_param("ssssiisssis", $fechaDeposito, $montoDeposito, $nominaAval1, $telAval1, $nominaAval2, $telAval2, $montoAprobado, $comentarios, $fechaResp, $idSolicitud, $anioConvocatoria);
+
+        // Ejecutar la consulta
+        $resultado = $updateSol->execute();
+
+        if (!$resultado) {
+            $respuesta = array('status' => 'error', 'message' => 'Error al actualizar la solicitud.');
+        } else {
+            // Registro en la bitácora
+            $nomina = $_SESSION["nomina"];
+            $descripcion = "Actualización Prestamo por admin. idSolicitud:".$idSolicitud." Monto depositado: $".$montoDeposito." Fecha Deposito:".$fechaDeposito;
+
+            $resultadoBitacora = actualizarBitacoraCambios($nomina, $fechaResp, $descripcion, $conex);
+
+            if (!$resultadoBitacora) {
+                $respuesta = array('status' => 'error', 'message' => 'Error al registrar en bitácora.');
+            } else {
+                $conex->commit();
+                $respuesta = array("status" => 'success', "message" => "Solicitud $idSolicitud actualizada exitosamente.");
+            }
+        }
+    } catch (Exception $e) {
+        // Deshacer la transacción en caso de error
+        $conex->rollback();
+        $respuesta = array("status" => 'error', "message" => $e->getMessage());
+    } finally {
+        $conex->close();
+    }
+    return $respuesta;
+}
+
 
 /*
  * UPDATE `Prestamo` SET `nominaSolicitante` = '00001806', `nominaAval1` = '00030993', `telAval1` = '8899558622', `nominaAval2` = '000303133',
