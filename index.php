@@ -127,7 +127,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/qro.jpg"
+                                    <img src="images/slide/personalGrammer.JPG"
                                         class="carousel-image img-fluid" alt="Celebrando">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Recuerda</h1>
