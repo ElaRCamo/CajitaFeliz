@@ -109,7 +109,7 @@
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="images/slide/colors2.png"
+                                    <img src="images/slide/qro.png"
                                         class="carousel-image img-fluid" alt="exito">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>¡Aviso importante!</h1>
@@ -118,7 +118,7 @@
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="images/slide/qro.png"
+                                    <img src="images/slide/colors2.png"
                                         class="carousel-image img-fluid" alt="PersonaFeliz">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Fácil y Posible</h1>
