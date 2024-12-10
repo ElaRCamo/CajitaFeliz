@@ -133,7 +133,7 @@ document.getElementById("ejemploExcelP").addEventListener("click", function() {
     mostrarImagenTooltip(
         "ejemploExcelP",
         "Ejemplo de excel para actualizar solicitudes",
-        "https://grammermx.com/RH/CajaDeAhorro/images/others/excelPrestamos.png",
+        "https://grammermx.com/RH/CajaDeAhorro/images/others/ejemploExcel.png",
         320,
         140
     );
