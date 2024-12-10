@@ -260,7 +260,7 @@ function mostrarImagenTooltip(idTooltip, message, imageUrl, width, height) {
             const text = document.createElement('p');
             text.textContent = message; // Mensaje dinámico
             text.style.margin = '0 0 10px'; // Margen inferior para separar del contenido siguiente
-            text.style.fontSize = '14px';
+            text.style.fontSize = '12px';
             text.style.textAlign = 'center';
             text.style.color = '#4d5154';
 
