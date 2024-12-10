@@ -661,7 +661,7 @@ input::placeholder {
   text-align: right;
   min-width: 350px;
   min-height: 350px;
-  background-color: var(--white-color);
+  background-color: #fff4f4;
 }
 /*rgba(166,227,238,100)
 rgba(253,196,119,255)*/
