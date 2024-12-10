@@ -661,8 +661,9 @@ input::placeholder {
   text-align: right;
   min-width: 350px;
   min-height: 350px;
-  background-color: rgba(166,227,238,100);
+  background-color: rgba(253,196,119,255);
 }
+/*rgba(166,227,238,100)*/
 #hero-slide .carousel-indicators-wrap {
   position: absolute;
   bottom: 0;
