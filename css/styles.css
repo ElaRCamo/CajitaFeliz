@@ -661,7 +661,7 @@ input::placeholder {
   text-align: right;
   min-width: 350px;
   min-height: 350px;
-  background-color: var(--custom-btn-bg-color);
+  background-color: rgba(166,227,238,100);
 }
 #hero-slide .carousel-indicators-wrap {
   position: absolute;
