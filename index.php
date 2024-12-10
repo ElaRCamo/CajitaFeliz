@@ -30,7 +30,7 @@
 
     // Si el nombre de usuario no está definido (sesión no válida), redirige a login
     if ($nombreUser == null && $user == null) {
-        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
+        header("Location: https://grammermx.com/RH/CajaDeAhorro/login.php");
         exit;
     }
     ?>

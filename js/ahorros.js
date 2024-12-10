@@ -203,7 +203,7 @@ function registrarAhorro(montoAhorro,nombres,porcentajes,telefonos,domicilios, d
                     confirmButtonText: "OK"
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = "https://grammermx.com/RH/CajitaGrammer/misSolicitudes.php";
+                        window.location.href = "https://grammermx.com/RH/CajaDeAhorro/misSolicitudes.php";
                     }
                 });
             } else {
@@ -268,7 +268,7 @@ function validarInput(idInput) {
 }
 
 function estatutosAhorro() {
-    var url = "https://grammermx.com/RH/CajitaGrammer/docs/ESTATUTOS_CAJA_AHORRO_2025.pdf";
+    var url = "https://grammermx.com/RH/CajaDeAhorro/docs/ESTATUTOS_CAJA_AHORRO_2025.pdf";
     window.open(url, '_blank');
 }
 
@@ -351,7 +351,7 @@ function retirarAhorros(){
                     confirmButtonText: "OK"
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = "https://grammermx.com/RH/CajitaGrammer/misSolicitudes.php";
+                        window.location.href = "https://grammermx.com/RH/CajaDeAhorro/misSolicitudes.php";
                     }
                 });
 

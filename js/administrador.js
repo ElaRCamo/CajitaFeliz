@@ -96,7 +96,7 @@ document.getElementById('guardarFechas').addEventListener('click', async functio
 
 const consultarFechas = async () => {
     try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarFechaInicio.php`);
+        const response = await fetch(`https://grammermx.com/RH/CajaDeAhorro/dao/daoConsultarFechaInicio.php`);
 
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
@@ -133,7 +133,7 @@ document.getElementById("ejemploExcelP").addEventListener("click", function() {
     mostrarImagenTooltip(
         "ejemploExcelP",
         "Ejemplo de excel para actualizar solicitudes",
-        "https://grammermx.com/RH/CajitaGrammer/images/others/excelPrestamos.png",
+        "https://grammermx.com/RH/CajaDeAhorro/images/others/excelPrestamos.png",
         320,
         140
     );
@@ -188,7 +188,7 @@ const initDataTablePresAdmin = async (anio) => {
 
 const dataTablePrestamosAdmin = async (anio) => {
     try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesPrestamos.php?anio=` + anio);
+        const response = await fetch(`https://grammermx.com/RH/CajaDeAhorro/dao/daoSolicitudesPrestamos.php?anio=` + anio);
 
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
@@ -247,7 +247,7 @@ function responderPrestamo(idSolicitud, anio){
     actualizarTitulo('#respModalTit', titulo);
     let data = "";
 
-    const url = `https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudPrestamoPorId.php?sol=${idSolicitud}&a=${anio}`;
+    const url = `https://grammermx.com/RH/CajaDeAhorro/dao/daoSolicitudPrestamoPorId.php?sol=${idSolicitud}&a=${anio}`;
 
     $.getJSON(url, function (response) {
 
@@ -300,13 +300,13 @@ function deshabilitarInputs() {
 
 function fCargarSolicitante(nomina){
 
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
+    $.getJSON('https://grammermx.com/RH/CajaDeAhorro/dao/daoConsultarSolicitante.php?sol='+nomina, function (response) {
         $('#nombreSol').val(response.data[0].NomUser);
     });
 }
 
 function fCargarEstatus(idSeleccionado){
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoEstatusSol.php', function (data){
+    $.getJSON('https://grammermx.com/RH/CajaDeAhorro/dao/daoEstatusSol.php', function (data){
         let selectS = document.getElementById("solEstatus");
         selectS.innerHTML = ""; //limpiar contenido
 
@@ -339,7 +339,7 @@ function actualizarSolicitud() {
     data.append("comentarios", comentarios.trim());
 
     // Llamada a fetch sin paréntesis adicionales
-    fetch("https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarSolPresAdmin.php", {
+    fetch("https://grammermx.com/RH/CajaDeAhorro/dao/daoActualizarSolPresAdmin.php", {
         method: 'POST',
         body: data
     })
@@ -444,7 +444,7 @@ async function insertarExcelPrestamos(file) {
         });
 
         // Enviar los datos al backend
-        const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarPrestamosExcel.php', {
+        const response = await fetch('https://grammermx.com/RH/CajaDeAhorro/dao/daoActualizarPrestamosExcel.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -528,7 +528,7 @@ const initDataTableAhorroAdmin = async (anio) => {
 
 const dataTableAhorroAdmin = async (anio) => {
     try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesAhorro.php?anio=` + anio);
+        const response = await fetch(`https://grammermx.com/RH/CajaDeAhorro/dao/daoSolicitudesAhorro.php?anio=` + anio);
 
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
@@ -660,7 +660,7 @@ const initDataTableRetiroAdmin = async (anio) => {
 
 const dataTableRetiroAdmin = async (anio) => {
     try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoSolicitudesRetiro.php?anio=` + anio);
+        const response = await fetch(`https://grammermx.com/RH/CajaDeAhorro/dao/daoSolicitudesRetiro.php?anio=` + anio);
 
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
@@ -767,7 +767,7 @@ async function insertarExcelRetiros(file) {
         });
 
         // Enviar los datos al backend en un solo array
-        const response = await fetch('https://grammermx.com/RH/CajitaGrammer/dao/daoActualizarRetirosExcel.php', {
+        const response = await fetch('https://grammermx.com/RH/CajaDeAhorro/dao/daoActualizarRetirosExcel.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -805,7 +805,7 @@ async function insertarExcelRetiros(file) {
 
 
 function cargarAnio() {
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoAnio.php', function (data) {
+    $.getJSON('https://grammermx.com/RH/CajaDeAhorro/dao/daoAnio.php', function (data) {
         let selectS = document.getElementById("selectAnio");
         selectS.innerHTML = ""; //limpiar contenido
 

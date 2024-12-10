@@ -124,7 +124,7 @@ function fCargarPrestamo() {
 function fExistePrestamo(){
     let data = "";
 
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoCargarUltimoPrestamo.php', function (response) {
+    $.getJSON('https://grammermx.com/RH/CajaDeAhorro/dao/daoCargarUltimoPrestamo.php', function (response) {
 
         data = response.data[0];
 
@@ -152,7 +152,7 @@ function fExisteAhorro(){
 
     let idCaja = "";
 
-    $.getJSON('https://grammermx.com/RH/CajitaGrammer/dao/daoCargarUltimoAhorro.php', function (response) {
+    $.getJSON('https://grammermx.com/RH/CajaDeAhorro/dao/daoCargarUltimoAhorro.php', function (response) {
 
         let data = response.data[0];
         let data2 = response.data[2];

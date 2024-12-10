@@ -43,7 +43,7 @@
     $esAdmin = $_SESSION['admin'];
 
     if ($nombreUser == null || $esAdmin == 0){
-        header("Location: https://grammermx.com/RH/CajitaGrammer/login.php");
+        header("Location: https://grammermx.com/RH/CajaDeAhorro/login.php");
     }
 
     ?>

@@ -1,6 +1,6 @@
 const consultarFechaConvocatoria = async () => {
     try {
-        const response = await fetch(`https://grammermx.com/RH/CajitaGrammer/dao/daoConsultarFechaInicio.php`);
+        const response = await fetch(`https://grammermx.com/RH/CajaDeAhorro/dao/daoConsultarFechaInicio.php`);
 
         if (!response.ok) {
             throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
@@ -159,7 +159,7 @@ function registrarPrestamo() {
                             confirmButtonText: "OK"
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                window.location.href = "https://grammermx.com/RH/CajitaGrammer/misSolicitudes.php";
+                                window.location.href = "https://grammermx.com/RH/CajaDeAhorro/misSolicitudes.php";
                             }
                         });
                     }else if (data.status === 'error') {

@@ -39,7 +39,7 @@ if (isset($_POST['iniciarSesionBtn'])) {
                         title: 'TAG incorrecto',
                         text: 'TAG incorrecto, verifique sus datos.',
                     }).then(function() {
-                        window.location.href = 'https://grammermx.com/RH/CajitaGrammer/login.php';
+                        window.location.href = 'https://grammermx.com/RH/CajaDeAhorro/login.php';
                     });
                 }
             });
@@ -53,7 +53,7 @@ if (isset($_POST['iniciarSesionBtn'])) {
                     title: 'Usuario no encontrado',
                     text: 'Verifique el número de nómina ingresado.',
                 }).then(function() {
-                    window.location.href = 'https://grammermx.com/RH/CajitaGrammer/login.php';
+                    window.location.href = 'https://grammermx.com/RH/CajaDeAhorro/login.php';
                 });
             });
         </script>";
@@ -71,7 +71,7 @@ if (isset($_POST['cerrarSesion']) || isset($_POST['cerrarSesionMisSs'])) {
                 title: 'Sesión finalizada',
                 text: 'Sesión cerrada exitosamente.',
             }).then(function() {
-                window.location.href = 'https://grammermx.com/RH/CajitaGrammer/login.php';
+                window.location.href = 'https://grammermx.com/RH/CajaDeAhorro/login.php';
             });
         });
     </script>";
