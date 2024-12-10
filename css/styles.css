@@ -1923,3 +1923,6 @@ blockquote::before {
   display: none;
 }
 
+#titCajita{
+  color: #005195 !important;
+}
