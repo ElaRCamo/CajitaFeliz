@@ -9,6 +9,12 @@ RRHHGrammer2024#
 30313
 0006453040
 
+rosa: #fee5e9
+
+var(--azul-claro);
+
+var(--lila);
+
 
 tengo la tabla que se llama Storage_Unit su con las columnas:
 Id_StorageUnit(int y PK), Numero_Parte(varchar),Cantidad(float), Storage_Bin(varchar), Storage_Type(varchar), Estatus(int), FolioMarbete(varchar),Conteo(int)

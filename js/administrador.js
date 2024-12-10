@@ -132,10 +132,10 @@ const consultarFechas = async () => {
 document.getElementById("ejemploExcelP").addEventListener("click", function() {
     mostrarImagenTooltip(
         "ejemploExcelP",
-        "Ejemplo de excel para actualizar solicitudes",
+        "El Excel exportado puede usarse para actualizar, siempre que se sigan las observaciones indicadas.",
         "https://grammermx.com/RH/CajaDeAhorro/images/others/ejemploExcel.png",
         320,
-        140
+        200
     );
 });
 
