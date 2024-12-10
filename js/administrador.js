@@ -374,8 +374,8 @@ document.getElementById('btnExcelPrestamos').addEventListener('click', () => {
 async function prepararExcelPrestamos(data) {
     // Filtra y renombra las columnas de los datos
     const datosFiltrados = data.map(item => ({
-        ID_Solicitud: item.idSolicitud,
-        Año: item.anioConvocatoria,
+        Id_Solicitud: item.idSolicitud,
+        Anio: item.anioConvocatoria,
         Nomina_Solicitante: item.nominaSolicitante,
         Nombre_Solicitante: item.NomUser,
         Fecha_Solicitud: item.fechaSolicitud,
@@ -440,10 +440,22 @@ async function insertarExcelPrestamos(file) {
         const prestamosData = jsonData.slice(1).map((row) => {
             return {
                 idSolicitud: row[0],
-                montoDepositado: row[1],
-                // Convertir la fecha usando excelDateToJSDate
-                fechaDeposito: excelDateToJSDate(row[2]),
-                comentarios: row[3]
+                anioConvocatoria: row[1],
+                nominaSolicitante: row[2],
+                NomUser: row[3],
+                fechaSolicitud: excelDateToJSDate(row[4]),
+                montoSolicitado: row[5],
+                telefono: row[6],
+                idEstatus: row[7],
+                nominaAval1: row[8],
+                telAval1: row[9],
+                nominaAval2: row[10],
+                telAval2: row[11],
+                fechaRespuesta: excelDateToJSDate(row[12]),
+                montoAprobado: row[13],
+                fechaDeposito: excelDateToJSDate(row[14]),
+                montoDeposito: row[15],
+                comentariosAdmin: row[16]
             };
         });
 
