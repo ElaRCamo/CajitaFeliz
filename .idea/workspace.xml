@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update anioConvocatoria">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update location to CajaDeAhorro">
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,63 +100,7 @@
       <workItem from="1733147066506" duration="806000" />
       <workItem from="1733417824400" duration="6433000" />
       <workItem from="1733424669396" duration="18059000" />
-      <workItem from="1733771440231" duration="2039000" />
-    </task>
-    <task id="LOCAL-00713" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732914812434</created>
-      <option name="number" value="00713" />
-      <option name="presentableId" value="LOCAL-00713" />
-      <option name="project" value="LOCAL" />
-      <updated>1732914812434</updated>
-    </task>
-    <task id="LOCAL-00714" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732915176687</created>
-      <option name="number" value="00714" />
-      <option name="presentableId" value="LOCAL-00714" />
-      <option name="project" value="LOCAL" />
-      <updated>1732915176687</updated>
-    </task>
-    <task id="LOCAL-00715" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732915314579</created>
-      <option name="number" value="00715" />
-      <option name="presentableId" value="LOCAL-00715" />
-      <option name="project" value="LOCAL" />
-      <updated>1732915314579</updated>
-    </task>
-    <task id="LOCAL-00716" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1732915425211</created>
-      <option name="number" value="00716" />
-      <option name="presentableId" value="LOCAL-00716" />
-      <option name="project" value="LOCAL" />
-      <updated>1732915425211</updated>
-    </task>
-    <task id="LOCAL-00717" summary="update load modal">
-      <option name="closed" value="true" />
-      <created>1733407023229</created>
-      <option name="number" value="00717" />
-      <option name="presentableId" value="LOCAL-00717" />
-      <option name="project" value="LOCAL" />
-      <updated>1733407023229</updated>
-    </task>
-    <task id="LOCAL-00718" summary="update savings modal">
-      <option name="closed" value="true" />
-      <created>1733418677165</created>
-      <option name="number" value="00718" />
-      <option name="presentableId" value="LOCAL-00718" />
-      <option name="project" value="LOCAL" />
-      <updated>1733418677165</updated>
-    </task>
-    <task id="LOCAL-00719" summary="update savings modal">
-      <option name="closed" value="true" />
-      <created>1733418917037</created>
-      <option name="number" value="00719" />
-      <option name="presentableId" value="LOCAL-00719" />
-      <option name="project" value="LOCAL" />
-      <updated>1733418917037</updated>
+      <workItem from="1733771440231" duration="5253000" />
     </task>
     <task id="LOCAL-00720" summary="update savings modal">
       <option name="closed" value="true" />
@@ -494,7 +438,63 @@
       <option name="project" value="LOCAL" />
       <updated>1733515287248</updated>
     </task>
-    <option name="localTasksCounter" value="762" />
+    <task id="LOCAL-00762" summary="update location to CajaDeAhorro">
+      <option name="closed" value="true" />
+      <created>1733849191407</created>
+      <option name="number" value="00762" />
+      <option name="presentableId" value="LOCAL-00762" />
+      <option name="project" value="LOCAL" />
+      <updated>1733849191407</updated>
+    </task>
+    <task id="LOCAL-00763" summary="update location to CajaDeAhorro">
+      <option name="closed" value="true" />
+      <created>1733849861315</created>
+      <option name="number" value="00763" />
+      <option name="presentableId" value="LOCAL-00763" />
+      <option name="project" value="LOCAL" />
+      <updated>1733849861315</updated>
+    </task>
+    <task id="LOCAL-00764" summary="update location to CajaDeAhorro">
+      <option name="closed" value="true" />
+      <created>1733850031588</created>
+      <option name="number" value="00764" />
+      <option name="presentableId" value="LOCAL-00764" />
+      <option name="project" value="LOCAL" />
+      <updated>1733850031588</updated>
+    </task>
+    <task id="LOCAL-00765" summary="update location to CajaDeAhorro">
+      <option name="closed" value="true" />
+      <created>1733850124243</created>
+      <option name="number" value="00765" />
+      <option name="presentableId" value="LOCAL-00765" />
+      <option name="project" value="LOCAL" />
+      <updated>1733850124243</updated>
+    </task>
+    <task id="LOCAL-00766" summary="update location to CajaDeAhorro">
+      <option name="closed" value="true" />
+      <created>1733850192747</created>
+      <option name="number" value="00766" />
+      <option name="presentableId" value="LOCAL-00766" />
+      <option name="project" value="LOCAL" />
+      <updated>1733850192748</updated>
+    </task>
+    <task id="LOCAL-00767" summary="update location to CajaDeAhorro">
+      <option name="closed" value="true" />
+      <created>1733850795205</created>
+      <option name="number" value="00767" />
+      <option name="presentableId" value="LOCAL-00767" />
+      <option name="project" value="LOCAL" />
+      <updated>1733850795205</updated>
+    </task>
+    <task id="LOCAL-00768" summary="update location to CajaDeAhorro">
+      <option name="closed" value="true" />
+      <created>1733850889538</created>
+      <option name="number" value="00768" />
+      <option name="presentableId" value="LOCAL-00768" />
+      <option name="project" value="LOCAL" />
+      <updated>1733850889538</updated>
+    </task>
+    <option name="localTasksCounter" value="769" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Precargar datos prestamo" />
     <MESSAGE value="Precargar datos ahorro" />
     <MESSAGE value="Index responsive" />
     <MESSAGE value="misSolicitudes responsive" />
@@ -537,7 +536,8 @@
     <MESSAGE value="update savings modal" />
     <MESSAGE value="update endorsements modal" />
     <MESSAGE value="update anioConvocatoria" />
-    <option name="LAST_COMMIT_MESSAGE" value="update anioConvocatoria" />
+    <MESSAGE value="update location to CajaDeAhorro" />
+    <option name="LAST_COMMIT_MESSAGE" value="update location to CajaDeAhorro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
