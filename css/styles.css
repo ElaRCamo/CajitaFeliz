@@ -837,21 +837,21 @@ section button{
 
 }
 .solPrestamo-section{
-  background-color: #fee5e9;
+  background-color: var(--lila);
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 .ahorro-section{
-  background-color: var(--azul-claro);
+  background-color: #fee5e9;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
 
 .prestamo-section {
-  background-color: var(--lila);
+  background-color: var(--azul-claro);
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
