@@ -375,18 +375,22 @@ async function prepararExcelPrestamos(data) {
     // Filtra y renombra las columnas de los datos
     const datosFiltrados = data.map(item => ({
         ID_Solicitud: item.idSolicitud,
+        Año: item.anioConvocatoria,
         Nomina_Solicitante: item.nominaSolicitante,
         Nombre_Solicitante: item.NomUser,
         Fecha_Solicitud: item.fechaSolicitud,
         Monto_Solicitado: item.montoSolicitado,
         Telefono: item.telefono,
-        Estatus: item.descripcion,
+        Estatus: item.idEstatus,
         Nomina_Aval1: item.nominaAval1,
+        Tel_Aval1: item.telAval1,
         Nomina_Aval2: item.nominaAval2,
+        Tel_Aval2: item.telAval2,
         Fecha_Respuesta: item.fechaRespuesta,
         Monto_Aprobado: item.montoAprobado,
         Fecha_Deposito: item.fechaDeposito,
-        Comentarios_Admin: item.comentariosAdmin
+        Monto_Depositado: item.montoDeposito,
+        Comentarios: item.comentariosAdmin
     }));
 
     // Convierte el JSON filtrado y renombrado en una hoja de Excel
@@ -841,42 +845,3 @@ async function cargarSolicitudes() {
         await initDataTableAhorroAdmin(anio);
     }
 }
-
-/*
-
-//Obtener datos a partir de un datatable para excel
-
-//ejemplo llamada
-// exportTableToExcel('tablaPrestamosAdmin', 'SolicitudesPrestamos.xlsx', 'SolicitudesDePrestamos')
-
-function exportTableToExcel(tableId, filename, sheetName) {
-    const dataTable = $(`#${tableId}`).DataTable();
-
-    // Obtén todos los datos de todas las páginas
-    const allData = dataTable.rows().data().toArray();
-
-    // Crea la estructura de datos para la hoja de cálculo
-    const worksheetData = [];
-
-    // Agrega los encabezados de la tabla
-    const headers = [];
-    $(`#${tableId} thead tr th`).each(function () {
-        headers.push($(this).text());
-    });
-    worksheetData.push(headers);
-
-    // Agrega las filas de datos a worksheetData
-    allData.forEach(rowData => {
-        const row = [];
-        rowData.forEach(cellData => row.push(cellData));
-        worksheetData.push(row);
-    });
-
-    // Crea el libro y la hoja de Excel usando los datos recopilados
-    const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
-
-    // Descarga el archivo de Excel
-    XLSX.writeFile(workbook, filename);
-}*/

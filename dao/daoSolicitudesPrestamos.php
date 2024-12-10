@@ -49,10 +49,8 @@ function todosLosPrestamos($anio)
             s.nominaSolicitante,
             s.fechaSolicitud,
             s.montoSolicitado,
-            s.fechaDeposito,
-            s.montoDepositado,
-            s.idEstatus,
             s.telefono,
+            s.idEstatus,
             CASE
                 WHEN s.idEstatus = 1 
                     THEN CONCAT('<span class=\"badge bg-warning text-dark\" title=\"', e.detalles, '\">', e.descripcion, '</span>')
@@ -67,10 +65,13 @@ function todosLosPrestamos($anio)
             END AS estatusVisual,
             e.descripcion,
             nominaAval1,
+            telAval1,
             nominaAval2,
+            telAval2,
             fechaRespuesta,
             montoAprobado,
-            fechaDeposito,
+            s.fechaDeposito,
+            s.montoDepositado,
             comentariosAdmin
         FROM
             Prestamo s
