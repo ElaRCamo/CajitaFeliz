@@ -335,7 +335,7 @@
                         </form>
                     </div>
                     <div class="col-lg-6 col-12 divImg">
-                        <img src="images/slide/pigVerde.png"
+                        <img src="images/slide/tractor.JPG"
                              class="volunteer-image img-fluid" alt="">
                     </div>
 
