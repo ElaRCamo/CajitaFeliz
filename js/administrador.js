@@ -482,7 +482,7 @@ async function insertarExcelPrestamos(file) {
             initDataTablePresAdmin(anioActual);
         } else {
             // Mostrar el mensaje de error que viene del backend
-            throw new Error(result.message );
+            throw new Error(result.message + " \nDetalles: " + result.detalles );
         }
 
     } catch (error) {
