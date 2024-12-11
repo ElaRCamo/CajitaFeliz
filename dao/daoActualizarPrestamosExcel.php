@@ -19,21 +19,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $montoAprobado = isset($prestamo['montoAprobado']) ? $prestamo['montoAprobado'] : null;
             $comentariosAdmin = trim(isset($prestamo['comentariosAdmin']) ? $prestamo['comentariosAdmin'] : '');
 
-            // Validar datos básicos
             if (empty($idSolicitud) || empty($anioConvocatoria)) {
                 $errores[] = "Faltan datos obligatorios para la solicitud ID: $idSolicitud.";
                 $todosExitosos = false;
                 continue;
             }
 
-            // Validar montoDeposito y fechaDeposito
             if (!empty($montoDeposito) xor !empty($fechaDeposito)) {
                 $errores[] = "Monto y fecha de depósito deben proporcionarse juntos para la solicitud Folio: $idSolicitud.";
                 $todosExitosos = false;
                 continue;
             }
 
-            // Formatear la fecha de depósito si está presente
             if (!empty($fechaDeposito)) {
                 $fechaDepositoFormateada = formatearFecha($fechaDeposito);
                 if (!$fechaDepositoFormateada) {
@@ -44,7 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $fechaDeposito = $fechaDepositoFormateada;
             }
 
-            // Asignar valores condicionales
             $idEstatus = (!empty($montoDeposito) && !empty($fechaDeposito)) ? 4 : null;
             if (!empty($montoDeposito) && (empty($montoAprobado) || $montoAprobado == 0)) {
                 $montoAprobado = $montoDeposito;
@@ -53,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $comentariosAdmin = 'Sin comentarios.';
             }
 
-            // Actualizar solicitud
             $resultado = actualizarSolicitud(
                 $idSolicitud,
                 $anioConvocatoria,
@@ -71,7 +66,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
 
-        // Respuesta final
         $respuesta = $todosExitosos
             ? ["status" => 'success', "message" => "Todas las solicitudes fueron actualizadas exitosamente."]
             : ["status" => 'error', "message" => "Errores al actualizar algunas solicitudes.", "detalles" => $errores];
@@ -91,30 +85,33 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
     try {
         $conex->begin_transaction();
 
-        $query = "UPDATE Prestamo 
-                  SET idEstatus = ?, montoAprobado = ?, montoDepositado = ?, fechaDeposito = ?, 
-                      comentariosAdmin = ?, fechaRespuesta = ? 
-                  WHERE idSolicitud = ? AND anioConvocatoria = ?";
+        $campos = [
+            "idEstatus = ?" => $idEstatus,
+            "montoAprobado = ?" => $montoAprobado,
+            "comentariosAdmin = ?" => $comentarios,
+            "fechaRespuesta = ?" => $fechaRespuesta
+        ];
+
+        if (!empty($montoDeposito) && !empty($fechaDeposito)) {
+            $campos["montoDepositado = ?"] = $montoDeposito;
+            $campos["fechaDeposito = ?"] = $fechaDeposito;
+        }
+
+        $query = "UPDATE Prestamo SET " . implode(", ", array_keys($campos)) . " WHERE idSolicitud = ? AND anioConvocatoria = ?";
         $stmt = $conex->prepare($query);
-        $stmt->bind_param(
-            "isssssii",
-            $idEstatus,
-            $montoAprobado,
-            $montoDeposito,
-            $fechaDeposito,
-            $comentarios,
-            $fechaRespuesta,
-            $idSolicitud,
-            $anioConvocatoria
-        );
+
+        $parametros = array_values($campos);
+        $parametros[] = $idSolicitud;
+        $parametros[] = $anioConvocatoria;
+
+        $stmt->bind_param(str_repeat("s", count($parametros)), ...$parametros);
 
         if (!$stmt->execute()) {
             throw new Exception("Error al actualizar la solicitud ID: $idSolicitud.");
         }
 
-        // Registro en bitácora
         $nomina = $_SESSION["nomina"];
-        $descripcion = "Actualización de préstamo ID: $idSolicitud. Monto depositado: $montoDeposito, Fecha depósito: $fechaDeposito.";
+        $descripcion = "Actualización de préstamo ID: $idSolicitud.";
         if (!actualizarBitacoraCambios($nomina, $fechaRespuesta, $descripcion, $conex)) {
             throw new Exception("Error al registrar en bitácora para la solicitud ID: $idSolicitud.");
         }
@@ -128,5 +125,4 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
         $conex->close();
     }
 }
-
 ?>
