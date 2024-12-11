@@ -132,8 +132,8 @@ const consultarFechas = async () => {
 document.getElementById("ejemploExcelP").addEventListener("click", function() {
     mostrarImagenTooltip(
         "ejemploExcelP",
-        "El excel exportado puede usarse para actualizar y se deben considerar estas observaciones. " +
-                "\nNota: Todas las solicitudes contenidas en el archivo serán actualizadas.",
+        "Nota: El excel exportado puede usarse para actualizar. " +
+                "\n Todas las solicitudes contenidas en el archivo serán actualizadas.",
         "https://grammermx.com/RH/CajaDeAhorro/images/others/ejemploExcel.png",
         320,
         200
