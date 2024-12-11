@@ -458,7 +458,9 @@ async function insertarExcelPrestamos(file) {
                 fechaDeposito: excelDateToJSDate(row[14]),
                 montoDeposito: row[15],
                 comentariosAdmin: row[16]
+
             };
+            alert("fechaDeposito: "+row[14]);
         });
 
         // Enviar los datos al backend
