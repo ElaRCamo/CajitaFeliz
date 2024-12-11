@@ -25,9 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 continue;
             }
 
-            // Validar que ambos campos estén vacíos o ambos llenos
-            if ((empty($montoDeposito) && !empty($fechaDeposito)) || (!empty($montoDeposito) && empty($fechaDeposito))) {
-                $errores[] = "Monto y fecha de depósito deben proporcionarse juntos para la solicitud Folio: $idSolicitud.";
+            // Validar que la fecha no sea '0000-00-00' y que el monto sea válido
+            if (($fechaDeposito == '0000-00-00' && !empty($montoDeposito)) ||
+                ($fechaDeposito != '0000-00-00' && (empty($montoDeposito) || !is_numeric($montoDeposito) || $montoDeposito <= 0))) {
+                $errores[] = "Monto y fecha de depósito deben estar correctamente proporcionados para la solicitud Folio: $idSolicitud.";
                 $todosExitosos = false;
                 continue;
             }

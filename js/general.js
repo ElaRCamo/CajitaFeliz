@@ -35,6 +35,11 @@ function excelDateToJSDate(excelDate) {
         return `${date.getUTCFullYear()}/${(date.getUTCMonth() + 1).toString().padStart(2, '0')}/${date.getUTCDate().toString().padStart(2, '0')}`;
     }
 
+    // Si la entrada es null o una cadena vacía, retornar "0000-00-00"
+    if (excelDate === null || excelDate === '') {
+        return "0000-00-00";
+    }
+
     // Verificar si es una fecha en formato numérico de Excel
     if (typeof excelDate === 'number') {
         const jsDate = new Date((excelDate - 25569) * 86400 * 1000);
@@ -67,6 +72,7 @@ function excelDateToJSDate(excelDate) {
         }
         return "Error: Formato de fecha no válido";
     }
+
     return "Error: Tipo de entrada no válido";
 }
 
