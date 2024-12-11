@@ -44,10 +44,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $fechaDeposito = $fechaDepositoFormateada;
             }
 
+            // Asignar el valor de $idEstatus si se cumple la condición de montoDeposito y fechaDeposito
             $idEstatus = (!empty($montoDeposito) && !empty($fechaDeposito)) ? 4 : null;
+
+            // Validar que $idEstatus esté en el rango de 1 a 5
+            if ($idEstatus !== null && ($idEstatus < 1 || $idEstatus > 5)) {
+                $errores[] = "El valor de idEstatus debe estar entre 1 y 5.";
+                $todosExitosos = false;
+                continue;
+            }
+
+            // Validar montoAprobado si montoDeposito no está vacío
             if (!empty($montoDeposito) && (empty($montoAprobado) || $montoAprobado == 0)) {
                 $montoAprobado = $montoDeposito;
             }
+
+
             if (empty($comentariosAdmin)) {
                 $comentariosAdmin = 'Sin comentarios.';
             }
