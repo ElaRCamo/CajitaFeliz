@@ -25,11 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 continue;
             }
 
-            if (!empty($montoDeposito) xor !empty($fechaDeposito)) {
+            // Validar que ambos campos estén vacíos o ambos llenos
+            if ((empty($montoDeposito) && !empty($fechaDeposito)) || (!empty($montoDeposito) && empty($fechaDeposito))) {
                 $errores[] = "Monto y fecha de depósito deben proporcionarse juntos para la solicitud Folio: $idSolicitud.";
                 $todosExitosos = false;
                 continue;
             }
+
 
             if (!empty($fechaDeposito)) {
                 $fechaDepositoFormateada = formatearFecha($fechaDeposito);
