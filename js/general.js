@@ -36,7 +36,7 @@ function excelDateToJSDate(excelDate) {
     }
 
     // Si la entrada es null o una cadena vacía, retornar "0000-00-00"
-    if (excelDate === null || excelDate === '') {
+    if (excelDate === null || excelDate === '' || excelDate === undefined) {
         return "0000-00-00";
     }
 
