@@ -52,6 +52,29 @@ function formatearFecha($fecha) {
     }
 }
 
+// Función auxiliar para validar montos
+function validarMonto($montoAhorro) {
+    $valor = trim($montoAhorro);
+
+    if (strpos($valor, '$') === 0) {
+        $valor = substr($valor, 1);
+    }
+
+    if (!is_numeric($valor) || floatval($valor) <= 0) {
+        return array(
+            'status' => 'error',
+            'message' => 'El monto ingresado no es válido.'
+        );
+    }
+
+    $numero = number_format(floatval($valor), 2, '.', '');
+
+    return array(
+        'status' => 'success',
+        'message' => 'El monto ingresado es válido.',
+        'monto' => $numero
+    );
+}
 /**
  * Formatea una fecha y hora para mostrarla en español.
  *
