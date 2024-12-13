@@ -92,20 +92,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 echo json_encode($respuesta);
 
-function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $montoAprobado, $montoDeposito, $fechaDeposito, $comentarios, $fechaRespuesta) {
+function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $montoAprobado, $montoDeposito, $fechaDeposito, $comentarios, $fechaRespuesta, $nominaAval1, $telAval1, $nominaAval2, $telAval2) {
     $con = new LocalConectorCajita();
     $conex = $con->conectar();
 
     try {
-        // Iniciar una transacción
         $conex->begin_transaction();
 
-        // Construir dinámicamente los campos a actualizar
         $campos = [
             "idEstatus = ?" => $idEstatus,
             "montoAprobado = ?" => $montoAprobado,
             "comentariosAdmin = ?" => $comentarios,
-            "fechaRespuesta = ?" => $fechaRespuesta
+            "fechaRespuesta = ?" => $fechaRespuesta,
+            "nominaAval1 = ?" => $nominaAval1,
+            "telAval1 = ?" => $telAval1,
+            "nominaAval2 = ?" => $nominaAval2,
+            "telAval2 = ?" => $telAval2
         ];
 
         if (!empty($montoDeposito) && !empty($fechaDeposito)) {
@@ -113,12 +115,10 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
             $campos["fechaDeposito = ?"] = $fechaDeposito;
         }
 
-        // Validar que se construyeron campos para la actualización
         if (empty($campos)) {
             throw new Exception("No hay campos para actualizar.");
         }
 
-        // Construir la consulta
         $query = "UPDATE Prestamo SET " . implode(", ", array_keys($campos)) . " WHERE idSolicitud = ? AND anioConvocatoria = ?";
         $stmt = $conex->prepare($query);
 
@@ -126,42 +126,36 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
             throw new Exception("Error al preparar la consulta: " . $conex->error);
         }
 
-        // Construir los parámetros
         $parametros = array_values($campos);
         $parametros[] = $idSolicitud;
         $parametros[] = $anioConvocatoria;
 
-        // Vincular parámetros
-        $tipos = str_repeat("s", count($parametros));
+        $tipos = "";
+        foreach ($parametros as $parametro) {
+            $tipos .= is_int($parametro) ? "i" : (is_float($parametro) ? "d" : "s");
+        }
+
         $stmt->bind_param($tipos, ...$parametros);
 
-        // Depuración: Loguear consulta y parámetros
-        error_log("Consulta: $query");
-        error_log("Parámetros: " . json_encode($parametros));
-
-        // Ejecutar la consulta
         if (!$stmt->execute()) {
             throw new Exception("Error al ejecutar la consulta: " . $stmt->error);
         }
 
-        // Registrar en la bitácora
         $nomina = $_SESSION["nomina"];
-        $descripcion = "Actualización de préstamo ID: $idSolicitud.";
+        $descripcion = "Actualización de préstamo Folio: $idSolicitud.";
         if (!actualizarBitacoraCambios($nomina, $fechaRespuesta, $descripcion, $conex)) {
-            throw new Exception("Error al registrar en bitácora para la solicitud ID: $idSolicitud.");
+            throw new Exception("Error al registrar en bitácora para la solicitud Folio: $idSolicitud.");
         }
 
-        // Confirmar la transacción
         $conex->commit();
-        return ["status" => 'success', "message" => "Solicitud ID: $idSolicitud actualizada exitosamente."];
+        return ["status" => 'success', "message" => "Solicitud Folio: $idSolicitud actualizada exitosamente."];
     } catch (Exception $e) {
-        // Revertir cambios en caso de error
         $conex->rollback();
         error_log("Error en actualizarSolicitud: " . $e->getMessage());
         return ["status" => 'error', "message" => $e->getMessage()];
     } finally {
-        // Cerrar la conexión
         $conex->close();
     }
 }
+
 ?>
