@@ -18,6 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fechaDeposito = isset($prestamo['fechaDeposito']) ? $prestamo['fechaDeposito'] : null;
             $montoAprobado = isset($prestamo['montoAprobado']) ? $prestamo['montoAprobado'] : null;
             $comentariosAdmin = trim(isset($prestamo['comentariosAdmin']) ? $prestamo['comentariosAdmin'] : '');
+            $nominaAval1 = isset($prestamo['nominaAval1']) ? $prestamo['nominaAval1'] : '';
+            $telAval1 = isset($prestamo['telAval1']) ? $prestamo['telAval1'] : '';
+            $nominaAval2 = isset($prestamo['nominaAval2']) ? $prestamo['nominaAval2'] : '';
+            $telAval2 = isset($prestamo['telAval2']) ? $prestamo['telAval2'] : '';
 
             if (empty($idSolicitud) || empty($anioConvocatoria)) {
                 $errores[] = "Faltan datos obligatorios para la solicitud ID: $idSolicitud.";
@@ -71,7 +75,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $montoDeposito,
                 $fechaDeposito,
                 $comentariosAdmin,
-                $fechaActual
+                $fechaActual,
+                $nominaAval1,
+                $telAval1,
+                $nominaAval2,
+                $telAval2
             );
 
             if ($resultado['status'] !== 'success') {
