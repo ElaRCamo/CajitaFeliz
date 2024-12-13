@@ -439,7 +439,6 @@ async function insertarExcelPrestamos(file) {
 
         // Mapear los datos, asegurándonos de convertir las fechas correctamente
         const prestamosData = jsonData.slice(1).map((row) => {
-            alert("fechaDeposito: "+row[14]);
             return {
                 idSolicitud: row[0],
                 anioConvocatoria: row[1],

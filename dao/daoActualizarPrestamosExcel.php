@@ -113,6 +113,11 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
             $campos["fechaDeposito = ?"] = $fechaDeposito;
         }
 
+        // Validar que se construyeron campos para la actualización
+        if (empty($campos)) {
+            throw new Exception("No hay campos para actualizar.");
+        }
+
         // Construir la consulta
         $query = "UPDATE Prestamo SET " . implode(", ", array_keys($campos)) . " WHERE idSolicitud = ? AND anioConvocatoria = ?";
         $stmt = $conex->prepare($query);
@@ -126,9 +131,13 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
         $parametros[] = $idSolicitud;
         $parametros[] = $anioConvocatoria;
 
-        // Bind dinámico de parámetros
+        // Vincular parámetros
         $tipos = str_repeat("s", count($parametros));
         $stmt->bind_param($tipos, ...$parametros);
+
+        // Depuración: Loguear consulta y parámetros
+        error_log("Consulta: $query");
+        error_log("Parámetros: " . json_encode($parametros));
 
         // Ejecutar la consulta
         if (!$stmt->execute()) {
@@ -148,6 +157,7 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
     } catch (Exception $e) {
         // Revertir cambios en caso de error
         $conex->rollback();
+        error_log("Error en actualizarSolicitud: " . $e->getMessage());
         return ["status" => 'error', "message" => $e->getMessage()];
     } finally {
         // Cerrar la conexión
