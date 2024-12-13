@@ -35,8 +35,8 @@ function excelDateToJSDate(excelDate) {
         return `${date.getUTCFullYear()}/${(date.getUTCMonth() + 1).toString().padStart(2, '0')}/${date.getUTCDate().toString().padStart(2, '0')}`;
     }
 
-    // Si la entrada es null o una cadena vacía, retornar "0000-00-00"
-    if (excelDate === null || excelDate === '' || excelDate === undefined) {
+    // Si la entrada es null, undefined o una cadena vacía, retornar "0000-00-00"
+    if (!excelDate) {
         return "0000-00-00";
     }
 

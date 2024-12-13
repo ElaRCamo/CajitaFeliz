@@ -460,7 +460,6 @@ async function insertarExcelPrestamos(file) {
                 comentariosAdmin: row[16]
 
             };
-            alert("fechaDeposito: "+row[14]);
         });
 
         // Enviar los datos al backend

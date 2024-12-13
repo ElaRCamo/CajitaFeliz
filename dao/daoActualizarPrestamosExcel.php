@@ -33,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 continue;
             }
 
-
             if (!empty($fechaDeposito)) {
                 $fechaDepositoFormateada = formatearFecha($fechaDeposito);
                 if (!$fechaDepositoFormateada) {
