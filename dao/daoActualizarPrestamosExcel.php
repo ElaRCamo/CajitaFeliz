@@ -97,8 +97,10 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
     $conex = $con->conectar();
 
     try {
+        // Iniciar una transacción
         $conex->begin_transaction();
 
+        // Construir dinámicamente los campos a actualizar
         $campos = [
             "idEstatus = ?" => $idEstatus,
             "montoAprobado = ?" => $montoAprobado,
@@ -111,31 +113,44 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
             $campos["fechaDeposito = ?"] = $fechaDeposito;
         }
 
+        // Construir la consulta
         $query = "UPDATE Prestamo SET " . implode(", ", array_keys($campos)) . " WHERE idSolicitud = ? AND anioConvocatoria = ?";
         $stmt = $conex->prepare($query);
 
+        if (!$stmt) {
+            throw new Exception("Error al preparar la consulta: " . $conex->error);
+        }
+
+        // Construir los parámetros
         $parametros = array_values($campos);
         $parametros[] = $idSolicitud;
         $parametros[] = $anioConvocatoria;
 
-        $stmt->bind_param(str_repeat("s", count($parametros)), ...$parametros);
+        // Bind dinámico de parámetros
+        $tipos = str_repeat("s", count($parametros));
+        $stmt->bind_param($tipos, ...$parametros);
 
+        // Ejecutar la consulta
         if (!$stmt->execute()) {
-            throw new Exception("Error al actualizar la solicitud ID: $idSolicitud.");
+            throw new Exception("Error al ejecutar la consulta: " . $stmt->error);
         }
 
+        // Registrar en la bitácora
         $nomina = $_SESSION["nomina"];
         $descripcion = "Actualización de préstamo ID: $idSolicitud.";
         if (!actualizarBitacoraCambios($nomina, $fechaRespuesta, $descripcion, $conex)) {
             throw new Exception("Error al registrar en bitácora para la solicitud ID: $idSolicitud.");
         }
 
+        // Confirmar la transacción
         $conex->commit();
         return ["status" => 'success', "message" => "Solicitud ID: $idSolicitud actualizada exitosamente."];
     } catch (Exception $e) {
+        // Revertir cambios en caso de error
         $conex->rollback();
         return ["status" => 'error', "message" => $e->getMessage()];
     } finally {
+        // Cerrar la conexión
         $conex->close();
     }
 }
