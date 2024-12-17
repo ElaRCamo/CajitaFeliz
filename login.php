@@ -59,18 +59,15 @@
                     <!-- La parte derecha tendrá la imagen de fondo -->
 
                     <div class="d-flex flex-column justify-content-end align-items-end" style="height: 100%;">
-                        <div class="p-2">
+                        <div class="p-2 m-3">
                             <small><strong>Caja de Ahorro</strong></small>
                         </div>
                     </div>
 
                 </div>
-
             </div>
         </div>
-
     </main>
-
 </body>
 
 <!-- JAVASCRIPT FILES -->
