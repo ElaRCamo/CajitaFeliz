@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/icons/Grammer_Logo.ico" type="image/x-icon">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Inicio | Caja de Ahorro</title>
+    <link rel="icon" href="images/icons/Grammer_Logo.ico" type="image/x-icon">
 
     <!-- CSS FILES -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
