@@ -194,7 +194,7 @@
                                     <option value="">Seleccione el año*</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100" onclick="cargarSolicitudes()">Ver solicitudes</button>
+                            <button type="submit" class="btn btn-primary w-100 mt-3" onclick="cargarSolicitudes()">Ver solicitudes</button>
                             <input type="file" id="fileInputRetiros" accept=".xlsx, .xls" style="display: none;" />
                         </form>
                     </div>

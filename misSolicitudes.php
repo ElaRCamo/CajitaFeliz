@@ -46,7 +46,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-    <div class="container" id="top">
+    <div clas s="container" id="top">
         <a class="navbar-brand" href="index.php">
             <img src="images/icons/croc_logo.png" class="logo img-fluid" alt="Logo CROC">
             <img src="images/icons/GrammerAzul.png" class="logo img-fluid" alt="Logo Grammer">

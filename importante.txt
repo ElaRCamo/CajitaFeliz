@@ -99,3 +99,11 @@ lo mismo  tabla Usuarios:
 Id_Usuario  int(11),Nomina	int(11),Nombre	varchar(250),User	varchar(250),
 Password	varchar(250),Rol	int(11), Estatus	int(11), Area	int(11)
 
+query para crear tabla que se llame Inventory
+con las columnas:
+noWarehouse(varchar 250), inventoryRec(int), inventoryItem(int), quant(int), inventoryPage(int), storageType(varchar 250),
+storageBin (varchar 250), binPos(int), noMaterial(varchar 250), plant(int), batch(int), storageUnit(int), 
+counted(int), baseUnit(varchar 250), totalStorage(int)
+
+
+

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0c0756e-c681-4c8d-8545-96feaf11e75c" name="Changes" comment="update location to CajaDeAhorro">
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/importante.txt" beforeDir="false" afterPath="$PROJECT_DIR$/importante.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/misSolicitudes.php" beforeDir="false" afterPath="$PROJECT_DIR$/misSolicitudes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +103,8 @@
       <workItem from="1733417824400" duration="6433000" />
       <workItem from="1733424669396" duration="18059000" />
       <workItem from="1733771440231" duration="5253000" />
+      <workItem from="1734353298146" duration="668000" />
+      <workItem from="1734363300236" duration="2520000" />
     </task>
     <task id="LOCAL-00720" summary="update savings modal">
       <option name="closed" value="true" />
