@@ -278,6 +278,20 @@
                                         <input type="text" name="nombreBen1" id="nombreBen1" class="form-control" placeholder="Juan Perez" required data-error="Por favor ingresa el nombre del beneficiario.">
                                         <div class="invalid-feedback"></div>
                                     </div>
+
+                                    <div class="col-lg-12 col-12">
+                                        <label for="parentescoBen1">Parentesco: </label>
+                                        <select name="parentescoBen1" id="parentescoBen1" class="form-control" required>
+                                            <option value="" disabled selected>Selecciona un parentesco</option>
+                                            <option value="Esposo/a">Esposo (a)</option>
+                                            <option value="Concubino/a">Concubino (a) y/o pareja</option>
+                                            <option value="Padre/Madre">Padre/Madre</option>
+                                            <option value="Hijo/a">Hijo (a)</option>
+                                            <option value="Familiar">Familiar</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                        <div class="invalid-feedback">Por favor selecciona un parentesco.</div>
+                                    </div>
                                     <div class="col-lg-6 col-12">
                                         <label for="porcentajeBen1">Porcentaje: </label>
                                         <input type="text" name="porcentajeBen1" id="porcentajeBen1" class="form-control" placeholder="80%" required data-error="Por favor ingresa un porcentaje válido.">
