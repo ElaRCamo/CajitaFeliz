@@ -45,8 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
             // Validar que $idEstatus esté en el rango de 1 a 5
-            if ($idEstatus !== null && ($idEstatus < 1 || $idEstatus > 5)) {
-                $errores[] = "El valor de idEstatus debe estar entre 1 y 5.";
+            if ($idEstatus === null || $idEstatus < 1 || $idEstatus > 5) {
+                $errores[] = "El valor de idEstatus no es válido.";
                 $todosExitosos = false;
                 continue;
             }
