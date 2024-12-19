@@ -40,8 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             // Asignar el valor de $idEstatus si se cumple la condición de montoDeposito y fechaDeposito
-            $idEstatus = (!empty($montoDeposito) && !empty($fechaDeposito)) ? 4 : null;
-
+            // Mantener el valor de $idEstatus actual si no se cumple la condición
+            if (!empty($montoDeposito) && !empty($fechaDeposito)) {
+                $idEstatus = 4;
+            }
             // Validar que $idEstatus esté en el rango de 1 a 5
             if ($idEstatus !== null && ($idEstatus < 1 || $idEstatus > 5)) {
                 $errores[] = "El valor de idEstatus debe estar entre 1 y 5.";
