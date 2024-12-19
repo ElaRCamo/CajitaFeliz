@@ -293,6 +293,20 @@
                                         <input type="text" name="domicilioBen1" id="domicilioBen1" class="form-control" placeholder="Av. de la Luz No.20" required data-error="Por favor ingresa el domicilio.">
                                         <div class="invalid-feedback"></div>
                                     </div>
+
+                                    <div class="col-lg-12 col-12">
+                                        <label for="parentescoBen1">Parentesco: </label>
+                                        <select name="parentescoBen1" id="parentescoBen1" class="form-control" required>
+                                            <option value="" disabled selected>Selecciona un parentesco</option>
+                                            <option value="Esposo/a">Esposo (a)</option>
+                                            <option value="Concubino/a">Concubino (a) y/o pareja</option>
+                                            <option value="Padre/Madre">Padre/Madre</option>
+                                            <option value="Hijo/a">Hijo (a)</option>
+                                            <option value="Familiar">Familiar</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                        <div class="invalid-feedback">Por favor selecciona un parentesco.</div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-12 col-12 row" id="divBeneficiario2" style="display: none;">
                                     <h5>Beneficiario 2</h5>
@@ -315,6 +329,19 @@
                                         <label for="domicilioBen2">Domicilio: </label>
                                         <input type="text" name="domicilioBen2" id="domicilioBen2" class="form-control" placeholder="Av. de la Luz No.20" required data-error="Por favor ingresa el domicilio.">
                                         <div class="invalid-feedback"></div>
+                                    </div>
+                                    <div class="col-lg-12 col-12">
+                                        <label for="parentescoBen2">Parentesco: </label>
+                                        <select name="parentescoBen2" id="parentescoBen2" class="form-control" required>
+                                            <option value="" disabled selected>Selecciona un parentesco</option>
+                                            <option value="Esposo/a">Esposo (a)</option>
+                                            <option value="Concubino/a">Concubino (a) y/o pareja</option>
+                                            <option value="Padre/Madre">Padre/Madre</option>
+                                            <option value="Hijo/a">Hijo (a)</option>
+                                            <option value="Familiar">Familiar</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                        <div class="invalid-feedback">Por favor selecciona un parentesco.</div>
                                     </div>
                                 </div>
                                 <button type="button" class="form-control" onclick="validarFormAhorro()" id="btnSolAhorro">Solicitar</button>
