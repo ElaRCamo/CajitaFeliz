@@ -113,7 +113,9 @@ function formatearFechaHora($fecha, $hora) {
     return "$fechaFormateada a las $horaFormateada";
 }
 
-
-
+function generarNomina($nomina) {
+    // Asegura que la nómina es un string y completa con ceros a la izquierda hasta alcanzar 8 caracteres
+    return str_pad($nomina, 8, "0", STR_PAD_LEFT);
+}
 
 ?>
