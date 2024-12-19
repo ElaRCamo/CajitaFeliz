@@ -99,6 +99,11 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
     try {
         $conex->begin_transaction();
 
+        // Actualizar el estatus si se proporcionan monto y fecha de depósito
+        if (!empty($montoDeposito) && !empty($fechaDeposito)) {
+            $idEstatus = 4;
+        }
+
         $campos = [
             "idEstatus = ?" => $idEstatus,
             "montoAprobado = ?" => $montoAprobado,
@@ -110,6 +115,7 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
             "telAval2 = ?" => $telAval2
         ];
 
+        // Agregar campos de depósito si corresponden
         if (!empty($montoDeposito) && !empty($fechaDeposito)) {
             $campos["montoDepositado = ?"] = $montoDeposito;
             $campos["fechaDeposito = ?"] = $fechaDeposito;
@@ -119,6 +125,7 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
             throw new Exception("No hay campos para actualizar.");
         }
 
+        // Construir consulta dinámica
         $query = "UPDATE Prestamo SET " . implode(", ", array_keys($campos)) . " WHERE idSolicitud = ? AND anioConvocatoria = ?";
         $stmt = $conex->prepare($query);
 
@@ -126,21 +133,29 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
             throw new Exception("Error al preparar la consulta: " . $conex->error);
         }
 
+        // Preparar parámetros y tipos
         $parametros = array_values($campos);
-        $parametros[] = $idSolicitud;
-        $parametros[] = $anioConvocatoria;
+        $parametros[] = $idSolicitud; // WHERE idSolicitud
+        $parametros[] = $anioConvocatoria; // WHERE anioConvocatoria
 
-        $tipos = "";
-        foreach ($parametros as $parametro) {
-            $tipos .= is_int($parametro) ? "i" : (is_float($parametro) ? "d" : "s");
+        $tipos = str_repeat("s", count($campos)); // Todos como string inicialmente
+        $tipos .= "ii"; // Agregar tipos para los WHERE (int)
+
+        // Ajustar tipos según la naturaleza de los datos
+        foreach ($campos as $key => $value) {
+            if (strpos($key, "idEstatus") !== false || strpos($key, "anioConvocatoria") !== false || strpos($key, "idSolicitud") !== false) {
+                $tipos = substr_replace($tipos, "i", strpos($tipos, "s"), 1);
+            }
         }
 
         $stmt->bind_param($tipos, ...$parametros);
 
+        // Ejecutar la consulta
         if (!$stmt->execute()) {
             throw new Exception("Error al ejecutar la consulta: " . $stmt->error);
         }
 
+        // Actualizar bitácora
         $nomina = $_SESSION["nomina"];
         $descripcion = "Actualización de préstamo Folio: $idSolicitud.";
         if (!actualizarBitacoraCambios($nomina, $fechaRespuesta, $descripcion, $conex)) {
@@ -157,5 +172,6 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
         $conex->close();
     }
 }
+
 
 ?>
