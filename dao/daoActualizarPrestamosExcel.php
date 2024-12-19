@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $telAval1 = isset($prestamo['telAval1']) ? $prestamo['telAval1'] : '';
             $nominaAval2 = isset($prestamo['nominaAval2']) ? $prestamo['nominaAval2'] : '';
             $telAval2 = isset($prestamo['telAval2']) ? $prestamo['telAval2'] : '';
+            $idEstatus = isset($prestamo['idEstatus']) ? $prestamo['idEstatus'] : null;
 
             if (empty($idSolicitud) || empty($anioConvocatoria)) {
                 $errores[] = "Faltan datos obligatorios para la solicitud ID: $idSolicitud.";
@@ -40,10 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             // Asignar el valor de $idEstatus si se cumple la condición de montoDeposito y fechaDeposito
-            // Mantener el valor de $idEstatus actual si no se cumple la condición
-            if (!empty($montoDeposito) && !empty($fechaDeposito)) {
-                $idEstatus = 4;
-            }
+            $idEstatus = (!empty($montoDeposito) && !empty($fechaDeposito)) ? 4 : $idEstatus;
+
+
             // Validar que $idEstatus esté en el rango de 1 a 5
             if ($idEstatus !== null && ($idEstatus < 1 || $idEstatus > 5)) {
                 $errores[] = "El valor de idEstatus debe estar entre 1 y 5.";
