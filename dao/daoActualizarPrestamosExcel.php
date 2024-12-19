@@ -141,10 +141,10 @@ function actualizarSolicitud($idSolicitud, $anioConvocatoria, $idEstatus, $monto
         }
 
         // Imprime los datos que se están intentando insertar
-        echo "Datos para la consulta:\n";
+        /*echo "Datos para la consulta:\n";
         echo "Query: $query\n";
         echo "Parámetros: " . implode(", ", $parametros) . "\n";
-        echo "Tipos: $tipos\n";
+        echo "Tipos: $tipos\n";*/
 
         $stmt->bind_param($tipos, ...$parametros);
 
