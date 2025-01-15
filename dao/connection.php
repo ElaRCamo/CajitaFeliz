@@ -5,9 +5,9 @@ error_reporting(E_ALL);
 
 class LocalConector{
     private $host = "127.0.0.1:3306";
-    private $usuario = "u909553968_Gramito";
-    private $clave = "Grammer2024";
-    private $db = "u909553968_Parte";
+    private $usuario = "poner aqui el usuario";
+    private $clave = "poner aqui la contrasena";
+    private $db = "poner aqui la base de datos";
     private $conexion;
 
     public function conectar(){
