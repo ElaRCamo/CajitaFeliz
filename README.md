@@ -32,6 +32,13 @@ El módulo **Administrador** habilita:
 
 ---
 
+## Capturas
+
+- ![Inicio de sesión](images/index.png)
+- ![Panel de inicio](images/home.png)
+
+---
+
 ## Licencia
 
 **© Grammer Automotive Puebla S.A. de C.V. — Todos los derechos reservados.**  
